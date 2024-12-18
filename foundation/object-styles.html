@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="Referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>연합 뉴스 디자인 시스템</title>
+    <!-- 연합뉴스 link -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://qa-r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://qa-r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <!-- 가이드 link -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            frontCommon.Html.reset();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="skip">
+            <span class="blind">skip navigation</span>
+            <ul>
+                <li><a href="#naviMenu">메뉴 바로가기</a></li>
+                <li><a href="#main">본문 바로가기</a></li>
+                <li><a href="#footer">하단 정보(링크) 바로가기</a></li>
+            </ul>
+        </div>
+        <!-- page-head -->
+        <div class="header" id="header">
+            <div class="header-inner">
+                <!-- 공통 로고 -->
+                <h1 class="site-logo">
+                    <a href="/yonhapnews/main/index.html" class="site-name">
+                        <span class="blind">연합뉴스</span>
+                    </a>
+                </h1>
+
+                <!-- 공통 네비게이션 -->
+                <div class="site-navi" id="naviMenu">
+                    <div class="depth1-wrap">
+                        <ul class="depth1-list">
+                            <li class="depth1-item active">
+                                <a href="/yonhapnews/foundation/colors.html" class="depth1">Foundation</a>
+                            </li>
+                            <li class="depth1-item ">
+                                <a href="/yonhapnews/components/top-navigation.html" class="depth1">Components</a>
+                            </li>
+                            <li class="depth1-item ">
+                                <a href="/yonhapnews/guidelines/principles.html" class="depth1">Guidelines</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 공통 유틸 -->
+                <div class="site-util">
+                    <div class="util-list">
+                        <em class="util-item version">
+                            <span class="text">v 0.1</span>
+                        </em>
+                        <!-- <div class="util-item search">
+                    <div class="search-input-wrap">
+                        <input type="text" class="search-input" placeholder="Please enter the keyword" />
+                    </div>
+                </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //page-head -->
+        <!-- page-body -->
+        <div class="main" id="main">
+            <div class="main-inner">
+                <div class="local">
+                    <div class="local-head">
+                        <div class="local-subject">
+                            <h2 class="local-name blind">Object Styles 디자인 가이드</h2>
+                        </div>
+                    </div>
+                    <div class="local-body">
+                        <div class="lnb" id="lnb">
+                            <div class="lnb-inner">
+                                <div class="site-logo">
+                                    <a href="/main/index.html" class="site-name">
+                                        <span class="blind">연합뉴스</span>
+                                    </a>
+                                </div>
+                                <!-- 타입별 depth2 : 이동 URL 전부 수정할 예정 (현재 javascript:void(0) 되어있는 부분)-->
+
+                                <div class="depth2-wrap foundation">
+                                    <div class="depth2-head">
+                                        <em class="depth2-subject">Foundation</em>
+                                    </div>
+                                    <div class="depth2-body">
+                                        <ul class="depth2-list">
+                                            <li class="depth2-item "><a href="/yonhapnews/foundation/colors.html" class="depth2">Colors</a></li>
+                                            <li class="depth2-item "><a href="/yonhapnews/foundation/typography.html" class="depth2">Typography</a></li>
+                                            <li class="depth2-item "><a href="/yonhapnews/foundation/layout.html" class="depth2">Layout</a></li>
+                                            <li class="depth2-item active"><a href="/yonhapnews/foundation/object-styles.html" class="depth2">Object Styles</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="content-inner">
+                                <div class="content-head">
+                                    <h3 class="content-name">Object Styles</h3>
+                                    <p class="content-summary">Object Style은 세 가지 시각적 요소인 Radius, Border Width, Shadow를 분류하여 전체 UI에서 시각적 일관성을 유지합니다.<br> 버튼 및 텍스트 입력 상자와 같은 디자인 구성 요소 컨테이너에 적용되는 스타일 속성을 정의합니다.</p>
+                                </div>
+                                <div class="content-body">
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="radius">Radius</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <div class="post-list design-01">
+                                                    <div class="post-item">
+                                                        <img src="../assets/images/foundation/objectStyles-01-a.jpg" alt=" ">
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/foundation/objectStyles-01-b.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="smallRounding">Small rounding</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">대부분의 구성 요소에서 가장 자주 사용되는 값입니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/foundation/objectStyles-01-c.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="defaultRounding">Default rounding</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">일반적으로 컨텐츠 카드 및 팝업 메세지와 같이<br> 큰 형태의 박스 구성 요소에 사용됩니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/foundation/objectStyles-01-d.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="etcRounding">ETC rounding</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">강조가 필요한 부분에 예외적으로 사용하는<br> 라운드 유형입니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/foundation/objectStyles-01-e.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="fullRounding">Full rounding</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">UI 요소에 사용하는 라운드 값으로 강조되는<br> 구성 요소에 사용합니다.</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="borderWidth">Border width</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <img src="../assets/images/foundation/objectStyles-02.jpg" alt=" ">
+                                                <div class="table-display design-02">
+                                                    <table>
+                                                        <caption>Border width</caption>
+                                                        <colgroup>
+                                                            <col width="18.37%">
+                                                            <col width="auto">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr class="align-01">
+                                                                <th>Value</th>
+                                                                <th>Usage</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1 px border</td>
+                                                                <td>가장 일반적인 테두리 너비입니다.<br> 일반적인 테두리(예: 텍스트 필드, 태그, 팝오버) 또는 구분선(예: 테이블, 작은 구분선)으로 사용됩니다.</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2 px border</td>
+                                                                <td>요소의 강조가 필요할 때 이 값을 사용합니다. </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3 px border</td>
+                                                                <td>주로 라인으로 구성된 구성 요소(예: 슬라이더 또는 탭)로 사용됩니다.</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="shadow">Shadow</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <div class="data-list design-01">
+                                                    <div class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head">
+                                                                <em class="subject" data-link-cont="defaultShadow">Default shadow</em>
+                                                            </div>
+                                                            <div class="data-figure">
+                                                                <img src="../assets/images/foundation/objectStyles-03-a.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="data-body">
+                                                                <div class="table-display design-02">
+                                                                    <table>
+                                                                        <caption>Default shadow</caption>
+                                                                        <colgroup>
+                                                                            <col width="18.37%">
+                                                                            <col width="21%">
+                                                                            <col width="auto">
+                                                                        </colgroup>
+                                                                        <thead>
+                                                                            <tr class="align-01">
+                                                                                <th>Category</th>
+                                                                                <th>Value</th>
+                                                                                <th>Usage</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>Normal</td>
+                                                                                <td>0px 0px 10px 0px<br> rgba(0, 0, 0, 0.15)</td>
+                                                                                <td>컨텐츠 박스, 컴포넌트에 사용하는 기본적인 그림자 유형입니다.</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Z-depth</td>
+                                                                                <td>0px 4px 16px 0px<br> rgba(0, 0, 0, 0.20)</td>
+                                                                                <td>일반 컴포넌트와의 계층의 차별을 명확히 구분하는 목적으로 사용됩니다.</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Bottom Bar</td>
+                                                                                <td>0px -4px 4px 0px<br> rgba(0, 0, 0, 0.04)</td>
+                                                                                <td>모바일 최하단 Bottom Bar에 사용하는 그림자 유형입니다. </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head">
+                                                                <em class="subject" data-link-cont="onLightGray">On light gray</em>
+                                                                <p class="summary">회색 배경인 마이뉴스 카테고리에서 사용하고 있는 그림자입니다. </p>
+                                                            </div>
+                                                            <div class="data-figure">
+                                                                <img src="../assets/images/foundation/objectStyles-03-b.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="data-body">
+                                                                <div class="table-display design-02">
+                                                                    <table>
+                                                                        <caption>Default shadow</caption>
+                                                                        <colgroup>
+                                                                            <col width="18.37%">
+                                                                            <col width="21%">
+                                                                            <col width="auto">
+                                                                        </colgroup>
+                                                                        <thead>
+                                                                            <tr class="align-01">
+                                                                                <th>Category</th>
+                                                                                <th>Value</th>
+                                                                                <th>Usage</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>Light</td>
+                                                                                <td>0px 8px 60px 0px<br> #F5F5F5;</td>
+                                                                                <td>라이트 모드에서 사용하고 있는 투명도 없는 그림자입니다. </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Dark</td>
+                                                                                <td>0px 8px 60px 0px<br> #232323;</td>
+                                                                                <td>다크 모드에서 사용하고 있는 투명도 없는 그림자입니다. </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quick-nav">
+                            <ul class="nav-list">
+                                <li class="nav-item term case-02">
+                                    <a href="javascript:void(0)" class="anchor" data-link="radius">Radius</a>
+                                    <ul class="sub-nav-list">
+                                        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="smallRounding">Small rounding</a></li>
+                                        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="defaultRounding">Default rounding</a></li>
+                                        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="etcRounding">ETC rounding</a></li>
+                                        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="fullRounding">Full rounding</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item term case-01"><a href="javascript:void(0)" class="anchor" data-link="borderWidth">Border width</a></li>
+                                <li class="nav-item term case-02">
+                                    <a href="javascript:void(0)" class="anchor" data-link="shadow">Shadow</a>
+                                    <ul class="sub-nav-list">
+                                        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="defaultShadow">Default shadow</a></li>
+                                        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="onLightGray">On light gray</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- //page-aside -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //page-body -->
+        <!-- page-foot -->
+        <div class="footer" id="footer">
+            <div class="footer-inner">
+                <div class="footer-head">
+                    <em class="footer-subject">©Pentabreed. StyleGuide Create with</em>
+                </div>
+                <div class="footer-body">
+                    <a href="https://www.pentabreed.com" target="_blank" class="company">
+                        <span class="text blind">펜타브리드</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- //page-foot -->
+    </div>
+</body>
+
+</html>

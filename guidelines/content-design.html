@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="Referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>연합 뉴스 디자인 시스템</title>
+    <!-- 연합뉴스 link -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://qa-r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://qa-r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://r.yna.co.kr/www/home_n/v02/img/favicon.ico">
+    <!-- 가이드 link -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/bash.min.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
+    <script src="../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            frontCommon.Html.reset();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="skip">
+            <span class="blind">skip navigation</span>
+            <ul>
+                <li><a href="#naviMenu">메뉴 바로가기</a></li>
+                <li><a href="#main">본문 바로가기</a></li>
+                <li><a href="#footer">하단 정보(링크) 바로가기</a></li>
+            </ul>
+        </div>
+        <!-- page-head -->
+        <div class="header" id="header">
+            <div class="header-inner">
+                <!-- 공통 로고 -->
+                <h1 class="site-logo">
+                    <a href="/yonhapnews/main/index.html" class="site-name">
+                        <span class="blind">연합뉴스</span>
+                    </a>
+                </h1>
+
+                <!-- 공통 네비게이션 -->
+                <div class="site-navi" id="naviMenu">
+                    <div class="depth1-wrap">
+                        <ul class="depth1-list">
+                            <li class="depth1-item ">
+                                <a href="/yonhapnews/foundation/colors.html" class="depth1">Foundation</a>
+                            </li>
+                            <li class="depth1-item ">
+                                <a href="/yonhapnews/components/top-navigation.html" class="depth1">Components</a>
+                            </li>
+                            <li class="depth1-item active">
+                                <a href="/yonhapnews/guidelines/principles.html" class="depth1">Guidelines</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 공통 유틸 -->
+                <div class="site-util">
+                    <div class="util-list">
+                        <em class="util-item version">
+                            <span class="text">v 0.1</span>
+                        </em>
+                        <!-- <div class="util-item search">
+                    <div class="search-input-wrap">
+                        <input type="text" class="search-input" placeholder="Please enter the keyword" />
+                    </div>
+                </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //page-head -->
+        <!-- page-body -->
+        <div class="main" id="main">
+            <div class="main-inner">
+                <div class="local">
+                    <div class="local-head">
+                        <div class="local-subject">
+                            <h2 class="local-name blind">Content design 디자인 가이드</h2>
+                        </div>
+                    </div>
+                    <div class="local-body">
+                        <div class="lnb" id="lnb">
+                            <div class="lnb-inner">
+                                <div class="site-logo">
+                                    <a href="/main/index.html" class="site-name">
+                                        <span class="blind">연합뉴스</span>
+                                    </a>
+                                </div>
+                                <!-- 타입별 depth2 : 이동 URL 전부 수정할 예정 (현재 javascript:void(0) 되어있는 부분)-->
+
+                                <div class="depth2-wrap guidelines">
+                                    <div class="depth2-head">
+                                        <em class="depth2-subject">Guidelines</em>
+                                    </div>
+                                    <div class="depth2-body">
+                                        <ul class="depth2-list">
+                                            <li class="depth2-item "><a href="/yonhapnews/guidelines/principles.html" class="depth2">Principles</a></li>
+                                            <li class="depth2-item active"><a href="/yonhapnews/guidelines/content-design.html" class="depth2">Content design</a></li>
+                                            <li class="depth2-item "><a href="/yonhapnews/guidelines/design-tokens.html" class="depth2">Design tokens</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="content-inner">
+                                <div class="content-head">
+                                    <h3 class="content-name">Content design</h3>
+                                    <p class="content-summary">UX 작성 및 정보 설계를 통해 UI를 사용자가 필요할 때 필요한 정보를 쉽게 사용할 수 있도록 디자인 합니다.</p>
+                                </div>
+                                <div class="content-body">
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="contentDesign">콘텐츠 디자인이란?</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <img src="../assets/images/guidelines/contentDesign-01.jpg" alt=" ">
+                                                <div class="data-list design-02">
+                                                    <div class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head">
+                                                                <em class="subject">1. Alt text</em>
+                                                            </div>
+                                                            <div class="data-body">
+                                                                <p class="para">효과적인 대체 텍스트는 화면 판독기 사용자를 위해 이미지의 의미와 맥락을 설명합니다.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head">
+                                                                <em class="subject">2. Global writing</em>
+                                                            </div>
+                                                            <div class="data-body">
+                                                                <p class="para">글로벌 쓰기는 여러 문화에 대해 포괄적으로 쓰고 현지화를 위해 최적화합니다. 읽고, 이해하고, 번역하기가 더 쉽습니다.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-item">
+                                                        <div class="data-wrap">
+                                                            <div class="data-head">
+                                                                <em class="subject">3. Style guide</em>
+                                                            </div>
+                                                            <div class="data-body">
+                                                                <p class="para">UI 텍스트는 누구나, 어디서나 이해할 수 있어야 합니다.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="section">
+                                        <div class="section-wrap">
+                                            <div class="section-head">
+                                                <h4 class="section-subject" data-link-cont="bestPractice">모범 사례</h4>
+                                            </div>
+                                            <div class="section-body">
+                                                <div class="post-list design-01">
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/guidelines/contentDesign-02-a.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="altTextShort">대체 텍스트는 짧게</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        대체 텍스트의 권장 길이는 140자입니다.<br>
+                                                                        대체 텍스트가 너무 길면 일부 화면 판독기에서 잘려<br>
+                                                                        나갈 수 있으며 사용자 경험에 좋지 않습니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/guidelines/contentDesign-02-b.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="chartSummary">차트와 그래프는 요약해서 작성</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        대체 텍스트는 차트와 그래프에 특히 중요합니다.<br>
+                                                                        일반적으로 모든 데이터 포인트를 자세히 설명하는 대신<br>
+                                                                        데이터를 요약하여 대체 텍스트를 작성합니다.
+                                                                    </p>
+                                                                    <p class="para">
+                                                                        그래프를 생성한 데이터에 대한 링크가 있으면 제공합니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/guidelines/contentDesign-02-c.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="plainLanguage">평범한 언어를 사용</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        제목을 사용하여 콘텐츠를 구성하고, 문구를 일대일로 대화하는 것처럼 대화적인 어조로 작성합니다.
+                                                                    </p>
+                                                                    <p class="para">
+                                                                        전 세계적으로 사용할 수 있도록 명확한 문구로 작성합니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-item">
+                                                        <div class="post-wrap">
+                                                            <div class="post-figure">
+                                                                <img src="../assets/images/guidelines/contentDesign-02-d.jpg" alt=" ">
+                                                            </div>
+                                                            <div class="post-info">
+                                                                <div class="post-head">
+                                                                    <em class="subject" data-link-cont="userFlow">사용자 시각의 흐름</em>
+                                                                </div>
+                                                                <div class="post-body">
+                                                                    <p class="para">
+                                                                        제목과 부제목을 사용하여 정보의 우선순위를<br>
+                                                                        지정하고 그룹화합니다.
+                                                                    </p>
+                                                                    <p class="para">
+                                                                        사용자가 액션을 훑어보거나 서두를 때 이러한 구성은<br>
+                                                                        실수와 의도치 않은 액션을 피하는 데 도움이 됩니다.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quick-nav">
+                            <ul class="nav-list">
+                                <li class="nav-item term case-01"><a href="javascript:void(0)" class="anchor" data-link="contentDesign">콘텐츠 디자인이란?</a></li>
+                                <li class="nav-item term case-02">
+                                    <a href="javascript:void(0)" class="anchor" data-link="bestPractice">모범 사례</a>
+                                    <ul class="sub-nav-list">
+                                        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="altTextShort">대체 텍스트는 짧게</a></li>
+                                        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="chartSummary">차트와 그래프는 요약해서 작성</a></li>
+                                        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="plainLanguage">평범한 언어를 사용</a></li>
+                                        <li class="nav-item desc"><a href="javascript:void(0)" class="anchor" data-link="userFlow">사용자 시각의 흐름</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- //page-aside -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //page-body -->
+        <!-- page-foot -->
+        <div class="footer" id="footer">
+            <div class="footer-inner">
+                <div class="footer-head">
+                    <em class="footer-subject">©Pentabreed. StyleGuide Create with</em>
+                </div>
+                <div class="footer-body">
+                    <a href="https://www.pentabreed.com" target="_blank" class="company">
+                        <span class="text blind">펜타브리드</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- //page-foot -->
+    </div>
+</body>
+
+</html>
