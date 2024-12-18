@@ -1,0 +1,314 @@
+.data-list {
+    &.design-01 {
+        > .data-item {
+            .data-head {
+                .subject {
+                    color: color(gray,900);
+                    @include font(small-2x,semibold)
+                }
+                .summary {
+                    color: color(gray,600);
+                    @include font(small-4x)
+                }
+                + .data-body,
+                + .data-figure {
+                    margin-top: 2rem;
+                }
+            }
+            .data-figure {
+                + .data-body {
+                    margin-top: 2rem;
+                }
+            }
+            + .data-item {
+                margin-top: 6rem;
+            }
+        }
+    }
+    &.design-02 {
+        > .data-item {
+            .data-head {
+                .subject {
+                    color: color(gray,900);
+                    @include font(small-2x,semibold)
+                }
+            }
+            .data-body {
+                .para {
+                    color: color(gray,600);
+                    @include font(small-3x)
+                }
+            }
+            + .data-item {
+                margin-top: 2.7rem;
+            }
+        }
+    }
+    &.design-03 {
+        > .data-item {
+            .data-head {
+                .subject {
+                    color: color(gray,900);
+                    @include font(small-2x,bold)
+                }
+                + .data-body {
+                    margin-top: 0.8rem;
+                }
+            }
+            .data-body {
+                .para {
+                    color: color(gray,500);
+                    @include font(small-4x);
+                    + .table-display {
+                        margin-top: 2rem;
+                    }
+                }
+                + .data-figure {
+                    margin-top: 2rem;
+                }
+            }
+            + .data-item {
+                margin-top: 6rem;
+            }
+            .data-list.bullet-01 {
+                + .table-display {
+                    margin-top: 2rem;
+                }
+            }
+        }
+        + .data-list.design-04 {
+            margin-top: 6rem;
+        }
+    }
+    &.design-04 {
+        >.data-item {
+            .data-head {
+                .subject {
+                    color: color(gray,900);
+                    @include font(small-3x,bold);
+                }
+                .summary {
+                    color: color(gray,600);
+                    @include font(small-4x)
+                }
+                ~.data-body {
+                    margin-top: 0.8rem;
+                }
+
+                ~.data-figure {
+                    margin-top: 2rem;
+                }
+            }
+            .data-body {
+                > .para {
+                    color: color(gray,500);
+                    @include font(small-4x);
+                }
+                + .data-figure {
+                    margin-top: 2rem;
+
+                    img {
+                        & + img {
+                            margin-top: 2rem;
+                        }
+                    }
+                }
+            }
+            .data-figure {
+                img {
+                    + .post-list {
+                        margin-top: 4rem;
+                    }
+                }
+            }
+            +.data-item {
+                margin-top: 6rem;
+            }
+        }
+        + .data-list.design-03 {
+            margin-top: 6rem;
+        }
+    }
+    &.design-05 {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+    }
+
+    // bullet
+    &.bullet-01 {
+        > .data-item {
+            position: relative;
+            padding-left: 1.2rem;
+            color: color(gray,500);
+            @include font(small-4x);
+            &::before {
+                content: '•';
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+
+}
+
+.post-list {
+    .post-figure {
+        &.do {
+            &::after {
+                display: block;
+                color: color(info, 100);
+                content: "Do";
+                padding-top: 1.2rem;
+                @include font(small-4x, semibold);
+            }
+        }
+        &.dont {
+            &::after {
+                display: block;
+                color: color(warning, 100);
+                content: "Don't";
+                padding-top: 1.2rem;
+                @include font(small-4x, semibold);
+            }
+        }
+    }
+    &.design-01 {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+
+        .post-item {
+            .post-wrap {
+                display: flex;
+                align-items: center;
+                gap: 5rem;
+
+                .post-figure {
+                    width: 56rem;
+                    flex-shrink: 0;
+                    img {
+                        max-width: 100%;
+                    }
+                }
+                .post-info {
+                    .post-head {
+                        .subject {
+                            color: color(gray, 900);
+                            @include font(small-3x, bold);
+                        }
+                        + .post-body {
+                            margin-top: 0.8rem;
+                        }
+                    }
+                    .post-body {
+                        .para {
+                            color: color(gray, 500);
+                            @include font(small-4x, regular);
+                            + .para {
+                                margin-top: 0.8rem;
+                            }
+                        }
+
+                        & + .post-aside {
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-02 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+
+        &.style-01 {
+            .post-item {
+                width: calc(100% / 2 - 2rem);
+            }
+        }
+        &.style-02 {
+            .post-item {
+                width: 100%;
+            }
+        }
+
+        .post-item {
+            .post-wrap {
+                display: flex;
+                flex-direction: column;
+                gap: 1.2rem;
+
+                .post-figure {
+                    img {
+                        max-width: 100%;
+                    }
+                }
+                .post-info {
+                    .post-head {
+                        .subject {
+                            color: color(gray, 900);
+                            @include font(small-3x, bold);
+                        }
+                        + .post-body {
+                            margin-top: 0.8rem;
+                        }
+                    }
+                    .post-body {
+                        .para {
+                            color: color(gray, 500);
+                            @include font(small-4x, regular);
+                            + .para {
+                                margin-top: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.design-03 {
+        .post-item {
+            .post-wrap {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                .post-figure {
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+        &.style-01 {
+            .post-body {
+                .para {
+                    color: color(gray,600);
+                    @include font(small-3x);
+                    + .para {
+                        margin-top: 0.8rem;
+                    }
+                }
+            }
+        }
+        &.style-02 {
+            .post-body {
+                .para {
+                    color: color(gray,600);
+                    @include font(small-4x);
+                    + .para {
+                        margin-top: 0.8rem;
+                    }
+                }
+            }
+        }
+        + .post-list {
+            &.design-02 {
+                margin-top: 4rem;
+            }
+        }
+    }
+}
