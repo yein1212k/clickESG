@@ -150,7 +150,7 @@ gulp.task("watch", function () {
 gulp.task("browserSync", function () {
     browserSync.init({
         notify: false,
-        port: 8090,
+        port: 9000,
         server: {
             baseDir: ["dist"],
             open: true,
