@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>SK Networks</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="SK Networks">
+    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+
+    <script src="./../../assets/js/jquery.js"></script>
+    <script src="./../../assets/js/gsap.min.js"></script>
+    <script src="./../../assets/js/ScrollTrigger.min.js"></script>
+    <script src="./../../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="./../../assets/js/swiper-bundle.min.js"></script>
+    <script src="./../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./../../assets/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            frontCommon.Html.reset();
+        });
+    </script>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            localAnimations_Case02();
+        });
+    </script>
+</head>
+
+<body class="kr">
+    <div id="wrap">
+        <div class="skip">
+            <span class="blind">skip navigation</span>
+            <ul>
+                <li><a href="#naviMenu">메뉴 바로가기</a></li>
+                <li><a href="#main">본문 바로가기</a></li>
+                <li><a href="#footer">하단 정보(링크) 바로가기</a></li>
+            </ul>
+        </div>
+        <header class="light" id="header">
+            <div class="header-inner">
+                <h1 class="site-logo">
+                    <a href="javascript:void(0)" class="site-name">
+                        <span class="blind">SK 네트웍스 로고</span>
+                    </a>
+                </h1>
+                <div class="site-navi" id="naviMenu">
+                    <ul class="depth1-list">
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Company</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list ">
+                                    <li class="depth2-item ">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">기업 개요</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">CEO인사말</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">연혁</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 네트워크</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Business</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">사업 개요</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 투자</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">정보통신</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">워커힐 호텔앤리조트</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK매직</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK스피드메이트</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK일렉링크</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">글로와이드</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">민팃</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">엔코아</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">피닉스 랩</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Sustainability</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Sustainability <br class="pc-only">개요</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">사회적 가치</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Double Bottom Line</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">사회적 가치 성과</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">환경</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">환경경영</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">기후변화</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">사회</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">구성원 행복</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">안전보건</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">이해관계자 행복</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">정보보호 및 보안</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">거버넌스</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">지배구조</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">윤리경영</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">투자관리</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">자료실</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">보고서 및 정책</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">인증</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">IR</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">주식정보</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">주가정보</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">주주환원</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">재무정보</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">주요재무현황</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">감사보고서</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">신용등급</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">IR정보</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR일정</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR자료</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">공시정보</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">전자공시</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">전자공고</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">PR</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">뉴스룸</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">브랜드</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Career</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">기업문화</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">인재육성</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">평가/보상</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">채용정보</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="site-util">
+                    <div class="util contact-wrap">
+                        <a href="javascript:void(0)" class="btn text design1 case2 color1 contact">
+                            <span class="btn-text">문의·제안</span>
+                        </a>
+                    </div>
+                    <div class="util lang" id="gnb_lang">
+                        <button title="언어 선택" aria-label="언어 선택" aria-haspopup="true" class="selected">
+                            <span class="select-text cur-lang">KR</span>
+                        </button>
+                        <div class="option-area">
+                            <ul class="option-list">
+                                <li class="option-item">
+                                    <a href="javascript:void(0)" class="option active">KR</a>
+                                </li>
+                                <li class="option-item">
+                                    <a href="javascript:void(0)" class="option">EN</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-control">
+                    <button class="btn icon case2 menu-header">
+                        <span class="btn-text blind">메뉴 열기</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="main business infocom" id="main">
+            <div class="main-inner">
+                <div class="local design2">
+                    <div class="local-head design5" data-local-animation="case-2">
+                        <div class="local-info">
+                            <ul class="data-list breadcrumb design1 case2 dark">
+                                <li class="data-item"><span class="item-text">Home</span></li>
+                                <li class="data-item"><span class="item-text">Business</span></li>
+                                <li class="data-item"><span class="item-text">정보통신</span></li>
+
+                            </ul>
+                        </div>
+                        <div class="local-subject">
+                            <h2 class="local-name">기업 내 모든 구성원이<br> AI 기술을 활용하는 세상</h2>
+                        </div>
+                        <div class="local-aside">
+                            <div class="local-wrap">
+                                <h2 class="local-title">정보통신</h2>
+                            </div>
+                        </div>
+                        <div class="local-figure">
+                            <img src="../../assets/images/business/bg-local-head-business-infocom.jpg" alt="">
+                        </div>
+                        <div class="local-util">
+                            <p class="scroll-guide">Scroll Down</p>
+                        </div>
+                    </div>
+                    <div class="local-body">
+                        <div class="content-head blind">정보통신 페이지</div>
+                        <div class="content-body">
+                            <div class="section design1 case3 type1 core">
+                                <div class="section-wrap">
+                                    <div class="article intro">
+                                        <div class="article-wrap">
+                                            <div class="article-head">
+                                                <h3 class="title">ICT Marketing</h3>
+                                                <h4 class="sub-title">국내 1위 Mobile Device 유통 사업자</h4>
+                                            </div>
+                                            <div class="article-body">
+                                                <p class="para case2">
+                                                    휴대전화 단말기 도매 유통을 중심으로 연간 약 400만 대 규모의 Market을 보유하고 있으며, 그 외 노트북과 태블릿PC, ICT 액세서리 등 제조사 협업을 통해 ICT Device 상품을 폭넓게 유통하고 있습니다.
+                                                </p>
+                                                <p class="para case2">
+                                                    또한 전국 물류 인프라를 통해 고객에게 통합 물류서비스를 제공합니다. 자회사인 SK네트웍스서비스는 SK텔레콤 및 SK브로드밴드의 네트워크망 운용, IT Solution, 통신 시스템 장비 유통 등 다양한 서비스를 제공하는 사업을 펼치고 있습니다.
+                                                </p>
+                                                <p class="para case2">
+                                                    또한 기업 IT 불용자산을 포함한 다양한 폐제품 및 사용 후 폐기물을 처리, 재활용하는 자원순환센터를 운영 중입니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="article major">
+                                        <div class="article-wrap">
+                                            <div class="article-head">
+                                                <h4 class="title">주요 성과</h4>
+                                            </div>
+                                            <div class="article-body">
+                                                <ul class="board-list design7 case1 type2">
+                                                    <li class="board-item">
+                                                        <div class="board-wrap">
+                                                            <div class="board-figure">
+                                                                <img src="https://place-hold.it/108X108" alt="">
+                                                            </div>
+                                                            <div class="board-info">
+                                                                <strong class="board-name">Title (admin)</strong>
+                                                                <p class="para">Text (admin)</p>
+                                                                <span class="note">add text (admin)</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="board-item">
+                                                        <div class="board-wrap">
+                                                            <div class="board-figure">
+                                                                <img src="https://place-hold.it/108X108" alt="">
+                                                            </div>
+                                                            <div class="board-info">
+                                                                <strong class="board-name">Title (admin)</strong>
+                                                                <p class="para">Text (admin)</p>
+                                                                <span class="note">add text (admin)</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="board-item">
+                                                        <div class="board-wrap">
+                                                            <div class="board-figure">
+                                                                <img src="https://place-hold.it/108X108" alt="">
+                                                            </div>
+                                                            <div class="board-info">
+                                                                <strong class="board-name">Title (admin)</strong>
+                                                                <p class="para">Text (admin)</p>
+                                                                <span class="note">add text (admin)</span>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section design1 case3 type1 business">
+                                <div class="section-wrap">
+                                    <div class="section-body">
+                                        <div class="data-display business-network">
+                                            <div class="data-head">
+                                                <strong class="data-name">사업 영역</strong>
+                                            </div>
+                                            <div class="data-body">
+                                                <div class="data-list">
+                                                    <div class="data-item back-wholesale">
+                                                        <div class="contents">
+                                                            <strong class="contents-name type1">휴대폰 단말기 도매</strong>
+                                                            <p class="para">전국적인 물류 인프라 및 구매 플랫폼 기반 유통망을 토대로 고객이 요구하는 모바일 기기를 적시에 공급하고 있으며, 이를 통해 국내 최대 규모의 휴대폰 유통 사업자로서의 위상을 보여주고 있습니다.</p>
+                                                            <p class="para">국내 1위 이동통신 사업자인 SK텔레콤 및 국내외 제조사와 공고한 파트너십을 바탕으로 2023년 394만 대의 휴대전화 단말기 판매 실적을 달성하였습니다.</p>
+                                                            <p class="para">통신 유통 시장이 지속 축소되는 환경 속에서도 여신ㆍ결제 서비스 및 구매 시스템을 제공하여 대리점의 구매 편의성을 개선하였으며, 영업 컨설팅을 통해 전국 1천여 개 대리점과 상생 발전하는 비즈니스 모델을 강화하였습니다.</p>
+                                                            <p class="para">단말 유통 사업은 향후에도 고객사를 대상으로 한 지속적인 가치 창출을 통해 휴대폰 유통 시장 내 SK네트웍스의 역할을 확대하여, 의미 있는 수익을 확보하고 안정적 성장을 이어나가겠습니다.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-item back-logiService">
+                                                        <div class="contents">
+                                                            <strong class="contents-name type1">물류 서비스</strong>
+                                                            <p class="para">전국 단위의 물류 인프라와 시스템 역량을 통해 고객에게 통합 배송 서비스를 제공합니다. 단말기 유통을 통한 물류 경험을 바탕으로 ICT Device뿐만 아니라 제3자 물류, 창고 보관업 등 다양한 영역으로 물류 서비스를 확대하고 있습니다.</p>
+                                                            <p class="para">증가하는 고객의 배송 수요를 충족시키기 위해 수도권 물류센터를 확장 이전했으며, 시스템 기반 통합 물류체계를 구축하여 국내 TOP 수준의 SCM* 역량을 갖춘 물류 서비스 사업자로 발전해 나가겠습니다.</p>
+                                                            <span class="comment design1">* SCM: Supply Chain Management, 공급망 관리</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-item back-dist">
+                                                        <div class="contents">
+                                                            <strong class="contents-name type1">ICT Device/Accessory 유통</strong>
+                                                            <p class="para">글로벌 제조사(Apple, 삼성)로부터 노트북, 태블릿 등 주요 ICT Device를 소싱하여 고객사의 다양한 Needs에 맞춰 Solution Customizing, 배송, 설치 등 맞춤형 서비스를 제공합니다. 아울러 다양한 ICT Accessory를 기획하여 온ㆍ오프라인 유통망 채널에 공급함으로써, 고객의 스마트폰 판매 확대 및 Mobile 사용자 경험 증대에 주력하고 있습니다.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-item back-subsidiary">
+                                                        <div class="contents">
+                                                            <strong class="contents-name type1">네트워크 인프라 관리, 글로벌 IT H/W·S/W 유통<br>(SK네트웍스서비스)</strong>
+                                                            <p class="para">SK네트웍스서비스는 다년간 축적해온 ICT 기술력을 기반으로 Network Infra 운용관리, Global IT H/W · S/W 유통사업을 영위하고 있습니다. 최근에는 태양광 자체 발전 및 EPC*사업, EV충전시설 구축/유지보수, 자원재순환사업 등 친환경분야로 사업영역을 확장해 지속가능성을 높이는데 주력하고 있습니다. SK네트웍스서비스는 변화와 혁신으로 경쟁력을 확보하고 새로운 가능성과 고객사 가치 창출로 상생을 도모하고 있습니다.</p>
+                                                            <p class="comment design1">* EPC: Engineering Procurement Construction</p>
+                                                        </div>
+                                                        <div class="contents-util">
+                                                            <a class="btn design3 case3 type4 color6 ar-icon-arrow-right-up2" href="https://www.sknservice.com/index.do" target="_blank" title="새창 열기"><span class="btn-text">SK네트웍스서비스 웹사이트로 이동하기</span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section design1 case3 type1 banner-section">
+                                <div class="section-wrap">
+                                    <div class="section-body">
+                                        <div class="banner design1 case1 type1">
+                                            <div class="banner-wrap">
+                                                <div class="banner-head">
+                                                    <img src="../../assets/images/logo/logo-c1-e.svg" alt="SK networks 로고 이미지">
+                                                </div>
+                                                <div class="banner-body">
+                                                    <p class="para">사업제안·고객문의가 필요하신가요?</p>
+                                                </div>
+                                                <div class="banner-footer">
+                                                    <span class="summary">SK네트웍스는 여러분의 소중한 제안을 기다리고 있습니다.</span>
+                                                </div>
+                                                <div class="banner-util">
+                                                    <a class="btn design3 case1 type1 color2 ar-icon-arrow-right2-bg" href="/#">
+                                                        <span class="btn-text">문의하기</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section design1 case3 type1 press">
+                                <div class="section-wrap">
+                                    <div class="section-head">
+                                        <div class="section-subject">
+                                            <h4 class="section-name">PRESS NOW</h4>
+                                        </div>
+                                    </div>
+                                    <div class="section-body">
+                                        <div class="post-list design2 case1 type1">
+                                            <a href="/#" class="post-item">
+                                                <div class="post-wrap">
+                                                    <div class="post-figure">
+                                                        <img src="https://place-hold.it/384x213" alt="press now 썸네일 이미지">
+                                                    </div>
+                                                    <div class="post-inform">
+                                                        <div class="post-head">
+                                                            <p class="post-caption">SK네트웍스</p>
+                                                            <p class="post-subject">SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!</p>
+                                                            <p class="post-summary">SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제
+                                                            </p>
+                                                        </div>
+                                                        <p class="post-date" title="등록일">2024.02.01</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="/#" class="post-item">
+                                                <div class="post-wrap">
+                                                    <div class="post-figure">
+                                                        <img src="https://place-hold.it/384x213" alt="press now 썸네일 이미지">
+                                                    </div>
+                                                    <div class="post-inform">
+                                                        <div class="post-head">
+                                                            <p class="post-caption">SK렌터카</p>
+                                                            <p class="post-subject">SK렌터카, ‘IF 디자인 어워드 2024’ 본상 수상</p>
+                                                            <p class="post-summary">SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024’에서 ‘플랫폼·UI(사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다. ‘IF 디자인 어워드’는 독일 ‘인터내셔널 포럼 디자인’이 주관하는 디자인 공모전으로, 매년 50…
+                                                            </p>
+                                                        </div>
+                                                        <p class="post-date" title="등록일">2024.02.01</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="/#" class="post-item">
+                                                <div class="post-wrap">
+                                                    <div class="post-figure">
+                                                        <img src="https://place-hold.it/384x213" alt="press now 썸네일 이미지">
+                                                    </div>
+                                                    <div class="post-inform">
+                                                        <div class="post-head">
+                                                            <p class="post-caption">SK네트웍스</p>
+                                                            <p class="post-subject">SK네트웍스, 탄소중립 경영 글로벌 기관 인정!</p>
+                                                            <p class="post-summary">2018년부터 지속가능경영보고서를 작성해오며 회사의 친환경 활동을 꾸준히 이해관계자들과 소통하고 있는 SK네트웍스가 국제적 수준의 ESG 경영 실천을 입증했다. SK네트웍스(대표이사: 이호정)는 13일 여의도 글래드호텔에서 열린 '2023 CDP 코리아 어워드'에서 산업…
+                                                            </p>
+                                                        </div>
+                                                        <p class="post-date" title="등록일">2024.02.01</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="section-util btn-display align3">
+                                        <div class="btn-area">
+                                            <a class="btn design3 case1 type1 color2 ar-icon-plus-bg" href="#"><span class="btn-text">더보기</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page-foot -->
+        <footer id="footer">
+            <div class="footer-inner">
+                <div class="footer-head">
+                    <a href="#" class="footer-subject"><span class="footer-name blind">SK networks</span></a>
+                </div>
+                <div class="footer-body">
+                    <div class="section policy">
+                        <div class="section-wrap">
+                            <div class="section-head blind">운영 정책</div>
+                            <div class="section-body">
+                                <ul class="navi-list">
+                                    <li class="navi-item"><a href="#" class="navi-text privacy">개인정보처리방침</a></li>
+                                    <li class="navi-item"><a href="#" class="navi-text">사이트맵</a></li>
+                                    <li class="navi-item"><a href="https://ethics.sk.co.kr/" target="_blank" title="새창 열기" class="navi-text">제보하기</a></li>
+                                </ul>
+                                <ul class="info-list">
+                                    <!-- <li class="info-item ncsi"><span class="info-text blind">NCSI</span></li> -->
+                                    <li class="info-item isms" title="정보보호 관리체계(ISMS) 인증&#10;[인증범위] 온라인 서비스 운영(ERS, 수입차 부품 홍보 및 자동차부품 대리점 관리, 대리점 휴대폰 주문 및 악세사리 판매, ICT마케팅)&#10;[유효기간] 2021.12.15 ~ 2024.12.14">
+                                        <span class="info-text blind">정보보호 관리체계 ISMS 인증 마크</span>
+                                    </li>
+                                    <li class="info-item wa" title="웹접근성 인증">
+                                        <span class="info-text blind">웹접근성 인증 마크</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section info">
+                        <div class="section-wrap">
+                            <div class="section-head blind">기업정보</div>
+                            <div class="section-body">
+                                <ul class="data-list">
+                                    <li class="data-item"><span class="data-text">경기도 수원시 장안구 경수대로 976번길 19(송죽동)</span></li>
+                                    <li class="data-item"><span class="data-text">Tel : 070-7800-2114</span></li>
+                                    <li class="data-item"><span class="data-text">Copyright ⓒ 2024 by SK Networks Co. Ltd. All Rights Reserved</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section family-site">
+                        <button title="패밀리 사이트" aria-label="패밀리 사이트" aria-haspopup="true" class="btn-family">
+                            <span class="btn-text">패밀리 사이트</span>
+                        </button>
+                        <div class="site-area">
+                            <ul class="site-list">
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/" target="_blank" title="새창 열기" class="site">워커힐 호텔앤리조트</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/grandwalkerhillseoul/" target="_blank" title="새창 열기" class="site">그랜드 워커힐 서울</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/vistawalkerhillseoul/" target="_blank" title="새창 열기" class="site">비스타 워커힐 서울</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/about/CustomerService" target="_blank" title="새창 열기" class="site">워커힐 대외사업부</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.sknservice.com/index.do" target="_blank" title="새창 열기" class="site">SK네트웍스 서비스</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.skmagic.com/?_ga=2.199319278.1937658122.1716172891-198197358.1712136793" target="_blank" title="새창 열기" class="site">SK매직</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.speedmate.com/Company" target="_blank" title="새창 열기" class="site">SK스피드메이트</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://skelectlink.co.kr/" target="_blank" title="새창 열기" class="site">SK일렉링크</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.mintit.co.kr/" target="_blank" title="새창 열기" class="site">민팃</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.en-core.com/" target="_blank" title="새창 열기" class="site">엔코아</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://hico.vc/hico-ventures/" target="_blank" title="새창 열기" class="site">하이코캐피탈</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-to-top">
+                <button type="button" id="topBtn" class="top-btn">
+                    <span class="btn-text">Top</span>
+                </button>
+            </div>
+        </footer>
+        <!-- //page-foot -->
+    </div>
+</body>
+
+</html>

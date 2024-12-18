@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>SK Networks</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="SK Networks">
+    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+
+    <script src="./../../assets/js/jquery.js"></script>
+    <script src="./../../assets/js/gsap.min.js"></script>
+    <script src="./../../assets/js/ScrollTrigger.min.js"></script>
+    <script src="./../../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="./../../assets/js/swiper-bundle.min.js"></script>
+    <script src="./../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./../../assets/js/common.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            frontCommon.Html.reset();
+        });
+    </script>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            Tab();
+        });
+    </script>
+</head>
+
+<body class="kr">
+    <div id="wrap">
+        <div class="skip">
+            <span class="blind">skip navigation</span>
+            <ul>
+                <li><a href="#naviMenu">메뉴 바로가기</a></li>
+                <li><a href="#main">본문 바로가기</a></li>
+                <li><a href="#footer">하단 정보(링크) 바로가기</a></li>
+            </ul>
+        </div>
+        <header class="light" id="header">
+            <div class="header-inner">
+                <h1 class="site-logo">
+                    <a href="javascript:void(0)" class="site-name">
+                        <span class="blind">SK 네트웍스 로고</span>
+                    </a>
+                </h1>
+                <div class="site-navi" id="naviMenu">
+                    <ul class="depth1-list">
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Company</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list ">
+                                    <li class="depth2-item ">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">기업 개요</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">CEO인사말</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">연혁</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 네트워크</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Business</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">사업 개요</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 투자</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">정보통신</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">워커힐 호텔앤리조트</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK매직</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK스피드메이트</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK일렉링크</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">글로와이드</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">민팃</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">엔코아</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">피닉스 랩</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Sustainability</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Sustainability <br class="pc-only">개요</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">사회적 가치</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Double Bottom Line</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">사회적 가치 성과</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">환경</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">환경경영</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">기후변화</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">사회</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">구성원 행복</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">안전보건</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">이해관계자 행복</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">정보보호 및 보안</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">거버넌스</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">지배구조</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">윤리경영</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">투자관리</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">자료실</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">보고서 및 정책</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">인증</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">IR</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">주식정보</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">주가정보</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">주주환원</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">재무정보</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">주요재무현황</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">감사보고서</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">신용등급</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">IR정보</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR일정</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR자료</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">공시정보</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">전자공시</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">전자공고</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">PR</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">뉴스룸</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">브랜드</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Career</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">기업문화</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">인재육성</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">평가/보상</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">채용정보</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="site-util">
+                    <div class="util contact-wrap">
+                        <a href="javascript:void(0)" class="btn text design1 case2 color1 contact">
+                            <span class="btn-text">문의·제안</span>
+                        </a>
+                    </div>
+                    <div class="util lang" id="gnb_lang">
+                        <button title="언어 선택" aria-label="언어 선택" aria-haspopup="true" class="selected">
+                            <span class="select-text cur-lang">KR</span>
+                        </button>
+                        <div class="option-area">
+                            <ul class="option-list">
+                                <li class="option-item">
+                                    <a href="javascript:void(0)" class="option active">KR</a>
+                                </li>
+                                <li class="option-item">
+                                    <a href="javascript:void(0)" class="option">EN</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-control">
+                    <button class="btn icon case2 menu-header">
+                        <span class="btn-text blind">메뉴 열기</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="main career recruit" id="main">
+            <div class="main-inner">
+                <div class="local design1">
+                    <div class="local-info">
+                        <ul class="data-list breadcrumb design1 case1 dark">
+                            <li class="data-item"><span class="item-text">Home</span></li>
+                            <li class="data-item"><span class="item-text">Career</span></li>
+                            <li class="data-item"><span class="item-text">채용정보</span></li>
+
+                        </ul>
+                    </div>
+                    <div class="local-head design3">
+                        <div class="local-subject">
+                            <h2 class="local-name">채용정보</h2>
+                        </div>
+                    </div>
+                    <div class="local-body">
+                        <div class="content-head">채용정보 페이지</div>
+                        <div class="content-body">
+                            <div class="section design1 type1 rec-info">
+                                <div class="section-wrap">
+                                    <div class="section-body">
+                                        <div class="tab-display design1 case1 type1">
+                                            <div class="swiper tab-wrap">
+                                                <ul class="swiper-wrapper tab-list" role="tablist">
+                                                    <li id="tab1" class="swiper-slide tab-item recruit-tab-item" aria-controls="tab-panel1">
+                                                        <button role="tab" class="tab-text">직무소개</button>
+                                                    </li>
+                                                    <li id="tab2" class="swiper-slide tab-item recruit-tab-item" aria-controls="tab-panel2">
+                                                        <button role="tab" class="tab-text">채용절차</button>
+                                                    </li>
+                                                    <li id="tab3" class="swiper-slide recruit-tab-item">
+                                                        <a href="https://www.skcareers.com" class="tab-text" target="_blank" title="새창 열기">채용공고</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="panel-display design1 case1">
+                                            <div class="panel-list">
+                                                <div id="tab-panel1" class="panel-item" role="tabpanel">
+                                                    <div class="panel-wrap">
+                                                        <div class="panel-head">
+                                                            <div class="data-display design2 case7 type1">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="item-wrap">
+                                                                            <div class="item-head">
+                                                                                <p class="item-subject">직무소개</p>
+                                                                            </div>
+                                                                            <div class="item-body bg"></div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <div class="board-list design1 case1 type1">
+                                                                <div class="board-item">
+                                                                    <div class="board-wrap">
+                                                                        <div class="board-head">
+                                                                            <p class="board-subject">정보통신</p>
+                                                                            <div class="bullet-display design1 case1 type1">
+                                                                                <ul class="data-list">
+                                                                                    <li class="data-item">휴대폰 단말기 도매(ICT Device 포함), 제조사 및 유통업체 관리 지원</li>
+                                                                                    <li class="data-item">온라인 직영 채널 기획 및 운영</li>
+                                                                                    <li class="data-item">물류 운영 Process 기획/설계, 비용 분석</li>
+                                                                                    <li class="data-item">중고 ICT Device 유통, Recycle 신규 서비스 기획</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="board-util">
+                                                                            <div class="btn-display align1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design3 case1 type1 color2 ar-icon-arrow-right2-bg" href="https://www.skcareers.com" target="_blank" title="새창 열기"><span class="btn-text">정보통신 소개 바로가기</span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- <div class="board-item">
+                                                                <div class="board-wrap">
+                                                                    <div class="board-head">
+                                                                        <p class="board-subject">Trading</p>
+                                                                        <div class="bullet-display design1 case1 type1">
+                                                                            <ul class="data-list">
+                                                                                <li class="data-item">화학/소재 제품 Global Trading (해외 직수출, 삼국 간 중개무역 등)</li>
+                                                                                <li class="data-item">해외법인 RM 모니터링, 손익 Impact 분석, 해외 투자사 관리 및 Issue 지원</li>
+                                                                                <li class="data-item">해외 Agent 관리, 시황분석 및 Global Biz Trend 파악</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="board-util">
+                                                                        <div class="btn-display align1">
+                                                                            <div class="btn-area">
+                                                                                <a class="btn design3 case1 type1 color2 ar-icon-arrow-right2-bg" href="#"><span class="btn-text">글로벌 트레이딩 소개 바로가기</span></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div> -->
+                                                                <div class="board-item">
+                                                                    <div class="board-wrap">
+                                                                        <div class="board-head">
+                                                                            <p class="board-subject">경영지원</p>
+                                                                            <div class="bullet-display design1 case1 type1">
+                                                                                <ul class="data-list">
+                                                                                    <li class="data-item">전사 경영전략 수립, 투자 검토, 손익관리</li>
+                                                                                    <li class="data-item">재무/금융, 회계, 세무</li>
+                                                                                    <li class="data-item">HR, 구매, 홍보, 법무, SHE</li>
+                                                                                    <li class="data-item">기업문화, SV(Social Value)</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="board-item">
+                                                                    <div class="board-wrap">
+                                                                        <div class="board-head">
+                                                                            <p class="board-subject">워커힐 호텔앤리조트</p>
+                                                                            <div class="bullet-display design1 case1 type1">
+                                                                                <ul class="data-list">
+                                                                                    <li class="data-item">Marketing, Promotion 기획</li>
+                                                                                    <li class="data-item">호텔 Biz. 업그레이드 및 BM 혁신 기획 및 운영</li>
+                                                                                    <li class="data-item">외부 사업 등 신규 Biz. 개발</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="board-util">
+                                                                            <div class="btn-display align1">
+                                                                                <div class="btn-area">
+                                                                                    <a class="btn design3 case1 type1 color2 ar-icon-arrow-right2-bg" href="#"><span class="btn-text">워커힐 호텔앤리조트 소개 바로가기</span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="tab-panel2" class="panel-item" role="tabpanel">
+                                                    <div class="panel-wrap">
+                                                        <div class="panel-head">
+                                                            <div class="data-display design2 case4 type1">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="item-wrap">
+                                                                            <div class="item-head">
+                                                                                <p class="item-subject">단계별 전형절차</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="panel-body">
+                                                            <ul class="board-list design11 case1 type1">
+                                                                <li class="board-item">
+                                                                    <div class="board-wrap">
+                                                                        <div class="board-figure">
+                                                                            <img src="../../assets/images/career/appl.svg" alt="">
+                                                                        </div>
+                                                                        <div class="board-info">
+                                                                            <strong class="board-name">입사지원</strong>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="board-item">
+                                                                    <div class="board-wrap">
+                                                                        <div class="board-figure">
+                                                                            <img src="../../assets/images/career/doc.svg" alt="">
+                                                                        </div>
+                                                                        <div class="board-info">
+                                                                            <strong class="board-name">서류전형</strong>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="board-item">
+                                                                    <div class="board-wrap">
+                                                                        <div class="board-figure">
+                                                                            <img src="../../assets/images/career/write.svg" alt="">
+                                                                        </div>
+                                                                        <div class="board-info">
+                                                                            <strong class="board-name">필기전형</strong>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="board-item">
+                                                                    <div class="board-wrap">
+                                                                        <div class="board-figure">
+                                                                            <img src="../../assets/images/career/inter.svg" alt="">
+                                                                        </div>
+                                                                        <div class="board-info">
+                                                                            <strong class="board-name">면접전형</strong>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="board-item">
+                                                                    <div class="board-wrap">
+                                                                        <div class="board-figure">
+                                                                            <img src="../../assets/images/career/audit.svg" alt="">
+                                                                        </div>
+                                                                        <div class="board-info">
+                                                                            <strong class="board-name">신체검사</strong>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="board-item">
+                                                                    <div class="board-wrap">
+                                                                        <div class="board-figure">
+                                                                            <img src="../../assets/images/career/accept.svg" alt="">
+                                                                        </div>
+                                                                        <div class="board-info">
+                                                                            <strong class="board-name">최종합격</strong>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="data-display design2 case4 type1">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="item-wrap">
+                                                                            <div class="item-head">
+                                                                                <p class="item-subject">입사지원</p>
+                                                                                <p class="para">
+                                                                                    SK Talent Portal (<a href="https://www.skcareers.com/" target="_blank" title="새창 열기"><u>www.skcareers.com</u></a>)을 통해서 On-line 입사지원을 받고 있습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="data-display design2 case4 type1">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="item-wrap">
+                                                                            <div class="item-head">
+                                                                                <p class="item-subject">서류전형</p>
+                                                                                <p class="para">
+                                                                                    제출된 지원서를 바탕으로 지원자의 학력/경력과 모집직무와의 연관성을 검토하고 결격사유의 유무를 확인하게 됩니다. 특히, 지원자가 직접 기술한 입사지원서의 경우 HR부서와 현업 관련부서가 공동으로 검토하고 있으며, 이를 통해 지원자 개개인의 가치관이 SK가 지향하는 가치관과 얼마나 부합하는가를 면밀히 검증하고 있습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="data-display design2 case4 type1">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="item-wrap">
+                                                                            <div class="item-head">
+                                                                                <p class="item-subject">필기전형</p>
+                                                                                <p class="para">
+                                                                                    SKCT는 SK에서 직무 수행을 위해 요구되는 역량을 다양하고 종합적인 관점에서 측정하고 있으며, 일하는 데 필요한 복합적이고 고차원적인 사고능력을 측정하는 인지역량 (Critical Thinking), 일하면서 부딪치는 문제상황에서 적절한 판단을 내릴 수 있는지를 측정하는 실행역량 (Situational Judgment), 그리고 일하는 데 적합한 성격, 가치관, 태도를 갖추고 있는지 측정하는 심층역량 (Work Personality)으로 구성되어 있습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="data-display design2 case4 type1">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="item-wrap">
+                                                                            <div class="item-head">
+                                                                                <p class="item-subject">면접전형</p>
+                                                                                <p class="para">
+                                                                                    지원자의 전문지식, 직무 이해도, 업무수행능력 및 잠재능력, 기업관, 패기 등을 개인/집단면접 형태의 다양한 면접도구를 활용하여 평가합니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="data-display design2 case4 type1">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="item-wrap">
+                                                                            <div class="item-head">
+                                                                                <p class="item-subject">건강검진</p>
+                                                                                <p class="para">
+                                                                                    면접 전형에서 합격하신 분에 한하여 건강 검진을 실시합니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="data-display design2 case4 type1">
+                                                                <ul class="data-list">
+                                                                    <li class="data-item">
+                                                                        <div class="item-wrap">
+                                                                            <div class="item-head">
+                                                                                <p class="item-subject">채용방식</p>
+                                                                                <p class="para">
+                                                                                    신입사원 채용은 수시채용 및 채용연계형 인턴십을 통해 진행하며, 경력사원 채용은 충원 Position이 발생할 경우 수시로 채용을 진행하고 있습니다.
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page-foot -->
+        <footer id="footer">
+            <div class="footer-inner">
+                <div class="footer-head">
+                    <a href="#" class="footer-subject"><span class="footer-name blind">SK networks</span></a>
+                </div>
+                <div class="footer-body">
+                    <div class="section policy">
+                        <div class="section-wrap">
+                            <div class="section-head blind">운영 정책</div>
+                            <div class="section-body">
+                                <ul class="navi-list">
+                                    <li class="navi-item"><a href="#" class="navi-text privacy">개인정보처리방침</a></li>
+                                    <li class="navi-item"><a href="#" class="navi-text">사이트맵</a></li>
+                                    <li class="navi-item"><a href="https://ethics.sk.co.kr/" target="_blank" title="새창 열기" class="navi-text">제보하기</a></li>
+                                </ul>
+                                <ul class="info-list">
+                                    <!-- <li class="info-item ncsi"><span class="info-text blind">NCSI</span></li> -->
+                                    <li class="info-item isms" title="정보보호 관리체계(ISMS) 인증&#10;[인증범위] 온라인 서비스 운영(ERS, 수입차 부품 홍보 및 자동차부품 대리점 관리, 대리점 휴대폰 주문 및 악세사리 판매, ICT마케팅)&#10;[유효기간] 2021.12.15 ~ 2024.12.14">
+                                        <span class="info-text blind">정보보호 관리체계 ISMS 인증 마크</span>
+                                    </li>
+                                    <li class="info-item wa" title="웹접근성 인증">
+                                        <span class="info-text blind">웹접근성 인증 마크</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section info">
+                        <div class="section-wrap">
+                            <div class="section-head blind">기업정보</div>
+                            <div class="section-body">
+                                <ul class="data-list">
+                                    <li class="data-item"><span class="data-text">경기도 수원시 장안구 경수대로 976번길 19(송죽동)</span></li>
+                                    <li class="data-item"><span class="data-text">Tel : 070-7800-2114</span></li>
+                                    <li class="data-item"><span class="data-text">Copyright ⓒ 2024 by SK Networks Co. Ltd. All Rights Reserved</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section family-site">
+                        <button title="패밀리 사이트" aria-label="패밀리 사이트" aria-haspopup="true" class="btn-family">
+                            <span class="btn-text">패밀리 사이트</span>
+                        </button>
+                        <div class="site-area">
+                            <ul class="site-list">
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/" target="_blank" title="새창 열기" class="site">워커힐 호텔앤리조트</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/grandwalkerhillseoul/" target="_blank" title="새창 열기" class="site">그랜드 워커힐 서울</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/vistawalkerhillseoul/" target="_blank" title="새창 열기" class="site">비스타 워커힐 서울</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/about/CustomerService" target="_blank" title="새창 열기" class="site">워커힐 대외사업부</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.sknservice.com/index.do" target="_blank" title="새창 열기" class="site">SK네트웍스 서비스</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.skmagic.com/?_ga=2.199319278.1937658122.1716172891-198197358.1712136793" target="_blank" title="새창 열기" class="site">SK매직</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.speedmate.com/Company" target="_blank" title="새창 열기" class="site">SK스피드메이트</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://skelectlink.co.kr/" target="_blank" title="새창 열기" class="site">SK일렉링크</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.mintit.co.kr/" target="_blank" title="새창 열기" class="site">민팃</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.en-core.com/" target="_blank" title="새창 열기" class="site">엔코아</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://hico.vc/hico-ventures/" target="_blank" title="새창 열기" class="site">하이코캐피탈</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-to-top">
+                <button type="button" id="topBtn" class="top-btn">
+                    <span class="btn-text">Top</span>
+                </button>
+            </div>
+        </footer>
+        <!-- //page-foot -->
+    </div>
+</body>
+
+</html>

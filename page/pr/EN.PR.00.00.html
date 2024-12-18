@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SK Networks</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="SK Networks">
+    <!-- <link rel="shortcut icon" href="./../../assets/images/bui/favicon.ico"> -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+
+    <script src="./../../assets/js/jquery.js"></script>
+    <script src="./../../assets/js/gsap.min.js"></script>
+    <script src="./../../assets/js/ScrollTrigger.min.js"></script>
+    <script src="./../../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="./../../assets/js/swiper-bundle.min.js"></script>
+    <script src="./../../assets/js/common.js"></script>
+    <script src="./../../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            frontCommon.Html.reset();
+        });
+    </script>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            Tab();
+
+            //인트로 슬라이드
+            new Swiper(".pr-swiper2", {
+                effect: "fade",
+                fadeEffect: {
+                    crossFade: true
+                },
+                // loop: true,
+                a11y: true,
+                allowTouchMove: false,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            //영상 라이브러리 슬라이드
+            var prSwiper1 = new Swiper(".pr-swiper1", {
+                slidesPerView: 2,
+                slidesPerColumn: 2,
+                spaceBetween: 15,
+                allowTouchMove: false,
+                loop: false,
+                centeredSlides: false,
+                a11y: true,
+                navigation: {
+                    nextEl: ".pr-swiper-area .swiper-button-next",
+                    prevEl: ".pr-swiper-area .swiper-button-prev",
+                },
+                breakpoints: {
+                    280: {
+                        slidesPerView: 2,
+                        slidesPerColumn: 2,
+                        spaceBetween: 15,
+                        loop: false,
+                        centeredSlides: false,
+                        allowTouchMove: true,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 24,
+                        loop: true,
+                        centeredSlides: true,
+                        allowTouchMove: false,
+                    },
+                },
+            });
+
+            document.querySelector('.pr-swiper-area').addEventListener('click', function(e) {
+                if (e.target.closest(".swiper-slide-next")) {
+                    prSwiper1.slideNext();
+                } else if (e.target.closest(".swiper-slide-prev")) {
+                    prSwiper1.slidePrev();
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="en">
+    <div id="wrap">
+        <div class="skip">
+            <span class="blind">skip navigation</span>
+            <ul>
+                <li><a href="#naviMenu">Menu Shortcuts</a></li>
+                <li><a href="#main">Text Shortcuts</a></li>
+                <li><a href="#footer">Footer Information Shortcuts</a></li>
+            </ul>
+        </div>
+        <header class="light" id="header">
+            <div class="header-inner">
+                <h1 class="site-logo">
+                    <a href="javascript:void(0)" class="site-name">
+                        <span class="blind">SK Networks</span>
+                    </a>
+                </h1>
+                <div class="site-navi" id="naviMenu">
+                    <ul class="depth1-list">
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Company</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list ">
+                                    <li class="depth2-item ">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Company <br class="pc-only">Overview</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">CEO Message</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">History</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Global Networks</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Business</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Business Overview</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Global Investment</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">ICT Marketing</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2 spec">Walkerhill Hotels &amp; Resorts</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK Magic</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK Speedmate</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">SK Electlink</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Glowide</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">MINTIT</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">En-core</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">PhnyX Lab</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Sustainability</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Overview of <br class="pc-only">Sustainable<br class="pc-only"> Management</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Social Value</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Double Bottom Line</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Social Value <br class="pc-only">Performance</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Environment</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Environmental <br class="pc-only">Management</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Climate Change</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Society</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Employee Happiness</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Safety &amp; Health</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Stakeholder <br class="pc-only">Happiness</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Information Protection <br class="pc-only">and Security</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Governance</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Governance</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Ethical Management</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Investment <br class="pc-only">Management</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Data Center</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Sustainability Report <br class="pc-only">and Policy</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Certifications</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">IR</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Stocks</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Stock Prices</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Shareholder Return</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Finance</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Financial Status</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Audit Report</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">Credit Ratings</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">IR Information</a>
+                                        <div class="depth3-wrap">
+                                            <ul class="depth3-list">
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR Event</a>
+                                                </li>
+                                                <li class="depth3-item">
+                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR Materials</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">PR</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Newsroom</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Brand</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="depth1-item">
+                            <a href="javascript:void(0)" class="depth1">Career</a>
+                            <div class="depth2-wrap">
+                                <ul class="depth2-list">
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Business Culture</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Human Resource <br class="pc-only">Development</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Appraisal/<br class="pc-only">Remuneration</a>
+                                    </li>
+                                    <li class="depth2-item">
+                                        <a href="javascript:void(0)" target="_self" class="depth2">Recruitment information</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="site-util">
+                    <div class="util contact-wrap">
+                        <a href="javascript:void(0)" class="btn text design1 case2 color1 contact">
+                            <span class="btn-text">Contact</span>
+                        </a>
+                    </div>
+                    <div class="util lang" id="gnb_lang">
+                        <button title="language selection" aria-label="language selection" aria-haspopup="true" class="selected">
+                            <span class="select-text cur-lang">KR</span>
+                        </button>
+                        <div class="option-area">
+                            <ul class="option-list">
+                                <li class="option-item">
+                                    <a href="javascript:void(0)" class="option">KR</a>
+                                </li>
+                                <li class="option-item">
+                                    <a href="javascript:void(0)" class="option active">EN</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="site-control">
+                    <button class="btn icon case2 menu-header">
+                        <span class="btn-text blind">Open Menu</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="main pr news-room" id="main">
+            <div class="main-inner">
+                <div class="local design1">
+                    <div class="local-info">
+                        <ul class="data-list breadcrumb design1 case1 dark">
+                            <li class="data-item"><span class="item-text">Home</span></li>
+                            <li class="data-item"><span class="item-text">PR</span></li>
+                            <li class="data-item"><span class="item-text">Newsroom</span></li>
+
+                        </ul>
+                    </div>
+                    <div class="local-head design3">
+                        <div class="local-subject">
+                            <h2 class="local-name">Newsroom</h2>
+                        </div>
+                    </div>
+                    <div class="local-body">
+                        <div class="content-head">Newsroom page</div>
+                        <div class="content-body">
+                            <div class="section">
+                                <div class="section-body">
+                                    <div class="swiper-display swiper pr-swiper2">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <a href="javascript:void(0)">
+                                                    <div class="figure-wrap">
+                                                        <img src="../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                    </div>
+                                                    <div class="text-wrap">
+                                                        <div class="slide-head">
+                                                            <span class="cate">SK렌터카1</span>
+                                                            <h3 class="tit">SK렌터카, 'IF 디자인 어워드 2024' 본상 수상</h3>
+                                                        </div>
+                                                        <div class="slide-body">
+                                                            <p class="des">SK렌터카(대표이사:황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024＇에서 ＇플랫폼ㆍUI (사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
+                                                            <span class="date">2024.02.01</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="javascript:void(0)">
+                                                    <div class="figure-wrap">
+                                                        <img src="../../assets/images/ir/thumb-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                    </div>
+                                                    <div class="text-wrap">
+                                                        <div class="slide-head">
+                                                            <span class="cate">SK렌터카2</span>
+                                                            <h3 class="tit">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</h3>
+                                                        </div>
+                                                        <div class="slide-body">
+                                                            <p class="des">SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024’에서 ‘플랫폼·UI(사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
+                                                            <span class="date">2024.02.01</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="javascript:void(0)">
+                                                    <div class="figure-wrap">
+                                                        <img src="../../assets/images/pr/news-slide-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                    </div>
+                                                    <div class="text-wrap">
+                                                        <div class="slide-head">
+                                                            <span class="cate">SK렌터카3</span>
+                                                            <h3 class="tit">SK렌터카, 'IF 디자인 어워드 2024' 본상 수상</h3>
+                                                        </div>
+                                                        <div class="slide-body">
+                                                            <p class="des">SK렌터카(대표이사:황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024＇에서 ＇플랫폼ㆍUI (사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
+                                                            <span class="date">2024.02.01</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="javascript:void(0)">
+                                                    <div class="figure-wrap">
+                                                        <img src="../../assets/images/ir/thumb-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                    </div>
+                                                    <div class="text-wrap">
+                                                        <div class="slide-head">
+                                                            <span class="cate">SK렌터카4</span>
+                                                            <h3 class="tit">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</h3>
+                                                        </div>
+                                                        <div class="slide-body">
+                                                            <p class="des">SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024’에서 ‘플랫폼·UI(사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다.</p>
+                                                            <span class="date">2024.02.01</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="swiper-control">
+                                            <button class="btn icon case1 arrow-left2-bg swiper-button-prev"><span class="btn-text blind">PREV</span></button>
+                                            <button class="btn icon case1 arrow-right2-bg swiper-button-next"><span class="btn-text blind">NEXT</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section">
+                                <div class="section-body">
+                                    <div class="tab-display design1 case1 type1">
+                                        <div class="swiper tab-wrap">
+                                            <ul class="swiper-wrapper tab-list" role="tablist">
+                                                <li id="tab1" class="swiper-slide tab-item" aria-controls="tab-panel1">
+                                                    <button role="tab" class="tab-text">Press Release</button>
+                                                </li>
+                                                <!-- 소셜미디어 EN 삭제--> <!-- //소셜미디어 EN 삭제-->
+                                                <li id="tab3" class="swiper-slide tab-item" aria-controls="tab-panel3">
+                                                    <button role="tab" class="tab-text">Media Library</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel-display design1 case1">
+                                        <div class="panel-list">
+                                            <!-- 보도자료 -->
+                                            <div id="tab-panel1" class="panel-item" role="tabpanel">
+                                                <div class="panel-wrap">
+                                                    <div class="submit-form design1 case1 align2">
+                                                        <div class="form-list">
+                                                            <div class="form-item">
+                                                                <div class="form search design1 case1 type1">
+                                                                    <label for="temp-search" class="blind">
+                                                                        search
+                                                                    </label>
+                                                                    <input id="temp-search" class="input-elem" type="text" placeholder="Please enter keyword(s).">
+                                                                    <div class="input-icon">
+                                                                        <button class="btn icon case3 remove">
+                                                                            <span class="btn-text blind">delete</span>
+                                                                        </button>
+                                                                        <button class="btn icon case3 search">
+                                                                            <span class="btn-text blind">search</span>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-list design2 case1 type1">
+                                                        <a href="#" class="post-item">
+                                                            <div class="post-wrap">
+                                                                <div class="post-figure">
+                                                                    <img src="../../assets/images/ir/thumb-01.jpg" alt="ir뉴스 썸네일 이미지">
+                                                                </div>
+                                                                <div class="post-inform">
+                                                                    <div class="post-head">
+                                                                        <p class="post-caption">SK네트웍스</p>
+                                                                        <p class="post-subject">이호정 SK네트웍스 대표이사, 구성원들과 묘목 식재 활동</p>
+                                                                        <p class="post-summary">SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제
+                                                                        </p>
+                                                                    </div>
+                                                                    <p class="post-date" title="date">2024.03.19</p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" class="post-item">
+                                                            <div class="post-wrap">
+                                                                <div class="post-figure">
+                                                                    <img src="../../assets/images/ir/thumb-02.jpg" alt="ir뉴스 썸네일 이미지">
+                                                                </div>
+                                                                <div class="post-inform">
+                                                                    <div class="post-head">
+                                                                        <p class="post-caption">SK네트웍스</p>
+                                                                        <p class="post-subject">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</p>
+                                                                        <p class="post-summary">SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024’에서 ‘플랫폼·UI(사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다. ‘IF 디자인 어워드’는 독일 ‘인터내셔널 포럼 디자인’이 주관하는 디자인 공모전으로, 매년 50…
+                                                                        </p>
+                                                                    </div>
+                                                                    <p class="post-date" title="date">2024.03.19</p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" class="post-item">
+                                                            <div class="post-wrap">
+                                                                <div class="post-figure">
+                                                                    <img src="../../assets/images/ir/thumb-02.jpg" alt="ir뉴스 썸네일 이미지">
+                                                                </div>
+                                                                <div class="post-inform">
+                                                                    <div class="post-head">
+                                                                        <p class="post-caption">SK네트웍스</p>
+                                                                        <p class="post-subject">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</p>
+                                                                        <p class="post-summary">SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024’에서 ‘플랫폼·UI(사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다. ‘IF 디자인 어워드’는 독일 ‘인터내셔널 포럼 디자인’이 주관하는 디자인 공모전으로, 매년 50…
+                                                                        </p>
+                                                                    </div>
+                                                                    <p class="post-date" title="date">2024.03.19</p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <a href="#" class="post-item">
+                                                            <div class="post-wrap">
+                                                                <div class="post-figure">
+                                                                    <img src="../../assets/images/ir/thumb-02.jpg" alt="ir뉴스 썸네일 이미지">
+                                                                </div>
+                                                                <div class="post-inform">
+                                                                    <div class="post-head">
+                                                                        <p class="post-caption">SK네트웍스</p>
+                                                                        <p class="post-subject">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</p>
+                                                                        <p class="post-summary">SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 SK렌터카(대표이사 : 황일문)가 세계 3대 디자인 공모전 중 하나로 꼽히는 ‘IF 디자인 어워드 2024’에서 ‘플랫폼·UI(사용자 인터페이스)’ 부문 본상을 수상했다고 20일 밝혔다. ‘IF 디자인 어워드’는 독일 ‘인터내셔널 포럼 디자인’이 주관하는 디자인 공모전으로, 매년 50…
+                                                                        </p>
+                                                                    </div>
+                                                                    <p class="post-date" title="date">2024.03.19</p>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="btn-display case1 align3">
+                                                        <div class="btn-area">
+                                                            <a class="btn design3 case1 type1 color2 ar-icon-plus-bg" href="#"><span class="btn-text">View more</span></a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 검색결과 없음 -->
+                                                    <div class="no-result-wrap">
+                                                        <em class="no-result-title">No results found.</em>
+                                                    </div>
+                                                    <!-- //검색결과 없음 -->
+                                                </div>
+                                            </div>
+                                            <!-- //보도자료 -->
+                                            <!-- 소셜미디어 EN 삭제--> <!-- //소셜미디어 EN 삭제-->
+                                            <!-- 영상 라이브러리 -->
+                                            <div id="tab-panel3" class="panel-item" role="tabpanel">
+                                                <div class="panel-wrap">
+                                                    <div class="data-display video-layout">
+                                                        <div class="data-list">
+                                                            <div class="data-item">
+                                                                <div class="data-wrap">
+                                                                    <div class="data-figure">
+                                                                        <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/dcDCrAvMFm4" title="비대면으로 편리하게 중고폰 ATM, 민팃" aria-label="YouTube video: 비대면으로 편리하게 중고폰 ATM, 민팃" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen lang="ko"></iframe>
+                                                                    </div>
+                                                                    <div class="data-script">
+                                                                        <p class="head">비대면으로 편리하게 중고폰 ATM, 민팃</p>
+                                                                        <div class="body">
+                                                                            <p class="para">
+                                                                                영상 스크립트<br> 노출영역
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="data-swiper pr-swiper-area">
+                                                                        <div class="swiper-display swiper pr-swiper1">
+                                                                            <div class="swiper-wrapper">
+                                                                                <a href="#" class="swiper-slide">
+                                                                                    <div class="img">
+                                                                                        <img src="../../assets/images/pr/pr-video-thumb-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                                                    </div>
+                                                                                    <p class="para">
+                                                                                        1집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
+                                                                                    </p>
+                                                                                </a>
+                                                                                <a href="#" class="swiper-slide">
+                                                                                    <div class="img">
+                                                                                        <img src="../../assets/images/pr/pr-video-thumb-02.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                                                    </div>
+                                                                                    <p class="para">
+                                                                                        2집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
+                                                                                    </p>
+                                                                                </a>
+                                                                                <a href="#" class="swiper-slide">
+                                                                                    <div class="img">
+                                                                                        <img src="../../assets/images/pr/pr-video-thumb-01.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                                                    </div>
+                                                                                    <p class="para">
+                                                                                        3집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
+                                                                                    </p>
+                                                                                </a>
+                                                                                <a href="#" class="swiper-slide">
+                                                                                    <div class="img">
+                                                                                        <img src="../../assets/images/pr/pr-video-thumb-02.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                                                    </div>
+                                                                                    <p class="para">
+                                                                                        4집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
+                                                                                    </p>
+                                                                                </a>
+                                                                                <a href="#" class="swiper-slide">
+                                                                                    <div class="img">
+                                                                                        <img src="../../assets/images/pr/pr-video-thumb-02.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                                                    </div>
+                                                                                    <p class="para">
+                                                                                        5집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
+                                                                                    </p>
+                                                                                </a>
+                                                                                <a href="#" class="swiper-slide">
+                                                                                    <div class="img">
+                                                                                        <img src="../../assets/images/pr/pr-video-thumb-02.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                                                    </div>
+                                                                                    <p class="para">
+                                                                                        6집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
+                                                                                    </p>
+                                                                                </a>
+                                                                                <a href="#" class="swiper-slide">
+                                                                                    <div class="img">
+                                                                                        <img src="../../assets/images/pr/pr-video-thumb-02.jpg" alt="SK렌터카, 'IF 디자인 어워드 2024' 본상 수상">
+                                                                                    </div>
+                                                                                    <p class="para">
+                                                                                        7집에서도 5성급 호텔처럼 숙면하는 방법은? SK매직 워커힐 스위트 룸 매트리스 편
+                                                                                    </p>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="swiper-control">
+                                                                            <button class="btn icon case1 arrow-left2-bg swiper-button-prev"><span class="btn-text blind">PREV</span></button>
+                                                                            <button class="btn icon case1 arrow-right2-bg swiper-button-next"><span class="btn-text blind">NEXT</span></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- //영상 라이브러리 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- page-foot -->
+        <footer id="footer">
+            <div class="footer-inner">
+                <div class="footer-head">
+                    <a href="#" class="footer-subject"><span class="footer-name blind">SK networks</span></a>
+                </div>
+                <div class="footer-body">
+                    <div class="section policy">
+                        <div class="section-wrap">
+                            <div class="section-head blind">operational policy</div>
+                            <div class="section-body">
+                                <ul class="navi-list">
+                                    <li class="navi-item"><a href="#" class="navi-text privacy">Privacy Policy</a></li>
+                                    <li class="navi-item"><a href="#" class="navi-text">Sitemap</a></li>
+                                    <li class="navi-item"><a href="https://ethics.sk.co.kr/Main/Index" target="_blank" title="Opens in a new window." class="navi-text">Speak up</a></li>
+                                </ul>
+                                <ul class="info-list">
+                                    <li class="info-item isms"><span class="info-text blind" title="ISMS Popup">information security Management system mark</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section info">
+                        <div class="section-wrap">
+                            <div class="section-head blind">Corporate information</div>
+                            <div class="section-body">
+                                <ul class="data-list">
+                                    <li class="data-item"><span class="data-text">19, Gyeongsu-daero 976beon-gil, Jangan-gu, Suwon-si, Gyeonggi-do, Republic of Korea</span></li>
+                                    <li class="data-item"><span class="data-text">Tel : 070-7800-2114</span></li>
+                                    <li class="data-item"><span class="data-text">Copyright ⓒ 2024 by SK Networks Co. Ltd. All Rights Reserved.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section family-site">
+                        <button title="Family Site" aria-label="Family Site" aria-haspopup="true" class="btn-family">
+                            <span class="btn-text">Family Site</span>
+                        </button>
+                        <div class="site-area">
+                            <ul class="site-list">
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/en/" target="_blank" title="Opens in a new window." class="site">Walkerhill Hotels & Resorts</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/grandwalkerhillseoul/en/" target="_blank" title="Opens in a new window." class="site">Grand Walkerhill Seoul</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/vistawalkerhillseoul/en/" target="_blank" title="Opens in a new window." class="site">VISTA Walkerhill Seoul</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.walkerhill.com/en/about/CustomerService" target="_blank" title="Opens in a new window." class="site">Walkerhill External Business</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.sknservice.com/en/index.do" target="_blank" title="Opens in a new window." class="site">SK Networks Service</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://company.skmagic.com/en/" target="_blank" title="Opens in a new window." class="site">SK Magic</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.speedmate.com/Company" target="_blank" title="Opens in a new window." class="site">SK Speedmate</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://skelectlink.co.kr/" target="_blank" title="Opens in a new window." class="site">SK Electlink</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.mintit.co.kr/" target="_blank" title="Opens in a new window." class="site">MINTIT</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://www.en-core.com/?language=eng" target="_blank" title="Opens in a new window." class="site">En-core</a>
+                                </li>
+                                <li class="site-item">
+                                    <a href="https://hico.vc/hico-ventures/" target="_blank" title="Opens in a new window." class="site">HICO CAPITAL</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-to-top">
+                <button type="button" id="topBtn" class="top-btn">
+                    <span class="btn-text">Top</span>
+                </button>
+            </div>
+        </footer>
+        <!-- //page-foot -->
+    </div>
+</body>
+
+</html>
