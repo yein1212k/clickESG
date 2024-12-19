@@ -6,14 +6,13 @@ frontCommon.Html = (function () {
         reset: function () {
             frontCommonResize();
             //frontCommonScroll();
-            header();
-            footer();
-            localAnimations();
+            //header();
+            //footer();
+            //localAnimations();
             lenis();
-            business_Interaction();
-            scrollTopBtn();
+            //business_Interaction();
+            //scrollTopBtn();
         },
-
     };
     return instance;
   }
@@ -548,7 +547,7 @@ function Accordion() {
             function toggleAccordion() {
                 // this에 title 속성이 있는지 확인
                 let currentLabel = this.getAttribute("title");
-            
+
                 if (currentLabel) {
                     // "열기" 또는 "닫기"라는 텍스트가 포함된 경우 조건에 따라 title 값을 변경
                     if (currentLabel.includes("열기")) {
@@ -558,7 +557,7 @@ function Accordion() {
                     }
                 }
             }
-            
+
             button.addEventListener("click", toggleAccordion.bind(button));
 
             const accordionHeads = accordionItem.querySelectorAll(".accordion-head");
