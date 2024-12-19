@@ -9,6 +9,7 @@
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+
   &.module-a {
     display: inline-flex;
     align-items: center;
@@ -16,11 +17,17 @@
     text-align: center;
 
     &.style-a {
-      border: 0.1rem solid custom-color(typo, 000);
+      padding: 1.4rem 4.7rem;
+      @include font(small-4x, bold);
       border-radius: 3rem;
 
       &.color-a {
-
+        border: 0.1rem solid custom-color(neutral, 100);
+        color: custom-color(typo, 100);
+      }
+      &.color-b {
+        border: 0.1rem solid custom-color(neutral, 000);
+        color: custom-color(typo, 000);
       }
     }
   }
