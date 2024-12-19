@@ -2,6 +2,29 @@
 @use '../components/variables' as *;
 @use '../components/icons' as *;
 
-.main {
+.page-main {
     header {display: none;}
+
+    .section {
+        &.key-visual {
+            .section-wrap {
+                .section-head {
+
+                }
+                .section-body {
+                    .swiper-display {
+                        .swiper-list {
+                            &.bg {
+                                .swiper-wrapper {
+                                    .swiper-item {
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
