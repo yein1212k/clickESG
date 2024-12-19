@@ -2,9 +2,7 @@
 @use '../components/variables' as *;
 @use '../components/icons' as *;
 
-.page-main {
-    header {display: none;}
-
+.main {
     .section {
         &.key-visual {
             .section-wrap {
