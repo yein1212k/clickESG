@@ -34,6 +34,7 @@
 }
 
 // 반응형
+
 @mixin mobile2 {
     @media (max-width:#{$mobile-large - 1}) {
         @content;
@@ -68,16 +69,19 @@
         @content;
     }
 }
-
 @mixin iframe {
     @media (min-width:#{$tablet}) {
         @content;
-        width: calc(100% + 1.7rem);
-        margin-left: -0.85rem;
+        & {
+            width: calc(100% + 1.7rem);
+            margin-left: -0.85rem;
+        }
     }
     @media (max-width:#{$tablet - 1}) {
         @content;
-        width: 100%;
+        & {
+            width: 100%;
+        }
     }
 }
 // scroll
