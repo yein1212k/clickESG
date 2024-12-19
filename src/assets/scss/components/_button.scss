@@ -1,0 +1,27 @@
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+@use '../components/icons' as *;
+
+.btn {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  &.module-a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &.style-a {
+      border: 0.1rem solid custom-color(typo, 000);
+      border-radius: 3rem;
+
+      &.color-a {
+
+      }
+    }
+  }
+}
