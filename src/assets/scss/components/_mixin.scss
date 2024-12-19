@@ -11,6 +11,7 @@
     line-height: 1px;
     overflow: hidden;
     visibility: hidden;
+    clip: rect(0 0 0 0);
     clip: rect(0, 0, 0, 0);
     pointer-events: none;
 }
@@ -19,19 +20,66 @@
 @mixin ellipsis($line: 1) {
     @if $line ==1 {
         white-space: nowrap;
-        text-overflow: ellipsis;
         overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     @else {
         display: -webkit-box;
-        text-overflow: ellipsis;
         overflow: hidden;
+        text-overflow: ellipsis;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: $line;
     }
 }
 
+// 반응형
+@mixin mobile2 {
+    @media (max-width:#{$mobile-large - 1}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width:#{$tablet - 1}) {
+        @content;
+    }
+}
+
+@mixin web2 {
+    @media (max-width:#{$web-small - 1}) {
+        @content;
+    }
+}
+
+@mixin web {
+    @media (min-width:#{$tablet}) {
+        @content;
+    }
+}
+
+@mixin webSmall {
+    @media (max-width:#{$web-small - 1}) {
+        @content;
+    }
+}
+@mixin webLarge {
+    @media (min-width:#{$web-small}) {
+        @content;
+    }
+}
+
+@mixin iframe {
+    @media (min-width:#{$tablet}) {
+        @content;
+        width: calc(100% + 1.7rem);
+        margin-left: -0.85rem;
+    }
+    @media (max-width:#{$tablet - 1}) {
+        @content;
+        width: 100%;
+    }
+}
 // scroll
 @mixin scroll-x {
     width: calc(100% + 3.6rem);
@@ -67,9 +115,4 @@
         background-color: #D5D4D9;
         border-radius: 5rem;
     }
-}
-
-@mixin font($size, $weight: regular) {
-    font-weight: map-get($font-weight, $weight);
-    font-size: map-get($font-size, $size);
 }

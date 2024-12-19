@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_guide.head.ejs', {
+	pageJavascript: ''
+}) %>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+	Accordion();
+})
+</script>
+</head>
+<body>
+<div id="wrap">
+	<div id="guide-list">
+		<%-include('../_templates/_guide.header.ejs') %>
+		<!-- page-body -->
+		<div class="page-body">
+			<!-- local-head -->
+			<div class="local-head">
+				<h2 class="local-subject">
+					<span class="local-name">Accoridion</span>
+				</h2>
+			</div>
+			<!-- //local-head -->
+			<!-- local-body -->
+			<div class="local-body">
+				<!-- section -->
+				<div class="section accordion-guide">
+					<div class="section-head">
+						<h4 class="section-subject"><span class="section-name">accordion display</span></h4>
+						<p class="section-desc">접근성을 위해 <span class="accent case4">title</span> 을 사용하여 현재 아코디언의 상태(열림, 닫힘)를 정의하고,<br> 아코디언 head의 <span class="accent case4">aria-controls</span>과 아코디언 body의 id를 같은 값으로 연결하여 어떤 요소에 대한 컨트롤인지 참조합니다.</p>
+					</div>
+					<div class="section-body">
+						<div class="subsection">
+							<div class="subsection-head">아코디언 demo</div>
+							<div class="subsection-body">
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;div class=&quot;accordion-display design1 case1 type1&quot;&gt;
+	&lt;div class=&quot;accordion-list&quot;&gt;
+		&lt;div class=&quot;accordion-item&quot;&gt;
+			&lt;div class=&quot;accordion-head&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn&quot; aria-label=&quot;열림&quot; aria-controls=&quot;accordionCont1&quot;&gt;
+					&lt;span class=&quot;btn-text&quot;&gt;Accordion Component&lt;/span&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;accordion-body&quot; id=&quot;accordionCont1&quot;&gt;
+				&lt;div class=&quot;accordion-inner&quot;&gt;
+					...
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;accordion-item&quot;&gt;
+			&lt;div class=&quot;accordion-head&quot;&gt;
+				&lt;button type=&quot;button&quot; class=&quot;btn&quot; aria-label=&quot;열림&quot; aria-controls=&quot;accordionCont2&quot;&gt;
+					&lt;span class=&quot;btn-text&quot;&gt;Accordion Component&lt;/span&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;accordion-body&quot; id=&quot;accordionCont2&quot;&gt;
+				&lt;div class=&quot;accordion-inner&quot;&gt;
+					...
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<!-- //highlight-js -->
+                                <div class="guide-accordion-area">
+									<!-- accordion-display -->
+                                    <div class="accordion-display design1 case1 type1">
+										<div class="accordion-list">
+											<div class="accordion-item">
+												<div class="accordion-wrap">
+													<div class="accordion-head">
+														<button type="button" class="btn" aria-label="열림" aria-controls="accordionCont1"><span class="btn-text">accordionCont1</span></button>
+													</div>
+													<div class="accordion-body" id="accordionCont1">
+														accordionCont1 body. Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Dignissimos, suscipit neque error doloribus quia impedit exercitationem sapiente voluptates nemo totam.
+													</div>
+												</div>
+											</div>
+											<div class="accordion-item">
+												<div class="accordion-wrap">
+													<div class="accordion-head">
+														<button type="button" class="btn" aria-label="열림" aria-controls="accordionCont2"><span class="btn-text">accordionCont2</span></button>
+													</div>
+													<div class="accordion-body" id="accordionCont2">
+														accordionCont2 body. Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br> Dignissimos, suscipit neque error doloribus quia impedit exercitationem sapiente voluptates nemo totam.
+													</div>
+												</div>
+											</div>
+										</div>
+                                    </div>
+									<!-- //accordion-display -->
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //section -->
+				<!-- section -->
+				<div class="section accordion-guide">
+					<div class="section-head">
+						<h4 class="section-subject"><span class="section-name">common.js</span></h4>
+					</div>
+					<div class="section-body">
+						<div class="subsection">
+							<div class="subsection-head" style="display: flex; align-items: center; justify-content: space-between;">
+								<em class="subject" style="font-weight: 700; font-size: 24px; line-height: 150%;">Code</em>
+								<div class="subsection-util">
+									<div class="btn-area">
+										<a class="btn" href="https://codepen.io/PIX-the-bold/pen/mdZxQvK" target="_blank" title="새창 열기" style="display: inline-flex; padding: 6px 16px 7px; background: #FFFFFF; border: 1px solid #CDCDCD; border-radius: 2px;"><span class="btn-text" style="font-weight: 400; font-size: 15px; line-height: 150%;">View Code</span></a>
+									</div>
+								</div>
+							</div>
+							<div class="subsection-body">
+<!-- highlight-js -->
+<pre class="highlight-js"><code class="html">&lt;div class=&quot;form-row10&quot;&gt;
+	&lt;div class=&quot;file-text01&quot; id=&quot;attachFileListWrap&quot;&gt;&#54028;&#51068;&#51012; &#52628;&#44032;&#54644; &#51452;&#49464;&#50836;&lt;/div&gt;
+	&lt;span class=&quot;btn-unit080&quot;&gt;
+		&lt;label for=&quot;inputAttachFile&quot; class=&quot;txt01&quot;&gt;&#54028;&#51068;&#52628;&#44032;&lt;/label&gt;
+		&lt;input type=&quot;file&quot; id=&quot;inputAttachFile&quot; class=&quot;text01&quot;&gt;
+	&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+<!-- //highlight-js -->
+                            </div>
+						</div>
+					</div>
+				</div>
+				<!-- //section -->
+			</div>
+			<!-- //local-body -->
+		</div>
+		<!-- //page-body -->
+		<%-include('../_templates/_guide.footer.ejs') %>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%-include('../_templates.en/_head.ejs', {
+	layoutTemplate: 'front',
+	pageJavascript: ''
+}) %>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        input();
+    });
+</script>
+</head>
+<body class="en">
+<div id="wrap">
+    <%-include('../_templates.en/_header.ejs', {
+        type: 'light',
+    }) 
+    %>
+    <div class="main etc sk-inquiry" id="main">
+        <div class="main-inner">
+            <div class="local design1">
+                <%-include('../_templates.en/_local-info.ejs', {
+                    depth1: 'InquiriesㆍSuggestions',
+                    depth2: 'SK networks InquiriesㆍSuggestions',
+                    depth3: null,
+                }) %>
+                <div class="local-head design3"> 
+                    <div class="local-subject">
+                        <h2 class="local-name">Inquiries<br class="mo-only">ㆍ<br class="mo-only">Suggestions</h2>
+                    </div>
+                </div>
+                <div class="local-body">
+                    <div class="content-head">InquiriesㆍSuggestions</div>
+                    <div class="content-body">
+                        <div class="section design1 case1 type1 align2">
+                            <div class="section-wrap">
+                                <div class="section-caption required-caption">
+                                    <span class="caption">*Required Entry Items</span>
+                                </div>
+                                <div class="section-body">
+                                    <div class="data-display inquiry-form">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="data-head">
+                                                    <strong class="data-name">
+                                                        Name<span class="required">*</span>
+                                                    </strong>
+                                                </div>
+                                                <div class="data-body">
+                                                    <div class="form input design1 case1 type1" style="width: 100%;">
+                                                        <label for="name" class="blind">Enter Name</label>
+                                                        <input id="name" class="input-elem" type="text" placeholder="Please enter your name.">
+                                                        <div class="input-icon">
+                                                            <button class="btn icon case3 remove">
+                                                                <span class="btn-text blind">remove</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-text error">
+                                                        <p class="comment design1">* Please enter your name.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item email">
+                                                <div class="data-head">
+                                                    <strong class="data-name">
+                                                        E-mail<span class="required">*</span>
+                                                    </strong>
+                                                </div>
+                                                <div class="data-body">
+                                                    <div class="form-bundle">
+                                                        <div class="form input design1 case1 type1 email1 pc-only" style="width: 37.3rem;">
+                                                            <label for="email1" class="blind">Enter E-mail</label>
+                                                            <input id="email1" class="input-elem" type="text" placeholder="Please enter your E-mail.">
+                                                            <div class="input-icon">
+                                                                <button class="btn icon case3 remove">
+                                                                    <span class="btn-text blind">remove</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form input design1 case1 type1 email1 mo-only">
+                                                            <label for="email-mo" class="blind mo-only">Enter E-mail</label>
+                                                            <input id="email-mo" class="input-elem mo-only" type="text" placeholder="Please enter your E-mail.">
+                                                            <div class="input-icon">
+                                                                <button class="btn icon case3 remove">
+                                                                    <span class="btn-text blind">remove</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <span class="sign pc-only">@</span>
+                                                        <div class="form input design1 case1 type1 email2 pc-only" style="width: 18.4rem;">
+                                                            <label for="email2" class="blind">Enter E-mail</label>
+                                                            <input id="email2" class="input-elem" type="text" readonly>
+                                                            <div class="input-icon">
+                                                                <button class="btn icon case3 remove">
+                                                                    <span class="btn-text blind">remove</span>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form select design1 case1 type1 pc-only" style="width: 18.3rem;">
+                                                            <label for="temp" class="blind">Label</label>
+                                                            <select name="name" id="temp">
+                                                                <option value="option1">select</option>
+                                                                <option value="option2">naver.com</option>
+                                                                <option value="option3">daum.net</option>
+                                                                <option value="option4">nate.com</option>
+                                                                <option value="option5">hotmail.com</option>
+                                                                <option value="option5">yahoo.com</option>
+                                                                <option value="option5">empas.com</option>
+                                                                <option value="option5">korea.com</option>
+                                                                <option value="option5">dreamwiz.com</option>
+                                                                <option value="option5">gmail.com</option>
+                                                                <option value="option5">Other</option>
+                                                            </select>
+                                                            <div class="arrow"><span class="blind">Close</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-text error">
+                                                        <p class="comment design1">* Please enter your E-mail.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item inquiry-sort">
+                                                <div class="data-head">
+                                                    <strong class="data-name">
+                                                        Inquiry Type<span class="required">*</span>
+                                                    </strong>
+                                                </div>
+                                                <div class="data-body">
+                                                    <div class="form radio design1 case2 type1">
+                                                        <ul class="radio-list">
+                                                            <li class="radio-item">
+                                                                <label for="inquiry">
+                                                                    <input type="radio" name="inquiry-radio" value="r1" id="inquiry" checked="">
+                                                                    <span class="option">Inquiries</span>
+                                                                </label>
+                                                            </li>
+                                                            <li class="radio-item">
+                                                                <label for="proposal">
+                                                                    <input type="radio" name="inquiry-radio" value="r2" id="proposal">
+                                                                    <span class="option">Suggestions</span>
+                                                                </label>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <p class="para">For faster assistance, please use the Customer Inquiry Page of the relevant brand.</p>
+                                                    <div class="btn-display">
+                                                        <a class="btn design3 case2 type3 color4 ar-icon-arrow-right2" href="#">
+                                                            <span class="btn-text">Go to Brand-specific Customer Inquiry</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item business-ph">
+                                                <div class="data-head">
+                                                    <strong class="data-name">
+                                                        Business Site Name &amp; Contact Info.
+                                                    </strong>
+                                                </div>
+                                                <div class="data-body">
+                                                    <div class="form input design1 case1 type1" style="width: 100%;">
+                                                        <label for="phone" class="blind">Enter Business Site Name &amp; Contact Info.</label>
+                                                        <input id="phone" class="input-elem" type="text" placeholder="Please enter the contents.">
+                                                        <div class="input-icon">
+                                                            <button class="btn icon case3 remove">
+                                                                <span class="btn-text blind">remove</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="bullet-display design1 case1 type1">
+                                                        <ul class="data-list">
+                                                            <li class="data-item">To expedite the process, please provide your contact information(E-mail) and the name of the relevant business site.</li>
+                                                            <li class="data-item">Your contact information(E-mail) will be deleted immediately after we response to your inquiry.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="data-head">
+                                                    <strong class="data-name">
+                                                        Subject<span class="required">*</span>
+                                                    </strong>
+                                                </div>
+                                                <div class="data-body">
+                                                    <div class="form input design1 case1 type1" style="width: 100%;">
+                                                        <label for="title" class="blind">Enter Subject</label>
+                                                        <input id="title" class="input-elem" type="text" placeholder="Please enter the subject.">
+                                                        <div class="input-icon">
+                                                            <button class="btn icon case3 remove">
+                                                                <span class="btn-text blind">remove</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-text error">
+                                                        <p class="comment design1">* Please enter the subject.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item inquiry-contents">
+                                                <div class="data-head">
+                                                    <strong class="data-name">
+                                                        Content<span class="required">*</span>
+                                                    </strong>
+                                                </div>
+                                                <div class="data-body">
+                                                    <div class="form textArea">
+                                                        <label for="inquiry-contents"></label>
+                                                        <textarea name="contents" id="inquiry-contents" cols="20" rows="4" placeholder="Please enter the content of your inquiry."></textarea>
+                                                    </div>
+                                                    <div class="form-text error">
+                                                        <p class="comment design1">* Please enter the content of your inquiry.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section design1 case2 type2 align1">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <h4 class="section-name">
+                                            Consent to the Collection &amp; Use of Personal Information
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="section-body">
+                                    <div class="t-display design1 case1 type1 align3 pc-only">
+                                        <table style="min-width: 580px;" class="col-w-1">
+                                            <caption>This table provides personal information collection and consent to use and consists of classification, collection items, purpose of use, use, and retention period.</caption>
+                                            <colgroup>
+                                                <col class="col1">
+                                                <col class="col2">
+                                                <col class="col3">
+                                                <col class="col4">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Type</th>
+                                                    <th scope="col">Collection Item</th>
+                                                    <th scope="col">Purpose of Use</th>
+                                                    <th scope="col">Term of Use &amp; Retention</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td rowspan="2">Required</td>
+                                                    <td>Name</td>
+                                                    <td>User identification for service use</td>
+                                                    <td rowspan="3" class="accent color7">Retain for 1 year, then delete</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>E-mail</td>
+                                                    <td>To respond to inquiries</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Optional</td>
+                                                    <td>Contact Info.</td>
+                                                    <td>To respond to inquiries</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="data-display onePair-table mo-only">
+                                        <div class="data-head">
+                                            <strong class="table-title">Required</strong>
+                                        </div>
+                                        <div class="data-list">
+                                            <div class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <div class="data-tr">
+                                                            <span class="data-th">Collection Item</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <div class="data-tr">
+                                                            <span class="data-th">Name</span>
+                                                            <span class="data-th">E-mail</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data-list">
+                                            <div class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <div class="data-tr">
+                                                            <span class="data-th">Purpose of Use</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <div class="data-tr">
+                                                            <span class="data-th">User identification for service use</span>
+                                                            <span class="data-th">To respond to inquiries</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="data-list last">
+                                            <div class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <div class="data-tr">
+                                                            <span class="data-th">Term of Use &amp; Retention</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <div class="data-tr">
+                                                            <span class="data-th color1">Retain for 1 year, then delete</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+									</div>
+                                    <div class="data-display onePair-table mo-only">
+                                        <div class="data-head">
+                                            <strong class="table-title">Optional</strong>
+                                        </div>
+										<div class="data-list">
+											<div class="data-item">
+												<div class="data-wrap">
+													<div class="data-head">
+														<div class="data-tr">
+															<span class="data-th">Collection Item</span>
+														</div>
+													</div>
+													<div class="data-body">
+														<div class="data-tr">
+															<span class="data-th">Contact Info.</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="data-list">
+											<div class="data-item">
+												<div class="data-wrap">
+													<div class="data-head">
+														<div class="data-tr">
+															<span class="data-th">Purpose of Use</span>
+														</div>
+													</div>
+													<div class="data-body">
+														<div class="data-tr">
+															<span class="data-th">To respond to inquiries</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="data-list last">
+											<div class="data-item">
+												<div class="data-wrap">
+													<div class="data-head">
+														<div class="data-tr">
+															<span class="data-th">Term of Use &amp; Retention</span>
+														</div>
+													</div>
+													<div class="data-body">
+														<div class="data-tr">
+															<span class="data-th color1">Retain for 1 year, then delete</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+                                    <div class="data-display design1 type5 consent-use">
+                                        <div class="data-list">
+                                            <div class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <div class="data-subject"> 
+                                                            <span class="data-split">I</span>
+                                                            <div class="form radio design1 case2 type2">
+                                                                <ul class="radio-list">
+                                                                    <li class="radio-item">
+                                                                        <label for="agree1">
+                                                                            <input type="radio" name="consentToUse1" value="r1" id="agree1">
+                                                                            <span class="option">consent</span>
+                                                                        </label>
+                                                                    </li>
+                                                                    <li class="radio-item">
+                                                                        <label for="disagree1">
+                                                                            <input type="radio" name="consentToUse1" value="r2" id="disagree1" checked="">
+                                                                            <span class="option">do not consent</span>
+                                                                        </label>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="data-split">to the collection and use of required information.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <p class="comment design1">* You have the right to refuse to consent; however, refusal will prevent the registration and processing of your inquiry.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="data-item">
+                                                <div class="data-wrap">
+                                                    <div class="data-head">
+                                                        <div class="data-subject"> 
+                                                            <span class="data-split">I</span>
+                                                            <div class="form radio design1 case2 type2">
+                                                                <ul class="radio-list">
+                                                                    <li class="radio-item">
+                                                                        <label for="agree2">
+                                                                            <input type="radio" name="consentToUse2" value="r1" id="agree2">
+                                                                            <span class="option">consent</span>
+                                                                        </label>
+                                                                    </li>
+                                                                    <li class="radio-item">
+                                                                        <label for="disagree2">
+                                                                            <input type="radio" name="consentToUse2" value="r2" id="disagree2" checked="">
+                                                                            <span class="option">do not consent</span>
+                                                                        </label>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <span class="data-split">to the collection and use of optional information.</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="data-body">
+                                                        <p class="comment design1">* You have the right to refuse to consent; refusal will not affect your ability to register and process your inquiry.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section design1 case5 type2 align1">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <h4 class="section-name">
+                                            Notice on Outsourcing of Personal Information Handling
+                                        </h4>
+                                        <p class="section-summary">SK Networks Co., Ltd. Primarily manages and handles the collected personal information in-house. However, to ensure efficient business operations, we may outsource all or part of these tasks to the companies listed below during the specified retention period.</p>
+                                    </div>
+                                </div>
+                                <div class="section-body scroll">
+                                    <div class="t-display design1 case1 type1 align3 pc-only">
+                                        <table style="min-width: 390px;" class="col-w-2">
+                                            <caption>This table provides information on personal information handling consignment and consists of trustees and processing consignment tasks.</caption>
+                                            <colgroup>
+                                                <col class="col1">
+                                                <col class="col2">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Outsourcing Contractors</th>
+                                                    <th scope="col">Outsourced Task Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>SK C&amp;C</td>
+                                                    <td>Information system processing and maintenance</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PENTABREED</td>
+                                                    <td>Website operation and management</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="data-display onePair-table mo-only">
+										<div class="data-list">
+											<div class="data-item">
+												<div class="data-wrap">
+													<div class="data-head">
+														<div class="data-tr">
+															<span class="data-th">Outsourcing Contractors</span>
+														</div>
+													</div>
+													<div class="data-body">
+														<div class="data-tr">
+															<span class="data-th">SK C&amp;C</span>
+															<span class="data-th">PENTABREED</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="data-list">
+											<div class="data-item">
+												<div class="data-wrap">
+													<div class="data-head">
+														<div class="data-tr">
+															<span class="data-th">Outsourced Task Description</span>
+														</div>
+													</div>
+													<div class="data-body">
+														<div class="data-tr">
+															<span class="data-th">Information system processing and maintenance</span>
+															<span class="data-th">Website operation and management</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-display case1 type1 align3">
+                            <div class="btn-area">
+                                <a class="btn design1 case1 type1 color1" href="#">
+                                    <span class="btn-text">Go to Inquiry</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%-include('../_templates.en/_footer.ejs')%>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs', {
+	layoutTemplate: 'front',
+	pageJavascript: ''
+}) %>
+</head>
+<body class="kr">
+<div id="wrap">
+    <%-include('../_templates/_header.ejs', {
+        type: 'light',
+    }) 
+    %>
+    <div class="main ir stock-info ir-news" id="main">
+        <div class="main-inner">
+            <div class="local design1">
+                <%-include('../_templates/_local-info.ejs', {
+                    depth1: 'IR',
+                    depth2: 'IR정보',
+                    depth3: 'IR 뉴스',
+                }) %>
+                <div class="local-head design3"> 
+                    <div class="local-subject">
+                        <h2 class="local-name">IR 뉴스</h2>
+                    </div>
+                </div>
+                <div class="local-body">
+                    <div class="content-head">IR 뉴스 페이지</div>
+                    <div class="content-body">
+                        <div class="section design3 case1 type1">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <h4 class="section-name">IR 뉴스</h4>
+                                    <div class="section-util">
+                                        <div class="submit-form design1 case1 align1">
+                                            <div class="form-list">
+                                                <div class="form-item">
+                                                    <div class="form select design1 case1 type1">
+                                                        <label for="temp" class="blind">분류 선택</label>
+                                                        <select name="name" id="temp">
+                                                            <option value="option1">제목</option>
+                                                            <option value="option2">내용</option>
+                                                        </select>
+                                                        <div class="arrow"><span class="blind">닫힘</span></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-item">
+                                                    <div class="form search design1 case1 type1">
+                                                        <label for="temp-search" class="blind">
+                                                            검색어 입력
+                                                        </label>
+                                                        <input id="temp-search" class="input-elem" type="text" placeholder="검색어를 입력하세요.">
+                                                        <div class="input-icon">
+                                                            <button class="btn icon case3 remove">
+                                                                <span class="btn-text blind">삭제</span>
+                                                            </button>
+                                                            <button class="btn icon case3 search">
+                                                                <span class="btn-text blind">검색</span>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section-body">
+                                    <div class="post-list design1 case1 type1">
+                                        <a href="#" class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/ir/thumb-01.jpg" alt="ir뉴스 썸네일 이미지">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-caption">SK네트웍스</p>
+                                                    <p class="post-subject">이호정 SK네트웍스 대표이사, 구성원들과 묘목 식재 활동</p>
+                                                </div>
+                                                <p class="post-date" title="등록일">2024.03.19</p>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/ir/thumb-02.jpg" alt="ir뉴스 썸네일 이미지">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-caption">SK렌터카</p>
+                                                    <p class="post-subject">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</p>
+                                                </div>
+                                                <p class="post-date" title="등록일">2024.03.19</p>
+                                            </div>
+                                        </a>
+                                            <a href="#" class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/ir/thumb-03.jpg" alt="ir뉴스 썸네일 이미지">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-caption">SK네트웍스</p>
+                                                    <p class="post-subject">이호정 SK네트웍스 대표이사, 구성원들과 묘목 식재 활동</p>
+                                                </div>
+                                                <p class="post-date" title="등록일">2024.03.19</p>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/ir/thumb-04.jpg" alt="ir뉴스 썸네일 이미지">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-caption">워커힐</p>
+                                                    <p class="post-subject">이호정 SK네트웍스 대표이사, 구성원들과 묘목 식재 활동</p>
+                                                </div>
+                                                <p class="post-date" title="등록일">2024.03.19</p>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/ir/thumb-05.jpg" alt="ir뉴스 썸네일 이미지">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-caption">SK네트웍스</p>
+                                                    <p class="post-subject">이호정 SK네트웍스 대표이사, 구성원들과 묘목 식재 활동</p>
+                                                </div>
+                                                <p class="post-date" title="등록일">2024.03.19</p>
+                                            </div>
+                                        </a>
+                                            <a href="#" class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/ir/thumb-06.jpg" alt="ir뉴스 썸네일 이미지">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-caption">기타</p>
+                                                    <p class="post-subject">벚꽃 성지 ‘워커힐 호텔앤리조트’, 설레는 봄을 만끽하는 ‘2024년 행사</p>
+                                                </div>
+                                                <p class="post-date" title="등록일">2024.03.19</p>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/ir/thumb-07.jpg" alt="ir뉴스 썸네일 이미지">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-caption">SK네트웍스</p>
+                                                    <p class="post-subject">이호정 SK네트웍스 대표이사, 구성원들과 묘목 식재 활동</p>
+                                                </div>
+                                                <p class="post-date" title="등록일">2024.03.19</p>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/ir/thumb-08.jpg" alt="ir뉴스 썸네일 이미지">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-caption">SK렌터카</p>
+                                                    <p class="post-subject">SK렌터카, 창립 36주년 맞아 전사 봉사활동 실시</p>
+                                                </div>
+                                                <p class="post-date" title="등록일">2024.03.19</p>
+                                            </div>
+                                        </a>
+                                            <a href="#" class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/ir/thumb-03.jpg" alt="ir뉴스 썸네일 이미지">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-caption">SK네트웍스</p>
+                                                    <p class="post-subject">이호정 SK네트웍스 대표이사, 구성원들과 묘목 식재 활동</p>
+                                                </div>
+                                                <p class="post-date" title="등록일">2024.03.19</p>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/ir/thumb-01.jpg" alt="ir뉴스 썸네일 이미지">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-caption">SK네트웍스</p>
+                                                    <p class="post-subject">이호정 SK네트웍스 대표이사, 구성원들과 묘목 식재 활동</p>
+                                                </div>
+                                                <p class="post-date" title="등록일">2024.03.19</p>
+                                            </div>
+                                        </a>
+                                        <a href="#" class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/ir/thumb-02.jpg" alt="ir뉴스 썸네일 이미지">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-caption">SK네트웍스</p>
+                                                    <p class="post-subject">이호정 SK네트웍스 대표이사, 구성원들과 묘목 식재 활동</p>
+                                                </div>
+                                                <p class="post-date" title="등록일">2024.03.19</p>
+                                            </div>
+                                        </a>
+                                            <a href="#" class="post-item">
+                                            <div class="post-wrap">
+                                                <div class="post-figure">
+                                                    <img src="../../assets/images/ir/thumb-03.jpg" alt="ir뉴스 썸네일 이미지">
+                                                </div>
+                                                <div class="post-head">
+                                                    <p class="post-caption">기타</p>
+                                                    <p class="post-subject">이호정 SK네트웍스 대표이사, 구성원들과 묘목 식재 활동</p>
+                                                </div>
+                                                <p class="post-date" title="등록일">2024.03.19</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="section-util">
+                                        <div class="pagination design1 case1">
+                                            <span class="page-util">
+                                                <span class="util-item disabled">
+                                                    <a class="btn icon case1 arrow-left2-bg" href="#"><span class="btn-text blind">이전</span></a>
+                                                </span>
+                                            </span>
+                                            <span class="page-list">
+                                                <a class="page-item current" href="#">1</a>
+                                                <a class="page-item" href="#">2</a>
+                                                <a class="page-item" href="#">3</a>
+                                                <a class="page-item" href="#">4</a>
+                                                <a class="page-item" href="#">5</a>
+                                            </span>
+                                            <span class="page-util">
+                                                <span class="util-item">
+                                                    <a class="btn icon case1 arrow-right2-bg" href="#"><span class="btn-text blind">다음</span></a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- 검색결과 없음 -->
+                                    <div class="no-result-wrap">
+                                        <em class="no-result-title">검색된 결과가 없습니다.</em>
+                                    </div>
+                                    <!-- //검색결과 없음 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%-include('../_templates/_footer.ejs')%>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%-include('../_templates.en/_head.ejs', {
+	layoutTemplate: 'front',
+	pageJavascript: ''
+}) %>
+
+</head>
+<body class="en">
+<div id="wrap">
+    <%-include('../_templates.en/_header.ejs', {
+        type: 'light',
+    }) 
+    %>
+    <div class="main ir stock-info ir-dart" id="main">
+        <div class="main-inner">
+            <div class="local design1">
+                <%-include('../_templates.en/_local-info.ejs', {
+                    caseType: 'design1',
+                    depth1: 'IR',
+                    depth2: '공시정보',
+                    depth3: '전자공시(DART)',
+                }) %>
+                <div class="local-head design3"> 
+                    <div class="local-subject">
+                        <h2 class="local-name">전자공시(DART)</h2>
+                    </div>
+                </div>
+                <div class="local-body">
+                    <div class="content-head">전자공시 페이지</div>
+                    <div class="content-body">
+                        <div class="section design1 case1 type1">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <h4 class="section-name">전자공시(DART)</h4>
+                                        <div class="section-summary">
+                                            <div class="btn-display design1 case3 align1">
+                                                <div class="btn-area">
+                                                    <a class="btn design3 case2 type3 color5 ar-icon-download" href="https://www.sknetworks.co.kr/upload_skn/(SKN%EC%82%AC%EA%B7%9C-II-25)_%EA%B3%B5%EC%8B%9C%EC%A0%95%EB%B3%B4%EA%B4%80%EB%A6%AC%EA%B7%9C%EC%A0%95.pdf" download><span class="btn-text">공시정보관리규정</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="section-body">
+									<!-- Iframe 연동 -->
+									<iframe title="전자공시 정보" src="https://ir.gsifn.io/sknetworks/ir2_notices.html" allowfullscreen></iframe>
+									<!-- //Iframe 연동 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%-include('../_templates.en/_footer.ejs')%>
+</div>
+</body>
+
+</html>

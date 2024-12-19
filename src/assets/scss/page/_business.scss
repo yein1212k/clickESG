@@ -1,0 +1,1352 @@
+#wrap {
+    .business {
+        &:not(.overview) {
+            .local-figure {
+                max-width: 100%;
+            }
+        }
+        .content-body {
+            background-color: color(system, 070);
+            .section {
+                .section-wrap {
+                    .article {
+                        .article-head {
+                            .title {
+                                @include web {
+                                    @include font(large-3x, bold);
+                                }
+                                @include mobile {
+                                    @include font(medium, bold);
+                                }
+                            }
+                        }
+                        &.intro {
+                            .article-wrap {
+                                .title {
+                                    color: color(typo, 000);
+                                    @include web {
+                                        @include font(large-3x, bold);
+                                        ~.para {
+                                            padding-top: 2.4rem;
+                                        }
+                                    }
+                                    @include mobile {
+                                        @include font(medium, bold);
+                                        ~.para {
+                                            padding-top: 1.6rem;
+                                        }
+                                    }
+                                    ~.sub-title {
+                                        @include web {
+                                            padding-top: 2.4rem;
+                                        }
+                                        @include mobile {
+                                            padding-top: 1.6rem;
+                                        }
+                                    }
+                                }
+                                .sub-title {
+                                    color: color(typo, 000);
+                                    @include web {
+                                        @include font(medium, bold);
+                                    }
+                                    @include mobile {
+                                        @include font(small-2x, bold);
+                                    }
+                                }
+                                .article-head {
+                                    ~.article-body {
+                                        @include web {
+                                            margin-top: 6.4rem;
+                                        }
+                                        @include mobile {
+                                            margin-top: 3.2rem;
+                                        }
+                                    }
+                                }
+                                .article-body {
+                                    position: relative;
+                                    .title {
+                                        @include web {
+                                            padding-top: 6.4rem;
+                                        }
+                                        @include mobile {
+                                            padding-top: 3.2rem;
+                                        }
+                                        ~.para {
+                                            @include web {
+                                                padding-top: 2.4rem;
+                                            }
+                                            @include mobile {
+                                                padding-top: 1.6rem;
+                                            }
+                                        }
+                                    }
+                                    .para {
+                                        color: color(neutral, 040);
+                                        &.case1 {
+                                            @include web {
+                                                @include font(small-1x, bold);
+                                            }
+                                        }
+                                        &.case2 {
+                                            @include web {
+                                                @include font(small-3x, medium);
+                                            }
+                                        }
+                                        ~.para {
+                                            @include web {
+                                                padding-top: 1.6rem;
+                                            }
+                                            @include mobile {
+                                                padding-top: 1.2rem;
+                                            }
+                                        }
+                                        @include web {
+                                            padding-top: 8rem;
+                                        }
+                                        @include mobile {
+                                            padding-top: 4.8rem;
+                                            @include font(small-4x, medium);
+                                        }
+                                    }
+                                    + .article-util {
+                                        margin-top: 8rem;
+                                    }
+                                    @include web {
+                                        padding-top: 60rem;
+                                    }
+                                    @include mobile {
+                                        padding-top: 28rem;
+                                        + .article-util {
+                                            margin-top: 4.8rem;
+                                        }
+                                    }
+                                    
+                                    &::before {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        content: '';
+                                        clip-path: inset(0% 25% 0% 25% round 1.6rem);
+                                        opacity: 0;
+                                        transition: 1.4s cubic-bezier(0, 0, 0.2, 1);
+                                        @include web {
+                                            height: 60rem;
+                                        }
+                                        @include mobile {
+                                            height: 28rem;
+                                        }
+                                    }
+                                }
+                            }
+                            &.active {
+                                .article-wrap {
+                                    .article-body {
+                                        &::before {
+                                            opacity: 1;
+                                            clip-path: inset(0% 0% 0% 0% round 1.6rem);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.major {
+                            .article-wrap {
+                                .article-head {
+                                    // overflow: hidden;
+                                    .title {
+                                        // transform: translateY(105%);
+                                        // transition: transform 1.4s cubic-bezier(0, 0, 0.2, 1);
+                                    }
+                                    ~.article-body {
+                                        padding-top: 4rem;
+                                        @include mobile {
+                                            padding-top: 2.4rem;
+                                        }
+                                    }
+                                    @include web {
+                                        text-align: center;
+                                    }
+                                }
+                                .article-body {
+                                    .board-list {
+                                        .board-item {
+                                            transform: translateY(20%);
+                                            opacity: 0;
+                                            transition: 1.4s cubic-bezier(0, 0, 0.2, 1);
+                                            @for $i from 1 through 4 {
+                                                &:nth-child(#{$i}) {
+                                                    transition-delay: $i * 0.2s;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &.active {
+                                .article-wrap {
+                                    .article-head {
+                                        .title {
+                                            // transform: translateY(0);
+                                        }
+                                    }
+                                    .article-body {
+                                        .board-list {
+                                            .board-item {
+                                                transform: translateY(0);
+                                                opacity: 1;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.hico {
+                            .article-head {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                gap: 4.8rem;
+                                .info-wrap {
+                                    width: 100%;
+                                    flex-shrink: 0;
+                                    .title {
+                                        ~.para {
+                                            padding-top: 2.4rem;
+                                        }
+                                    }
+                                    .para {
+                                        color: color(typo, 000);
+                                        @include web {
+                                            @include font(small-2x, bold);
+                                        }
+                                        @include mobile {
+                                            @include font(small-4x, medium);
+                                        }
+                                    }
+                                    @include web {
+                                        max-width: 48.4rem;
+                                    }
+                                }
+                                .figure-wrap {
+                                    position: relative;
+                                    opacity: 0;
+                                    transition: opacity 1s cubic-bezier(0, 0, 0.2, 1);
+                                    img {
+                                        position: absolute;
+                                        transition: 1s cubic-bezier(0, 0, 0.2, 1);
+                                        &.hyper {
+                                            top: 8%;
+                                            left: 50%;
+                                            transform: translateX(-50%);
+                                        }
+                                        &.intel {
+                                            bottom: 5%;
+                                            left: 5%;
+                                        }
+                                        &.eco {
+                                            right: 5%;
+                                            bottom: 5%;
+                                        }
+                                        @include web {
+                                            width: 23.2rem;
+                                            height: 20rem;
+                                        }
+                                        @include mobile {
+                                            width: 13rem;
+                                            height: 11.2rem;
+                                        }
+                                    }
+                                    &::before {
+                                        display: block;
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        content: '';
+                                        animation: rotate 17s linear infinite;
+                                        animation-delay: 0.8s;
+                                        animation-play-state: paused;
+                                        transform-origin: 50% 58.5%;
+                                        @include web {
+                                            background: url("../../assets/images/business/figure-hico-circle.svg") no-repeat center 78%;
+                                        }
+                                        @include mobile {
+                                            background: url("../../assets/images/business/figure-hico-circle.svg") no-repeat center 78% / 19.5rem;
+                                        }
+                                    }
+                                    @keyframes rotate {
+                                        100% {
+                                            transform: rotate(360deg);
+                                        }
+                                    }
+                                    @include web {
+                                        width: 57.8rem;
+                                        height: 49.5rem;
+                                        margin: 0 1.1rem;
+                                    }
+                                    @include mobile {
+                                        width: 100%;
+                                        height: 27.9rem;
+                                        max-width: 33.9rem;
+                                    }
+                                }
+                                @include web {
+                                    ~.article-body {
+                                        padding-top: 20rem;
+                                    }
+                                }
+                                @include mobile {
+                                    flex-direction: column;
+                                    ~.article-body {
+                                        padding-top: 9.6rem;
+                                    }
+                                }
+                            }
+                            .article-body {
+                                .board-item {
+                                    opacity: 0;
+                                    transform: translateY(80%);
+                                    transition: 1s cubic-bezier(0, 0, 0.2, 1);
+                                    @for $i from 1 through 3 {
+                                        &:nth-child(#{$i}) {
+                                            transition-delay: ($i - 1) * 0.2s;
+                                        }
+                                    }
+                                }
+                            }
+                            &.active1 {
+                                .article-head {
+                                    .figure-wrap {
+                                        opacity: 1;
+                                        overflow: hidden;
+                                        img {
+                                            &.hyper {
+                                                top: 0;
+                                            }
+                                            &.intel {
+                                                bottom: 0;
+                                                left: 0;
+                                            }
+                                            &.eco {
+                                                right: 0;
+                                                bottom: 0;
+                                            }
+                                        }
+                                        &::before {
+                                            animation-play-state: running;
+                                        }
+                                    }
+                                }
+                            }
+                            &.active2 {
+                                .article-body {
+                                    .board-item {
+                                        transform: translateY(0);
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        &.history {
+                            .article-head {
+                                text-align: center;
+                                .title {
+                                    ~.para {
+                                        @include web {
+                                            padding-top: 2.4rem;
+                                        }
+                                        @include mobile {
+                                            padding-top: 1.6rem;
+                                        }
+                                    }
+                                }
+                                .para {
+                                    color: color(neutral, 040);
+                                    @include web {
+                                        @include font(small-2x, bold);
+                                    }
+                                    @include mobile {
+                                        @include font(small-4x, medium);
+                                    }
+                                }
+                                ~.article-body {
+                                    @include web {
+                                        padding-top: 6.4rem;
+                                    }
+                                    @include mobile {
+                                        padding-top: 3.2rem;
+                                    }
+                                }
+                            }
+                            .article-body {
+                                .history-list {
+                                    display: flex;
+                                    .history-item {
+                                        display: flex;
+                                        background: linear-gradient(180deg, #9735D0 0%, rgba(118, 41, 163, 0.56) 50%, rgba(77, 27, 106, 0.00) 100%);
+                                        color: color(typo, 000);
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        border-radius: 50%;
+                                        transform: translateY(30%);
+                                        opacity: 0;
+                                        transition: 1.4s cubic-bezier(0, 0, 0.2, 1);
+                                        @for $i from 1 through 3 {
+                                            &:nth-child(#{$i}) {
+                                                transition-delay: $i * 0.2s;
+                                            }
+                                        }
+                                        .date {
+                                            display: inline-block;
+                                            +.para {
+                                                padding-top: 0.4rem;
+                                            }
+                                            @include web {
+                                                @include font(medium, extrabold);
+                                            }
+                                            @include mobile {
+                                                @include font(small-1x, extrabold);
+                                            }
+                                        }
+                                        .para {
+                                            .note {
+                                                display: block;
+                                                text-align: center;
+                                                padding-top: 0.4rem;
+                                                @include web {
+                                                    @include font(small-5x, bold);
+                                                }
+                                                @include mobile {
+                                                    @include font(small-6x, bold);
+                                                }
+                                            }
+                                            @include web {
+                                                @include font(small-1x, bold);
+                                            }
+                                            @include mobile {
+                                                @include font(small-2x, bold);
+                                            }
+                                        }
+                                        @include web {
+                                            width: 30rem;
+                                            height: 30rem;
+                                            +.history-item {
+                                                margin-left: 6.4rem;
+                                            }
+                                        }
+                                        @include mobile {
+                                            width: 24rem;
+                                            height: 24rem;
+                                            +.history-item {
+                                                margin-top: 1.2rem;
+                                            }
+                                        }
+                                    }
+                                    @include web {
+                                        padding: 2.4rem 0;
+                                        justify-content: center;
+                                    }
+                                    @include mobile {
+                                        padding: 1.6rem 0;
+                                        flex-direction: column;
+                                        align-items: center;
+                                    }
+                                }
+                            }
+                            &.active {
+                                .article-body {
+                                    .history-list {
+                                        .history-item {
+                                            transform: translateY(0);
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        @include web {
+                            +.article {
+                                margin-top: 16rem;
+                            }
+                        }
+                        @include mobile {
+                            +.article {
+                                margin-top: 8rem;
+                            }
+                        }
+                    }
+                    .section-util {
+                        @include web {
+                            margin-top: 8rem;
+                        }
+                    }
+                }
+                &.core {
+                    background-color: color(secondary, 080);
+                    box-shadow: 0 4.7rem 2.8rem 0 rgba(0, 0, 0, 0.05), 0 2.1rem 2.1rem 0 rgba(0, 0, 0, 0.09);
+                    .comment {
+                        display: inline-block;
+                        color: color(neutral, 040);
+                    }
+                    .section-wrap {
+                        margin: 0 auto;
+                        max-width: 123.6rem;
+                        .article {
+                            padding: 0 1.8rem;
+                            .article-head {
+                                .title {
+                                    color: color(typo, 000);
+                                }
+                            }
+                        }
+                        @include web {
+                            padding: 16rem 0;
+                        }
+                        @include mobile {
+                            padding: 8rem 0;
+                        }
+                    }
+                    @include web {
+                        border-radius: 0 0 6rem 6rem;
+                    }
+                    @include mobile {
+                        border-radius: 0 0 1.6rem 1.6rem;
+                    }
+                }
+                &.portfolio {
+                    .section-wrap {
+                        .article {
+                            .article-head {
+                                padding: 0 1.8rem;
+                                margin: 0 auto;
+                                max-width: 123.6rem;
+                                .title {
+                                    color: color(typo, 020);
+                                    ~.investment {
+                                        @include web {
+                                            padding-top: 8rem;
+                                        }
+                                        @include mobile {
+                                            padding-top: 4.8rem;
+                                        }
+                                    }
+                                    @include mobile {
+                                        text-align: center;
+                                        @include font(small-1x, bold);
+                                    }
+                                }
+                                .investment {
+                                    transform: translateY(20%);
+                                    opacity: 0;
+                                    transition: 1.4s cubic-bezier(0, 0, 0.2, 1);
+                                }
+                                @include web {
+                                    margin-bottom: 16rem;
+                                }
+                                @include mobile {
+                                    margin-bottom: 8rem;
+                                }
+                            }
+                            .article-body {
+                                background-color: color(system, 070);
+                                transition: 1.4s cubic-bezier(0, 0, 0.2, 1);
+                                @include web {
+                                    padding-top: 16rem;
+                                    clip-path: inset(0% 7% 0% 7% round 4.8rem);
+                                }
+                                @include mobile {
+                                    padding-top: 8rem;
+                                    clip-path: inset(0% 0% 0% 0% round 1.6rem);
+                                }
+                            }
+                        }
+                    }
+                    &.active1 {
+                        .section-wrap {
+                            .article {
+                                .article-head {
+                                    .investment {
+                                        transform: translateY(0);
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.active2 {
+                        .section-wrap {
+                            .article {
+                                .article-body {
+                                    @include web {
+                                        clip-path: inset(0% 0% 0% 0% round 4.8rem);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.banner-section,
+                &.press {
+                    background-color: color(system, 070);
+                    .section-wrap {
+                        padding: 0 1.8rem;
+                        margin: 0 auto;
+                        max-width: 123.6rem;
+                    }
+                }
+                &.business-profile {
+                    .data-display {
+                        .data-list {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            .data-item {
+                                position: relative;
+                                width: calc((100% - 4rem) / 3);
+                                height: 19.8rem;
+                                border-radius: 1.6rem;
+                                overflow: hidden;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                background-position: center;
+                                >a {
+                                    display: inline-block;
+                                    width: 100%;
+                                    height: 100%;
+                                    .data-title {
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        width: 100%;
+                                        color: color(system, 070);
+                                        text-align: center;
+                                        transform: translate(-50%, -50%);
+                                        @include font(small-1x, bold);
+                                    }
+                                }
+                                &::before {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    content: '';
+                                    background-color: color(system, 100, 0.5);
+                                    pointer-events: none;
+                                }
+                                &:nth-child(n+4) {
+                                    margin-top: 2rem;
+                                } 
+                                &.invest {
+                                    background-image: url("../../assets/images/business/profile1-figure.jpg");
+                                }
+                                &.infocom {
+                                    background-image: url("../../assets/images/business/profile2-figure.jpg");
+                                }
+                                &.hotel {
+                                    background-image: url("../../assets/images/business/profile3-figure.jpg");
+                                }
+                                &.rental {
+                                    background-image: url("../../assets/images/business/profile4-figure.jpg");
+                                }
+                                &.mobility {
+                                    background-image: url("../../assets/images/business/profile5-figure.jpg");
+                                }
+                                &.trading {
+                                    background-image: url("../../assets/images/business/profile6-figure.jpg");
+                                }
+                                &.ai {
+                                    background-image: url("../../assets/images/business/profile7-figure.jpg");
+                                }
+
+                                // focus 아웃라인
+                                &:has(a:focus-visible) {
+                                    outline: 5px dotted color(neutral,100); //어두운 이미지는 outline이 잘 안보여서 dotted로 처리함
+                                }
+                            }
+                        }
+                        @include mobile {
+                            .data-list {
+                                .data-item {
+                                    width: calc((100% - 1.6rem) / 2);
+                                    height: 9rem;
+                                    border-radius: 0.8rem;
+                                    >a {
+                                        .data-title {
+                                            width: 100%;
+                                            text-align: center;
+                                            @include font(small-4x, bold);
+                                        }
+                                    }
+                                    &:nth-child(n+3) {
+                                        margin-top: 1.6rem;
+                                    } 
+                                }
+                            }
+                        }
+                    }
+                }
+                +.section {
+                    @include web {
+                        padding-top: 16rem;
+                    }
+                    @include mobile {
+                        padding-top: 8rem;
+                    }
+                }
+                .comment-wrap {
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 1.6rem;
+                }
+            }
+        }
+        &#main:not(.overview) {
+            padding: 0;
+            .content-body {
+                &::after {
+                    display: block;
+                    width: 100%;
+                    content: '';
+                    background-color: color(system, 070);
+                    @include web {
+                        height: 16rem;
+                    }
+                    @include mobile {
+                        height: 8rem;
+                    }
+                }
+            }
+        }
+        &.overview {
+            .local-body {
+                @include web {
+                    padding-top: 16rem;
+                }
+                @include mobile {
+                    padding-top: 8rem;
+                }
+            }
+            .section {
+                width: 100%;
+                margin: 0 auto;
+                max-width: 120rem;
+                .section-head {
+                    position: relative;
+                    padding-bottom: 46.4rem;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: bottom;
+                    &::after {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 40rem;
+                        content: '';
+                        @include mobile {
+                            height: 18rem;
+                        }
+                    }
+                }
+                .section-body {
+                    .board-list {
+                        display: block;
+                        .board-item {
+                            width: 100%;
+                            border-radius: 16px;
+                            background-color: color(system, 070);
+                            box-shadow: 0 0.1336rem 0.5342rem 0 color(system, 100, 0.1);
+                            .board-wrap {
+                                position: relative;
+                                padding: 4rem;
+                                .board-head {
+                                    .board-name {
+                                        display: flex;
+                                        color: color(primary, 080);
+                                        align-items: center;
+                                        @include font(small-1x, bold);
+                                        .btn {
+                                            margin-left: 2.4rem;
+                                        }
+                                        +.board-summary {
+                                            padding-top: 2.4rem;
+                                        }
+                                    }
+                                    .board-summary {
+                                        color: color(typo, 010);
+                                        @include font(small-3x, medium);
+                                    }
+                                    ~.board-body { 
+                                        padding-top: 4rem;
+                                    }
+                                    ~.board-util {
+                                        padding-top: 4rem;
+                                    }
+                                }
+                                .board-body {
+                                    .board-list-sub {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        .board-item-sub {
+                                            display: flex;
+                                            width: calc((100% - 2rem) / 2);
+                                            padding: 2.4rem;
+                                            flex-direction: column;
+                                            justify-content: center;
+                                            border-radius: .8rem;
+                                            background-color: color(secondary, 070);
+                                            .board-name-sub {
+                                                display: inline-block;
+                                                color: color(typo, 010);
+                                                @include font(small-4x, bold);
+                                                +.para {
+                                                    padding-top: 1.2rem;
+                                                }
+                                            }
+                                            .para {
+                                                color: color(typo, 010);
+                                                @include font(small-3x, bold);
+                                            }
+                                            &:nth-child(2n) {
+                                                margin-left: 2rem;
+                                            }
+                                            &:nth-child(n+3) {
+                                                margin-top: 2rem;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            +.board-item {
+                                margin-top: 4rem;
+                            }
+                        }
+                    }
+    
+                }
+                &.business-profile {
+                    .section-head {
+                        padding-bottom: 0;
+                    }
+                }
+                &.invest {
+                    .section-head {
+                        &::after {
+                            background: url("../../assets/images/business/bg-invest-pc.jpg") no-repeat center/cover;
+                            clip-path: inset(0% 0% 0% 0% round 1.6rem);
+                        }
+                    }
+                }
+                &.infocom {
+                    .section-head {
+                        &::after {
+                            background: url("../../assets/images/business/bg-infocom-pc.jpg") no-repeat center/cover;
+                            clip-path: inset(0% 0% 0% 0% round 1.6rem);
+                        }
+                    }
+    
+                    //accordion
+                    .section-body {
+                        .board-list {
+                            .board-item {
+                                .board-wrap {
+                                    .board-head {
+                                        .board-summary {
+                                            @include web {
+                                                padding-right: 22rem;
+                                            }
+                                        }
+                                    }
+                                    .board-body {
+                                        padding-top: 0 !important;
+                                        .board-list-sub {
+                                            .accordion-display {
+                                                width: 100%;
+                                                .accordion-item {
+                                                    width: 100%;
+                                                    .accordion-head {
+                                                        position: absolute;
+                                                        top: 7.7rem;
+                                                        right: 4rem;
+                                                        width: 11rem;
+                                                        .btn {
+                                                            .btn-text {
+                                                                justify-content: end;
+                                                            }
+                                                        }
+                                                    }
+                                                    .accordion-body {
+                                                        .accordion-body-inner {
+                                                            display: flex;
+                                                            padding-top: 4rem;
+                                                        }
+                                                    }
+                                                    &.active {
+                                                        .accordion-head {
+                                                            .btn.design3.ar-icon-arrow-down1 {
+                                                                .btn-text::after {
+                                                                    transform: rotate(180deg);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.hotel {
+                    .section-head {
+                        &::after {
+                            background: url("../../assets/images/business/bg-hotel-pc.jpg") no-repeat center/cover;
+                            clip-path: inset(0% 0% 0% 0% round 1.6rem);
+                        }
+                    }
+                }
+                &.rental {
+                    .section-head {
+                        &::after {
+                            background: url("../../assets/images/business/bg-rental-pc.jpg") no-repeat bottom/cover;
+                            clip-path: inset(0% 0% 0% 0% round 1.6rem);
+                        }
+                    }
+                }
+                &.mobility {
+                    .section-head {
+                        &::after {
+                            background: url("../../assets/images/business/bg-mobility-pc.jpg") no-repeat center/cover;
+                            clip-path: inset(0% 0% 0% 0% round 1.6rem);
+                        }
+                    }
+                }
+                &.trading {
+                    .section-head {
+                        &::after {
+                            background: url("../../assets/images/business/bg-trading-pc.jpg") no-repeat center/cover;
+                            clip-path: inset(0% 0% 0% 0% round 1.6rem);
+                        }
+                    }
+                }
+                &.ai {
+                    .section-head {
+                        &::after {
+                            background: url("../../assets/images/business/bg-ai-pc.jpg") no-repeat center/cover;
+                            clip-path: inset(0% 0% 0% 0% round 1.6rem);
+                        }
+                    }
+                    .section-body {
+                        .board-list {
+                            .board-item {
+                                .board-wrap {
+                                    .board-body {
+                                        .board-list-sub {
+                                            .board-item-sub {
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @include mobile {
+                .section {
+                    .section-head {
+                        padding-bottom: 21.2rem;
+                    }
+                    .section-body {
+                        .board-list {
+                            .board-item {
+                                .board-wrap {
+                                    padding: 2.4rem;
+                                    .board-head {
+                                        .board-name {
+                                            justify-content: space-between;
+                                            @include font(small-2x, bold);
+                                        }
+                                        .board-summary {
+                                            @include font(small-4x, medium);
+                                        }
+                                        ~.board-body {
+                                            padding-top: 3.2rem;
+                                        }
+                                        ~.board-util {
+                                            padding-top: 3.2rem;
+                                        }
+                                    }
+                                    .board-body {
+                                        .board-list-sub {
+                                            flex-direction: column;
+                                            .board-item-sub {
+                                                width: 100%;
+                                                padding: 1.6rem;
+                                                .board-name-sub {
+                                                    @include font(small-6x, bold);
+                                                    +.para {
+                                                        padding-top: 0.8rem;
+                                                    }
+                                                }
+                                                .para {
+                                                    @include font(small-4x, bold);
+                                                }
+                                                +.board-item-sub {
+                                                    margin-top: 0.8rem;
+                                                    margin-left: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                +.board-item {
+                                    margin-top: 2.4rem;
+                                }
+                            }
+                        }
+                    }
+                    &.invest {
+                        .section-head {
+                            &::after {
+                                background: url("../../assets/images/business/bg-invest-mo.jpg") no-repeat center/cover;
+                                clip-path: inset(0% 0% 0% 0% round 0.8rem);
+                            }
+                        }
+                    }
+                    &.infocom {
+                        .section-head {
+                            &::after {
+                                background: url("../../assets/images/business/bg-infocom-mo.jpg") no-repeat center/cover;
+                                clip-path: inset(0% 0% 0% 0% round 0.8rem);
+                            }
+                        }
+                        //accordion
+                        .section-body {
+                            .board-list {
+                                .board-item {
+                                    .board-wrap {
+                                        .board-body {
+                                            .board-list-sub {
+                                                .accordion-display {
+                                                    .accordion-item {
+                                                        .accordion-head {
+                                                            @include mobile {
+                                                                position: relative;
+                                                                top: auto;
+                                                            }
+                                                        }
+                                                        .accordion-body {
+                                                            @include mobile {
+                                                                height: auto;
+                                                                .accordion-body-inner {
+                                                                    flex-direction: column;
+                                                                    padding-top: 3.2rem;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.hotel {
+                        .section-head {
+                            &::after {
+                                background: url("../../assets/images/business/bg-hotel-mo.jpg") no-repeat center/cover;
+                                clip-path: inset(0% 0% 0% 0% round 0.8rem);
+                            }
+                        }
+                    }
+                    &.rental {
+                        .section-head {
+                            &::after {
+                                background: url("../../assets/images/business/bg-rental-mo.jpg") no-repeat center/cover;
+                                clip-path: inset(0% 0% 0% 0% round 0.8rem);
+                            }
+                        }
+                    }
+                    &.mobility {
+                        .section-head {
+                            &::after {
+                                background: url("../../assets/images/business/bg-mobility-mo.jpg") no-repeat center/cover;
+                                clip-path: inset(0% 0% 0% 0% round 0.8rem);
+                            }
+                        }
+                    }
+                    &.trading {
+                        .section-head {
+                            &::after {
+                                background: url("../../assets/images/business/bg-trading-mo.jpg") no-repeat center/cover;
+                                clip-path: inset(0% 0% 0% 0% round 0.8rem);
+                            }
+                        }
+                    }
+                    &.ai {
+                        .section-head {
+                            &::after {
+                                background: url("../../assets/images/business/bg-ai-mo.jpg") no-repeat center/cover;
+                                clip-path: inset(0% 0% 0% 0% round 0.8rem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.globalInvestment {
+            .content-body {
+                background-color: color(secondary, 070);
+                .section {
+                    .article {
+                        &.intro {
+                            .article-wrap {
+                                .article-body::before {
+                                    @include web {
+                                        background: url("../../assets/images/business/bg-intro-section-globalInvestment-pc.jpg") no-repeat center/cover;
+                                    }
+                                    @include mobile {
+                                        background: url("../../assets/images/business/bg-intro-section-globalInvestment-mo.jpg") no-repeat center/cover;
+                                    }
+                                }
+                            }
+                        }
+                        &.major {
+                            @include web {
+                                padding: 8rem 0;
+                            }
+                        }
+                    }
+                    .comment {
+                        color: color(typo, 010);
+                        .mail {
+                            text-decoration: underline;
+                            vertical-align: top;
+                        }
+                    }
+                }
+            }
+        }
+        &.infocom {
+            .content-body {
+                .section {
+                    .article {
+                        &.intro {
+                            .article-wrap {
+                                .article-body::before {
+                                    @include web {
+                                        background: url("../../assets/images/business/bg-intro-section-infoCom-pc.jpg") no-repeat center/cover;
+                                    }
+                                    @include mobile {
+                                        background: url("../../assets/images/business/bg-intro-section-infoCom-mo.jpg") no-repeat center/cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.hotel {
+            .content-body {
+                .section {
+                    .article {
+                        &.intro {
+                            .article-wrap {
+                                .article-body::before {
+                                    @include web {
+                                        background: url("../../assets/images/business/bg-intro-section-hotel-pc.jpg") no-repeat center/cover
+                                    }
+                                    @include mobile {
+                                        background: url("../../assets/images/business/bg-intro-section-hotel-mo.jpg") no-repeat center/cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.skmagic {
+            .content-body {
+                .section {
+                    .article {
+                        &.intro {
+                            .article-wrap {
+                                .article-body::before {
+                                    @include web {
+                                        background: url("../../assets/images/business/bg-intro-section-skMagic-pc.jpg") no-repeat center/cover;                                    }
+                                    @include mobile {
+                                        background: url("../../assets/images/business/bg-intro-section-skMagic-mo.jpg") no-repeat center/cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.electlink {
+            .content-body {
+                .section {
+                    .article {
+                        &.intro {
+                            .article-wrap {
+                                .article-body::before {
+                                    @include web {
+                                        background: url("../../assets/images/business/bg-intro-section-electLink-pc.jpg") no-repeat center/cover;
+                                    }
+                                    @include mobile {
+                                        background: url("../../assets/images/business/bg-intro-section-electLink-mo.jpg") no-repeat center/cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.banner-section {
+                        .banner-head {
+                            width: 10.4rem;
+                            >img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.speedmate {
+            .content-body {
+                .section {
+                    .article {
+                        &.intro {
+                            .article-wrap {
+                                .article-body::before {
+                                    @include web {
+                                        background: url("../../assets/images/business/bg-intro-section-speedmate-pc.jpg") no-repeat center/cover;
+                                    }
+                                    @include mobile {
+                                        background: url("../../assets/images/business/bg-intro-section-speedmate-pc.jpg") no-repeat center/cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.banner-section {
+                        .banner-head {
+                            img {
+                                width: 10.9rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.globalTrading {
+            .content-body {
+                .section {
+                    .article {
+                        &.intro {
+                            .article-wrap {
+                                .article-body::before {
+                                    @include web {
+                                        background: url("../../assets/images/business/bg-intro-section-globalTrading-pc.jpg") no-repeat center/cover;
+                                    }
+                                    @include mobile {
+                                        background: url("../../assets/images/business/bg-intro-section-globalTrading-mo.jpg") no-repeat center/cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.mintit {
+            .content-body {
+                .section {
+                    .article {
+                        &.intro {
+                            .article-wrap {
+                                .article-body::before {
+                                    @include web {
+                                        background: url("../../assets/images/business/bg-intro-section-mintit-pc.jpg") no-repeat center/cover;
+                                    }
+                                    @include mobile {
+                                        background: url("../../assets/images/business/bg-intro-section-mintit-mo.jpg") no-repeat center/cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.encore {
+            .content-body {
+                .section {
+                    .article {
+                        &.intro {
+                            .article-wrap {
+                                .article-body::before {
+                                    @include web {
+                                        background: url("../../assets/images/business/bg-intro-section-encore-pc.jpg") no-repeat center/cover;
+                                    }
+                                    @include mobile {
+                                        background: url("../../assets/images/business/bg-intro-section-encore-mo.jpg") no-repeat center/cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.phnyxLab {
+            .content-body {
+                .section {
+                    .article {
+                        &.intro {
+                            .article-wrap {
+                                .article-body::before {
+                                    @include web {
+                                        background: url("../../assets/images/business/bg-intro-section-phnyxLab-pc.jpg") no-repeat center/cover;
+                                    }
+                                    @include mobile {
+                                        background: url("../../assets/images/business/bg-intro-section-phnyxLab-mo.jpg") no-repeat center/cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include mobile {
+            .content-body {
+                .section {
+                    .section-head {
+                        ~.section-util {
+                            padding-top: 4.8rem;
+                        }
+                    }
+                    &.major {
+                        padding: 4.8rem 0;
+                    }
+                }
+            }
+        }
+    }
+    &:has(.main.business:not(.overview)) {
+        overflow: unset;
+    }
+}

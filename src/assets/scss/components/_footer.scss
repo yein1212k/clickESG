@@ -1,32 +1,335 @@
+
 #footer {
+    position: relative;
     width: 100%;
-    height: 10rem;
-    position: absolute;
-    bottom: 0;
-    
-    .footer-inner {
-        min-width: 98rem;
-        height: 10rem;
-        margin: 0 46rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-top: 1px solid color(gray,200);
+    padding: 6rem 6rem 4rem 6rem;
+    background-image: url(../images/common/bg-footer-pc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    z-index: 99;
+    @include mobile {
+        padding: 4rem 1.8rem;
+        background-image: url(../images/common/bg-footer-mo.jpg);
+    }
+
+   .footer-inner {
+        position: relative;
+        width: 100%;
         .footer-head {
+            position: absolute;
+            top: 0.4rem;
+            left: 0;
+            width: 18rem;
+            height: 6.4rem;
+            z-index: 1;
+            @include mobile {
+                position: static;
+                width: 11.8rem;
+                height: 4.2rem;
+            }
             .footer-subject {
-                color: color(gray,500);
-                @include font(small-6x,regular);
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-image: url(../images/logo/logo-w-e.svg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                box-sizing: border-box;
+            }
+
+            & + .footer-body {
+                @include mobile {
+                    margin-top: 4rem;
+                }
             }
         }
         .footer-body {
-            .company {
-                display: block;
-                width: 16rem;
-                height: 2.1rem;
-                background-image: url('../../assets/images/logo/logo-pentabreed.svg');
-                background-size: 100% 100%;
-                background-repeat: no-repeat;
+            .section {
+                &.policy {
+                    width: 100%;
+                    padding-left: 18rem;
+                    @include mobile {
+                        padding-left: 0;
+                    }
+                    .section-wrap {
+                        .section-body {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                            @include mobile {
+                                flex-direction: row;
+                                justify-content: space-between;
+                            }
+                            .navi-list {
+                                display: flex;
+                                @include mobile {
+                                    flex-direction: column;
+                                }
+                                .navi-item {
+                                    position: relative;
+                                    .navi-text {
+                                        color: color(neutral, 050);
+                                        @include font(small-4x, medium); 
+                                        &.privacy {
+                                            color: color(typo, 000);
+                                            @include font(small-4x, bold); 
+                                        }
+                                        @include mobile {
+                                            @include font(small-5x, bold);
+                                        }
+                                    }
+                                    & + .navi-item {
+                                        margin-left: 3rem;
+                                        @include mobile {
+                                            margin: 1.8rem 0 0 0;
+                                        }
+                                        &::before {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: -1.5rem;
+                                            width: 0.1rem;
+                                            height: 1rem;
+                                            content: '';
+                                            transform: translateY(-50%);
+                                            background-color: color(neutral, 060);
+                                            opacity: 0.2;
+
+                                            @include mobile {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                                & + .info-list {
+                                    margin-top: 2.4rem;
+                                    @include mobile {
+                                        margin-top: 0;
+                                    }
+                                }
+                            }
+                            .info-list {
+                                display: flex;
+                                .info-item {
+                                    background-repeat: no-repeat;
+                                    background-size: 100%;
+                                    &.ncsi {
+                                        width: 4.8rem;
+                                        height: 4rem;
+                                        background-image: url(../images/logo/logo-ncsi.svg);
+                                    }
+                                    &.isms {
+                                        width: 4.4rem;
+                                        height: 4rem;
+                                        background-image: url(../images/logo/logo-isms.svg);
+                                    }
+                                    &.wa {
+                                        width: 4.8rem;
+                                        height: 4rem;
+                                        background-image: url(../images/logo/logo-wa.png);
+                                    }
+                                    & + .info-item {
+                                        margin-left: 2.4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & + .info {
+                        margin-top: 3.6rem;
+                        @include mobile {
+                            margin-top: 5.6rem;
+                        }
+                    }
+                }
+                &.info {
+                    padding: 2rem 42.2rem 0 0;
+                    @include mobile {
+                        padding: 0;
+                    }
+                    .section-wrap {
+                        .section-body {
+                            .data-list {
+                                display: flex;
+                                max-width: 50rem;
+                                flex-wrap: wrap;
+                                column-gap: 2rem;
+                                row-gap: 0.8rem;
+                                .data-item {
+                                    .data-text {
+                                        @include font(small-5x, medium);
+                                        color: color(neutral, 030);
+
+                                        @include mobile {
+                                            @include font(small-6x, medium);
+                                        }
+                                    }
+                                    &:last-child {
+                                        @media screen and (max-width: 760px) {
+                                            margin-top: 0.8rem;
+                                        }
+                                    }
+                                }
+                                @include mobile {
+                                    width: 100%;
+                                }
+                                @at-root .en & {
+                                    max-width: 80rem;
+                                    @include mobile {
+                                        width: 100%;
+                                        flex-direction: column;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    & + .family-site {
+                        @include mobile {
+                            margin-top: 3.2rem;
+                        }
+                    }
+                }
+                &.family-site {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 42.3rem;
+                    height: 7.8rem;
+                    z-index: 5;
+                    .btn-family {
+                        display: flex;
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        padding: 0 4rem;
+                        text-align: left;
+                        align-items: center;
+                        background-color: color(system, 100);
+                        border-radius: .8rem;
+                        z-index: 5;
+                        transition: background-color .3s ease;
+                        .btn-text {
+                            display: inline-block;
+                            color: color(secondary, 070);
+                            @include font(small-4x, medium);
+                        }
+                        &::after {
+                            position: absolute;
+                            right: 4rem;
+                            width: 2rem;
+                            height: 2rem;
+                            content: '';
+                            background-image: icon(arrow-down1, color(neutral, 030));
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            transition: transform .3s ease;
+                            @include mobile {
+                                right: 3.2rem;
+                                width: 1.8rem;
+                                height: 1.8rem;
+                                background-size: 1.2rem .7rem;
+                            }
+                        }
+                        @include mobile {
+                            padding: 0 3.2rem;
+                        }
+                    }
+                    .site-area {
+                        position: absolute;
+                        bottom: 8.6rem;
+                        width: 100%;
+                        transform: translateY(1rem);
+                        transition: .3s ease;
+                        opacity: 0;
+                        visibility: hidden;
+                        z-index: 4;
+                        .site-list {
+                            background-color: color(system, 070);
+                            border-radius: .8rem;
+                            box-shadow: 0 0.1336rem 0.5342rem 0 color(system, 100, 0.1);
+                            overflow: hidden;
+                            .site-item {
+                                transition: background-color .3s ease;
+                                .site {
+                                    display: inline-block;
+                                    width: 100%;
+                                    height: 100%;
+                                    padding: 1.1rem 0;
+                                    color: color(typo, 020);
+                                    padding-left: 4rem;
+                                    transition: color .3s ease;
+                                    @include font(small-4x, medium);
+                                    @include mobile {
+                                        padding: .9rem 0;
+                                        padding-left: 3.2rem;
+                                    }
+                                }
+                                +.site-item {
+                                    border-top: .1rem solid color(neutral, 030);
+                                }
+                                &:hover {
+                                    background-color: color(secondary, 070);
+                                    .site {
+                                        color: color(primary, 080);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.active {
+                        .btn-family {
+                            background-color: color(primary, 070);
+                            &::after {
+                                transform: rotate(-180deg);
+                            }
+                        }
+                        .site-area {
+                            opacity: 1;
+                            transform: translateY(0);
+                            visibility: visible;
+                        }
+                    }
+                    @include mobile {
+                        position: static;
+                        width: 100% !important;
+                        height: 5.8rem;
+                    }
+                }
             }
+        }
+    }
+    .btn-to-top {
+        position: fixed;
+        bottom: 1.6rem;
+        right: 6rem;
+        z-index: 1;
+        transition: 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+    
+        .top-btn {
+            padding: 0.8rem 1.6rem;
+            border-radius: 3.2rem;
+            border: 1.5px solid rgba(184, 184, 194, 0.40);
+            .btn-text {
+                display: block;
+                text-align: center;
+                color: #85858C;
+                @include font(small-4x,extrabold)
+            }
+        }
+    
+        &.active {
+            visibility: visible;
+            opacity: 100%;
+        }
+        &.fixed {
+            position: absolute;
+            top: -6rem;
+            bottom: unset;
+        }
+        @include mobile {
+            right: 1.7rem;
         }
     }
 }

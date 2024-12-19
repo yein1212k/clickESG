@@ -14,32 +14,71 @@ body {
         overflow: hidden;
     }
 
+    @include web {
+        .mo-only {
+            display: none !important;
+        }
+    }
+
+    @include mobile {
+        .pc-only {
+            display: none !important;
+        }
+    }
+
     /* Accent */
     .accent {
+        //weight
+        &.case1 {
+            font-weight: 400 !important;
+        }
+
+        &.case2 {
+            font-weight: 500 !important;
+        }
+
+        &.case3 {
+            font-weight: 600 !important;
+        }
+
+        &.case4 {
+            font-weight: 700 !important;
+        }
+
         //color
-        &.color-01 {
-            color: color(primary,100) !important;
+        &.color1 {
+            color: color(primary, 100) !important;
         }
-    }
 
-    /* Small */
-    .small {
-        &.design-01 {
-            &.style-01 {
-                @include font(small-6x, regular);
-            }
-            &.gray-01 {
-                color: color(gray,500);
-            }
+        &.color2 {
+            color: color(etc, 100) !important;
         }
-    }
 
-    /* Link */
-    .link {
-        color: inherit;
-        font-weight: inherit;
-        font-size: inherit;
-        text-decoration: underline;
+        &.color3 {
+            color: color(neutral, 060) !important;
+        }
+
+        &.color4 {
+            color: color(system, 070) !important;
+        }
+        &.color5 {
+            color: color(system, 080) !important;
+        }
+        &.color6 {
+            color: color(typo, 020) !important;
+        }
+        &.color7 {
+            color: color(primary, 080) !important;
+        }
+        &.color8 {
+            color: color(typo, 010) !important;
+        }
+        &.color9 {
+            color: color(primary, 070) !important;
+        }
+        &.color10 {
+            color: color(secondary, 100) !important;
+        }
     }
 
     .skip {
@@ -52,15 +91,15 @@ body {
                     right: 0;
                     left: 0;
                     height: 5.6rem;
-                    background: color(gray, 900);
-                    color: color(gray, 000);
+                    background: color(neutral, 080);
+                    color: color(system, 070);
                     font-size: 16px;
                     line-height: 5.6rem;
                     text-align: center;
                     flex-direction: column;
                     justify-content: center;
                     z-index: 99999;
-
+    
                     &:focus-within,
                     &:focus,
                     &:active {
@@ -70,20 +109,116 @@ body {
             }
         }
     }
-        
-    // highlight
-    .highlight-js {
-        font-size: 0;
+
+    .scroll-guide {
+        display: flex;
+        color: color(system,070);
+        align-items: center;
+        gap: 0.8rem;
+        @include font(small-5x, bold);
+        &::after {
+            display: block;
+            width: 1.6rem;
+            height: 1.6rem;
+            content:'';
+            background-image: icon(arrow-down2, color(system,070));
+            background-repeat: no-repeat;
+            background-size: 1rem;
+            background-position: center;
+        }
+    }
+    
+    .no-result-wrap {
+        padding: 16rem 0;
+        text-align: center;
+        .no-result-title {
+            @include font(small-2x,bold);
+            color: color(typo,005);
+        }
+        @include mobile {
+            padding: 8rem 0;
+            .no-result-title {
+                @include font(small-3x,bold);
+            }
+        }
     }
 
-    // highlight
-    .highlight-js .hljs {
-        padding: 1.5rem;
-        border: 0.1rem solid #f3f3f3;
-        background: #ffffff;
-        font-size: 1.2rem;
-        line-height: 1.5;
-        font-family: Consolas, Courier New, monospace, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', dotum, 돋움, sans-serif;
-        scrollbar-color: #cdcdcd #f0f0f0;
+    .text-bundle {
+        display: inline-block;
+    }
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+
+    //404 에러페이지
+    .error-page {
+        min-height: calc(100vh - 29rem);
+        .main-inner {
+            max-width: 123.6rem;
+            margin: 0 auto;
+            margin-top: 13.6rem;
+            padding-left: 26.7rem;
+            @include mobile {
+                margin-top: 9rem;
+                padding-left: unset;
+            }
+            .content-head {
+                font-size: 16rem;
+                font-weight: 700;
+                line-height: 130%;
+                letter-spacing: -0.32rem;
+                color: #6D0CA6;
+                opacity: 0.5;
+                + .content-body {
+                    margin-top: 1.6rem;
+                }
+                @include mobile {
+                    font-size: 14rem;
+                    letter-spacing: -0.28rem;
+                    text-align: center;
+                    display: block;
+                    + .content-body {
+                        margin-top: 1.2rem;
+                    }
+                }
+            }
+            .content-body {
+                .para {
+                    &.type1 {
+                        font-size: 3.2rem;
+                        font-weight: 700;
+                        color: #15151A;
+                        @include mobile {
+                            font-size: 2.4rem;
+                        }
+                    }
+                    &.type2 {
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        color: #3F3F46;
+                        @include mobile {
+                            font-size: 1.6re,;
+                        }
+                    }
+                    + .para {
+                        margin-top: 2.4rem;
+                        @include mobile {
+                            margin-top: 1.6rem;
+                        }
+                    }
+                }
+                + .content-util {
+                    margin-top: 8rem;
+                    @include mobile {
+                        margin-top: 4.8rem;
+                        .btn-display {
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

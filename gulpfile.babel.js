@@ -40,6 +40,17 @@ const DEST_PATH = {
 gulp.task("clean", () => del([DIST_FOLDER]));
 gulp.task("cleanDeploy", () => del(".publish"));
 
+gulp.task("html", () => {
+  return gulp
+    .src([SRC_FOLDER + "**/*.html"], {
+      base: SRC_FOLDER,
+      since: gulp.lastRun("html"),
+    })
+    .pipe(gulp.dest(DIST_FOLDER))
+    .pipe(browserSync.stream());
+});
+
+
 // -------------------- EJS Task --------------------
 gulp.task("ejs", () => {
   console.log("Compiling EJS files...");
@@ -90,8 +101,7 @@ gulp.task("browserSync", () => {
     port: 9000,
     server: {
       baseDir: DIST_FOLDER,
-    },
-    startPath: "main/index.html",
+    }
   });
 });
 
@@ -113,7 +123,7 @@ gulp.task("watch", () => {
 gulp.task("gh", () => gulp.src(`${DIST_FOLDER}/**/*`).pipe(ghPages()));
 
 // -------------------- Task Groups --------------------
-const build = gulp.series("clean", gulp.parallel("ejs", "scss:compile", "js", "images", "fonts", "movies"));
+const build = gulp.series("clean", gulp.parallel("html","ejs", "scss:compile", "js", "images", "fonts", "movies"));
 const dev = gulp.series(build, gulp.parallel("browserSync", "watch"));
 const deploy = gulp.series(build, "gh", "cleanDeploy");
 

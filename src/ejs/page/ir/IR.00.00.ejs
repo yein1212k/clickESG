@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs', {
+	layoutTemplate: 'front',
+	pageJavascript: ''
+}) %>
+
+</head>
+<body class="kr">
+<div id="wrap">
+    <%-include('../_templates/_header.ejs', {
+        type: 'light',
+    })
+    %>
+    <div class="main ir stock-info price-info" id="main">
+        <div class="main-inner">
+            <div class="local design1">
+                <%-include('../_templates/_local-info.ejs', {
+                    caseType: 'design1',
+                    depth1: 'IR',
+                    depth2: '주식정보',
+                    depth3: '주가정보',
+                }) %>
+                <div class="local-head design3">
+                    <div class="local-subject">
+                        <h2 class="local-name">주가정보</h2>
+                    </div>
+                </div>
+                <div class="local-body">
+                    <div class="content-head">주가정보 페이지</div>
+                    <div class="content-body">
+                        <div class="section design1 case1 type1">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <h4 class="section-name">주식 발행정보</h4>
+                                    </div>
+                                </div>
+                                <div class="section-body">
+                                    <div class="t-display design1 case1 type1 align3 scroll">
+                                        <table style="min-width: 646px;" class="col-w-2">
+                                            <caption>이 표는 주식 발행 정보를 제공하며 발행한 주식의 총수, 소각한 주식의 총수, 발행주식 수, 자기주식 보유현황으로 구성되어 있습니다.</caption>
+                                            <colgroup>
+                                                <col class="col1">
+                                                <col class="col2">
+                                                <col class="col3">
+                                                <col class="col4">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">발행한 주식의 총수</th>
+                                                    <th scope="col">소각한 주식의 총수</th>
+                                                    <th scope="col">발행주식 수</th>
+                                                    <th scope="col">자기주식 보유현황</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>248,187,647</td>
+                                                    <td>26,909,745</td>
+                                                    <td>221,277,902</td>
+                                                    <td>18,837,617</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p class="comment design1">* 2024.06.30 기준</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section design1 case1 type1">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <h4 class="section-name">주주현황</h4>
+                                    </div>
+                                </div>
+                                <div class="section-body chart-display design2 case1">
+                                    <div class="chart-info">
+                                        <div class="mark design1 case1 type1 al-square-color1"><span class="mark-text">SK㈜</span></div>
+                                        <div class="mark design1 case1 type1 al-square-color2"><span class="mark-text">그 외 특수관계인</span></div>
+                                        <div class="mark design1 case1 type1 al-square-color3"><span class="mark-text">자기주식</span></div>
+                                        <div class="mark design1 case1 type1 al-square-color4"><span class="mark-text">국민연금</span></div>
+                                        <div class="mark design1 case1 type1 al-square-color7"><span class="mark-text">기타</span></div>
+                                    </div>
+                                    <ul class="chart-list">
+                                        <li class="chart-item">
+                                            <div class="chart-diagram">
+                                                <img src="../../assets/images/ir/diagram1.png" alt="주주현황 2024년 이미지 입니다. 자세한 설명은 하단 내용을 참고하세요." class="pc-only">
+                                                <img src="../../assets/images/ir/diagram1-mo.png" alt="주주현황 2024년 이미지 입니다. 자세한 설명은 하단 내용을 참고하세요." class="mo-only">
+                                            </div>
+                                            <div class="chart-body">
+                                                <div class="t-display design1 case1 type1 align3 scroll">
+                                                    <table style="min-width: 386px;" class="col-w-1">
+                                                        <caption>이 표는 2024년 주주현황 정보를 제공하며 구분(SK㈜, 그 외 특수관계인, 자기주식, 국민연금, 기타), 주식 수, 지분율로 구성되어 있습니다.</caption>
+                                                        <colgroup>
+                                                            <col class="col1">
+                                                            <col class="col2">
+                                                            <col class="col3">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">구분</th>
+                                                                <th scope="col">주식 수</th>
+                                                                <th scope="col">지분율</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>SK㈜</td>
+                                                                <td>97,142,856</td>
+                                                                <td>43.90%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>그 외 특수관계인</td>
+                                                                <td>3,824,954</td>
+                                                                <td>1.73%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>자기주식</td>
+                                                                <td>18,837,617</td>
+                                                                <td>8.51%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>국민연금</td>
+                                                                <td>14,231,406</td>
+                                                                <td>6.43%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>기타</td>
+                                                                <td>87,241,069</td>
+                                                                <td>39.43%</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <p class="comment design1">* 2024.06.30 기준 </p>
+                                            </div>
+                                        </li>
+                                        <!-- <li class="chart-item">
+                                            <div class="chart-diagram">
+                                                <img src="../../assets/images/ir/diagram2.png" alt="주주현황 2022년" class="pc-only">
+                                                <img src="../../assets/images/ir/diagram2-mo.png" alt="주주현황 2022년" class="mo-only">
+                                            </div>
+                                            <div class="chart-body">
+                                                <div class="t-display design1 case1 type1 align3 scroll">
+                                                    <table style="min-width: 388px;" class="col-w-1">
+                                                        <caption>이 표는 주주현황 정보를 제공하며 구분, 주식 수, 지분율로 구성되어 있습니다.</caption>
+                                                        <colgroup>
+                                                            <col class="col1">
+                                                            <col class="col2">
+                                                            <col class="col3">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">구분</th>
+                                                                <th scope="col">주식 수</th>
+                                                                <th scope="col">지분율</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>SK㈜</td>
+                                                                <td>97,142,856</td>
+                                                                <td>43.90%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>그 외 특수관계인</td>
+                                                                <td>9,670,733</td>
+                                                                <td>4.1%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>자기주식</td>
+                                                                <td>29,545,493</td>
+                                                                <td>12.5%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>국민연금</td>
+                                                                <td>13,106,086</td>
+                                                                <td>5.6%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>기타</td>
+                                                                <td>98,722,479</td>
+                                                                <td>41.9%</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <p class="comment design1">* 2022.12.31 기준 </p>
+                                            </div>
+                                        </li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section design1 case1 type1 shareholder-status">
+                            <iframe src="https://ir.gsifn.io/sknetworks/ir2_current.html?koreng=1" allowfullscreen></iframe>
+                            <!-- <img src="../../assets/images/ir/ex-ir-iframe1-pc.png" alt="IR iframe 예시 이미지" class='pc-only' style='width: 100%; height: 100%;'>
+                            <img src="../../assets/images/ir/ex-ir-iframe1-mo.png" alt="IR iframe 예시 이미지" class='mo-only' style='width: 100%; height: 100%;'> -->
+                            <!-- <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <h4 class="section-name">SK네트웍스 보통주 (001740)</h4>
+                                    </div>
+                                    <p class="comment design1">2024-04-18 15:30 기준</p>
+                                </div>
+                                <div class="section-body sk">
+                                    <div class="table-result">
+                                        <div class="result-data">8,200 <em><img src="../../assets/images/ir/arrow-up.png" alt="증가"></em></div>
+                                    </div>
+                                    <div class="t-display design1 case1 type1 align3 scroll pc-only">
+                                        <table>
+                                            <caption>이 표는 SK네트웍스 보통주 정보를 제공하며 전일대비, 등락율, 고가, 저가, 거래량으로 구성되어 있습니다.</caption>
+                                            <colgroup>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                                <col>
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">전일대비</th>
+                                                    <th scope="col">등락율</th>
+                                                    <th scope="col">고가</th>
+                                                    <th scope="col">저가</th>
+                                                    <th scope="col">거래량</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="accent color1" title="상승">1,000 ▲</td>
+                                                    <td class="accent color2">-0.80%</td>
+                                                    <td class="accent color1">8,800</td>
+                                                    <td class="accent color2">7,200</td>
+                                                    <td>357,692</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="data-display onePair-table mo-only">
+										<div class="data-list">
+											<div class="data-item">
+												<div class="data-wrap">
+													<div class="data-head">
+														<div class="data-tr">
+															<span class="data-th">전일대비</span>
+															<span class="data-th">등락율</span>
+														</div>
+													</div>
+													<div class="data-body">
+														<div class="data-tr">
+															<span class="data-th">1,000 ▲</span>
+															<span class="data-th">-0.80%</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="data-item">
+												<div class="data-wrap">
+													<div class="data-head">
+														<div class="data-tr">
+															<span class="data-th">고가</span>
+															<span class="data-th">저가</span>
+														</div>
+													</div>
+													<div class="data-body">
+														<div class="data-tr">
+															<span class="data-th">8,800</span>
+															<span class="data-th">7,200</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="data-item">
+												<div class="data-wrap">
+													<div class="data-head">
+														<div class="data-tr">
+															<span class="data-th">거래량</span>
+														</div>
+													</div>
+													<div class="data-body">
+														<div class="data-tr">
+															<span class="data-th">357,692</span>
+														</div>
+													</div>
+												</div>
+											</diclass=""v>
+										</div>
+									</div>
+                                </div>
+                            </div> -->
+                        </div>
+                        <!--<div class="section design1 case1 type1  bg-color">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <h4 class="section-name">시세 차트</h4>
+                                    </div>
+                                </div>
+                                <div class="section-body">
+                                    <img src="../../assets/images/ir/ex-ir-iframe2-pc.png" alt="IR iframe 예시 이미지" class='pc-only' style='width: 100%; height: 100%;'>
+                                    <img src="../../assets/images/ir/ex-ir-iframe2-mo.png" alt="IR iframe 예시 이미지" class='mo-only' style='width: 100%; height: 100%;'>
+                                    <div class="chart-display design3 case1">
+                                        <ul class="chart-list">
+                                            <li class="chart-item">
+                                                <div class="chart-img">
+                                                    <div class="chart-img-head">
+                                                        <div class="form radio design1 case2 type1">
+                                                            <ul class="radio-list">
+                                                                <li class="radio-item">
+                                                                    <label for="period1">
+                                                                        <input type="radio" name="period" value="p1" id="period1" checked>
+                                                                        <span class="option">2개월</span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="radio-item">
+                                                                    <label for="period2">
+                                                                        <input type="radio" name="period" value="p2" id="period2">
+                                                                        <span class="option">1년</span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="radio-item">
+                                                                    <label for="period3">
+                                                                        <input type="radio" name="period" value="p3" id="period3">
+                                                                        <span class="option">2년</span>
+                                                                    </label>
+                                                                </li>
+                                                                <li class="radio-item">
+                                                                    <label for="period4">
+                                                                        <input type="radio" name="period" value="p4" id="period4">
+                                                                        <span class="option">분단위</span>
+                                                                    </label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="btn-display align2">
+                                                            <div class="btn-area">
+                                                                <a class="btn design3 case4 type3 color8 ar-icon-refresh" href="#"><span class="btn-text">새로고침</span></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="chart-img-body">
+                                                        <img src="../../assets/images/ir/main_chart.jpg" alt="시세 차트">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="chart-item">
+                                                <ul class="chart-compare-list">
+                                                    <li class="item blue">
+                                                        <div class="item-head">KOSPI</div>
+                                                        <div class="item-body"></div>
+                                                        <div class="item-util">
+                                                            <div class="accent color2 ">2656.12<p class="exchange">29.72 (1.11%▼)</p></div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="item red">
+                                                        <div class="item-head">KOSDAQ</div>
+                                                        <div class="item-body"></div>
+                                                        <div class="item-util">
+                                                            <div class="accent color1 ">889.46<p class="exchange">29.72 (1.11%▲)</p></div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="chart-exchange">
+                                        <ul class="chart-exchange-list">
+                                            <li class="item">
+                                                <div class="info">
+                                                    <p class="title">전일가</p>
+                                                    <p class="data">6,250</p>
+                                                </div>
+                                                <div class="info">
+                                                    <p class="title">전일거래량</p>
+                                                    <p class="data">6,250</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="info">
+                                                    <p class="title">52주 최고가(원)</p>
+                                                    <p class="data">8,540</p>
+                                                </div>
+                                                <div class="info">
+                                                    <p class="title">전일거래량</p>
+                                                    <p class="data">4,085</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="info">
+                                                    <p class="title">외국인보유(천주)</p>
+                                                    <p class="data">32,695</p>
+                                                </div>
+                                                <div class="info">
+                                                    <p class="title">외국인지분율(%)</p>
+                                                    <p class="data">13.87</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="info">
+                                                    <p class="title">자본금(억원)</p>
+                                                    <p class="data">6,205</p>
+                                                </div>
+                                                <div class="info">
+                                                    <p class="title">상장주식(천주)</p>
+                                                    <p class="data">235,778</p>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <div class="info">
+                                                    <p class="title">액면가</p>
+                                                    <p class="data">2,500</p>
+                                                </div>
+                                                <div class="info">
+                                                    <p class="title">시가총액(억원)</p>
+                                                    <p class="data">14,736</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%-include('../_templates/_footer.ejs')%>
+</div>
+</body>
+
+</html>

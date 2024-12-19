@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%-include('../_templates.en/_head.ejs', {
+	layoutTemplate: 'front',
+	pageJavascript: ''
+}) %>
+</head>
+<body class="en">
+<div id="wrap">
+    <%-include('../_templates.en/_header.ejs', {
+        type: 'light',
+    }) 
+    %>
+    <div class="main etc inquiry-complete" id="main">
+        <div class="main-inner">
+            <div class="local design3">
+                <div class="local-body">
+                    <div class="content-body">
+                        <div class="section design1 case5 type3 align4">
+                            <div class="section-wrap">
+                                <div class="section-caption">
+                                    <img src="../../assets/images/logo/logo-c1-e.svg" alt="SK networks 로고">
+                                </div>
+                                <div class="section-head">
+                                    <h3 class="section-name">Your proposal has been successfully submitted.</h3>
+                                </div>
+                                <div class="section-body">
+                                    <p class="para">Our team will review your proposal and send a detailed response to the e-mail address you provided.</p>
+                                    <span class="note">Click the ‘Confirm’ button below to return to the main screen.</span>
+                                </div>
+                                <div class="section-util btn-display design1 align3">
+                                    <div class="btn-area">
+                                        <a class="btn design1 case1 type1 color1" href="/">
+                                            <span class="btn-text">Confirm</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%-include('../_templates.en/_footer.ejs')%>
+</div>
+</body>
+
+</html>

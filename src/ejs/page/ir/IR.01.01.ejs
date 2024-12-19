@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs', {
+	layoutTemplate: 'front',
+	pageJavascript: ''
+}) %>
+</head>
+<body class="kr">
+<div id="wrap">
+    <%-include('../_templates/_header.ejs', {
+        type: 'light',
+    }) 
+    %>
+    <div class="main ir stock-info audit-report" id="main">
+        <div class="main-inner">
+            <div class="local design1">
+                <%-include('../_templates/_local-info.ejs', {
+                    depth1: 'IR',
+                    depth2: '재무정보',
+                    depth3: '감사보고서',
+                }) %>
+                <div class="local-head design3"> 
+                    <div class="local-subject">
+                        <h2 class="local-name">감사보고서</h2>
+                    </div>
+                </div>
+                <div class="local-body">
+                    <div class="content-head">감사보고서 페이지</div>
+                    <div class="content-body">
+                        <div class="section design2 type1 current">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <h4 class="section-name">외부감사인 현황</h4>
+                                    </div>
+                                </div>
+                                <div class="section-body">
+                                    <p class="para">법인명 : 삼정회계법인 I 선임일 : 2022.11.29 I 계약기간 : 2023~2025 I 최근 감사 의견 : 적정</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section design2 type1 report">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <h4 class="section-name">감사보고서 자료</h4>
+                                    </div>
+                                </div>
+                                <div class="section-body">
+                                    <div class="board-list design1 case1 type1">
+                                        <div class="board-item">
+                                            <div class="board-wrap">
+                                                <div class="board-head">
+                                                    <p class="board-subject">연결 감사보고서</p>
+                                                    <p class="board-date">2023</p>
+                                                </div>
+                                                <div class="board-util">
+                                                    <div class="btn-display align2">
+                                                        <div class="btn-area">
+                                                            <button class="btn design3 case1 type1 color2 ar-icon-download-bg"><span class="btn-text">다운로드</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="board-item">
+                                            <div class="board-wrap">
+                                                <div class="board-head">
+                                                    <p class="board-subject">별도 감사보고서</p>
+                                                    <p class="board-date">2023</p>
+                                                </div>
+                                                <div class="board-util">
+                                                    <div class="btn-display align2">
+                                                        <div class="btn-area">
+                                                            <button class="btn design3 case1 type1 color2 ar-icon-download-bg"><span class="btn-text">다운로드</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section design2 type1 report">
+                            <div class="section-wrap">
+                                <div class="section-head">
+                                    <div class="section-subject">
+                                        <h4 class="section-name">연도별 감사보고서</h4>
+                                    </div>
+                                </div>
+                                <div class="section-body">
+                                    <div class="data-display design2 case6 type1">
+                                        <ul class="data-list">
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2023</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2022</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2021</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2020</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2019</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2018</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2017</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2016</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2015</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2014</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2013</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2012</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2011</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2010</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2009</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2008</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="data-item">
+                                                <div class="item-wrap">
+                                                    <div class="item-head">
+                                                        <p class="item-date">2007</p>
+                                                    </div>
+                                                    <div class="item-util">
+                                                        <div class="btn-display design1 case3 align1">
+                                                            <div class="btn-area">
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">연결 기준</span></button>
+                                                                <button class="btn design3 case2 type3 color5 ar-icon-download"><span class="btn-text">별도 기준</span></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%-include('../_templates/_footer.ejs')%>
+</div>
+</body>
+
+</html>

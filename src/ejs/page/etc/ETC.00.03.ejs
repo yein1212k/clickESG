@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs', {
+	layoutTemplate: 'front',
+	pageJavascript: ''
+}) %>
+</head>
+<body class="kr">
+<div id="wrap">
+    <%-include('../_templates/_header.ejs', {
+        type: 'light',
+    }) 
+    %>
+    <div class="main etc inquiry-complete" id="main">
+        <div class="main-inner">
+            <div class="local design3">
+                <div class="local-body">
+                    <div class="content-head">제안 접수 완료 페이지</div>
+                    <div class="content-body">
+                        <div class="section design1 case5 type3 align4">
+                            <div class="section-wrap">
+                                <div class="section-caption">
+                                    <img src="../../assets/images/logo/logo-c1-e.svg" alt="SK networks 로고">
+                                </div>
+                                <div class="section-head">
+                                    <h3 class="section-name">제안 접수가 완료되었습니다.</h3>
+                                </div>
+                                <div class="section-body">
+                                    <p class="para">제안내용은 담당자 검토 후 입력해주신 E-mail로 결과를 회신 드리겠습니다.</p>
+                                    <span class="note">아래 확인 버튼을 클릭 하시면, 메인 화면으로 이동합니다.</span>
+                                </div>
+                                <div class="section-util btn-display design1 align3">
+                                    <div class="btn-area">
+                                        <a class="btn design1 case1 type1 color1" href="/">
+                                            <span class="btn-text">확인</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%-include('../_templates/_footer.ejs')%>
+</div>
+</body>
+
+</html>
