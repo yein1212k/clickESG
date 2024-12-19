@@ -1,4 +1,4 @@
-@import 'guide/guide.common';
-@import 'guide/guide.intro';
-@import 'guide/guide.list';
-@import 'guide/guide.detail';
+@use 'guide/guide.common' as common;
+@use 'guide/guide.intro' as intro;
+@use 'guide/guide.list' as list;
+@use 'guide/guide.detail' as detail;

@@ -1,3 +1,7 @@
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+@use '../components/icons' as *;
+
 #wrap{
     #guide-intro {
         position: relative;

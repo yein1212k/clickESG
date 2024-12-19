@@ -1,3 +1,7 @@
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+@use '../components/icons' as *;
+
 #guide-list{
     .page-body {
         &.pub-list{
@@ -125,7 +129,7 @@
                             width: 100%;
                             padding: 1.1rem 1.4rem 1.1rem 6.2rem;
                             color: #afaeae;
-                            font-weight: 500; 
+                            font-weight: 500;
                             font-size: 2rem;
                             line-height: 3.2rem;
                             background-color: #f6f4f5;
@@ -276,7 +280,7 @@
                                         line-height: 2rem;
                                     }
                                 }
-                
+
                                 +.para {
                                     color: #000;
                                     font-weight: 400;
@@ -285,7 +289,7 @@
                                     padding-top: 1rem;
                                 }
                             }
-                
+
                             +.section-body {
                                 padding-top: 1.8rem;
                                 padding-left: 0;
@@ -293,7 +297,7 @@
                                     padding-top: 1.5rem;
                                 }
                             }
-                
+
                             button{
                                 position: absolute;
                                 top: 1.5rem;
@@ -304,7 +308,7 @@
                                 border-radius: 0.5rem;
                             }
                         }
-                
+
                         .section-body {
                             .data-display {
                                 .data-head {
@@ -402,7 +406,7 @@
                                                         display: flex;
                                                         text-align: center;
                                                         flex-direction: column;
-                                                        
+
                                                         .data {
                                                             color: #4d4d4d;
                                                             line-height: 3rem;
@@ -497,7 +501,7 @@
                                                             display: flex;
                                                             align-items: center;
                                                             flex-direction: column;
-                                                            
+
                                                             .btn {
                                                                 display: inline-block;
                                                                 width: 3rem;
@@ -709,7 +713,7 @@
                                 }
                             }
                         }
-                
+
                     }
                     .no-result {
                         display: none;

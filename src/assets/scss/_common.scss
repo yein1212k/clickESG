@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+@use 'components/mixin' as *;
+@use 'components/variables' as *;
+
 body {
     .blind {
         position: absolute;
@@ -99,7 +102,7 @@ body {
                     flex-direction: column;
                     justify-content: center;
                     z-index: 99999;
-    
+
                     &:focus-within,
                     &:focus,
                     &:active {
@@ -127,7 +130,7 @@ body {
             background-position: center;
         }
     }
-    
+
     .no-result-wrap {
         padding: 16rem 0;
         text-align: center;

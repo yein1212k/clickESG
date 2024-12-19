@@ -1,5 +1,5 @@
 const gulp = require("gulp");
-const scss = require("gulp-sass")(require("sass"));
+const sass = require("gulp-sass")(require("sass")); // gulp-sass와 sass를 함께 사용
 const babel = require("gulp-babel");
 const sourcemaps = require("gulp-sourcemaps");
 const htmlbeautify = require("gulp-html-beautify");
@@ -72,7 +72,7 @@ gulp.task("scss:compile", () => {
   return gulp
     .src(`${SRC_PATH.ASSETS.SCSS}/*.scss`)
     .pipe(sourcemaps.init())
-    .pipe(scss().on("error", scss.logError))
+    .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(DEST_PATH.ASSETS.CSS))

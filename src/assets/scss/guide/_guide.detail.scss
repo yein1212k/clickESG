@@ -1,8 +1,12 @@
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+@use '../components/icons' as *;
+
 #guide-list {
     .page-body {
         .local-body {
             .section {
-                
+
                 // 컬러
                 &.color-guide {
 					.subsection-body {
@@ -84,7 +88,7 @@
 									visibility: hidden;
 									transition: opacity 0.3s ease, visibility 0.3s ease;
 								}
-								
+
 								.copied-text.show {
 									opacity: 1;
 									visibility: visible;
