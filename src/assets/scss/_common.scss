@@ -47,37 +47,37 @@ body {
 
         //color
         &.color1 {
-            color: color(primary, 100) !important;
+            color: custom-color(primary, 100) !important;
         }
 
         &.color2 {
-            color: color(etc, 100) !important;
+            color: custom-color(etc, 100) !important;
         }
 
         &.color3 {
-            color: color(neutral, 060) !important;
+            color: custom-color(neutral, 060) !important;
         }
 
         &.color4 {
-            color: color(system, 070) !important;
+            color: custom-color(system, 070) !important;
         }
         &.color5 {
-            color: color(system, 080) !important;
+            color: custom-color(system, 080) !important;
         }
         &.color6 {
-            color: color(typo, 020) !important;
+            color: custom-color(typo, 020) !important;
         }
         &.color7 {
-            color: color(primary, 080) !important;
+            color: custom-color(primary, 080) !important;
         }
         &.color8 {
-            color: color(typo, 010) !important;
+            color: custom-color(typo, 010) !important;
         }
         &.color9 {
-            color: color(primary, 070) !important;
+            color: custom-color(primary, 070) !important;
         }
         &.color10 {
-            color: color(secondary, 100) !important;
+            color: custom-color(secondary, 100) !important;
         }
     }
 
@@ -91,8 +91,8 @@ body {
                     right: 0;
                     left: 0;
                     height: 5.6rem;
-                    background: color(neutral, 080);
-                    color: color(system, 070);
+                    background: custom-color(neutral, 080);
+                    color: custom-color(system, 070);
                     font-size: 16px;
                     line-height: 5.6rem;
                     text-align: center;
@@ -112,7 +112,7 @@ body {
 
     .scroll-guide {
         display: flex;
-        color: color(system,070);
+        color: custom-color(system,070);
         align-items: center;
         gap: 0.8rem;
         @include font(small-5x, bold);
@@ -121,7 +121,7 @@ body {
             width: 1.6rem;
             height: 1.6rem;
             content:'';
-            background-image: icon(arrow-down2, color(system,070));
+            background-image: icon(arrow-down2, custom-color(system,070));
             background-repeat: no-repeat;
             background-size: 1rem;
             background-position: center;
@@ -133,7 +133,7 @@ body {
         text-align: center;
         .no-result-title {
             @include font(small-2x,bold);
-            color: color(typo,005);
+            color: custom-color(typo,005);
         }
         @include mobile {
             padding: 8rem 0;

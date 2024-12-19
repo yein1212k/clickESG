@@ -43,7 +43,7 @@
         &.type1 {
             .mark-text {
                 @include font(small-5x, bold);
-                color: color(neutral, 080);
+                color: custom-color(neutral, 080);
                 line-height: 2.2rem;
                 @include mobile {
                     @include font(small-6x, bold);
@@ -54,21 +54,21 @@
         &.type2 {
             .mark-text {
                 @include font(small-4x, medium);
-                color: color(typo, 010);
+                color: custom-color(typo, 010);
                 line-height: 2.6rem; 
             }
         }
         &[class*=color1]::before {
-            background-color: color(primary, 070);
+            background-color: custom-color(primary, 070);
         }
         &[class*=color2]::before {
-            background-color: color(primary, 080);
+            background-color: custom-color(primary, 080);
         }
         &[class*=color3]::before {
-            background-color: color(etc, 090);
+            background-color: custom-color(etc, 090);
         }
         &[class*=color4]::before {
-            background-color: color(etc, 080);
+            background-color: custom-color(etc, 080);
         }
         &[class*=color5]::before {
             background: linear-gradient(180deg, #9735D0 0%, rgba(151, 53, 208, 0.40) 100%);
@@ -85,7 +85,7 @@
         &.case1 {
             .mark-text {
                 @include font(small-3x, bold);
-                color: color(typo, 010);
+                color: custom-color(typo, 010);
                 @include mobile {
                     @include font(small-4x, bold);
                 }
@@ -117,9 +117,9 @@
                 margin-left: 1.6rem;
 			}
             &[class*=location]::before {
-                background-image: icon(location,color(neutral,080));
+                background-image: icon(location,custom-color(neutral,080));
                 background-size: 2rem 2.2rem;
-                background-color: color(neutral,020);
+                background-color: custom-color(neutral,020);
                 border-radius: 1.6rem;
                 @include mobile {
                     background-size: 1.4rem 1.6rem;
@@ -127,9 +127,9 @@
                 }
             }
             &[class*=calendar]::before {
-                background-image: icon(calendar,color(neutral,080));
+                background-image: icon(calendar,custom-color(neutral,080));
                 background-size: 1.9rem 2rem;
-                background-color: color(neutral,020);
+                background-color: custom-color(neutral,020);
                 border-radius: 1.6rem;
                 @include mobile {
                     background-size: 1.2rem 1.4rem;

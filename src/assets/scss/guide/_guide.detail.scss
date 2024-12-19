@@ -419,10 +419,10 @@
 							padding-left: unset;
 							.subsection {
 								.subsection-head {
-									color: color(system,050);
+									color: custom-color(system,050);
 								}
 								&.line {
-									border-top: 0.1rem dashed color(neutral, 080);
+									border-top: 0.1rem dashed custom-color(neutral, 080);
 								}
 							}
 						}
@@ -447,11 +447,11 @@
 					}
 					.section[class*=design].type1 .section-name {
 						font-size: 3.2rem !important;
-						color: color(typo, 020) !important;
+						color: custom-color(typo, 020) !important;
 					}
 					.section[class*=design].type2 .section-name {
 						font-size: 2.4rem !important;
-						color: color(typo, 020) !important;
+						color: custom-color(typo, 020) !important;
 					}
 				}
 				&.accordion-guide {
@@ -473,7 +473,7 @@
 							}
 							.accordion-body {
 								@include font(small-4x);
-								color: color(typo,010);
+								color: custom-color(typo,010);
 							}
 						}
 					}

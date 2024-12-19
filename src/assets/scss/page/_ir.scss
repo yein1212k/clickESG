@@ -120,7 +120,7 @@
                 .section-head {
                     width: 32.25%;
                     .section-name{
-                        color: color(system, 070);
+                        color: custom-color(system, 070);
                         @include font(small-2x, bold);
                     }
                 }
@@ -289,7 +289,7 @@
                         width: 100vw;
                         height: 100%;
                         content: '';
-                        background-color: color(secondary, 070);
+                        background-color: custom-color(secondary, 070);
                         transform: translateX(-50%);
                         z-index: -1;
                         
@@ -375,7 +375,7 @@
                             width: 100vw;
                             height: 100%;
                             content: '';
-                            background-color: color(secondary, 070);
+                            background-color: custom-color(secondary, 070);
                             transform: translateX(-50%);
                             z-index: -1;
                             
@@ -425,8 +425,8 @@
                             width: 100%;
                             padding: 1.6rem 0;
                             margin-top: 6.8rem;
-                            border-top: 0.1rem solid color(neutral, 060);
-                            border-bottom: 0.1rem solid color(neutral, 060);
+                            border-top: 0.1rem solid custom-color(neutral, 060);
+                            border-bottom: 0.1rem solid custom-color(neutral, 060);
                             .chart-exchange-list{
                                 display: flex;
                                 width: 100%;
@@ -434,19 +434,19 @@
                                     display: flex;
                                     width: 20%;
                                     padding: 2.4rem;
-                                    border-right: 0.1rem solid color(neutral, 030);
+                                    border-right: 0.1rem solid custom-color(neutral, 030);
                                     flex-direction: column;
                                     gap: 2.4rem;
                                     .title{
                                         @include font(small-5x, bold);
-                                        color: color(typo, 020);
+                                        color: custom-color(typo, 020);
                                         +.data {
                                             padding-top: 0.8rem;
                                         }
                                     }
                                     .data{
                                         @include font(small-3x, bold);
-                                        color: color(typo, 010);
+                                        color: custom-color(typo, 010);
                                     }
                                     &:last-child{
                                         border-right: none;
@@ -498,7 +498,7 @@
                                         width: 50%;
                                         padding: 1.6rem 2.4rem;
                                         &:last-child{
-                                            border-right: 0.1rem solid color(neutral, 030);
+                                            border-right: 0.1rem solid custom-color(neutral, 030);
                                         }
                                         &:nth-child(2), &:nth-child(4){
                                             border-right: none;

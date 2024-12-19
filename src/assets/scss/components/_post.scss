@@ -32,7 +32,7 @@
                     left: 1.6rem;
                     padding: 0.4rem 1.2rem;
                     border-radius: 1.2rem;
-                    background-color: color(system, 070);
+                    background-color: custom-color(system, 070);
                 }
             }
             a.post-figure {
@@ -44,7 +44,7 @@
                 }
             }
             .post-date {
-                color: color(typo,005);
+                color: custom-color(typo,005);
                 @include font(small-5x,medium);
             }
             .post-util {
@@ -55,10 +55,10 @@
                     .tag {
                         display: block;
                         padding: 0.3rem 0.7rem;
-                        border: 1px solid color(neutral, 030);
+                        border: 1px solid custom-color(neutral, 030);
                         border-radius: 0.6rem;
-                        background-color: color(system, 070);
-                        color: color(typo,020);
+                        background-color: custom-color(system, 070);
+                        color: custom-color(typo,020);
                         @include font(small-5x,medium);
                     }
                 }
@@ -132,24 +132,24 @@
         &.type1 {
             .post-head {
                 .post-caption {
-                    color: color(primary,070);
+                    color: custom-color(primary,070);
                     @include font(small-4x,bold);
                 }
                 .post-subject {
-                    color: color(typo,020);
+                    color: custom-color(typo,020);
                     @include font(small-1x,bold);
                     + .post-summary {
                         margin-top: 1.2rem
                     }
                 }
                 .post-summary {
-                    color: color(typo,010);
+                    color: custom-color(typo,010);
                     @include font(small-4x,medium);
                     @include ellipsis(2);
                 }
                 .post-figure {
                     .figure-name {
-                        color:color(neutral,090);
+                        color:custom-color(neutral,090);
                         @include font(small-5x,bold);
                     }
                 }
@@ -171,7 +171,7 @@
         &.type2 {
             .post-figure {
                 .figure-name {
-                    color:color(neutral,090);
+                    color:custom-color(neutral,090);
                     @include font(small-5x,bold);
                     @include mobile {
                         @include font(small-6x,bold);
@@ -180,7 +180,7 @@
             }
             .post-head {
                 .post-subject {
-                    color: color(typo,020);
+                    color: custom-color(typo,020);
                     @include font(small-2x,bold);
                 }
                 @include mobile {
@@ -281,21 +281,21 @@
         &.type1 {
             .post-item {
                 .post-caption {
-                    color: color(primary,070);
+                    color: custom-color(primary,070);
                     @include font(small-4x,bold);
                 }
                 .post-subject {
-                    color: color(typo,020);
+                    color: custom-color(typo,020);
                     @include font(small-1x,bold);
                     @include ellipsis(1);
                 }
                 .post-summary {
-                    color: color(typo,010);
+                    color: custom-color(typo,010);
                     @include font(small-4x,medium);
                     @include ellipsis(2);
                 }
                 .post-date {
-                    color: color(typo,005);
+                    color: custom-color(typo,005);
                     @include font(small-5x,medium);
                 }
                 @include mobile {
@@ -623,14 +623,14 @@
             .post-inform{
                 .head{
                     @include font(small-2x, bold);
-                    color: color(typo,010);
+                    color: custom-color(typo,010);
                     @include mobile{
                         @include font(small-3x, medium); 
                     }
                 }
                 .para{
                     @include font(small-3x, medium);
-                    color: color(neutral, 080);
+                    color: custom-color(neutral, 080);
                     @include mobile{
                         @include font(small-4x, medium); 
                     }
@@ -641,14 +641,14 @@
             .post-inform{
                 .head{
                     @include font(small-1x, bold);
-                    color: color(typo,020);
+                    color: custom-color(typo,020);
                     @include mobile{
                         @include font(small-2x, bold); 
                     }
                 }
                 .para{
                     @include font(small-4x , medium);
-                    color: color(typo, 010);
+                    color: custom-color(typo, 010);
                     @include mobile{
                         @include font(small-5x, medium); 
                     }
@@ -706,7 +706,7 @@
                 .post-body{
                     .para{
                         @include font(small-3x, medium);
-                        color: color(neutral, 080);
+                        color: custom-color(neutral, 080);
                         @include mobile{
                             @include font(small-4x, medium); 
                         }
@@ -763,7 +763,7 @@
                     position: relative;
                     border-radius: 0.8rem;
                     overflow: hidden;
-                    background-color: color(neutral,020);
+                    background-color: custom-color(neutral,020);
                     img {
                         display:block;
                         width:100%;
@@ -782,14 +782,14 @@
                     .head {
                         .caption {
                             @include font(small-3x,medium);
-                            color: color(primary,070);
+                            color: custom-color(primary,070);
                             + .name {
                                 margin-top: 0.8rem;
                             }
                         }
                         .name {
                             @include font(small-1x,bold);
-                            color: color(typo,020);
+                            color: custom-color(typo,020);
                         }
                     }
                     .body {
@@ -797,7 +797,7 @@
                             .data-item {
                                 display: flex;
                                 .title {
-                                    color: color(typo,020);
+                                    color: custom-color(typo,020);
                                     min-width: 6.4rem;
                                     @include font(small-3x,bold);
                                     @at-root .en & {
@@ -805,7 +805,7 @@
                                     }
                                 }
                                 .data {
-                                    color: color(typo,010);
+                                    color: custom-color(typo,010);
                                     @include font(small-4x,medium);
                                     @at-root .en & {
                                         padding-left: 2rem;
@@ -873,7 +873,7 @@
         }
         }
         &.case1 {
-            border-bottom: 1px solid color(neutral,030);
+            border-bottom: 1px solid custom-color(neutral,030);
             padding-bottom: 4rem;
             @include mobile {
                 gap: 1.6rem;
@@ -912,12 +912,12 @@
                 }
                 .post-profile {
                     padding: 1.6rem 2.4rem 2.4rem;
-                    border: 1px solid color(neutral,030);
+                    border: 1px solid custom-color(neutral,030);
                     border-radius: 0.8rem;
                     min-height: 20.1rem;
                     .caption {
                         @include font(small-3x,bold);
-                        color: color(typo,020);
+                        color: custom-color(typo,020);
                         + .data-list {
                             margin-top: 1.6rem;
                         }
@@ -925,7 +925,7 @@
                     > .data-list {
                         .data-item {
                             @include font(small-4x,medium);
-                            color: color(typo,010);
+                            color: custom-color(typo,010);
                             + .data-item {
                                 margin-top: 0.4rem;
                             }

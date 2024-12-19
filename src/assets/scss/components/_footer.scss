@@ -69,10 +69,10 @@
                                 .navi-item {
                                     position: relative;
                                     .navi-text {
-                                        color: color(neutral, 050);
+                                        color: custom-color(neutral, 050);
                                         @include font(small-4x, medium); 
                                         &.privacy {
-                                            color: color(typo, 000);
+                                            color: custom-color(typo, 000);
                                             @include font(small-4x, bold); 
                                         }
                                         @include mobile {
@@ -92,7 +92,7 @@
                                             height: 1rem;
                                             content: '';
                                             transform: translateY(-50%);
-                                            background-color: color(neutral, 060);
+                                            background-color: custom-color(neutral, 060);
                                             opacity: 0.2;
 
                                             @include mobile {
@@ -158,7 +158,7 @@
                                 .data-item {
                                     .data-text {
                                         @include font(small-5x, medium);
-                                        color: color(neutral, 030);
+                                        color: custom-color(neutral, 030);
 
                                         @include mobile {
                                             @include font(small-6x, medium);
@@ -204,13 +204,13 @@
                         padding: 0 4rem;
                         text-align: left;
                         align-items: center;
-                        background-color: color(system, 100);
+                        background-color: custom-color(system, 100);
                         border-radius: .8rem;
                         z-index: 5;
                         transition: background-color .3s ease;
                         .btn-text {
                             display: inline-block;
-                            color: color(secondary, 070);
+                            color: custom-color(secondary, 070);
                             @include font(small-4x, medium);
                         }
                         &::after {
@@ -219,7 +219,7 @@
                             width: 2rem;
                             height: 2rem;
                             content: '';
-                            background-image: icon(arrow-down1, color(neutral, 030));
+                            background-image: icon(arrow-down1, custom-color(neutral, 030));
                             background-position: center;
                             background-repeat: no-repeat;
                             transition: transform .3s ease;
@@ -244,9 +244,9 @@
                         visibility: hidden;
                         z-index: 4;
                         .site-list {
-                            background-color: color(system, 070);
+                            background-color: custom-color(system, 070);
                             border-radius: .8rem;
-                            box-shadow: 0 0.1336rem 0.5342rem 0 color(system, 100, 0.1);
+                            box-shadow: 0 0.1336rem 0.5342rem 0 custom-color(system, 100, 0.1);
                             overflow: hidden;
                             .site-item {
                                 transition: background-color .3s ease;
@@ -255,7 +255,7 @@
                                     width: 100%;
                                     height: 100%;
                                     padding: 1.1rem 0;
-                                    color: color(typo, 020);
+                                    color: custom-color(typo, 020);
                                     padding-left: 4rem;
                                     transition: color .3s ease;
                                     @include font(small-4x, medium);
@@ -265,12 +265,12 @@
                                     }
                                 }
                                 +.site-item {
-                                    border-top: .1rem solid color(neutral, 030);
+                                    border-top: .1rem solid custom-color(neutral, 030);
                                 }
                                 &:hover {
-                                    background-color: color(secondary, 070);
+                                    background-color: custom-color(secondary, 070);
                                     .site {
-                                        color: color(primary, 080);
+                                        color: custom-color(primary, 080);
                                     }
                                 }
                             }
@@ -278,7 +278,7 @@
                     }
                     &.active {
                         .btn-family {
-                            background-color: color(primary, 070);
+                            background-color: custom-color(primary, 070);
                             &::after {
                                 transform: rotate(-180deg);
                             }

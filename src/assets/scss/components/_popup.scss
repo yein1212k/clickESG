@@ -74,7 +74,7 @@ body {
 					.modal-subjec {
 						.modal-name {
 							@include font(medium, bold);
-							color: color(primary, 080);
+							color: custom-color(primary, 080);
 							@include mobile {
 									@include font(small-1x, bold);
 							}
@@ -184,7 +184,7 @@ body {
 								.section-name {
 									display: block;
 									text-align: center;
-									color: color(typo, 020);
+									color: custom-color(typo, 020);
 									@include font(small-1x, bold);
 								}
 							}
@@ -194,7 +194,7 @@ body {
 						}
 						.section-body {
 							.para {
-								color: color(typo, 010);
+								color: custom-color(typo, 010);
 								text-align: center;
 								@include font(small-4x, medium);
 								+ .para {
@@ -232,7 +232,7 @@ body {
 						align-items: center;
 						justify-content: space-between;
 						padding: 0.8rem 2.4rem;
-						background-color: color(neutral,020);
+						background-color: custom-color(neutral,020);
 						@include mobile {
 							padding: 0.8rem 1.6rem;
 						}

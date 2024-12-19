@@ -79,9 +79,9 @@
         &.design1 {
             position: relative;
             width: 28.5rem;
-            border: .1rem solid color(neutral, 030);
+            border: .1rem solid custom-color(neutral, 030);
             border-radius: .8rem;
-            background-color: color(system, 070);
+            background-color: custom-color(system, 070);
 
             .input-elem {
                 width: 100%;
@@ -100,7 +100,7 @@
 
                 .remove {
                     display: none;
-                    background-image: icon(close, color(system, 100));
+                    background-image: icon(close, custom-color(system, 100));
                     background-repeat: no-repeat;
                     background-position: center;
                     cursor: pointer;
@@ -108,8 +108,8 @@
             }
 
             &.disabled {
-                background-color: color(neutral, 020);
-                border-color: color(neutral, 020);
+                background-color: custom-color(neutral, 020);
+                border-color: custom-color(neutral, 020);
             }
 
             &.error {
@@ -122,7 +122,7 @@
             }
 
             &:focus-within {
-                border-color: color(secondary, 080);
+                border-color: custom-color(secondary, 080);
             }
 
             @include mobile {
@@ -136,24 +136,24 @@
 
         &.type1 {
             .input-elem {
-                color: color(neutral, 060);
+                color: custom-color(neutral, 060);
                 @include font(small-4x, medium);
 
                 &:focus {
-                    color: color(system, 100);
+                    color: custom-color(system, 100);
                 }
 
                 &::placeholder {
-                    color: color(neutral, 060);
+                    color: custom-color(neutral, 060);
                 }
             }
 
             &.disabled {
                 .input-elem {
-                    color: color(neutral, 040);
+                    color: custom-color(neutral, 040);
 
                     &::placeholder {
-                        color: color(neutral, 040);
+                        color: custom-color(neutral, 040);
                     }
                 }
             }
@@ -162,14 +162,14 @@
                 display: none;
                 .input-elem {
                     &::placeholder {
-                        color: color(system, 100);
+                        color: custom-color(system, 100);
                     }
 
                     &:focus {
-                        color: color(system, 100);
+                        color: custom-color(system, 100);
 
                         &::placeholder {
-                            color: color(neutral, 060);
+                            color: custom-color(neutral, 060);
                         }
                     }
                 }
@@ -184,21 +184,21 @@
         &.design1 {
             position: relative;
             width: 28.5rem;
-            border: .1rem solid color(neutral, 030);
+            border: .1rem solid custom-color(neutral, 030);
             border-radius: .8rem;
-            background-color: color(system, 070);
+            background-color: custom-color(system, 070);
 
             .input-elem {
                 width: 100%;
                 padding-right: 7.4rem;
 
                 &:focus {
-                    color: color(system, 100);
+                    color: custom-color(system, 100);
                     outline: none;
                 }
 
                 &::placeholder {
-                    color: color(neutral, 060);
+                    color: custom-color(neutral, 060);
                 }
             }
 
@@ -212,14 +212,14 @@
                 .icon {
                     &.remove {
                         display: none;
-                        background-image: icon(close, color(system, 100));
+                        background-image: icon(close, custom-color(system, 100));
                         background-repeat: no-repeat;
                         background-position: center;
                         cursor: pointer;
                     }
 
                     &.search {
-                        background-image: icon(search, color(primary, 070));
+                        background-image: icon(search, custom-color(primary, 070));
                         background-repeat: no-repeat;
                         background-position: center;
                         cursor: pointer;
@@ -232,23 +232,23 @@
             }
 
             &.disabled {
-                background-color: color(neutral, 020);
-                border-color: color(neutral, 020);
+                background-color: custom-color(neutral, 020);
+                border-color: custom-color(neutral, 020);
 
                 .input-icon {
                     .search {
-                        background-image: icon(search, color(neutral, 040));
+                        background-image: icon(search, custom-color(neutral, 040));
                         cursor: auto;
                     }
                 }
 
                 &:focus-within {
-                    border-color: color(neutral, 020);
+                    border-color: custom-color(neutral, 020);
                 }
             }
 
             &:focus-within {
-                border-color: color(secondary, 080);
+                border-color: custom-color(secondary, 080);
             }
 
             @include mobile {
@@ -262,24 +262,24 @@
 
         &.type1 {
             .input-elem {
-                color: color(neutral, 060);
+                color: custom-color(neutral, 060);
                 @include font(small-4x, medium);
 
                 &:focus {
-                    color: color(system, 100);
+                    color: custom-color(system, 100);
                 }
 
                 &::placeholder {
-                    color: color(neutral, 060);
+                    color: custom-color(neutral, 060);
                 }
             }
 
             &.disabled {
                 .input-elem {
-                    color: color(neutral, 040);
+                    color: custom-color(neutral, 040);
 
                     &::placeholder {
-                        color: color(neutral, 040);
+                        color: custom-color(neutral, 040);
                     }
                 }
             }
@@ -293,25 +293,25 @@
 
             >select {
                 display: flex;
-                border: .1rem solid color(neutral, 030);
+                border: .1rem solid custom-color(neutral, 030);
                 min-width: 18.3rem;
                 border-radius: .8rem;
-                background-color: color(system, 070);
+                background-color: custom-color(system, 070);
 
                 option[value=""][disabled] {
                     display: none;
                 }
 
                 &:focus {
-                    color: color(system, 100);
+                    color: custom-color(system, 100);
                     outline: none;
-                    border-color: color(secondary, 080);
+                    border-color: custom-color(secondary, 080);
                 }
 
                 &:disabled {
-                    color: color(neutral, 040);
+                    color: custom-color(neutral, 040);
                     opacity: 1;
-                    background-color: color(secondary, 070);
+                    background-color: custom-color(secondary, 070);
                     border-color: transparent;
                 }
             }
@@ -331,7 +331,7 @@
                 right: 1.6rem;
                 width: 2.4rem;
                 height: 2.4rem;
-                background-image: icon(arrow-fill-down, color(system, 100));
+                background-image: icon(arrow-fill-down, custom-color(system, 100));
                 background-repeat: no-repeat;
                 background-position: center;
                 pointer-events: none;
@@ -345,7 +345,7 @@
 
             &.disabled {
                 .arrow {
-                    background-image: icon(arrow-fill-down, color(neutral, 040));
+                    background-image: icon(arrow-fill-down, custom-color(neutral, 040));
                 }
             }
 
@@ -373,22 +373,22 @@
 
         &.type1 {
             >select {
-                color: color(typo, 005);
+                color: custom-color(typo, 005);
                 @include font(small-4x, medium);
             }
 
             &:focus {
-                color: color(system, 100);
+                color: custom-color(system, 100);
             }
 
             &:disabled {
-                color: color(neutral, 040);
+                color: custom-color(neutral, 040);
             }
 
             &.error {
                 display: none;
                 >select {
-                    color: color(system, 100);
+                    color: custom-color(system, 100);
                 }
             }
         }
@@ -408,9 +408,9 @@
                     }
                     input {
                         &[type="radio"] {
-                            background: icon(radio-on, color(system, 100)) no-repeat center / 100%;
+                            background: icon(radio-on, custom-color(system, 100)) no-repeat center / 100%;
                             &:checked {
-                                background: icon(radio-off, color(system, 100)) no-repeat center / 100%;
+                                background: icon(radio-off, custom-color(system, 100)) no-repeat center / 100%;
                             }
                         }
                     }
@@ -454,7 +454,7 @@
                 > label {
                     font-size: 0;
                     .option {
-                        color: color(system, 100);
+                        color: custom-color(system, 100);
                         @include font(small-4x, bold);
                     }
                 }
@@ -465,7 +465,7 @@
                 > label {
                     font-size: 0;
                     .option {
-                        color: color(system, 100);
+                        color: custom-color(system, 100);
                         @include font(small-5x, bold);
                     }
                 }
@@ -474,10 +474,10 @@
 
         &.disabled {
             input {
-                background: icon(radio-on, color(neutral, 040)) no-repeat center / 100% !important;
+                background: icon(radio-on, custom-color(neutral, 040)) no-repeat center / 100% !important;
             }
             .option {
-                color: color(neutral, 040) !important;
+                color: custom-color(neutral, 040) !important;
             }
         }
     }
@@ -495,11 +495,11 @@
                     }
                     input {
                         &[type="checkbox"] {
-                            background: icon(check-off, color(system, 100)) no-repeat center / 1.6rem 1.6rem;
+                            background: icon(check-off, custom-color(system, 100)) no-repeat center / 1.6rem 1.6rem;
                             &:checked {
-                                background: icon(check, color(primary, 070)) no-repeat center / 1.6rem 1.2rem;
+                                background: icon(check, custom-color(primary, 070)) no-repeat center / 1.6rem 1.2rem;
                                 + .option {
-                                    color: color(primary, 070);
+                                    color: custom-color(primary, 070);
                                 }
                             }
                         }
@@ -526,7 +526,7 @@
                 > label {
                     font-size: 0;
                     .option {
-                        color: color(system, 100);
+                        color: custom-color(system, 100);
                         @include font(small-4x, bold);
                     }
                 }
@@ -535,23 +535,23 @@
 
         // &.disabled {
         //     input {
-        //         background: icon(radio-on, color(neutral, 040)) no-repeat center / 100% !important;
+        //         background: icon(radio-on, custom-color(neutral, 040)) no-repeat center / 100% !important;
         //     }
         //     .option {
-        //         color: color(neutral, 040) !important;
+        //         color: custom-color(neutral, 040) !important;
         //     }
         // }
     }
     &.textArea {
         width: 100%;
         height: 16.8rem;
-        border: .1rem solid color(neutral, 030);
+        border: .1rem solid custom-color(neutral, 030);
         border-radius: .8rem;
         >textarea {
             width: 100%;
             height: 100%;
             padding: 1.4rem 1.5rem;
-            color: color(typo, 005);
+            color: custom-color(typo, 005);
             resize: none;
             @include font(small-4x, medium);
         }

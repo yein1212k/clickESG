@@ -88,7 +88,7 @@
 
 			.local-subject {
 				.local-name {
-                    color: color(typo, 020);
+                    color: custom-color(typo, 020);
 					text-align: center;
 					@include font(large-3x, extrabold);
 				}
@@ -147,7 +147,7 @@
 
 				.local-name {
 					@include font(large-12x, bold);
-					color: color(typo, 020);
+					color: custom-color(typo, 020);
 					line-height: 1.2;
 					transition: color 1s ease-out;
 
@@ -182,7 +182,7 @@
 
 					.local-title {
 						@include font(medium, bold);
-						color: color(primary, 080);
+						color: custom-color(primary, 080);
 						transition: color 1s ease-out;
 
 						@include mobile() {
@@ -195,7 +195,7 @@
 					}
 
 					.local-summary {
-						color: color(neutral, 080);
+						color: custom-color(neutral, 080);
 						transition: color 1s ease-out;
 						@include font(small-3x, bold);
 
@@ -283,18 +283,18 @@
 			&.active2 {
 				.local-subject {
 					.local-name {
-						color: color(system, 070);
+						color: custom-color(system, 070);
 					}
 				}
 
 				.local-aside {
 					.loca-wrap {
 						.local-title {
-							color: color(system, 070);
+							color: custom-color(system, 070);
 						}
 
 						.local-summary {
-							color: color(system, 070);
+							color: custom-color(system, 070);
 						}
 					}
 				}
@@ -348,7 +348,7 @@
 
 				.local-name {
 					position: relative;
-					color: color(typo, 020);
+					color: custom-color(typo, 020);
 					transform: translateY(30%);
 					opacity: 0;
 					@include font(large-5x, bold);
@@ -371,7 +371,7 @@
 
 				.local-wrap {
 					.local-title {
-						color: color(typo, 000);
+						color: custom-color(typo, 000);
 						@include font(large-5x, bold);
 
 						@include mobile() {
@@ -840,19 +840,19 @@
 			// font style
 			&.type1 {
                 .section-caption {
-                    color: color(primary, 080);
+                    color: custom-color(primary, 080);
                     @include font(small-5x, medium);
                 }
 				.section-name {
 					@include font(medium, bold);
-					color: color(typo, 020);
+					color: custom-color(typo, 020);
 
 					@include mobile {
 						@include font(small-1x, bold);
 					}
 
 					+.section-summary {
-						color: color(typo, 010);
+						color: custom-color(typo, 010);
 						margin-top: 2.4rem;
 						@include font(small-3x, medium);
 
@@ -865,7 +865,7 @@
 
 				.section-body {
 					>.para {
-						color: color(typo, 010);
+						color: custom-color(typo, 010);
 						@include font(small-3x, medium);
 
 						@include mobile {
@@ -877,7 +877,7 @@
 
 			&.type2 {
 				.section-name {
-					color: color(typo, 020);
+					color: custom-color(typo, 020);
 					@include font(small-1x, bold);
 
 					@include mobile {
@@ -885,7 +885,7 @@
 					}
 
 					+.section-summary {
-						color: color(typo, 010);
+						color: custom-color(typo, 010);
 						margin-top: 1.6rem;
 						@include font(small-4x, medium);
 
@@ -898,7 +898,7 @@
 
 				.section-body {
 					>.para {
-						color: color(typo, 010);
+						color: custom-color(typo, 010);
 						@include font(small-3x, medium);
 						@include mobile {
 							@include font(small-4x, medium);
@@ -909,14 +909,14 @@
 
 			&.type3 {
 				.section-name {
-					color: color(typo, 020);
+					color: custom-color(typo, 020);
 					@include font(large-3x, bold);
 
 					@include mobile {
 						@include font(medium, bold);
 					}
 					+.section-summary {
-						color: color(typo, 010);
+						color: custom-color(typo, 010);
 						margin-top: 2.4rem;
 						@include font(small-3x, medium);
 
@@ -929,7 +929,7 @@
 
 				.section-body {
 					>.para {
-						color: color(typo, 020);
+						color: custom-color(typo, 020);
 						@include font(small-1x, bold);
 						@include mobile {
 							@include font(small-2x, bold)
@@ -937,7 +937,7 @@
 					}
 					.note {
                         display: inline-block;
-						color: color(typo, 010);
+						color: custom-color(typo, 010);
 						@include font(small-3x, medium);
 						@include mobile {
 							@include font(small-4x, medium);
@@ -954,7 +954,7 @@
 
 				.section-body {
 					>.para {
-						color: color(typo, 010);
+						color: custom-color(typo, 010);
 						@include font(small-4x, medium);
 						@include mobile {
 								@include font(small-5x, medium);
@@ -966,14 +966,14 @@
             &.type5 {
                 .section-head {
                     .section-name {
-                        color: color(typo, 020);
+                        color: custom-color(typo, 020);
                         @include font(large-3x, bold);
                         @include mobile {
                             @include font(medium, bold);
                         }
                     }
                     .section-summary {
-                        color: color(typo, 010);
+                        color: custom-color(typo, 010);
                         @include font(small-2x, bold);
                         @include mobile {
                             @include font(small-3x, bold);
@@ -982,7 +982,7 @@
                 }
                 .section-body {
                     >.para {
-                        color: color(typo, 010);
+                        color: custom-color(typo, 010);
                         @include font(small-3x, medium);
                         @include mobile {
                             @include font(small-4x, medium);
@@ -994,7 +994,7 @@
 			&.type6 {
 				.section-name {
 					@include font(small-1x, bold);
-					color: color(typo, 020);
+					color: custom-color(typo, 020);
 
 					@include mobile {
 						@include font(small-2x, bold);
@@ -1002,7 +1002,7 @@
 
 					+.section-summary {
 						@include font(small-3x, medium);
-						color: color(typo, 010);
+						color: custom-color(typo, 010);
 
 						@include mobile {
 							@include font(small-4x, medium);
@@ -1012,7 +1012,7 @@
 
                 .section-body {
                     >.para {
-                        color: color(typo, 010);
+                        color: custom-color(typo, 010);
                         @include font(small-3x, medium);
                         @include mobile {
                             @include font(small-4x, medium);
@@ -1024,7 +1024,7 @@
             &.type7 {
 				.section-name {
 					@include font(medium, bold);
-					color: color(typo, 020);
+					color: custom-color(typo, 020);
 
 					@include mobile {
 						@include font(small-1x, bold);
@@ -1034,7 +1034,7 @@
 				.section-body {
 					>.para {
 						@include font(small-4x, medium);
-						color: color(typo, 010);
+						color: custom-color(typo, 010);
 
 						@include mobile {
 							@include font(small-5x, medium);
@@ -1045,7 +1045,7 @@
             &.type8 {
 				.section-name {
 					@include font(medium, bold);
-					color: color(typo, 000);
+					color: custom-color(typo, 000);
 
 					@include mobile {
 						@include font(small-1x, bold);
@@ -1054,7 +1054,7 @@
 
 				.section-body {
 					>.para {
-                        color: color(typo, 000);
+                        color: custom-color(typo, 000);
 						@include font(small-3x, medium);
 
 						@include mobile {
@@ -1170,7 +1170,7 @@
 		// 별첨 공통
 		.comment {
 			&.design1 {
-				color: color(typo, 010);
+				color: custom-color(typo, 010);
 				@include font(small-5x, medium);
 
 				@include mobile {
@@ -1178,7 +1178,7 @@
 				}
 			}
 			&.design2 {
-				color: color(system, 100);
+				color: custom-color(system, 100);
 				@include font(small-2x, bold);
 
 				@include mobile {
@@ -1186,7 +1186,7 @@
 				}
 			}
 			&.design3 {
-				color: color(system, 100);
+				color: custom-color(system, 100);
 				@include font(small-3x, bold);
 
 				@include mobile {
@@ -1228,18 +1228,18 @@
 					}
 
 					&.dark {
-						color: color(typo, 005);
+						color: custom-color(typo, 005);
 
 						.data-item:last-child {
 							.item-text {
-								color: color(neutral, 090);
+								color: custom-color(neutral, 090);
 								font-weight: 700;
 							}
 						}
 					}
 
 					&.light {
-						color: color(system, 070);
+						color: custom-color(system, 070);
 
 						.data-item:last-child {
 							.item-text {
@@ -1268,7 +1268,7 @@
 									width: 1.6rem;
 									height: 1.6rem;
 									content: '';
-									background-image: icon(arrow-right1, color(neutral, 030));
+									background-image: icon(arrow-right1, custom-color(neutral, 030));
 									background-size: 0.7rem 1rem;
 									background-repeat: no-repeat;
 									background-position: center center;

@@ -109,7 +109,7 @@
                     .data-item {
                         position: absolute;
                         width: 100%;
-                        color: color(typo, 010);
+                        color: custom-color(typo, 010);
                         transition: all 0.2s linear;
                         z-index: 0;
                         opacity: 0;
@@ -154,7 +154,7 @@
                     .section-subject {
                         .section-sub {
                             display: block;
-                            color: color(typo, 000);
+                            color: custom-color(typo, 000);
                             font-weight: 700;
                             font-size: 2.5vw;
                             line-height: 4vw;
@@ -174,7 +174,7 @@
                         }
                         .section-name {
                             display: block;
-                            color: color(typo, 000);
+                            color: custom-color(typo, 000);
                             font-weight: 700;
                             font-size: 3.333vw;
                             line-height: 5.333vw;
@@ -616,7 +616,7 @@
                             .post-head {
                                 .post-sub {
                                     @include font(medium, bold);
-                                    color: color(typo, 000);
+                                    color: custom-color(typo, 000);
 
                                     @include mobile {
                                         @include font(small-2x, bold);
@@ -632,7 +632,7 @@
                             .post-body {
                                 .para {
                                     @include font(large-3x, bold);
-                                    color: color(typo, 000);
+                                    color: custom-color(typo, 000);
                                     @include mobile {
                                         @include font(medium, bold);
                                     }
@@ -711,7 +711,7 @@
                             transition: all .5s ease-out;
                             .data-text {
                                 display: flex;
-                                color: color(typo, 000);
+                                color: custom-color(typo, 000);
                                 font-weight: 600;
                                 font-size: 8.333333vw;
                                 align-items: center;
@@ -775,7 +775,7 @@
                             font-weight: 700;
                             font-size: 10rem;
                             line-height: 1.2;
-                            color: color(primary,070);
+                            color: custom-color(primary,070);
                             // -webkit-background-clip: text;
                             // -webkit-text-fill-color: transparent;
 
@@ -794,7 +794,7 @@
                     }
                     .section-summary {
                         position: relative;
-                        color: color(typo, 010);
+                        color: custom-color(typo, 010);
                         transition: all 0.5s ease-out;
 
                         @include font(small-1x, medium);
@@ -862,7 +862,7 @@
                                         .product-body {
                                             .para {
                                                 @include font(small-3x, medium);
-                                                color: color(typo, 010);
+                                                color: custom-color(typo, 010);
                                                 line-height: 1.8;
 
                                                 @include mobile {
@@ -1063,7 +1063,7 @@
                     }
                     .section-summary {
                         position: relative;
-                        color: color(typo, 010);
+                        color: custom-color(typo, 010);
                         @include font(small-1x, medium);
 
                         @include mobile {
@@ -1127,7 +1127,7 @@
                                         .product-body {
                                             .para {
                                                 @include font(small-3x, medium);
-                                                color: color(typo, 010);
+                                                color: custom-color(typo, 010);
                                                 line-height: 1.8;
 
                                                 @include mobile {
@@ -1259,7 +1259,7 @@
                     .section-subject {
                         .section-name {
                             display: block;
-                            color: color(typo, 020);
+                            color: custom-color(typo, 020);
                             font-weight: 700;
                             font-size: 6.4rem;
                             line-height: 1.2;
@@ -1280,7 +1280,7 @@
                     }
                     .section-summary {
                         @include font(small-1x, medium);
-                        color: color(typo, 010);
+                        color: custom-color(typo, 010);
 
                         @include mobile {
                             @include font(small-3x, medium);
@@ -1371,7 +1371,7 @@
                                     .data-subject {
                                         .data-name {
                                             display: block;
-                                            color: color(typo, 000);
+                                            color: custom-color(typo, 000);
                                             line-height: 1.8;
                                             @include font(small-3x, medium);
 
@@ -1384,7 +1384,7 @@
                                 }
                                 .data-body {
                                     @include font(large-1x, extrabold);
-                                    color: color(typo, 000);
+                                    color: custom-color(typo, 000);
                                     line-height: 1.8;
 
                                     @include mobile {
@@ -1394,7 +1394,7 @@
                                 }
                                 .data-base {
                                     display: block;
-                                    color: color(typo, 000);
+                                    color: custom-color(typo, 000);
                                     line-height: 1.8;
                                     @include font(small-3x, extrabold);
 
@@ -1463,12 +1463,12 @@
                     .section-subject {
                         .section-name {
                             display: block;
-                            color: color(typo, 000);
+                            color: custom-color(typo, 000);
                             @include font(large-5x, bold);
 
                             @include mobile {
                                 @include font(large, bold);
-                                color: color(typo, 020);
+                                color: custom-color(typo, 020);
                                 line-height: 1.2;
                             }
                         }
@@ -1489,18 +1489,18 @@
                             }
 
                             // .btn  {
-                            //     color: color(system, 070);
+                            //     color: custom-color(system, 070);
                             //     border-color: rgb(228, 228, 231);
                             // }
                         }
                     }
                     .section-summary {
                         @include font(small-3x, medium);
-                        color: color(typo, 000);
+                        color: custom-color(typo, 000);
                         line-height: 1.8;
 
                         @include mobile {
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             font-weight: 500;
                             font-size: 1.5rem;
                             line-height: 1.6;
@@ -1509,8 +1509,8 @@
                     @include mobile {
                         .btn {
                             &.color3 {
-                                color: color(system, 100);
-                                border-color: color(neutral, 030);
+                                color: custom-color(system, 100);
+                                border-color: custom-color(neutral, 030);
                             }
                         }
                     }
@@ -1612,7 +1612,7 @@
 
                                     .board-subject {
                                         .board-name {
-                                            color: color(typo, 000);
+                                            color: custom-color(typo, 000);
                                             font-weight: 700;
                                             font-size: 2.2rem;
 
@@ -1687,7 +1687,7 @@
 
                     .section-summary {
                         @include font(medium, bold);
-                        color: color(typo, 020);
+                        color: custom-color(typo, 020);
                         text-align: center;
 
                         @include mobile {
@@ -1775,7 +1775,7 @@
                             // background-size: min(49.17%, 100%);
                             .data-head {
                                 .data-name {
-                                    color: color(typo, 020);
+                                    color: custom-color(typo, 020);
                                     @include font(small-2x, bold);
                                     @include mobile {
                                         @include font(small-3x, bold);
@@ -1790,7 +1790,7 @@
                             }
                             .data-body {
                                 .para {
-                                    color: color(typo, 010);
+                                    color: custom-color(typo, 010);
                                     word-break: keep-all;
                                     @include font(small-3x, medium);
                                     @include mobile {
@@ -1830,7 +1830,7 @@
                                 max-width: 50rem;
                                 .position {
                                     display: inline-block;
-                                    color: color(typo, 005);
+                                    color: custom-color(typo, 005);
                                     @include font(small-3x, bold);
                                     +.name {
                                         margin-left: 2.4rem;
@@ -1841,7 +1841,7 @@
                                 }
                                 .name {
                                     display: inline-block;
-                                    color: color(typo, 020);
+                                    color: custom-color(typo, 020);
                                     @include font(small-1x, bold);
                                     @include mobile {
                                         @include font(small-1x, bold);
@@ -1896,7 +1896,7 @@
                         .section-body {
                             .para,
                             .closing-comment {
-                                color: color(typo, 020);
+                                color: custom-color(typo, 020);
                                 @include font(small-2x, bold);
                             }
                             .para {
@@ -1979,11 +1979,11 @@
                                 width: 100%;
                                 flex: 1;
                                 .board-list {
-                                    background-color: color(system, 070);
+                                    background-color: custom-color(system, 070);
                                     .board-item {
                                         position: relative;
                                         padding: 4rem;
-                                        border: .1rem solid color(neutral, 060);
+                                        border: .1rem solid custom-color(neutral, 060);
                                         padding-bottom: 6.4rem;
                                         border-radius: .8rem;
                                         .board-head {
@@ -1992,7 +1992,7 @@
                                             min-height: 5.6rem;
                                             margin-right: 14.1rem;
                                             .board-subject {
-                                                color: color(typo, 020);
+                                                color: custom-color(typo, 020);
                                                 @include font(small-1x, bold)
                                             }
                                             &::after {
@@ -2000,7 +2000,7 @@
                                                 width: 2.4rem;
                                                 height: 2.4rem;
                                                 content: "";
-                                                background-image: icon(arrow-down1, color(secondary, 080));
+                                                background-image: icon(arrow-down1, custom-color(secondary, 080));
                                                 background-repeat: no-repeat;
                                                 background-position: center;
                                                 transition: transform .3s ease;
@@ -2018,13 +2018,13 @@
                                                     display: flex;
                                                     .info-title {
                                                         display: inline-block;
-                                                        color: color(typo, 020);
+                                                        color: custom-color(typo, 020);
                                                         min-width: 8.1rem;
                                                         @include font(small-3x, bold);
                                                     }
                                                     .info-content {
                                                         display: inline-block;
-                                                        color: color(typo, 010);
+                                                        color: custom-color(typo, 010);
                                                         @include font(small-3x, medium);
                                                     }
                                                     +.info-item {
@@ -2095,12 +2095,12 @@
                                             padding: 0;
                                             border: none;
                                             border-radius: 0;
-                                            border-top: .2rem solid color(secondary, 080);
+                                            border-top: .2rem solid custom-color(secondary, 080);
                                             .board-head {
                                                 padding: 2.3rem 1.6rem;
                                                 justify-content: space-between;
                                                 margin-right: 0;
-                                                border-bottom: .1rem solid color(neutral, 060);
+                                                border-bottom: .1rem solid custom-color(neutral, 060);
                                                 cursor: pointer;
                                                 .board-subject {
                                                     @include font(small-3x, bold);
@@ -2112,10 +2112,10 @@
                                             .board-body {
                                                 height: 0;
                                                 overflow: hidden;
-                                                background-color: color(secondary, 070);
+                                                background-color: custom-color(secondary, 070);
                                                 .board-inner {
                                                     padding: 1.6rem 2.4rem;
-                                                    border-bottom: .1rem solid color(neutral, 060);
+                                                    border-bottom: .1rem solid custom-color(neutral, 060);
                                                     .info-list {
                                                         padding: 0;
                                                         .info-item {
@@ -2220,7 +2220,7 @@
                                 }
                             }
                             .link-text {
-                                color: color(system,070);
+                                color: custom-color(system,070);
                                 &.title {
                                     @include font(small-2x,bold);
                                 }
@@ -2247,13 +2247,13 @@
                                 border: 1px solid rgba(255, 255, 255, 0.40);
                             }
                             &.active {
-                                background: color(system,070);
+                                background: custom-color(system,070);
                                 .link-text {
                                     &.title {
                                         @include font(small-2x,bold);
                                     }
                                     &.date {
-                                        color: color(typo,020);
+                                        color: custom-color(typo,020);
                                         @include font(small-2x,bold);
                                     }
                                     @include web2 {
@@ -2320,12 +2320,12 @@
                                 }
                             }
                             .summary {
-                                color: color(system,070);
+                                color: custom-color(system,070);
                                 opacity: 1;
                                 transition: opacity 0.4s ease;
                                 @include font(small-3x,bold);
                                 + .name {
-                                    color: color(system,070);
+                                    color: custom-color(system,070);
                                     padding-right: 1rem;
                                     margin-top: 1.6rem;
                                     transform-origin: bottom left;
@@ -2354,7 +2354,7 @@
                                 bottom: 0;
                                 left: 0;
                                 height: 0.4rem;
-                                background-color: color(neutral,090);
+                                background-color: custom-color(neutral,090);
                                 z-index: 10;
                             }
                             + .body {
@@ -2387,7 +2387,7 @@
                                 width: 100vw;
                                 height: 0.4rem;
                                 content: "";
-                                background-color: color(neutral,030);
+                                background-color: custom-color(neutral,030);
                             }
                         }
                         @each $index in (0, 1, 2, 3) {

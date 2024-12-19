@@ -45,10 +45,10 @@
 					>tr {
 						>th {
 							padding: 1.8rem;
-							background-color: color(secondary, 080);
-							border-right: 1px solid color(neutral, 060);
-							border-left: 1px solid color(neutral, 060);
-							border-top: 1px solid color(neutral, 060);
+							background-color: custom-color(secondary, 080);
+							border-right: 1px solid custom-color(neutral, 060);
+							border-left: 1px solid custom-color(neutral, 060);
+							border-top: 1px solid custom-color(neutral, 060);
 							@include mobile {
 								padding: 1.5rem 1rem;
 							}
@@ -72,10 +72,10 @@
 						>td {
 							padding: 1.8rem 2rem;
 							vertical-align: middle;
-							border-right: 1px solid color(neutral, 030);
-							border-bottom: 1px solid color(neutral, 030);
+							border-right: 1px solid custom-color(neutral, 030);
+							border-bottom: 1px solid custom-color(neutral, 030);
 							&.t-bg {
-								background: color(secondary, 070);
+								background: custom-color(secondary, 070);
 							}
 							@include mobile {
 								padding: 1.5rem 2.4rem;
@@ -91,8 +91,8 @@
 					>tr {
 						>th {
 							padding: 1.8rem;
-							background-color: color(secondary, 080);
-							border-right: 1px solid color(neutral, 060);
+							background-color: custom-color(secondary, 080);
+							border-right: 1px solid custom-color(neutral, 060);
 							@include mobile {
 								padding: 1.5rem 1rem;
 							}
@@ -116,7 +116,7 @@
 						>td {
 							padding: 1.8rem 2rem;
 							vertical-align: middle;
-							border-right: 1px solid color(neutral, 030);
+							border-right: 1px solid custom-color(neutral, 030);
 							@include mobile {
 								padding: 1.5rem 2.4rem;
 							}
@@ -131,7 +131,7 @@
 				>thead {
 					>tr {
 						>th {
-							color: color(typo, 000);
+							color: custom-color(typo, 000);
 							text-align: center;
 							@include font(small-3x, bold);
 							@include mobile {
@@ -145,7 +145,7 @@
 					>tr {
                         >th,
 						>td {
-							color: color(typo, 010);
+							color: custom-color(typo, 010);
 							@include font(small-3x, bold);
 							@include mobile {
 								@include font(small-4x, bold);
@@ -207,9 +207,9 @@
 					>tr {
 						>th {
 							padding: 1.8rem;
-							background-color: color(secondary, 080);
-							border-right: 1px solid color(neutral, 060);
-							border-left: 1px solid color(neutral, 060);
+							background-color: custom-color(secondary, 080);
+							border-right: 1px solid custom-color(neutral, 060);
+							border-left: 1px solid custom-color(neutral, 060);
 							@include mobile {
 								padding: 1.5rem 1rem;
 							}
@@ -223,13 +223,13 @@
 						>td {
 							padding: 2rem;
 							vertical-align: middle;
-							border-right: 1px solid color(neutral, 030);
-							border-bottom: 1px solid color(neutral, 030);
+							border-right: 1px solid custom-color(neutral, 030);
+							border-bottom: 1px solid custom-color(neutral, 030);
 							@include mobile {
 								padding: 1.5rem 2.4rem;
 							}
 							&.t-bg{
-								background: color(secondary, 070);
+								background: custom-color(secondary, 070);
 								text-align: center;
 							}
 						}
@@ -244,7 +244,7 @@
 					>tr {
 						>th {
 							@include font(small-3x, bold);
-							color: color(typo, 000);
+							color: custom-color(typo, 000);
 							text-align: center;
 							@include mobile {
 								@include font(small-4x, bold);
@@ -258,7 +258,7 @@
                         >th,
 						>td {
 							@include font(small-3x, bold);
-							color: color(typo, 010);
+							color: custom-color(typo, 010);
 							@include mobile {
 								@include font(small-4x, bold);
 							}
@@ -274,16 +274,16 @@
 		display: flex;
 		&.case1 {
 			table {
-				border-top: 1px solid color(neutral, 060);
+				border-top: 1px solid custom-color(neutral, 060);
 				>thead {
 					>tr {
 						>th {
 							padding: 1.8rem;
-							background-color: color(secondary, 080);
-							border-right: 1px solid color(neutral, 060);
-							border-left: 1px solid color(neutral, 060);
-							border-top: 1px solid color(neutral, 060);
-							border-bottom: 1px solid color(neutral, 060);
+							background-color: custom-color(secondary, 080);
+							border-right: 1px solid custom-color(neutral, 060);
+							border-left: 1px solid custom-color(neutral, 060);
+							border-top: 1px solid custom-color(neutral, 060);
+							border-bottom: 1px solid custom-color(neutral, 060);
 							@include mobile {
 								padding: 1.5rem 1rem;
 							}
@@ -297,35 +297,35 @@
 						>td {
 							padding: 1.8rem;
 							vertical-align: middle;
-							border-right: 1px solid color(neutral, 030);
+							border-right: 1px solid custom-color(neutral, 030);
 							@include mobile {
 								padding: 1.5rem 2.4rem;
 							}
 							&.t-bg{
-								background: color(secondary, 070);
-								border-bottom: 1px solid color(neutral, 030);
+								background: custom-color(secondary, 070);
+								border-bottom: 1px solid custom-color(neutral, 030);
 							}
 							&.bl-bg{
-								background-color: color(secondary, 080);
-								border-bottom: 1px solid color(neutral,060);
+								background-color: custom-color(secondary, 080);
+								border-bottom: 1px solid custom-color(neutral,060);
 							}
 						}
 						>td {
-							border-bottom: 1px solid color(neutral, 030);
+							border-bottom: 1px solid custom-color(neutral, 030);
 						}
 					}
 				}
 				+ table {
 					border-top: unset;
-					border-left: 1px solid color(neutral,060);
+					border-left: 1px solid custom-color(neutral,060);
 					position: relative;
 					@include mobile {
-						border-top: 1px solid color(neutral,060);
+						border-top: 1px solid custom-color(neutral,060);
 					}
 					>tbody {
 						>tr:first-child {
 							>td {
-								border-top: 1px solid color(neutral, 030);
+								border-top: 1px solid custom-color(neutral, 030);
 							}
 						}
 					}
@@ -339,7 +339,7 @@
 					>tr {
 						>th {
 							@include font(small-3x, bold);
-							color: color(typo, 000);
+							color: custom-color(typo, 000);
 							text-align: center;
 							@include mobile {
 								@include font(small-4x, bold);
@@ -353,12 +353,12 @@
                         >th,
 						>td {
 							@include font(small-3x, bold);
-							color: color(typo, 010);
+							color: custom-color(typo, 010);
 							@include mobile {
 								@include font(small-4x, bold);
 							}
 							&.bl-bg{
-								color: color(secondary, 070);
+								color: custom-color(secondary, 070);
 							}
 						}
 					}
@@ -373,18 +373,18 @@
 					>tr {
 						>th {
 							padding: 1.8rem;
-							background-color: color(secondary, 080);
-							border-right: 1px solid color(neutral, 060);
-							border-left: 1px solid color(neutral, 060);
-							border-top: 1px solid color(neutral, 060);
-							border-bottom: 1px solid color(neutral, 060);
+							background-color: custom-color(secondary, 080);
+							border-right: 1px solid custom-color(neutral, 060);
+							border-left: 1px solid custom-color(neutral, 060);
+							border-top: 1px solid custom-color(neutral, 060);
+							border-bottom: 1px solid custom-color(neutral, 060);
 							@include mobile {
 								padding: 1.5rem 1rem;
 							}
 							&.t-bg{
-								background: color(secondary, 070);
-								border-right: 1px solid color(neutral, 030);
-								border-bottom: 1px solid color(neutral, 030);
+								background: custom-color(secondary, 070);
+								border-right: 1px solid custom-color(neutral, 030);
+								border-bottom: 1px solid custom-color(neutral, 030);
 							}
 						}
 					}
@@ -396,15 +396,15 @@
 						>td {
 							padding: 2rem;
 							vertical-align: middle;
-							border-right: 1px solid color(neutral, 030);
-							border-bottom: 1px solid color(neutral, 030);
+							border-right: 1px solid custom-color(neutral, 030);
+							border-bottom: 1px solid custom-color(neutral, 030);
 							@include mobile {
 								padding: 1.5rem 2.4rem;
 							}
 						}
 						>td{
 							&.t-bg{
-								background: color(secondary, 070);
+								background: custom-color(secondary, 070);
 							}
 							.radio-list{
 								align-items: center;
@@ -422,14 +422,14 @@
 					>tr {
 						>th {
 							@include font(small-3x, bold);
-							color: color(typo, 000);
+							color: custom-color(typo, 000);
 							text-align: center;
 							@include mobile {
 								@include font(small-4x, bold);
 							}
 							&.t-bg{
 								@include font(small-4x, bold);
-								color: color(typo, 010);
+								color: custom-color(typo, 010);
 								@include mobile {
 									@include font(small-5x, bold);
 								}
@@ -443,7 +443,7 @@
                         >th,
 						>td {
 							@include font(small-3x, bold);
-							color: color(typo, 010);
+							color: custom-color(typo, 010);
 							@include mobile {
 								@include font(small-4x, bold);
 							}
@@ -487,12 +487,12 @@
 	// table info
     .t-info {
 		&.type1 {
-			color: color(neutral, 050);
+			color: custom-color(neutral, 050);
 			font-weight: 600;
 			font-size: 3.2rem;
 		}
 		&.type2 {
-			color: color(neutral, 050);
+			color: custom-color(neutral, 050);
 			font-weight: 600;
 			font-size: 1.3rem;
 		}

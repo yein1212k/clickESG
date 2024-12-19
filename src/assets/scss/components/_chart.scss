@@ -37,12 +37,12 @@
                     .chart-wrap{
                         @include font(small-4x, medium);
                         display: flex;
-                        color: color(neutral, 080);
+                        color: custom-color(neutral, 080);
                         gap: 9.4rem;
                         .chart-aside{
                             .chart-bar-color{
                                 padding: 2.4rem;
-                                border: 0.1rem solid color(neutral, 030);
+                                border: 0.1rem solid custom-color(neutral, 030);
                                 border-radius: 8px;
                                 margin-bottom: 2.4rem;
                             }
@@ -57,7 +57,7 @@
                                 .unit-item{
                                     display: flex;
                                     position: relative;
-                                    color: color(neutral, 080);
+                                    color: custom-color(neutral, 080);
                                     align-items: center;
                                     @include font(small-4x, bold);
                                     &::after{
@@ -66,7 +66,7 @@
                                         width: 89.5rem;
                                         height: 0.1rem;
                                         content: '';
-                                        background-color: color(neutral, 030);
+                                        background-color: custom-color(neutral, 030);
                                         margin-left: 7.6rem;
                                     }
                                     .num{
@@ -85,7 +85,7 @@
                                 .year-item{
                                     position: relative;
                                     width: 12.4rem;
-                                    color: color(typo,020);
+                                    color: custom-color(typo,020);
                                     text-align: center;
                                     @include font(small-3x, bold);
                                     .graph-list{
@@ -130,7 +130,7 @@
                                                 left: 50%;
                                                 width: max-content;
                                                 padding: 0.8rem 1.6rem;
-                                                border: 0.1rem solid color(semantic, 010);
+                                                border: 0.1rem solid custom-color(semantic, 010);
                                                 background: rgba(255, 255, 255, 0.85);
                                                 align-items: center;
                                                 transform: translateX(-50%);
@@ -206,12 +206,12 @@
                     .chart-wrap{
                         @include font(small-4x, medium);
                         display: flex;
-                        color: color(neutral, 080);
+                        color: custom-color(neutral, 080);
                         gap: 9.4rem;
                         .chart-aside{
                             .chart-bar-color{
                                 padding: 2.4rem;
-                                border: 0.1rem solid color(neutral, 030);
+                                border: 0.1rem solid custom-color(neutral, 030);
                                 border-radius: 8px;
                                 margin-bottom: 2.4rem;
                             }
@@ -226,7 +226,7 @@
                                 .unit-item{
                                     display: flex;
                                     position: relative;
-                                    color: color(neutral, 080);
+                                    color: custom-color(neutral, 080);
                                     align-items: center;
                                     @include font(small-4x, bold);
                                     &::after{
@@ -235,7 +235,7 @@
                                         width: 89.5rem;
                                         height: 0.1rem;
                                         content: '';
-                                        background-color: color(neutral, 030);
+                                        background-color: custom-color(neutral, 030);
                                         margin-left: 7.6rem;
                                     }
                                     .num{
@@ -313,7 +313,7 @@
                                                     left: 50%;
                                                     width: max-content;
                                                     padding: 0.8rem 1.6rem;
-                                                    border: 0.1rem solid color(semantic, 010);
+                                                    border: 0.1rem solid custom-color(semantic, 010);
                                                     background: rgba(255, 255, 255, 0.85);
                                                     align-items: center;
                                                     transform: translateX(-50%);
@@ -439,7 +439,7 @@
 
                     .chart-img-body{
                         padding: 3.2rem 5.5rem;
-                        background: color(system, 070);
+                        background: custom-color(system, 070);
                         border-radius: 1.6rem;
                         box-shadow: 0px 1.336px 5.342px 0px rgba(0, 0, 0, 0.10);
                     }
@@ -452,13 +452,13 @@
                     .item{
                         width: 100%;
                         padding: 3.2rem;
-                        background: color(system, 070);
+                        background: custom-color(system, 070);
                         border-radius: 1.6rem;
                         box-shadow: 0px 1.336px 5.342px 0px rgba(0, 0, 0, 0.10);
                         max-width: 25rem;
                         .item-head{
                             @include font(small-2x, bold);
-                            color: color(neutral, 100);
+                            color: custom-color(neutral, 100);
                         }
                         &.blue{
                             .item-body{
@@ -556,7 +556,7 @@
                 }
                 .year-value {
                     @include font(small-1x,bold);
-                    color: color(typo,020);
+                    color: custom-color(typo,020);
                     + .year-body {
                         margin-top: 1.6rem;
                     }
@@ -577,7 +577,7 @@
                 .year-head {
                     .year-subject {
                         @include font(small-3x,bold);
-                        color: color(typo,010);
+                        color: custom-color(typo,010);
                     }
                 }
                 //상승

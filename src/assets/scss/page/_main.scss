@@ -49,7 +49,7 @@
                                 position: relative;
                                 padding: 0 1.8rem;
                                 margin: 0 auto;
-                                color: color(system, 070);
+                                color: custom-color(system, 070);
                                 transition: 1s ease;
                                 opacity: 0;
                                 @include web {
@@ -102,7 +102,7 @@
                             transform: scale(1.2);
                             transition: 1s ease;
                             .para {
-                                color: color(neutral, 040);
+                                color: custom-color(neutral, 040);
                                 @include font(small-1x, bold);
                                 @include mobile {
                                     @include font(small-4x, medium);
@@ -260,7 +260,7 @@
                         .section-head {
                             transition: transform 1.7s cubic-bezier(.5,0,0,1);
                             .section-name {
-                                color: color(typo, 000);
+                                color: custom-color(typo, 000);
                                 line-height: 130%;
                                 transform: scale(1.5);
                                 transition: transform 1.7s cubic-bezier(.5,0,0,1);
@@ -283,7 +283,7 @@
                             max-width: 59.4rem;
                             transition: transform 1.7s cubic-bezier(.5,0,0,1);
                             .para {
-                                color: color(neutral, 040);
+                                color: custom-color(neutral, 040);
                                 @include font(small-1x, regular);
                                 @include mobile {
                                     @include font(small-4x, medium);
@@ -555,7 +555,7 @@
                                     overflow: hidden;
                                     .split {
                                         display: inline-block;
-                                        color: color(system, 070);
+                                        color: custom-color(system, 070);
                                         transform: translateY(100%);
                                         @include font(large-3x, bold);
                                         @include mobile {
@@ -611,7 +611,7 @@
                             background-color: #050505;
                             padding-bottom: 8.7rem;
                             border-radius: 0 0 6rem 6rem;
-                            box-shadow: 0rem 4.7rem 2.8rem 0rem color(system, 100, 0.05), 0rem 2.1rem 2.1rem 0rem color(system, 100, 0.09);
+                            box-shadow: 0rem 4.7rem 2.8rem 0rem custom-color(system, 100, 0.05), 0rem 2.1rem 2.1rem 0rem custom-color(system, 100, 0.09);
                             transition: 1s cubic-bezier(.5,0,0,1);
                             @include mobile {
                                 padding: 0 1.8rem 8rem;
@@ -631,7 +631,7 @@
                                     transform: scale(2);
                                     transition: transform 1.7s cubic-bezier(.5,0,0,1);
                                     .section-name {
-                                        color: color(system, 070);
+                                        color: custom-color(system, 070);
                                         @include font(large-3x, bold);
                                         @include mobile {
                                             @include font(small-1x, bold);
@@ -646,7 +646,7 @@
                                 }
                                 .section-summary {
                                     display: inline-block;
-                                    color: color(neutral, 040);
+                                    color: custom-color(neutral, 040);
                                     max-width: 51rem;
                                     transform: translateY(5rem);
                                     transition: transform 1.7s cubic-bezier(.5,0,0,1);
@@ -685,7 +685,7 @@
                                         position: relative;
                                         width: 36.8rem;
                                         height: 28.4rem;
-                                        background: linear-gradient(146deg, color(system, 070, 0.16) 0%, transparent 60%, transparent 100%);
+                                        background: linear-gradient(146deg, custom-color(system, 070, 0.16) 0%, transparent 60%, transparent 100%);
                                         text-align: center;
                                         padding-top: 13.7rem;
                                         border-radius: 2.4rem;
@@ -693,7 +693,7 @@
                                         z-index: 12;
                                         .board-head {
                                             .board-name {
-                                                color: color(system, 070);
+                                                color: custom-color(system, 070);
                                                 @include font(small-1x, bold);
                                                 @include mobile {
                                                     @include font(small-4x, bold);
@@ -732,7 +732,7 @@
                                                 padding: 0 0rem;
                                             }
                                             .para {
-                                                color: color(neutral, 050);
+                                                color: custom-color(neutral, 050);
                                                 @include font(small-4x, medium);
                                                 @include mobile {
                                                     @include font(small-5x, medium)
@@ -944,7 +944,7 @@
                     margin: 0 auto;
                     margin-bottom: 7rem;
                     border-radius: 4.8rem;
-                    background-color: color(neutral, 100);
+                    background-color: custom-color(neutral, 100);
                     clip-path: inset(0% 15% 0% 15% round 4.8rem);
                     transition: 1.7s cubic-bezier(.5,0,0,1);
                     z-index: 1;
@@ -954,7 +954,7 @@
                         max-width: 120rem;
                         .section-subject {
                             .section-name {
-                                color: color(typo, 000);
+                                color: custom-color(typo, 000);
                                 @include font(large-3x, bold);
                                 @include mobile {
                                     @include font(small-1x, bold);
@@ -965,7 +965,7 @@
                             }
                         }
                         .section-summary {
-                            color: color(typo, 000);
+                            color: custom-color(typo, 000);
                             @include font(small-2x, semibold);
                             @include mobile {
                                 @include font(small-4x, medium);
@@ -1063,10 +1063,10 @@
                                                     @include font(small-5x, bold);
                                                 }
                                                 ~.para {
-                                                    color: color(neutral, 050);
+                                                    color: custom-color(neutral, 050);
                                                     padding-top: 0.8rem;
                                                     @include mobile {
-                                                        color: color(neutral, 040);
+                                                        color: custom-color(neutral, 040);
                                                     }
                                                 }
                                                 ~.date {
@@ -1077,7 +1077,7 @@
                                                 }
                                             }
                                             .para {
-                                                color: color(neutral, 050);
+                                                color: custom-color(neutral, 050);
                                                 transition: color .2s ease-out;
                                                 @include font(small-3x, bold);
                                                 @include ellipsis(2);
@@ -1087,11 +1087,11 @@
                                             }
                                             .date {
                                                 display: inline-block;
-                                                color: color(neutral, 050);
+                                                color: custom-color(neutral, 050);
                                                 @include font(small-5x, medium);
                                                 @include mobile {
                                                     @include font(small-6x, medium);
-                                                    color: color(typo, 005);
+                                                    color: custom-color(typo, 005);
                                                 }
                                             }
                                         }
@@ -1110,7 +1110,7 @@
                                                 }
                                                 .swiper-body {
                                                     .para {
-                                                        color: color(typo, 000);
+                                                        color: custom-color(typo, 000);
                                                     }
                                                 }
                                             }
@@ -1149,10 +1149,10 @@
                                 height: .3rem;
                                 padding: 0;
                                 margin-left: calc((100% - 120rem)/2);
-                                background-color: color(neutral, 090);
+                                background-color: custom-color(neutral, 090);
                                 transition: height .3s ease-out;
                                 .swiper-scrollbar-drag {
-                                    background-color: color(neutral, 050);
+                                    background-color: custom-color(neutral, 050);
                                     transition: transform .3s ease-out;
                                 }
                                 @include mobile {
@@ -1200,7 +1200,7 @@
                     width: 100%;
                     padding: 14rem 1.8rem 10rem;
                     margin: 0 auto;
-                    background-color: color(neutral, 100);
+                    background-color: custom-color(neutral, 100);
                     border-radius: 4.8rem;
                     @include mobile {
                         padding: 4.8rem 0;
@@ -1212,7 +1212,7 @@
                         max-width: 120rem;
                         .section-name {
                             display: flex;
-                            color: color(system, 070);
+                            color: custom-color(system, 070);
                             align-items: center;
                             @include font(large-3x, bold);
                             @include mobile {
@@ -1310,7 +1310,7 @@
                                     }
                                 }
                                 .post-name {
-                                    color: color(system, 070);
+                                    color: custom-color(system, 070);
                                     @include font(small, bold);
                                     @include ellipsis(3);
                                     @include mobile {
@@ -1319,7 +1319,7 @@
                                     }
                                 }
                                 .para {
-                                    color: color(neutral, 050);
+                                    color: custom-color(neutral, 050);
                                     transition: color .2s ease-out;
                                     @include font(small-4x, medium);
                                     @include mobile {
@@ -1328,11 +1328,11 @@
                                     }
                                 }
                                 .date {
-                                    color: color(neutral, 050);
+                                    color: custom-color(neutral, 050);
                                     @include font(small-5x, medium);
                                     @include mobile {
                                         @include font(small-6x, medium);
-                                        color: color(typo,005);
+                                        color: custom-color(typo,005);
                                     }
                                 }
                             }
@@ -1437,23 +1437,23 @@
                                 }
                             }
                             .post-name {
-                                color: color(neutral, 050);
+                                color: custom-color(neutral, 050);
                                 transition: color .2s ease-out;
                                 @include font(small-3x, bold);
                                 @include ellipsis(2);
                                 @include mobile {
                                     @include font(small-5x, bold);
-                                    color: color(neutral, 040);
+                                    color: custom-color(neutral, 040);
                                     opacity: 0.9;
                                 }
                             }
                             .date {
                                 display: block;
-                                color: color(neutral, 050);
+                                color: custom-color(neutral, 050);
                                 @include font(small-5x, medium);
                                 @include mobile {
                                     @include font(small-6x, medium);
-                                    color: color(typo, 005);
+                                    color: custom-color(typo, 005);
                                 }
                             }
                         }
@@ -1474,7 +1474,7 @@
                                     .post-body {
                                         .post-name,
                                         .para {
-                                            color: color(typo, 000);
+                                            color: custom-color(typo, 000);
                                         }
                                     }
                                 }
@@ -1544,7 +1544,7 @@
                     }
                     .section-head {
                         .section-name {
-                            color: color(system, 070);
+                            color: custom-color(system, 070);
                             @include font(large-3x, bold);
                             @include mobile {
                                 @include font(medium, bold);
@@ -1573,7 +1573,7 @@
                                 position: relative;
                                 width: 100%;
                                 height: 100%;
-                                background: linear-gradient(146deg, color(system, 070, 0.16) 0%, transparent 60%, transparent 100%);
+                                background: linear-gradient(146deg, custom-color(system, 070, 0.16) 0%, transparent 60%, transparent 100%);
                                 border-radius: 2.4rem;
                                 transition: transform 1.7s cubic-bezier(.5,0,0,1);
                                 .link {
@@ -1589,7 +1589,7 @@
                                     }
                                     .board-head {
                                         .board-name {
-                                            color: color(system, 070);
+                                            color: custom-color(system, 070);
                                             line-height: 120%;
                                             @include font(small-2x, bold);
                                             @include mobile {
@@ -1601,7 +1601,7 @@
                                     .board-footer {
                                         .note {
                                             display: inline-block;
-                                            color: color(system, 070);
+                                            color: custom-color(system, 070);
                                             @include font(small-4x, bold);
                                             .gap {
                                                 color: #FF5050;
@@ -1615,7 +1615,7 @@
                                 .board-body {
                                     position: relative;
                                     .board-name {
-                                        color: color(system, 070);
+                                        color: custom-color(system, 070);
                                         line-height: 120%;
                                         @include font(small-2x, bold);
                                         @include mobile {
@@ -1700,7 +1700,7 @@
                                                     height: 1.6rem;
                                                     content: "";
                                                     margin-left: .8rem;
-                                                    background-image: icon(arrow-right-up3, color(system, 070));
+                                                    background-image: icon(arrow-right-up3, custom-color(system, 070));
                                                     background-repeat: no-repeat;
                                                     background-position: center .3rem;
                                                     transform: translate(-.5rem, .5rem);
@@ -1754,7 +1754,7 @@
                                                     height: 1.6rem;
                                                     content: "";
                                                     margin-left: .8rem;
-                                                    background-image: icon(arrow-right-up3, color(system, 070));
+                                                    background-image: icon(arrow-right-up3, custom-color(system, 070));
                                                     background-repeat: no-repeat;
                                                     background-position: center .3rem;
                                                     transform: translate(-.5rem, .5rem);
@@ -1826,10 +1826,10 @@
                                                 justify-content: space-between;
                                                 align-items: center;
                                                 border-radius: .8rem;
-                                                background-color: color(system, 070, 0.05);
+                                                background-color: custom-color(system, 070, 0.05);
                                                 transition: background-color .2s ease;
                                                 .text {
-                                                    color: color(system,070);
+                                                    color: custom-color(system,070);
                                                     line-height: 100%;
                                                     @include font(small-3x, medium);
                                                     @include mobile {
@@ -1850,7 +1850,7 @@
                                                 }
                                                 @include web {
                                                     &:hover {
-                                                        background-color: color(system, 070, 0.1);
+                                                        background-color: custom-color(system, 070, 0.1);
                                                         &::after {
                                                             transform: translate(.4rem, -.4rem);
                                                         }

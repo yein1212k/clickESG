@@ -47,14 +47,14 @@
                                 width: 0;
                                 height: 0.3rem;
                                 content: '';
-                                background-color: color(primary, 070);
+                                background-color: custom-color(primary, 070);
                                 transform: translateX(-50%);
                                 transition: width .3s ease;
                             }
 
                             &:hover,
                             &:focus {
-                                color: color(primary, 070);
+                                color: custom-color(primary, 070);
 
                                 &::after {
                                     width: calc(100% - 3.6rem);
@@ -79,7 +79,7 @@
                                 .depth2 {
                                     display: block;
                                     position: relative;
-                                    color: color(typo, 020);
+                                    color: custom-color(typo, 020);
                                     transition: color .3s ease;
                                     @include font(small-3x, bold);
 
@@ -102,7 +102,7 @@
 
                                         &:hover,
                                         &:focus {
-                                            color: color(primary, 070);
+                                            color: custom-color(primary, 070);
                                         }
                                     }
                                 }
@@ -115,7 +115,7 @@
 
                                         .depth3 {
                                             display: block;
-                                            color: color(typo, 005);
+                                            color: custom-color(typo, 005);
                                             transition: color .3s ease;
                                             @include font(small-4x, medium);
 
@@ -123,7 +123,7 @@
 
                                                 &:hover,
                                                 &:focus {
-                                                    color: color(primary, 070);
+                                                    color: custom-color(primary, 070);
                                                 }
                                             }
                                         }
@@ -162,7 +162,7 @@
                             &:hover,
                             &:focus-within {
                                 .depth1 {
-                                    color: color(primary, 070);
+                                    color: custom-color(primary, 070);
     
                                     &::after {
                                         width: calc(100% - 3.6rem);
@@ -199,8 +199,8 @@
                     &:focus-within {
                         &::after {
                             height: 39.9rem;
-                            border-bottom: .1rem solid color(secondary, 070);
-                            background-color: color(system, 070);
+                            border-bottom: .1rem solid custom-color(secondary, 070);
+                            background-color: custom-color(system, 070);
                         }
                     }
                 }
@@ -239,7 +239,7 @@
                             height: 1.6rem;
                             content: '';
                             margin-left: 0.8rem;
-                            background-image: icon(arrow-fill-down, color(system, 100));
+                            background-image: icon(arrow-fill-down, custom-color(system, 100));
                             background-repeat: no-repeat;
                             background-position: center;
                             vertical-align: middle;
@@ -250,9 +250,9 @@
                     .option-area {
                         .option-list {
                             padding: 0.7rem;
-                            border: .1rem solid color(neutral, 030);
+                            border: .1rem solid custom-color(neutral, 030);
                             border-radius: .2rem;
-                            background-color: color(system, 070);
+                            background-color: custom-color(system, 070);
 
                             .option-item {
                                 text-align: center;
@@ -265,7 +265,7 @@
 
                                         &:hover,
                                         &:focus {
-                                            color: color(primary, 070);
+                                            color: custom-color(primary, 070);
                                             @include font(small-4x, bold);
                                         }
                                     }
@@ -308,7 +308,7 @@
                                 .option-item {
                                     .option {
                                         padding: 0;
-                                        color: color(typo, 010);
+                                        color: custom-color(typo, 010);
                                         @include font(small-5x, medium);
 
                                         &.active {
@@ -361,23 +361,23 @@
                     &:hover,
                     &:focus-within {
                         &::after {
-                            background-color: color(system, 070);
+                            background-color: custom-color(system, 070);
                         }
                     }
                 }
             }
         }
         .depth1 {
-            color: color(system, 070);
+            color: custom-color(system, 070);
         }
 
         .selected {
             .select-text {
-                color: color(system, 070);
+                color: custom-color(system, 070);
             }
 
             &::after {
-                background-image: icon(arrow-fill-down, color(system, 070));
+                background-image: icon(arrow-fill-down, custom-color(system, 070));
             }
         }
 
@@ -388,7 +388,7 @@
             &.hover {
                 &:hover,
                 &:focus-within {
-                    background-color: color(system, 070);
+                    background-color: custom-color(system, 070);
                     .site-logo {
                         .site-name {
                             background-image: url('../images/logo/logo-c2-e.svg');
@@ -398,9 +398,9 @@
                         .depth1-list {
                             .depth1-item {
                                 .depth1 {
-                                    color: color(system, 100);
+                                    color: custom-color(system, 100);
                                     &:hover {
-                                        color: color(primary, 070);
+                                        color: custom-color(primary, 070);
                                     }
                                 }
                             }
@@ -409,23 +409,23 @@
                     .site-util {
                         .contact-wrap {
                             .contact {
-                                color: color(system, 070);
-                                background-color: color(semantic, 020);
-                                border-color: color(semantic, 020);
+                                color: custom-color(system, 070);
+                                background-color: custom-color(semantic, 020);
+                                border-color: custom-color(semantic, 020);
                                 &:hover,
                                 &:focus {
-                                    background-color: color(neutral, 070);
-                                    border-color: color(neutral, 070);
+                                    background-color: custom-color(neutral, 070);
+                                    border-color: custom-color(neutral, 070);
                                 }
                             }
                         }
                         .lang {
                             .selected {
                                 .cur-lang {
-                                    color: color(system, 100);
+                                    color: custom-color(system, 100);
                                 }
                                 &::after {
-                                    background-image: icon(arrow-fill-down, color(system, 100));
+                                    background-image: icon(arrow-fill-down, custom-color(system, 100));
                                 }
                             }
                         }
@@ -439,11 +439,11 @@
         @include webSmall {
             .site-control {
                 .menu-header {
-                    background-image: icon(menu-header, color(system, 070));
+                    background-image: icon(menu-header, custom-color(system, 070));
                 }
             }
             &.open {
-                background-color: color(system, 070);
+                background-color: custom-color(system, 070);
                 .site-logo {
                     .site-name {
                         background-image: url('../images/logo/logo-c2-e.svg');
@@ -453,7 +453,7 @@
                     .depth1-list {
                         .depth1-item {
                             .depth1 {
-                                color: color(typo, 020);
+                                color: custom-color(typo, 020);
                             }
                         }
                     }
@@ -475,14 +475,14 @@
             .site-util {
                 .util {
                     .btn {
-                        color: color(system, 100);
-                        background-color: color(system, 070);
-                        border-color: color(neutral, 030);
+                        color: custom-color(system, 100);
+                        background-color: custom-color(system, 070);
+                        border-color: custom-color(neutral, 030);
                     }
                     &.lang {
                         .selected {
                             &::after {
-                                background-image: icon(arrow-fill-down, color(system, 070));
+                                background-image: icon(arrow-fill-down, custom-color(system, 070));
                             }
                         }
                     }
@@ -499,7 +499,7 @@
                         &.lang {
                             .selected {
                                 &::after {
-                                    background-image: icon(arrow-fill-down, color(system, 100));
+                                    background-image: icon(arrow-fill-down, custom-color(system, 100));
                                 }
                             }
                         }
@@ -512,7 +512,7 @@
 
     &.light,
     &.up-color {
-        background-color: color(system, 070);
+        background-color: custom-color(system, 070);
         .header-inner {
             .site-logo {
                 .site-name {
@@ -521,10 +521,10 @@
             }
             .site-navi {
                 .depth1 {
-                    color: color(system, 100);
+                    color: custom-color(system, 100);
                 }
                 &::after {
-                    background-color: color(system, 070);
+                    background-color: custom-color(system, 070);
                 }
             }
             .site-util {
@@ -532,24 +532,24 @@
                     &.lang {
                         .selected {
                             .select-text {
-                                color: color(system, 100);
+                                color: custom-color(system, 100);
                             }
                             &::after {
-                                background-image: icon(arrow-fill-down, color(system, 100));
+                                background-image: icon(arrow-fill-down, custom-color(system, 100));
                             }
                         }
                     }
                     .btn {
-                        color: color(system, 070);
-                        background-color: color(secondary, 080);
-                        border-color: color(secondary, 080);
+                        color: custom-color(system, 070);
+                        background-color: custom-color(secondary, 080);
+                        border-color: custom-color(secondary, 080);
                     }
                 }
             }
             @include webSmall {
                 .site-control {
                     .menu-header {
-                        background-image: icon(menu-header, color(system, 100));
+                        background-image: icon(menu-header, custom-color(system, 100));
                     }
                 }
             }
@@ -639,18 +639,18 @@
                                 padding: 0.5rem;
                                 content: '';
                                 margin-right: 0.5rem;
-                                background-image: icon(plus, color(system, 100));
+                                background-image: icon(plus, custom-color(system, 100));
                                 background-position: center;
                                 background-repeat: no-repeat;
                                 transition: background-image .1s;
                             }
                             &.active {
-                                color: color(primary, 070);
+                                color: custom-color(primary, 070);
                                 ~.depth2-wrap {
                                     height: 100%;
                                 }
                                 &::after {
-                                    background-image: icon(minus, color(system, 100));
+                                    background-image: icon(minus, custom-color(system, 100));
                                 }
                             }
                         }
@@ -666,7 +666,7 @@
                                 .depth2-item {
                                     padding-left: 3.4rem;
                                     margin-left: 0;
-                                    background-color: color(secondary, 070);
+                                    background-color: custom-color(secondary, 070);
 
                                     .depth2 {
                                         padding: 2.7rem 0 2rem;
@@ -690,7 +690,7 @@
                                     }
 
                                     +.depth2-item {
-                                        border-top: .1rem solid color(neutral, 030);
+                                        border-top: .1rem solid custom-color(neutral, 030);
                                     }
 
                                 }
@@ -709,7 +709,7 @@
                 width: 100%;
                 padding: 1.3rem 1.8rem 1.6rem;
                 justify-content: space-between;
-                border-bottom: .1rem solid color(neutral, 030);
+                border-bottom: .1rem solid custom-color(neutral, 030);
                 opacity: 0;
                 transition: opacity .3s ease;
 
@@ -718,7 +718,7 @@
                         .btn.contact {
                             padding: 0;
                             border: none;
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             background-color: transparent;
                             @include font(small-4x, medium);
                         }
@@ -738,7 +738,7 @@
         &.open {
             position: fixed;
             .header-inner {
-                background-color: color(system, 070);
+                background-color: custom-color(system, 070);
             }
         }
     }
@@ -765,7 +765,7 @@
             }
             .site-control {
                 .menu-header {
-                    background-image: icon(close, color(system, 100));
+                    background-image: icon(close, custom-color(system, 100));
                     background-size: 1.8rem;
                 }
             }

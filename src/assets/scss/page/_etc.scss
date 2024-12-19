@@ -79,7 +79,7 @@
                 .data-head {
                     .table-title {
                         display: block;
-                        color: color(typo, 020);
+                        color: custom-color(typo, 020);
                         @include font(small-3x, bold);
                     }
                 }
@@ -100,7 +100,7 @@
                                     flex: 1;
                                     word-break: keep-all;
                                     &.color1 {
-                                        color: color(primary, 080);
+                                        color: custom-color(primary, 080);
                                     }
                                 }
                             }
@@ -177,12 +177,12 @@
         .section {
             .section-head {
                 .section-name {
-                    color: color(primary, 070);
+                    color: custom-color(primary, 070);
                     @include font(medium, bold);
                 }
             }
             .section-body {
-                border-top: .1rem solid color(neutral, 030);
+                border-top: .1rem solid custom-color(neutral, 030);
                 .sitemap-list {
                     display: flex;
                     flex-wrap: wrap;
@@ -193,13 +193,13 @@
                         min-height: 3.8rem;
                         .sitemap {
                             display: inline-block;
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             transition: color .3s ease;
                             @include font(small-2x, bold);
                             @include web {
                                 &:hover,
                                 &:focus {
-                                    color: color(primary, 070);
+                                    color: custom-color(primary, 070);
                                 }
                             }
                         }
@@ -208,13 +208,13 @@
                             .sitemap-item-depth2 {
                                 .sitemap-depth2 {
                                     display: inline-block;
-                                    color: color(typo, 005);
+                                    color: custom-color(typo, 005);
                                     min-height: 2.6rem;
                                     @include font(small-4x, medium);
                                     @include web {
                                         &:hover,
                                         &:focus {
-                                            color: color(primary, 070);
+                                            color: custom-color(primary, 070);
                                         }
                                     }
                                 }
@@ -333,7 +333,7 @@
                 }
                 +.section {
                     margin-top: 2.4rem;
-                    border-top: .1rem solid color(neutral, 030);
+                    border-top: .1rem solid custom-color(neutral, 030);
                 }
             }
         }
@@ -363,8 +363,8 @@
             &.anchor-area {
                 padding: 2.4rem 1.6rem;
                 margin-top: 4rem;
-                border-top: 2px solid color(neutral,090);
-                border-bottom: 2px solid color(neutral,090);
+                border-top: 2px solid custom-color(neutral,090);
+                border-bottom: 2px solid custom-color(neutral,090);
                 .anchor-display {
                     display: flex;
                     .anchor-list {
@@ -376,7 +376,7 @@
                         }
                         .anchor-link {
                             .link-text {
-                                color: color(system,100);
+                                color: custom-color(system,100);
                                 @include font(small-5x,bold);
                             }
                         }
@@ -386,7 +386,7 @@
                     margin-top: 8rem;
                     .accordion-item {
                         .accordion-head {
-                            border-bottom: 1px solid color(neutral,060);
+                            border-bottom: 1px solid custom-color(neutral,060);
                         }
                     }
                 }
@@ -445,7 +445,7 @@
             .accordion-select {
                 margin-top: 2.4rem;
                 .para {
-                    color: color(typo,010);
+                    color: custom-color(typo,010);
                     + .para {
                         margin-top: 1.6rem;
                     }

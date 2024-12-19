@@ -224,18 +224,18 @@
                     .data-head {
                         .data-subject {
                             @include font(small-1x, bold);
-                            color: color(typo, 020);
+                            color: custom-color(typo, 020);
                         }
 
                         .data-summary {
                             @include font(small-3x, bold);
-                            color: color(typo, 020);
+                            color: custom-color(typo, 020);
                         }
                     }
                     .data-body {
                         >.para {
                             @include font(small-3x, medium);
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                         }
                     }
                 }
@@ -264,13 +264,13 @@
                     .data-head {
                         .data-subject {
                             @include font(small-2x, bold);
-                            color: color(typo, 020);
+                            color: custom-color(typo, 020);
                         }
                     }
                     .data-body {
                         >.para {
                             @include font(small-3x, medium);
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                         }
                     }
                 }
@@ -297,13 +297,13 @@
                     .data-head {
                         .data-subject {
                             @include font(small-3x, bold);
-                            color: color(neutral, 100);
+                            color: custom-color(neutral, 100);
                         }
                     }
                     .data-body{
                         .para{
                             @include font(small-4x, medium);
-                            color: color(neutral, 080);
+                            color: custom-color(neutral, 080);
                         }
                     }
                 }
@@ -330,7 +330,7 @@
                     .data-head {
                         .data-subject {
                             @include font(small-2x, bold);
-                            color: color(typo, 020);
+                            color: custom-color(typo, 020);
                             
                             @include mobile {
                                 @include font(small-3x, bold);
@@ -340,7 +340,7 @@
                     .data-body {
                         .para {
                             @include font(small-4x, medium);
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                         }
                     }
                 }
@@ -367,7 +367,7 @@
                     .data-head {
                         .data-subject {
                             @include font(small-4x, bold);
-                            color: color(typo, 020);
+                            color: custom-color(typo, 020);
                             
                             @include mobile {
                                 @include font(small-5x, bold);
@@ -386,7 +386,7 @@
         &.type6{
             >.data-list {
                 .data-item {
-                    color: color(system, 070);
+                    color: custom-color(system, 070);
                     .data-head {
                         .data-subject {
                             @include font(small-3x, bold);
@@ -415,7 +415,7 @@
                         > .data-head {
                             text-align: center;
                             .data-subject {
-                                color: color(typo,020); 
+                                color: custom-color(typo,020); 
                                 @include font(medium, bold);
                             }
                         }
@@ -436,13 +436,13 @@
                 .data-item {
                     .data-head {
                         .data-subject {
-                            color: color(typo, 020);
+                            color: custom-color(typo, 020);
                             @include font(small-1x, bold);
                         }
                     }
                     .data-body {
                         >.para {
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             @include font(small-4x, medium);
                         }
                     }
@@ -471,7 +471,7 @@
             >.data-list {
                 .data-item {
                     padding: 0.8rem 1.6rem;
-                    border-bottom: 1px solid color(neutral, 030);
+                    border-bottom: 1px solid custom-color(neutral, 030);
 
                     .item-wrap {
                         display: flex;
@@ -499,7 +499,7 @@
                         .item-head {
                             .item-date {
                                 @include font(small-3x, medium);
-                                color: color(typo, 020);
+                                color: custom-color(typo, 020);
                             }
                         }
                     }
@@ -521,7 +521,7 @@
             >.data-list {
                 .data-item {
                     padding: 0 0 2.4rem;
-                    border-bottom: 1px solid color(neutral, 030);
+                    border-bottom: 1px solid custom-color(neutral, 030);
 
                     .item-wrap {
                         display: flex;
@@ -545,7 +545,7 @@
                         .item-head {
                             .item-date {
                                 @include font(small-3x, medium);
-                                color: color(typo, 005);
+                                color: custom-color(typo, 005);
                             }
                         }
                     }
@@ -568,7 +568,7 @@
                         .item-head {
                             .item-date {
                                 @include font(small-3x, bold);
-                                color: color(typo, 005);
+                                color: custom-color(typo, 005);
                             }
                         }
                     }
@@ -590,8 +590,8 @@
             >.data-list {
                 .data-item {
                     padding: 3.2rem 0;
-                    border-top: 1px solid color(neutral, 030);
-                    border-bottom: 1px solid color(neutral, 030);
+                    border-top: 1px solid custom-color(neutral, 030);
+                    border-bottom: 1px solid custom-color(neutral, 030);
 
                     .item-wrap {
                         display: flex;
@@ -636,14 +636,14 @@
                         .item-head {
                             .item-subject {
                                 @include font(small-3x, bold);
-                                color: color(typo, 010);
+                                color: custom-color(typo, 010);
                             }
                         }
 
                         .item-util {
                             .download-item {
                                 @include font(small-4x, medium);
-                                color: color(typo, 005);
+                                color: custom-color(typo, 005);
                                 text-decoration: underline;
                             }
                         }
@@ -692,7 +692,7 @@
                         .item-head {
                             .item-subject {
                                 @include font(medium, bold);
-                                color: color(typo, 020);
+                                color: custom-color(typo, 020);
                             }
                         }
                     }
@@ -715,7 +715,7 @@
                         .item-head {
                             .item-subject {
                                 @include font(small-1x, bold);
-                                color: color(typo, 020);
+                                color: custom-color(typo, 020);
                             }
                         }
                     }
@@ -783,7 +783,7 @@
                     .data-item {
                         .item-head {
                             .item-subject {
-                                color: color(typo, 020);
+                                color: custom-color(typo, 020);
                                 @include font(small-1x, bold);
                             }
                         }
@@ -805,7 +805,7 @@
                     .data-item {
                         .item-head {
                             .item-subject {
-                                color: color(typo, 020);
+                                color: custom-color(typo, 020);
                                 @include font(small-2x, bold);
                             }
                         }
@@ -828,7 +828,7 @@
             >.data-list {
                 .data-item {
                     padding: 0.8rem 1.6rem;
-                    border-bottom: 1px solid color(neutral, 030);
+                    border-bottom: 1px solid custom-color(neutral, 030);
 
                     .item-wrap {
                         display: flex;
@@ -853,7 +853,7 @@
                     .data-item {
                         .item-head {
                             .item-date {
-                                color: color(typo, 010);
+                                color: custom-color(typo, 010);
                                 @include font(small-3x, bold);
                             }
                         }
@@ -875,7 +875,7 @@
                     .data-item {
                         .item-head {
                             .item-subject {
-                                color: color(typo, 010);
+                                color: custom-color(typo, 010);
                                 @include font(small-3x, bold);
                             }
                         }
@@ -921,7 +921,7 @@
                     .data-item {
                         .item-head {
                             .item-subject {
-                                color: color(typo, 020);
+                                color: custom-color(typo, 020);
                                 @include font(medium, bold);
                             }
                         }
@@ -1086,10 +1086,10 @@
                     .data-head {
                         .data-subject {
                             display: flex;
-                            color: color(typo, 020);
+                            color: custom-color(typo, 020);
                             @include font(small-2x, bold);
                             &::before {
-                                color: color(primary, 080);
+                                color: custom-color(primary, 080);
                                 content: counter(data-subject, decimal-leading-zero) " "; // Display the counter with leading zero
                                 counter-increment: data-subject; 
                             }
@@ -1099,13 +1099,13 @@
                     .data-body {
                         >.para {
                             @include font(small-3x, medium);
-                            color: color(neutral, 080);
+                            color: custom-color(neutral, 080);
                         }
                     }
                 }
                 + .para{
                     @include font(small-5x, medium);
-                    color: color(neutral, 080);
+                    color: custom-color(neutral, 080);
                 }
             }
 
@@ -1121,13 +1121,13 @@
                         .data-body {
                             >.para {
                                 @include font(small-4x, medium);
-                                color: color(neutral, 080);
+                                color: custom-color(neutral, 080);
                             }
                         }
                     }
                     + .para{
                         @include font(small-6x, medium);
-                        color: color(neutral, 080);
+                        color: custom-color(neutral, 080);
                     }
                 }
             }
@@ -1138,7 +1138,7 @@
                     .data-head{
                         .data-subject{
                             @include font(small-2x, bold);
-                            color: color(primary, 070);
+                            color: custom-color(primary, 070);
                         }
                     }
                     .data-body {
@@ -1156,7 +1156,7 @@
                             }
                             @include font(small-4x, bold);
                             display: flex;
-                            color: color(typo,010);
+                            color: custom-color(typo,010);
                             gap: 0.5rem;
                             @include mobile{
                                 @include font(small-5x, bold);
@@ -1177,11 +1177,11 @@
                 .data-item {
                     .data-head {
                         .data-subject {
-                            color: color(typo, 020);
+                            color: custom-color(typo, 020);
                             @include font(small-1x, bold);
                             &::before {
                                 width: 3.6rem;
-                                color: color(primary, 080); 
+                                color: custom-color(primary, 080); 
                                 text-align: center;
                                 content: counter(data-subject, decimal-leading-zero) " ";
                                 counter-increment: data-subject;
@@ -1192,7 +1192,7 @@
                     .data-body {
                         >.para {
                             @include font(small-4x, medium);
-                            color: color(typo, 005);
+                            color: custom-color(typo, 005);
                         }
                     }
                 }
@@ -1223,10 +1223,10 @@
                     .data-head {
                         .data-subject {
                             display: flex;
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             @include font(small-4x, bold);
                             &::before {
-                                color: color(primary, 080);
+                                color: custom-color(primary, 080);
                                 content: counter(data-subject, decimal-leading-zero) " "; // Display the counter with leading zero
                                 counter-increment: data-subject; 
                                 @include font(small-3x, bold);
@@ -1243,13 +1243,13 @@
                     .data-body {
                         >.para {
                             @include font(small-3x, medium);
-                            color: color(neutral, 080);
+                            color: custom-color(neutral, 080);
                         }
                     }
                 }
                 + .para{
                     @include font(small-5x, medium);
-                    color: color(neutral, 080);
+                    color: custom-color(neutral, 080);
                 }
             }
 
@@ -1265,13 +1265,13 @@
                         .data-body {
                             >.para {
                                 @include font(small-4x, medium);
-                                color: color(neutral, 080);
+                                color: custom-color(neutral, 080);
                             }
                         }
                     }
                     + .para{
                         @include font(small-6x, medium);
-                        color: color(neutral, 080);
+                        color: custom-color(neutral, 080);
                     }
                 }
             }
@@ -1280,7 +1280,7 @@
 
     &.design4 {
         .data-item {
-            border-top: 1px solid color(neutral,030);
+            border-top: 1px solid custom-color(neutral,030);
             .data-wrap {
                 display: flex;
                 align-items: stretch;
@@ -1290,20 +1290,20 @@
                 display: flex;
                 width: 23.75%;
                 padding: 1.4rem 2rem;
-                background-color: color(neutral,020);
-                border-right: 1px solid color(neutral,030);
+                background-color: custom-color(neutral,020);
+                border-right: 1px solid custom-color(neutral,030);
                 flex-direction: column;
                 justify-content: center;
                 .data-subject {
                     @include font(small-4x,bold);
-                    color: color(typo,010);
+                    color: custom-color(typo,010);
                     + .data-summary {
                         margin-top: 0.4rem;
                     }
                 }
                 .data-summary {
                     @include font(small-5x,medium);
-                    color: color(typo,005);
+                    color: custom-color(typo,005);
                 }
             }
             .data-body {
@@ -1315,11 +1315,11 @@
                 justify-content: center;
                 .para {
                     @include font(small-3x,bold);
-                    color: color(typo,010);
+                    color: custom-color(typo,010);
                 }
             }
             &:last-child {
-                border-bottom: 1px solid color(neutral,030);
+                border-bottom: 1px solid custom-color(neutral,030);
             }
         }
         @include mobile {
@@ -1346,13 +1346,13 @@
     &.design5{
         .data-list{
             padding: 6.4rem 6.4rem;
-            border: 0.1rem solid color(neutral, 030);
+            border: 0.1rem solid custom-color(neutral, 030);
             border-radius: 1.6rem;
             .data-item{
                 .data-wrap{
                     .data-head {
                         .subject {
-                            color: color(typo,020);
+                            color: custom-color(typo,020);
                             @include font(small-2x, bold);
                         }
                         + .data-body {
@@ -1379,7 +1379,7 @@
                 + .data-item {
                     margin-top: 6.4rem;
                     padding-top: 4rem;
-                    border-top: 1px solid color(neutral,030);
+                    border-top: 1px solid custom-color(neutral,030);
                 }
             }
             @include mobile {
@@ -1651,16 +1651,16 @@
                     .data-head{
                         .data-subject{
                             @include font(large-3x, bold);
-                            color: color(system, 070);
+                            color: custom-color(system, 070);
                             + .para{
                                 @include font(small-3x, bold);
-                                color: color(system, 070);
+                                color: custom-color(system, 070);
                             }
                         }
                         + .data-body{
                             .para{
                                 @include font(small-2x, bold);
-                                color: color(primary, 070);
+                                color: custom-color(primary, 070);
                                 @include mobile{
                                     @include font(small-3x, bold);
                                 }
@@ -1699,11 +1699,11 @@
                         height: auto;
                         padding: 3.75rem 0;
                         .data-subject {
-                            color: color(typo, 000);
+                            color: custom-color(typo, 000);
                             @include font(large-3x, extrabold);   
                         }
                         .para {
-                            color: color(typo, 000);
+                            color: custom-color(typo, 000);
                             @include font(small-3x, bold);
                         }
                         +.data-body {
@@ -1715,7 +1715,7 @@
                         .data-content {
                             .cate-title {
                                 display: block;
-                                color: color(primary, 070);
+                                color: custom-color(primary, 070);
                                 @include font(small-2x, bold);
                                 +.bullet-display {
                                     padding-top: 1.6rem;
@@ -1863,7 +1863,7 @@
                 display: inline-block;
                 position: sticky;
                 top: 8rem;
-                color: color(neutral, 100);
+                color: custom-color(neutral, 100);
                 @include font(large-3x, bold)
             }
 
@@ -1886,15 +1886,15 @@
                                 padding-top: 2.4rem;
                             }
                             &.type1 {
-                                color: color(primary, 080);
+                                color: custom-color(primary, 080);
                             }
                             &.type2 {
-                                color: color(neutral, 100);
+                                color: custom-color(neutral, 100);
                             }
                         }
 
                         .para {
-                            color: color(neutral, 080);
+                            color: custom-color(neutral, 080);
                             @include font(small-3x, medium);
 
                             +.para,
@@ -1910,7 +1910,7 @@
 
                         .note {
                             display: inline-block;
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             @include font(small-5x, medium);
                         }
 
@@ -2338,7 +2338,7 @@
             .data-item {
                 text-align: center;
                 flex: 1;
-                background-color: color(system, 070);
+                background-color: custom-color(system, 070);
                 box-shadow: 0 0.1336rem 0.5342rem 0 rgba(0, 0, 0, 0.1);
                 border-radius: 1.6rem;
 
@@ -2346,7 +2346,7 @@
                     display: block;
                     .data-name {
                         display: inline-block;
-                        color: color(typo, 020);
+                        color: custom-color(typo, 020);
                         @include web {
                             @include font(small-1x, bold);
                         }
@@ -2358,9 +2358,9 @@
 
                 .data-body {
                     display: block;
-                    color: color(typo, 010);
+                    color: custom-color(typo, 010);
                     .accent {
-                        color: color(primary, 070);
+                        color: custom-color(primary, 070);
                         @include font(large-3x, bold);
                         @include web {
                             padding-right: 1.1rem;
@@ -2380,15 +2380,15 @@
                     }
                 }
                 &.active {
-                    background-color: color(primary, 070);
+                    background-color: custom-color(primary, 070);
                     .data-head {
                         .data-name {
-                            color: color(typo, 000);
+                            color: custom-color(typo, 000);
                         }
                     }
                     .data-body,
                     .data-body .accent {
-                        color: color(typo, 000);
+                        color: custom-color(typo, 000);
                     }
                 }
                 @include web {
@@ -2465,13 +2465,13 @@
             }
         }
         .data-body {
-            border-top: .1rem solid color(neutral, 030);
+            border-top: .1rem solid custom-color(neutral, 030);
 
             .data-item {
                 display: flex;
                 padding: 6.4rem 0;
                 align-items: center;
-                border-bottom: .1rem solid color(neutral, 030);
+                border-bottom: .1rem solid custom-color(neutral, 030);
 
                 .portfolio-figure {
                     position: relative;
@@ -2498,7 +2498,7 @@
                         width: 3.2rem;
                         height: 3.2rem;
                         content: '';
-                        background-image: icon(arrow-right-up2, color(primary, 070));
+                        background-image: icon(arrow-right-up2, custom-color(primary, 070));
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: 1.5rem;
@@ -2521,7 +2521,7 @@
                     .portfolio-head {
                         .portfolio-name {
                             display: inline-block;
-                            color: color(primary, 080);
+                            color: custom-color(primary, 080);
                             @include font(small-1x, bold);
                         }
 
@@ -2536,7 +2536,7 @@
 
                     .portfolio-body {
                         .para {
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             @include font(small-3x, medium);
                         }
                     }
@@ -2551,18 +2551,18 @@
                             display: inline-block;
                             padding: 0.8rem 1.6rem;
                             border-radius: .8rem;
-                            background-color: color(secondary, 070);
+                            background-color: custom-color(secondary, 070);
 
                             .label-name {
                                 display: inline-block;
-                                color: color(typo, 010);
+                                color: custom-color(typo, 010);
                                 padding-right: 1.6rem;
                                 @include font(small-4x, medium);
                             }
 
                             .label-data {
                                 display: inline-block;
-                                color: color(typo, 010);
+                                color: custom-color(typo, 010);
                                 @include font(small-4x, bold);
 
                                 .mail {
@@ -2687,7 +2687,7 @@
             position: relative;
             padding: 6.4rem 0 6.4rem 41%;
             min-height: 37.8rem;
-            border-top: .1rem solid color(neutral, 030);
+            border-top: .1rem solid custom-color(neutral, 030);
             background-repeat: no-repeat;
             background-position-y: 6.4rem;
             background-size: 41%;
@@ -2740,7 +2740,7 @@
         >.data-list {
             padding-bottom: 16rem;
             .data-item {
-                border-bottom: 1px solid color(neutral,030);
+                border-bottom: 1px solid custom-color(neutral,030);
                 .data-wrap {
                     display: flex;
                     justify-content: space-between;
@@ -2749,7 +2749,7 @@
                         .data-subject {
                             .data-name {
                                 @include font(medium,bold);
-                                color: color(typo,010);
+                                color: custom-color(typo,010);
                                 + .data-name {
                                     margin-top: 1.6rem;
                                 }
@@ -2760,7 +2760,7 @@
                         }
                         .data-date {
                             @include font(small-1x,bold);
-                            color: color(typo,005);
+                            color: custom-color(typo,005);
                         }
                     }
                     .data-figure {
@@ -2865,7 +2865,7 @@
 
                     .item-subject {
                         @include font(small-2x, bold);
-                        color: color(system, 070);
+                        color: custom-color(system, 070);
                     }
 
                     +.item-body {
@@ -2876,13 +2876,13 @@
                 .item-body {
                     padding: 2.4rem;
                     box-shadow: 0px 1.336px 5.342px 0px rgba(0, 0, 0, 0.10);
-                    background-color: color(system, 070);
+                    background-color: custom-color(system, 070);
                     border-radius: 0.4rem;
 
                     >.color-list {
                         .list-item {
                             display: flex;
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             justify-content: space-between;
 
                             .head {
@@ -2937,7 +2937,7 @@
             .data-item {
                 .data-head {
                     border-radius: 0.8rem;
-                    background-color: color(neutral, 090);
+                    background-color: custom-color(neutral, 090);
 
                     .data-tr {
                         display: flex;
@@ -2945,12 +2945,12 @@
                         .data-th {
                             width: calc(100% / 3);
                             padding: 1.8rem;
-                            color: color(system, 070);
+                            color: custom-color(system, 070);
                             text-align: center;
                             @include font(small-3x, bold);
 
                             +.data-th {
-                                border-left: 1px solid color(neutral, 060);
+                                border-left: 1px solid custom-color(neutral, 060);
                             }
                         }
                     }
@@ -2963,12 +2963,12 @@
                     .data-tr {
                         display: flex;
                         overflow: hidden;
-                        border-bottom: 1px solid color(neutral, 030);
+                        border-bottom: 1px solid custom-color(neutral, 030);
 
                         .data-th {
                             width: calc(100% / 3);
                             padding: 1.8rem 2rem;
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             text-align: center;
                             @include font(small-3x, bold);
 
@@ -3001,13 +3001,13 @@
                         .data-td {
                             width: calc(100% / 3);
                             padding: 1.4rem;
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             text-align: center;
                             @include font(small-4x, bold);
                         }
                     }
                     >.data-tr {
-                        border-bottom: 1px solid color(neutral, 030);
+                        border-bottom: 1px solid custom-color(neutral, 030);
                     }
 
                     .accordion-item.active {
@@ -3021,7 +3021,7 @@
                     }
 
                     .accordion-body {
-                        background-color: color(neutral, 020);
+                        background-color: custom-color(neutral, 020);
                         .data-tr {
                             border: none;
                         }
@@ -3036,9 +3036,9 @@
                         &::after {
                             width: 3.2rem;
                             height: 3.2rem;
-                            border: 1px solid color(neutral, 030);
+                            border: 1px solid custom-color(neutral, 030);
                             margin-left: 0;
-                            background-image: icon(arrow-down1, color(neutral, 060));
+                            background-image: icon(arrow-down1, custom-color(neutral, 060));
                             background-size: 1.4rem 0.9rem;
                             background-position: center 56%;
                             border-radius: 1.2rem;
@@ -3146,7 +3146,7 @@
             .data-item {
                 .data-head {
                     border-radius: 0.8rem;
-                    background-color: color(neutral, 090);
+                    background-color: custom-color(neutral, 090);
 
                     .data-tr {
                         display: flex;
@@ -3154,11 +3154,11 @@
                         .data-th {
                             @include font(small-3x, bold);
                             padding: 1.8rem;
-                            color: color(system, 070);
+                            color: custom-color(system, 070);
                             text-align: center;
 
                             +.data-th {
-                                border-left: 1px solid color(neutral, 060);
+                                border-left: 1px solid custom-color(neutral, 060);
                             }
                         }
                     }
@@ -3167,16 +3167,16 @@
                 .data-body {
                     .data-tr {
                         display: flex;
-                        border-bottom: 1px solid color(neutral, 030);
+                        border-bottom: 1px solid custom-color(neutral, 030);
 
                         .data-td {
                             @include font(small-3x, bold);
                             padding: 1.8rem;
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             text-align: center;
 
                             +.data-td {
-                                border-left: 1px solid color(neutral, 030);
+                                border-left: 1px solid custom-color(neutral, 030);
                             }
                         }
                     }
@@ -3262,7 +3262,7 @@
                     }
 
                     .data-body {
-                        border-top: 1px solid color(system, 080);
+                        border-top: 1px solid custom-color(system, 080);
 
                         .data-tr {
                             padding: 2.4rem 0.8rem;
@@ -3278,19 +3278,19 @@
 
                                 &.title {
                                     margin: 1.2rem 0;
-                                    color: color(typo, 020);
+                                    color: custom-color(typo, 020);
                                     order: 2;
                                     @include font(small-2x, bold);
                                 }
 
                                 &.name {
-                                    color: color(typo, 005);
+                                    color: custom-color(typo, 005);
                                     order: 3;
                                     @include font(small-5x, bold);
                                 }
 
                                 &.date {
-                                    color: color(typo, 005);
+                                    color: custom-color(typo, 005);
                                     order: 1;
                                     @include font(small-6x, medium);
                                 }
@@ -3334,7 +3334,7 @@
                 .data-script {
                     .head {
                         @include font(small-1x, bold);
-                        color: color(typo, 020);
+                        color: custom-color(typo, 020);
 
                         +.body {
                             margin-top: 3.2rem;
@@ -3347,7 +3347,7 @@
 
                         .para {
                             @include font(small-4x, medium);
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                         }
                     }
 
@@ -3383,11 +3383,11 @@
 
     &.inquiry-form {
         >.data-list {
-            border-top: .2rem solid color(secondary, 080);
+            border-top: .2rem solid custom-color(secondary, 080);
             >.data-item {
                 display: flex;
                 padding: 2.3rem 0;
-                border-bottom: .1rem solid color(neutral, 030);
+                border-bottom: .1rem solid custom-color(neutral, 030);
                 .data-head {
                     padding: 1.2rem 0;
                     padding-left: 1.6rem;
@@ -3397,7 +3397,7 @@
                         height: 100%;
                         @include font(small-2x, bold);
                         .required {
-                            color: color(primary, 070);
+                            color: custom-color(primary, 070);
                             padding-left: .4rem;
                         }
                     }
@@ -3430,7 +3430,7 @@
                     .data-body {
                         .sign {
                             margin: 0 0.8rem;
-                            color: color(typo, 005);
+                            color: custom-color(typo, 005);
                             @include font(small-4x, medium);
                         }
                         .email2 {
@@ -3554,11 +3554,11 @@
                 }
                 &.purple{
                     background: #F6EFFB;
-                    color: color(primary, 080);
+                    color: custom-color(primary, 080);
                     .data-util {
                         .value-type{
                             padding: 1.2rem 2rem;
-                            color: color(primary,070);
+                            color: custom-color(primary,070);
                             @include mobile {
                                 padding: 0.9rem 1.6rem;
                             }
@@ -3567,11 +3567,11 @@
                 }
                 &.orange{
                     background: #F6EFFB;
-                    color: color(primary, 080);
+                    color: custom-color(primary, 080);
                     .data-util {
                         .value-type{
                             padding: 1.2rem 1.6rem;
-                            color: color(primary,070);
+                            color: custom-color(primary,070);
                             line-height: 140%;
                             @include mobile {
                                 padding: 0.9rem 1.3rem;
@@ -3603,7 +3603,7 @@
                     align-items: center;
                     justify-content: center;
                     .value-type{
-                        background: color(system, 070);
+                        background: custom-color(system, 070);
                         border-radius: 6.8rem;
                         @include mobile {
                             padding: 1.1rem;
@@ -3708,7 +3708,7 @@
             >.data-list {
                 >.data-item {
                     @include font(small-4x, medium);
-                    color: color(typo, 010);
+                    color: custom-color(typo, 010);
 
                     @include mobile {
                         @include font(small-5x, medium);
@@ -3716,7 +3716,7 @@
 
                     &::before {
                         @include font(small-5x, medium);
-                        color: color(typo, 010);
+                        color: custom-color(typo, 010);
 
                         @include mobile {
                             @include font(small-6x, medium);
@@ -3729,7 +3729,7 @@
             >.data-list {
                 >.data-item {
                     @include font(small-3x, bold);
-                    color: color(typo, 010);
+                    color: custom-color(typo, 010);
 
                     @include mobile {
                         @include font(small-4x, bold);
@@ -3737,7 +3737,7 @@
 
                     &::before {
                         @include font(small-3x, bold);
-                        color: color(typo, 010);
+                        color: custom-color(typo, 010);
 
                         @include mobile {
                             @include font(small-4x, bold);
@@ -3749,7 +3749,7 @@
         &.type3 {
             >.data-list {
                 >.data-item {
-                    color: color(typo, 005);
+                    color: custom-color(typo, 005);
                     @include font(small-4x, medium);
 
                     @include mobile {
@@ -3757,7 +3757,7 @@
                     }
 
                     &::before {
-                        color: color(typo, 005);
+                        color: custom-color(typo, 005);
                         @include font(small-5x, medium);
 
                         @include mobile {
@@ -3771,7 +3771,7 @@
             >.data-list {
                 >.data-item {
                     @include font(small-3x, bold);
-                    color: color(typo, 005);
+                    color: custom-color(typo, 005);
 
                     @include mobile {
                         @include font(small-4x, bold);
@@ -3779,7 +3779,7 @@
 
                     &::before {
                         @include font(small-3x, bold);
-                        color: color(typo, 005);
+                        color: custom-color(typo, 005);
 
                         @include mobile {
                             @include font(small-4x, bold);
@@ -3791,7 +3791,7 @@
         &.type5 {
             >.data-list {
                 >.data-item {
-                    color: color(typo, 010);
+                    color: custom-color(typo, 010);
                     padding-left: 0;
                     @include font(small-4x, medium);
 
@@ -3801,7 +3801,7 @@
 
                     &::before {
                         @include font(small-5x, bold);
-                        color: color(typo, 010);
+                        color: custom-color(typo, 010);
 
                         @include mobile {
                             @include font(small-6x, bold);
@@ -3814,7 +3814,7 @@
             >.data-list {
                 >.data-item {
                     @include font(small-3x, medium);
-                    color: color(typo, 010);
+                    color: custom-color(typo, 010);
 
                     @include mobile {
                         @include font(small-4x, medium);
@@ -3822,7 +3822,7 @@
 
                     &::before {
                         @include font(small-3x, bold);
-                        color: color(typo, 010);
+                        color: custom-color(typo, 010);
 
                         @include mobile {
                             @include font(small-4x, bold);
@@ -3835,7 +3835,7 @@
             >.data-list {
                 >.data-item {
                     @include font(small-4x, bold);
-                    color: color(typo, 010);
+                    color: custom-color(typo, 010);
 
                     @include mobile {
                         @include font(small-5x, bold);
@@ -3843,7 +3843,7 @@
 
                     &::before {
                         @include font(small-5x, bold);
-                        color: color(typo, 010);
+                        color: custom-color(typo, 010);
 
                         @include mobile {
                             @include font(small-6x, bold);
@@ -3856,7 +3856,7 @@
             >.data-list {
                 >.data-item {
                     @include font(small-3x, medium);
-                    color: color(typo, 020);
+                    color: custom-color(typo, 020);
 
                     @include mobile {
                         @include font(small-4x, medium);
@@ -3864,7 +3864,7 @@
 
                     &::before {
                         @include font(small-3x, bold);
-                        color: color(typo, 020);
+                        color: custom-color(typo, 020);
 
                         @include mobile {
                             @include font(small-4x, bold);
@@ -3907,7 +3907,7 @@
         &.type1 {
             > .order-item {
                 @include font(small-3x,medium);
-                color: color(typo,010);
+                color: custom-color(typo,010);
             }
             @include mobile {
                 > .order-item {
@@ -3917,7 +3917,7 @@
         }
         &.type2 {
             > .order-item {
-                color: color(typo,010);
+                color: custom-color(typo,010);
                 @include font(small-4x,medium);
             }
             @include mobile {
@@ -3932,11 +3932,11 @@
         .list-inner {
             width: calc(100% / 3 - 0.1333rem);
             > .order-item {
-                color: color(typo,010);
+                color: custom-color(typo,010);
                 @include font(small-4x,bold);
                 .num {
                     display: inline-block;
-                    color: color(typo,005);
+                    color: custom-color(typo,005);
                     min-width: 2.6rem;
                     margin-right: 0.2rem;
                 }

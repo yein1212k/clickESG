@@ -6,7 +6,7 @@
             }
         }
         .content-body {
-            background-color: color(system, 070);
+            background-color: custom-color(system, 070);
             .section {
                 .section-wrap {
                     .article {
@@ -23,7 +23,7 @@
                         &.intro {
                             .article-wrap {
                                 .title {
-                                    color: color(typo, 000);
+                                    color: custom-color(typo, 000);
                                     @include web {
                                         @include font(large-3x, bold);
                                         ~.para {
@@ -46,7 +46,7 @@
                                     }
                                 }
                                 .sub-title {
-                                    color: color(typo, 000);
+                                    color: custom-color(typo, 000);
                                     @include web {
                                         @include font(medium, bold);
                                     }
@@ -83,7 +83,7 @@
                                         }
                                     }
                                     .para {
-                                        color: color(neutral, 040);
+                                        color: custom-color(neutral, 040);
                                         &.case1 {
                                             @include web {
                                                 @include font(small-1x, bold);
@@ -218,7 +218,7 @@
                                         }
                                     }
                                     .para {
-                                        color: color(typo, 000);
+                                        color: custom-color(typo, 000);
                                         @include web {
                                             @include font(small-2x, bold);
                                         }
@@ -363,7 +363,7 @@
                                     }
                                 }
                                 .para {
-                                    color: color(neutral, 040);
+                                    color: custom-color(neutral, 040);
                                     @include web {
                                         @include font(small-2x, bold);
                                     }
@@ -386,7 +386,7 @@
                                     .history-item {
                                         display: flex;
                                         background: linear-gradient(180deg, #9735D0 0%, rgba(118, 41, 163, 0.56) 50%, rgba(77, 27, 106, 0.00) 100%);
-                                        color: color(typo, 000);
+                                        color: custom-color(typo, 000);
                                         flex-direction: column;
                                         justify-content: center;
                                         align-items: center;
@@ -485,11 +485,11 @@
                     }
                 }
                 &.core {
-                    background-color: color(secondary, 080);
+                    background-color: custom-color(secondary, 080);
                     box-shadow: 0 4.7rem 2.8rem 0 rgba(0, 0, 0, 0.05), 0 2.1rem 2.1rem 0 rgba(0, 0, 0, 0.09);
                     .comment {
                         display: inline-block;
-                        color: color(neutral, 040);
+                        color: custom-color(neutral, 040);
                     }
                     .section-wrap {
                         margin: 0 auto;
@@ -498,7 +498,7 @@
                             padding: 0 1.8rem;
                             .article-head {
                                 .title {
-                                    color: color(typo, 000);
+                                    color: custom-color(typo, 000);
                                 }
                             }
                         }
@@ -524,7 +524,7 @@
                                 margin: 0 auto;
                                 max-width: 123.6rem;
                                 .title {
-                                    color: color(typo, 020);
+                                    color: custom-color(typo, 020);
                                     ~.investment {
                                         @include web {
                                             padding-top: 8rem;
@@ -551,7 +551,7 @@
                                 }
                             }
                             .article-body {
-                                background-color: color(system, 070);
+                                background-color: custom-color(system, 070);
                                 transition: 1.4s cubic-bezier(0, 0, 0.2, 1);
                                 @include web {
                                     padding-top: 16rem;
@@ -590,7 +590,7 @@
                 }
                 &.banner-section,
                 &.press {
-                    background-color: color(system, 070);
+                    background-color: custom-color(system, 070);
                     .section-wrap {
                         padding: 0 1.8rem;
                         margin: 0 auto;
@@ -621,7 +621,7 @@
                                         top: 50%;
                                         left: 50%;
                                         width: 100%;
-                                        color: color(system, 070);
+                                        color: custom-color(system, 070);
                                         text-align: center;
                                         transform: translate(-50%, -50%);
                                         @include font(small-1x, bold);
@@ -634,7 +634,7 @@
                                     width: 100%;
                                     height: 100%;
                                     content: '';
-                                    background-color: color(system, 100, 0.5);
+                                    background-color: custom-color(system, 100, 0.5);
                                     pointer-events: none;
                                 }
                                 &:nth-child(n+4) {
@@ -664,7 +664,7 @@
 
                                 // focus 아웃라인
                                 &:has(a:focus-visible) {
-                                    outline: 5px dotted color(neutral,100); //어두운 이미지는 outline이 잘 안보여서 dotted로 처리함
+                                    outline: 5px dotted custom-color(neutral,100); //어두운 이미지는 outline이 잘 안보여서 dotted로 처리함
                                 }
                             }
                         }
@@ -711,7 +711,7 @@
                     display: block;
                     width: 100%;
                     content: '';
-                    background-color: color(system, 070);
+                    background-color: custom-color(system, 070);
                     @include web {
                         height: 16rem;
                     }
@@ -758,15 +758,15 @@
                         .board-item {
                             width: 100%;
                             border-radius: 16px;
-                            background-color: color(system, 070);
-                            box-shadow: 0 0.1336rem 0.5342rem 0 color(system, 100, 0.1);
+                            background-color: custom-color(system, 070);
+                            box-shadow: 0 0.1336rem 0.5342rem 0 custom-color(system, 100, 0.1);
                             .board-wrap {
                                 position: relative;
                                 padding: 4rem;
                                 .board-head {
                                     .board-name {
                                         display: flex;
-                                        color: color(primary, 080);
+                                        color: custom-color(primary, 080);
                                         align-items: center;
                                         @include font(small-1x, bold);
                                         .btn {
@@ -777,7 +777,7 @@
                                         }
                                     }
                                     .board-summary {
-                                        color: color(typo, 010);
+                                        color: custom-color(typo, 010);
                                         @include font(small-3x, medium);
                                     }
                                     ~.board-body { 
@@ -798,17 +798,17 @@
                                             flex-direction: column;
                                             justify-content: center;
                                             border-radius: .8rem;
-                                            background-color: color(secondary, 070);
+                                            background-color: custom-color(secondary, 070);
                                             .board-name-sub {
                                                 display: inline-block;
-                                                color: color(typo, 010);
+                                                color: custom-color(typo, 010);
                                                 @include font(small-4x, bold);
                                                 +.para {
                                                     padding-top: 1.2rem;
                                                 }
                                             }
                                             .para {
-                                                color: color(typo, 010);
+                                                color: custom-color(typo, 010);
                                                 @include font(small-3x, bold);
                                             }
                                             &:nth-child(2n) {
@@ -1106,7 +1106,7 @@
         }
         &.globalInvestment {
             .content-body {
-                background-color: color(secondary, 070);
+                background-color: custom-color(secondary, 070);
                 .section {
                     .article {
                         &.intro {
@@ -1128,7 +1128,7 @@
                         }
                     }
                     .comment {
-                        color: color(typo, 010);
+                        color: custom-color(typo, 010);
                         .mail {
                             text-decoration: underline;
                             vertical-align: top;

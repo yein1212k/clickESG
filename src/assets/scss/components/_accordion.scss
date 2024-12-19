@@ -29,9 +29,9 @@
             .accordion-item {
                 .accordion-head {
                     position: relative;
-                    background-color: color(system,070);
+                    background-color: custom-color(system,070);
                     @include web {
-                        border-bottom: 1px solid color(neutral,060);
+                        border-bottom: 1px solid custom-color(neutral,060);
                     }
                     .btn {
                         position: relative;
@@ -43,8 +43,8 @@
                             right: 0;
                             width: 2.4rem;
                             height: 2.4rem;
-                            background: icon(arrow-down1, color(neutral, 090)) no-repeat center center;
-                            background-image: icon(arrow-down1, color(neutral, 090));
+                            background: icon(arrow-down1, custom-color(neutral, 090)) no-repeat center center;
+                            background-image: icon(arrow-down1, custom-color(neutral, 090));
                             background-size: 1.4rem 0.9rem;
                             transform: translateY(-50%);
                             transition: all 0.3s ease;
@@ -96,7 +96,7 @@
                 .accordion-head {
                     .btn {
                         .btn-text {
-                            color: color(typo,020);
+                            color: custom-color(typo,020);
                             text-align: left;
                             @include font(small-1x,bold);
                             @include mobile {
@@ -107,7 +107,7 @@
                 }
                 .accordion-body {
                     .para {
-                        color: color(typo,010);
+                        color: custom-color(typo,010);
                         @include font(small-3x,medium);
                         @include mobile {
                             @include font(small-4x,medium);
@@ -121,7 +121,7 @@
                 .accordion-head {
                     .btn {
                         .btn-text {
-                            color: color(typo,020);
+                            color: custom-color(typo,020);
                             text-align: left;
                             @include font(small-2x,bold);
                             @include mobile {
@@ -132,7 +132,7 @@
                 }
                 .accordion-body {
                     .para {
-                        color: color(typo,010);
+                        color: custom-color(typo,010);
                         @include font(small-4x,medium);
                         @include mobile {
                             @include font(small-5x,medium);

@@ -279,7 +279,7 @@
 							<div class="subsection">
 								<div class="subsection-head">Argument</div>
 								<div class="subsection-body">
-									<pre class="highlight-js"><code class="scss">color($theme, $variant, $opacity);</code></pre>
+									<pre class="highlight-js"><code class="scss">custom-color($theme, $variant, $opacity);</code></pre>
 								</div>
 							</div>
 							<!-- //subsection -->
@@ -288,9 +288,9 @@
 								<div class="subsection-head">Example</div>
 								<div class="subsection-body">
 									<pre class="highlight-js">
-<code class="scss">color: color(primary, 020);
-border-color: color(secondary, 060);
-background-color: color((system,070), 0.6);</code></pre>
+<code class="scss">color: custom-color(primary, 020);
+border-color: custom-color(secondary, 060);
+background-color: custom-color((system,070), 0.6);</code></pre>
 								</div>
 							</div>
 							<!-- //subsection -->
@@ -309,7 +309,7 @@ background-color: color((system,070), 0.6);</code></pre>
 	document.querySelectorAll('.data-item').forEach(button => {
 		button.addEventListener('click', () => {
 			const dataName = button.querySelector('.data-name').textContent;
-			const textToCopy = `color(${dataName});`;
+			const textToCopy = `custom-color(${dataName});`;
 
 			navigator.clipboard.writeText(textToCopy)
 				.then(() => {

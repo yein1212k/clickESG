@@ -323,11 +323,22 @@ $icon: (
     )
 );
 
+@use "sass:map";
+@use "sass:color";
+
 @function icon($name, $color) {
-    $size-w: map-get($icon, $name, 'size-w');
-    $size-h: map-get($icon, $name, 'size-h');
-    $path: map-get($icon, $name, 'path');
-    $data: "data:image/svg+xml,%0A%3Csvg width='#{$size-w}' height='#{$size-h}' viewBox='0 0 #{$size-w} #{$size-h}' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='#{$path}' fill='rgb(" +
-        red($color) + ',' + green($color) + ',' + blue($color) + ")'/%3E%3C/svg%3E%0A";
+    $size-w: map.get($icon, $name, 'size-w');
+    $size-h: map.get($icon, $name, 'size-h');
+    $paths: map.get($icon, $name, 'paths');
+
+    $svg-paths: '';
+
+    @each $path in $paths {
+        $rgb-color: "#{color.channel($color, 'red')},#{color.channel($color, 'green')},#{color.channel($color, 'blue')}";
+        $svg-paths: "#{$svg-paths}%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='#{$path}' fill='rgb(#{$rgb-color})'/%3E";
+    }
+
+    $data: "data:image/svg+xml,%0A%3Csvg width='#{$size-w}' height='#{$size-h}' viewBox='0 0 #{$size-w} #{$size-h}' fill='none' xmlns='http://www.w3.org/2000/svg'%3E#{$svg-paths}%3C/svg%3E%0A";
+
     @return url($data);
 }

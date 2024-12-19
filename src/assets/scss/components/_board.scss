@@ -11,7 +11,7 @@
             .board-item {
                 padding: 4rem;
                 border-radius: 0.4rem;
-                background-color: color(neutral, 020);
+                background-color: custom-color(neutral, 020);
                 .board-wrap {
                     flex-direction: column;
                     .board-head {
@@ -38,11 +38,11 @@
                     .board-wrap {
                         .board-head {
                             .board-subject {
-                                color: color(typo,020);
+                                color: custom-color(typo,020);
                                 @include font(small-1x,bold);
                             }
                             .board-date {
-                                color: color(typo,020);
+                                color: custom-color(typo,020);
                                 @include font(small-3x,medium);
                             }
                         }
@@ -76,7 +76,7 @@
                 width: 100%;
                 padding: 4rem 6.4rem;
                 border-radius: 1.6rem;
-                background-color: color(neutral, 020);
+                background-color: custom-color(neutral, 020);
                 .board-info {
                     display: flex;
                     flex-wrap: nowrap;
@@ -109,13 +109,13 @@
                 .board-item {
                     .board-info {
                         .board-name {
-                            color: color(typo,020);
+                            color: custom-color(typo,020);
                             white-space: nowrap;
                             transition: 0.3s ease;
                             @include font(small-3x,bold);
                         }
                         .board-caption {
-                            color: color(typo,010);
+                            color: custom-color(typo,010);
                             transition: 0.3s ease;
                             @include font(small-3x,medium);
                             @include ellipsis;
@@ -123,7 +123,7 @@
                         &:hover {
                             .board-name,
                             .board-caption {
-                                color: color(primary,070);
+                                color: custom-color(primary,070);
                             }
                         }
                     }
@@ -154,7 +154,7 @@
                 width: 100%;
                 padding: 4rem;
                 border-radius: 1.6rem;
-                background-color: color(neutral, 020);
+                background-color: custom-color(neutral, 020);
                 .board-wrap {
                     justify-content: space-between;
                     align-items: center;
@@ -183,7 +183,7 @@
                     .board-wrap {
                         .board-info {
                             .board-name {
-                                color: color(typo,020);
+                                color: custom-color(typo,020);
                                 @include font(small-1x,bold);
                             }
                         }
@@ -211,7 +211,7 @@
                 width: calc(100% / 3 - 1.2rem);
                 padding: 4rem;
                 border-radius: 1.6rem;
-                background-color: color(neutral, 020);
+                background-color: custom-color(neutral, 020);
             }
             @include mobile {
                 flex-direction: column;
@@ -241,7 +241,7 @@
                 width: calc(100% / 3 - 4.2666rem);
                 padding: 4rem;
                 border-radius: 1.6rem;
-                background-color: color(neutral, 020);
+                background-color: custom-color(neutral, 020);
                 ~ .board-item {
                     &::before {
                         position: absolute;
@@ -251,7 +251,7 @@
                         height: 3.2rem;
                         content: '';
                         transform: translateY(-50%);
-                        background-image: icon(arrow-right1, color(primary, 070));
+                        background-image: icon(arrow-right1, custom-color(primary, 070));
                         background-repeat: no-repeat;
                         background-size: 1.2rem 1.9rem;
                         background-position: center center;
@@ -289,7 +289,7 @@
                 width: calc(100% / 4 - 1.5rem);
                 padding: 4rem;
 
-                background: color(system, 070);
+                background: custom-color(system, 070);
                 align-items: stretch;
                 border-radius: 1.6rem;
                 box-shadow: 0px 1.336px 5.342px 0px rgba(0, 0, 0, 0.10);
@@ -326,11 +326,11 @@
                     .board-wrap {
                         .board-info {
                             .board-caption {
-                                color: color(primary,080);
+                                color: custom-color(primary,080);
                                 @include font(small-5x,bold);
                             }
                             .board-name {
-                                color: color(typo,020);
+                                color: custom-color(typo,020);
                                 @include font(small-1x,bold);
                                 @include ellipsis(3);
                             }
@@ -377,7 +377,7 @@
             }
             .board-item {
                 padding: 4rem 4rem 6.4rem;
-                border: 2px solid color(system, 070);
+                border: 2px solid custom-color(system, 070);
                 background: rgba(255, 255, 255, 0.75);
                 border-radius: .8rem;
                 box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
@@ -410,13 +410,13 @@
                     .board-wrap {
                         .board-head {
                             .board-name {
-                                color: color(primary,080);
+                                color: custom-color(primary,080);
                                 @include font(small-1x,bold);
                             }
                         }
                         .board-body {
                             .para {
-                                color: color(typo,010);
+                                color: custom-color(typo,010);
                                 @include font(small-4x,bold);
                             }
                         }
@@ -456,9 +456,9 @@
                     flex-direction: column;
                     .board-head {
                         padding: 8.9rem 3.2rem;
-                        border: 1px solid color(neutral,030);
+                        border: 1px solid custom-color(neutral,030);
                         border-radius: 1.6rem;
-                        background-color: color(system, 070);
+                        background-color: custom-color(system, 070);
                     }
                     .board-info {
                         padding: 2.4rem;
@@ -498,7 +498,7 @@
                     .board-wrap {
                         .board-head {
                             .board-rank {
-                                color: color(system, 080);
+                                color: custom-color(system, 080);
                                 text-align: center;
                                 @include font(large-5x, bold);
                             }
@@ -506,12 +506,12 @@
                         .board-info {
                             .data-head{
                                 .data-subject {
-                                    color: color(typo, 020);
+                                    color: custom-color(typo, 020);
                                     @include font(small-1x, bold);
                                 }
                             }
                             .data-body {
-                                color: color(typo, 005);
+                                color: custom-color(typo, 005);
                                 @include font(small-3x, medium);
                             }
                         }
@@ -647,7 +647,7 @@
                     .board-info {
                         .board-name {
                             display: block;
-                            color: color(typo, 000);
+                            color: custom-color(typo, 000);
                             @include font(medium, bold);
                             ~.para {
                                 @include web {
@@ -662,7 +662,7 @@
                             }
                         }
                         .para {
-                            color: color(neutral, 040);
+                            color: custom-color(neutral, 040);
                             @include font(small-3x, medium);
                             @include mobile {
                                 @include font(small-4x, medium);
@@ -677,14 +677,14 @@
                 .board-wrap {
                     .board-info {
                         .board-name {
-                            color: color(typo, 000);
+                            color: custom-color(typo, 000);
                             @include font(small-3x, bold);
                             ~.para {
                                 padding-top: 0.4rem;
                             }
                             ~.note {
                                 display: inline-block;
-                                color: color(neutral, 040);
+                                color: custom-color(neutral, 040);
                                 @include font(small-5x, medium);
                                 @include web {
                                     padding-top: 1.2rem;
@@ -698,7 +698,7 @@
                             }
                         }
                         .para {
-                            color: color(typo, 000);
+                            color: custom-color(typo, 000);
                             @include font(medium, bold);
                             @include mobile {
                                 @include font(small-1x, bold);
@@ -713,14 +713,14 @@
                 .board-wrap {
                     .board-info {
                         .board-name {
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             @include font(small-3x, bold);
                             @include mobile {
                                 @include font(small-4x, bold);
                             }
                         }
                         .para {
-                            color: color(typo, 020);
+                            color: custom-color(typo, 020);
                             @include font(medium, bold);
                             @include mobile {
                                 @include font(small-1x, bold);
@@ -728,7 +728,7 @@
                         }
                         .board-data {
                             display: block;
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             @include font(small-5x, medium);
 
                             @include mobile {
@@ -741,12 +741,12 @@
         }
         &.type4 {
             .board-item {
-                background-color: color(system, 070);
+                background-color: custom-color(system, 070);
                 .board-wrap {
                     .board-info {
                         .board-name {
                             display: block;
-                            color: color(typo, 020);
+                            color: custom-color(typo, 020);
                             @include font(small-1x, bold);
                             ~.para {
                                 @include web {
@@ -761,7 +761,7 @@
                             }
                         }
                         .para {
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             @include font(small-4x, medium);
                             @include mobile {
                                 @include font(small-5x, medium);
@@ -783,7 +783,7 @@
                 padding: 4rem;
                 text-align: center;
                 flex: 1;
-                background-color: color(system, 070);
+                background-color: custom-color(system, 070);
                 border-radius: 1.6rem;
                 box-shadow: 0 0.1336rem 0.5342rem 0 rgba(0, 0, 0, 0.1);
                 .board-wrap {
@@ -821,12 +821,12 @@
         &.type1 {
             .board-head {
                 .board-name {
-                    color: color(typo, 020);
+                    color: custom-color(typo, 020);
                     @include font(small-3x, bold);
                 }
             }
             .board-body {
-                color: color(typo, 010);
+                color: custom-color(typo, 010);
                 @include font(medium, bold);
             }
             @include mobile {
@@ -851,7 +851,7 @@
                 justify-content: space-between;
                 .board-head {
                     .title {
-                        color: color(typo, 000);
+                        color: custom-color(typo, 000);
                         @include web {
                             @include font(large-3x, bold);
                         }
@@ -861,7 +861,7 @@
                     }
                 }
                 .board-body {
-                    color: color(typo, 000);
+                    color: custom-color(typo, 000);
                     @include web {
                         @include font(medium, bold);
                         .accent {
@@ -907,7 +907,7 @@
             > .board-item {
                 width: calc(100% / 2 - 2rem);
                 padding: 3.2rem 8rem 4rem 8rem;
-                background-color: color(system, 070);
+                background-color: custom-color(system, 070);
                 border-radius: 0.8rem;
                 .board-wrap {
                     flex-direction: column;
@@ -949,11 +949,11 @@
         &.type1 {
             > .board-item {
                 .board-name {
-                    color: color(typo, 020);
+                    color: custom-color(typo, 020);
                     @include font(small-1x, bold);
                 }
                 .board-info {
-                    color: color(typo, 010);
+                    color: custom-color(typo, 010);
                     @include font(small-4x, medium);
                 }
                 @include mobile {
@@ -980,7 +980,7 @@
             .board-item {
                 width: 100%;
                 padding: 4rem;
-                background-color: color(system, 070);
+                background-color: custom-color(system, 070);
                 border-radius: 1.6rem;
                 box-shadow: 0 0.1336rem 0.5342rem 0 rgba(0, 0, 0, 0.1);
                 .board-wrap {
@@ -1043,14 +1043,14 @@
                 .board-wrap {
                     .board-info {
                         .board-name {
-                            color: color(neutral, 100);
+                            color: custom-color(neutral, 100);
                             @include font(small-1x, bold);
                             @include mobile {
                                 @include font(small-2x, bold);
                             }
                         }
                         .para {
-                            color: color(neutral, 080);
+                            color: custom-color(neutral, 080);
                             @include font(small-4x, medium);
                             @include mobile {
                                 @include font(small-5x, medium);
@@ -1128,7 +1128,7 @@
                     height: 3.2rem;
                     content: '';
                     transform: translateY(-40%);
-                    background-image: icon(arrow-right1, color(neutral, 060));
+                    background-image: icon(arrow-right1, custom-color(neutral, 060));
                     background-repeat: no-repeat;
                     background-size: 1.1rem 1.9rem;
                     background-position: center;
@@ -1172,7 +1172,7 @@
                         width: 2.4rem;
                         height: 2.4rem;
                         transform: translateY(-40%);
-                        background-image: icon(arrow-right1, color(neutral, 060));
+                        background-image: icon(arrow-right1, custom-color(neutral, 060));
                         background-repeat: no-repeat;
                         background-size: 0.9rem 1.4rem;
 
@@ -1188,7 +1188,7 @@
                 .board-wrap {
                     .board-info {
                         .board-name {
-                            color: color(neutral, 100);
+                            color: custom-color(neutral, 100);
                             @include font(small-2x, semibold);
                             @include mobile {
                                 @include font(small-3x, bold);
@@ -1210,7 +1210,7 @@
             gap: 2rem;
             >.board-item {
                 width: calc(100% / 2 - 2rem);
-                background-color: color(system, 070);
+                background-color: custom-color(system, 070);
                 border-radius: 1.6rem;
                 box-shadow: 0 0.1336rem 0.5342rem 0 rgba(0, 0, 0, 0.1);
                 >.board-wrap {
@@ -1236,7 +1236,7 @@
         }
         &.case2 {
             >.board-item {
-                background-color: color(system, 070);
+                background-color: custom-color(system, 070);
                 border-radius: 1.6rem;
                 box-shadow: 0 0.1336rem 0.5342rem 0 rgba(0, 0, 0, 0.1);
                 >.board-wrap {
@@ -1272,7 +1272,7 @@
             >.board-item {
                 >.board-wrap {
                     > .board-name {
-                        color: color(primary, 070);
+                        color: custom-color(primary, 070);
                         @include font(small-2x, bold);
                         @include mobile {
                             @include font(small-3x, bold);
@@ -1280,7 +1280,7 @@
                     }
                     .board-body {
                         > .para {
-                            color: color(typo, 010);
+                            color: custom-color(typo, 010);
                             @include font(small-4x, medium);
                         }
                     }
@@ -1301,11 +1301,11 @@
             .board-wrap {
                 .board-head {
                     padding: 2.4rem;
-                    background: color(primary,070);
+                    background: custom-color(primary,070);
                     text-align: center;
                     border-radius: 1.6rem;
                     .board-subject {
-                        color: color(typo,000);
+                        color: custom-color(typo,000);
                         @include font(small-2x,bold);
                     }
                     + .board-body {
@@ -1321,14 +1321,14 @@
             &.type1 {
                 .board-wrap {
                     .board-head {
-                        background-color: color(primary,070);
+                        background-color: custom-color(primary,070);
                     }
                 }
             }
             &.type2 {
                 .board-wrap {
                     .board-head {
-                        // background-color: color(secondary,100);
+                        // background-color: custom-color(secondary,100);
                     }
                 }
             }
@@ -1369,10 +1369,10 @@
         .board-item {
             width: calc(100% / 3 - 1.3rem);
             padding: 4rem;
-            border: 0.1rem solid color(neutral, 030);
+            border: 0.1rem solid custom-color(neutral, 030);
             border-radius: 1.6rem;
             min-height: 21.6rem;
-            background-color: color(system,070);
+            background-color: custom-color(system,070);
             .board-wrap{
                 display: flex;
                 height: 100%;
@@ -1387,7 +1387,7 @@
         }
         &.type1{
             .board-subject {
-                color: color(typo, 005);
+                color: custom-color(typo, 005);
                 @include font(small-3x, bold);
             }
         }
@@ -1415,7 +1415,7 @@
             padding: 6.4rem 4rem;
             box-shadow: 0px 1.336px 5.342px 0px rgba(0, 0, 0, 0.10);
             border-radius: 1.6rem;
-            background-color: color(system,070);
+            background-color: custom-color(system,070);
             .board-wrap{
                 display: flex;
                 flex-direction: column;
@@ -1472,14 +1472,14 @@
                 .board-wrap {
                     .board-info {
                         .board-name {
-                            color: color(neutral, 100);
+                            color: custom-color(neutral, 100);
                             @include font(small-1x, bold);
                             @include mobile {
                                 @include font(small-2x, bold);
                             }
                         }
                         .para {
-                            color: color(neutral, 080);
+                            color: custom-color(neutral, 080);
                             @include font(small-4x, medium);
                             @include mobile {
                                 @include font(small-5x, medium);
@@ -1523,7 +1523,7 @@
                     width: 2.4rem;
                     height: 2.4rem;
                     content: '';
-                    background-image: icon(arrow-right2, color(secondary, 100));
+                    background-image: icon(arrow-right2, custom-color(secondary, 100));
                     background-size: 1.6rem 1.4rem;
                     background-repeat: no-repeat;
                     background-position: center center;
@@ -1554,7 +1554,7 @@
         }
         &.type1{
             .para {
-                color: color(typo, 010);
+                color: custom-color(typo, 010);
                 text-align: center;
                 @include font(small-4x, medium);
             }
@@ -1584,7 +1584,7 @@
         gap: 2rem;
         .board-item{
             width: calc(100% / 4 - 1.5rem);
-            background-color: color(secondary, 070);
+            background-color: custom-color(secondary, 070);
             border-radius: 1.6rem;
             .board-figure{
                 border-radius: 0.8rem;
@@ -1601,7 +1601,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: color(system, 070);
+                    background-color: custom-color(system, 070);
                     min-height: 10rem;
                     @include mobile {
                         min-height: 8.4rem;
@@ -1627,7 +1627,7 @@
                 text-align: center;
                 .board-name{
                     .board-caption{
-                        color: color(primary, 080);
+                        color: custom-color(primary, 080);
                         @include font(small-1x, bold);
                         @include mobile{
                             @include font(small-2x, bold);
@@ -1655,14 +1655,14 @@
         display: flex;
         .board-item {
             padding: 2.4rem 0 3.2rem;
-            border: 1px solid color(neutral,030);
-            background: color(neutral,020);
+            border: 1px solid custom-color(neutral,030);
+            background: custom-color(neutral,020);
             border-radius: 2.4rem;
             .board-wrap {
                 text-align: center;
                 .board-head {
                     .subject {
-                        color: color(typo,020);
+                        color: custom-color(typo,020);
                         @include font(small-1x,bold);
                     }
                     + .board-figure {
@@ -1708,11 +1708,11 @@
         width: 100%;
         .board-item {
             padding: 4rem 6.4rem;
-            background: color(neutral,020);
+            background: custom-color(neutral,020);
             border-radius: 1.6rem;
             .board-body {
                 .para {
-                    color: color(primary,080);
+                    color: custom-color(primary,080);
                     text-align: center;
                     @include font(small-2x,bold);
                 }
@@ -1765,7 +1765,7 @@
                         }
                     }
                     .body{
-                        color: color(typo, 010);
+                        color: custom-color(typo, 010);
                         @include font(small-4x, medium);
                     }
                 }
@@ -1811,7 +1811,7 @@
         .board-item{
             width: calc(100% / 6 - 1rem);
             padding: 3.45rem;
-            background: color(system, 070);
+            background: custom-color(system, 070);
             text-align: center;
             border-radius: 1.6rem;
             box-shadow: 0px 1.336px 5.342px 0px rgba(0, 0, 0, 0.10);
@@ -1880,7 +1880,7 @@
         .board-item{
             width: calc(100% / 3 - 1rem);
             padding: 4rem;
-            background: color(system, 070);
+            background: custom-color(system, 070);
             text-align: center;
             border-radius: 1.6rem;
             box-shadow: 0px 1.336px 5.342px 0px rgba(0, 0, 0, 0.10);
@@ -1901,7 +1901,7 @@
                     }
                 }
                 .board-name{
-                    color: color(primary, 070);
+                    color: custom-color(primary, 070);
                     margin-top: 0.8rem;
                     @include font(small-3x, bold);
                 }
@@ -1941,7 +1941,7 @@
             .borad-item {
                 display: flex;
                 padding: 2.4rem;
-                border: 1px solid color(neutral,030);
+                border: 1px solid custom-color(neutral,030);
                 border-radius: 1.6rem;
 
                 flex: 1;
@@ -1974,7 +1974,7 @@
             .borad-item {
                 width: 100%;
                 padding: 2.4rem;
-                border: 1px solid color(neutral,030);
+                border: 1px solid custom-color(neutral,030);
                 border-radius: 1.6rem;
 
                 > .board-head {
@@ -2010,8 +2010,8 @@
                 width: calc(100% / 4 - 1.5rem);
                 padding: 4rem 2.4rem;
                 text-align: center;
-                // border: 1px solid color(neutral,020);
-                background-color: color(neutral,020);
+                // border: 1px solid custom-color(neutral,020);
+                background-color: custom-color(neutral,020);
                 border-radius: 1.6rem;
                 .board-figure {
                     width: 14rem;
@@ -2028,24 +2028,24 @@
                     }
                 }
                 .haed {
-                    color: color(typo,010);
+                    color: custom-color(typo,010);
                     @include font(small-3x,bold);
                     + .body {
                         margin-top: 0.8rem
                     }
                 }
                 .body {
-                    color: color(typo,020);
+                    color: custom-color(typo,020);
                     @include font(small-1x,bold);
                 }
                 &.type1 {
                     display: flex;
-                    border: 1px solid color(primary,070);
+                    border: 1px solid custom-color(primary,070);
                     align-items: center;
                     justify-content: center;
-                    background-color: color(primary,070);
+                    background-color: custom-color(primary,070);
                     .body {
-                        color: color(system,070);
+                        color: custom-color(system,070);
                         @include font(medium,bold);
                     }
                 }
@@ -2081,8 +2081,8 @@
             .borad-item {
                 position: relative;
                 padding: 2rem 2rem 2.4rem;
-                background-color: color(neutral,020);
-                // border: 1px solid color(neutral,020);
+                background-color: custom-color(neutral,020);
+                // border: 1px solid custom-color(neutral,020);
                 border-radius: 1.6rem;
             }
             .board-head {
@@ -2104,11 +2104,11 @@
         &.type1 {
             .board-head {
                 .board-subject {
-                    color: color(typo,020);
+                    color: custom-color(typo,020);
                     @include font(small-2x,bold);
                 }
                 .caption {
-                    color: color(typo,010);
+                    color: custom-color(typo,010);
                     text-align: right;
                     @include font(small-4x,medium);
                 }
@@ -2301,9 +2301,9 @@
             position: relative;
             width: 22.4rem;
             height: 24.2rem;
-            border: .1rem solid color(neutral, 030);
+            border: .1rem solid custom-color(neutral, 030);
             border-radius: .8rem;
-            background-color: color(system, 070);
+            background-color: custom-color(system, 070);
             overflow: hidden;
             .board-wrap {
                 display: flex;
@@ -2374,14 +2374,14 @@
                     .board-wrap {
                         >a {
                             &::after {
-                                color: color(system, 070);
-                                background-color: color(system, 100, 0.9);
+                                color: custom-color(system, 070);
+                                background-color: custom-color(system, 100, 0.9);
                             }
                         }
                     }
                     &::after {
-                        background-color: color(secondary, 080);
-                        background-image: icon(arrow-right-up2, color(system, 070));
+                        background-color: custom-color(secondary, 080);
+                        background-image: icon(arrow-right-up2, custom-color(system, 070));
                     }
                 }
             }
@@ -2423,7 +2423,7 @@
                 min-height: 5.8rem;
                 .num {
                     display: none;
-                    color: color(primary, 080);
+                    color: custom-color(primary, 080);
                     margin-right: 1.2rem;
                     @include font(small-3x, bold);
                 }
@@ -2485,7 +2485,7 @@
                     height: 3.2rem;
                     margin: 0 1.6rem;
                     content: '';
-                    background-image: icon(arrow-right1, color(secondary, 080));
+                    background-image: icon(arrow-right1, custom-color(secondary, 080));
                     background-repeat: no-repeat;
                     background-position: center;
                 }
@@ -2495,9 +2495,9 @@
             padding: 2.4rem 3.2rem;
             align-items: flex-start;
             flex-direction: column;
-            background-color: color(system, 070);
+            background-color: custom-color(system, 070);
             border-radius: .8rem;
-            box-shadow: 0 0.1336rem 0.5342rem 0 color(system, 100, 0.1);
+            box-shadow: 0 0.1336rem 0.5342rem 0 custom-color(system, 100, 0.1);
             .board-item {
                 .board-wrap {
                     padding: 0;

@@ -17,11 +17,11 @@
                 gap: 0.1rem;
                 .page-item {
                     @include font(small-3x,bold);
-                    color: color(semantic,020);
+                    color: custom-color(semantic,020);
                     text-align: center;
                     min-width: 4rem;
                     &.current {
-                        color: color(primary,070);
+                        color: custom-color(primary,070);
                     }
                 }
                 @include mobile {
