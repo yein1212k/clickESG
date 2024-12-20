@@ -237,27 +237,33 @@ function header() {
     const $header = $('#header');
     const $depth1List = $('.depth1-list');
     const $depth2Wraps = $('.depth2-wrap');
+    let lastScrollTop = 0;
 
-    function showDepth2Wrap() {
-        $depth2Wraps.css('visibility', 'visible');
-    }
+    const toggleDepth2Wrap = (show) => {
+        $depth2Wraps.css('visibility', show ? 'visible' : 'hidden');
+    };
 
-    function hideDepth2Wrap() {
-        $depth2Wraps.css('visibility', 'hidden');
-    }
+    $depth1List.hover(
+        () => {
+            $header.addClass('active');
+            toggleDepth2Wrap(true);
+        },
+        () => {
+            $header.removeClass('active');
+            toggleDepth2Wrap(false);
+        }
+    );
 
-    $depth1List.on('mouseenter', function () {
-        $header.addClass('active');
-        showDepth2Wrap();
-    });
-
-    $depth1List.on('mouseleave', function () {
-        $header.removeClass('active');
-        hideDepth2Wrap();
+    $(window).on('scroll', () => {
+        const scrollTop = $(this).scrollTop();
+        $header.toggleClass('white', scrollTop > lastScrollTop);
+        lastScrollTop = scrollTop;
     });
 }
 
 $(document).ready(header);
+
+
 
 
 
