@@ -21,6 +21,7 @@
                                         .swiper-item {
                                             position: relative;
                                             height: 82rem;
+                                            overflow: hidden;
 
                                             .swiper-figure {
                                                 position: absolute;
@@ -86,6 +87,53 @@
                                                 }
                                             }
                                         }
+                                    }
+                                }
+                                .swiper-controls {
+                                    display: flex;
+                                    gap: 2rem;
+                                    margin-left: auto;
+                                    .swiper-pagination {
+                                        display: flex;
+                                        gap: 0.9rem;
+                                        position: unset;
+                                        .swiper-pagination-bullet {
+                                            position: relative;
+                                            width: 18px;
+                                            height: auto;
+                                            margin: 0;
+                                            background: none;
+                                            border-radius: 0;
+                                            overflow: hidden;
+                                            opacity: 1;
+                                            transition: all .5s ease-out;
+
+                                            .timer-title {
+                                                display: inline-block;
+                                                @include font(small-5x, bold);
+                                                color: custom-color(typo, 000);
+                                                white-space:nowrap;
+                                            }
+
+                                            &.swiper-pagination-bullet-active {
+                                                //width: auto;
+                                            }
+                                        }
+                                    }
+                                    .timer-bar {
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 4px;
+                                        background-color: rgba(0, 0, 0, 0.3);
+                                    }
+                                    .timer-percent {
+                                        display: block;
+                                        width: 0;
+                                        height: 4px;
+                                        background-color: #007aff;
+                                        // transition: width 5s linear;
                                     }
                                 }
                             }
