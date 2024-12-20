@@ -1,0 +1,151 @@
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 6.4rem;
+    z-index: 999;
+    background-color: transparent; 
+    z-index: 10;
+
+    &.transparent {
+        .header-inner {
+            display: flex;
+            height: 100%;
+            padding: 0 6rem;
+            max-height: 6.4rem;
+            align-items: center;
+            border-bottom: 1px solid #d9d9d9;
+            position: relative;
+    
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 0rem;
+                background-color: #fff; 
+                transition: all 0.5s ease-out;
+                opacity: 0;
+                z-index: -1;
+            }
+    
+            .site-logo {
+                display: inline-block;
+                max-height: 6.4rem;
+    
+                .site-name {
+                    display: inline-block;
+                    width: 10.2rem;
+                    height: 3.8rem;
+                    background: url(../images/logo/logo-white.svg);
+                }
+            }
+    
+            .site-navi {
+                position: relative;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                margin: 0 auto;
+    
+                .depth1-list {
+                    width: 63rem;
+                    display: flex;
+                    justify-content: space-between;
+                    transition: all 0.5s ease-out;
+                    transform: translateX(0);
+                    position: relative;
+    
+                    .depth1-item {
+                        width: 18rem;
+    
+                        .depth1 {
+                            display: inline-block;
+                            position: relative;
+                            font-size: 1.7rem;
+                            font-weight: 700;
+                            color: #fff;
+                            padding: 2rem 0;
+                        
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                bottom: 0.1rem;
+                                left: 0;
+                                width: 0;
+                                height: 0.2rem;
+                                background-color: #00BEF2;
+                                transition: all 0.3s ease-out;
+                            }
+                        
+                            &:hover::after,
+                            &:focus::after {
+                                width: 18rem;
+                            }
+                    
+                        }
+                        
+    
+                        .depth2-wrap {
+                            display: none;
+                            position: absolute;
+                            display: flex;
+                            flex-direction: column;
+                            z-index: 11;
+                            opacity: 0;
+                            visibility: visible;
+                            transform: translateY(-10px);
+                            transition: opacity 0.3s ease, transform 0.3s ease;
+                            transition-delay: 0.2s;
+    
+                            .depth2-list {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 2.2rem;
+                                padding: 2.8rem 0;
+    
+                                .depth2-item {
+                                    .depth2 {
+                                        font-size: 1.6rem;
+                                        line-height: 1.9rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.active {
+            .header-inner::after {
+                height: 36.4rem;
+                opacity: 1;
+            }
+    
+            .site-logo {
+                .site-name {
+                    background: url(../images/logo/logo-colored.svg);
+                }
+            }
+    
+            .site-navi {
+                .depth1-list {
+                    width: 102rem;
+                    margin: 0 auto;
+                    .depth1-item {
+                        .depth1 {
+                            color: #000;
+                        }
+                        
+                        .depth2-wrap {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

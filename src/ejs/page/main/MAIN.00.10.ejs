@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<%-include('../_templates/_head.ejs', {
+	layoutTemplate: 'front',
+	pageStyle: 'main',
+	pageJavascript: ''
+}) %>
+</head>
+<body>
+<!-- Modal -->
+<div id="wrap" class="main">
+    <%-include('../_templates/_header.ejs', {type: 'transparent',})%>
+    <!-- main -->
+    <div id="main" class="main">
+        <div class="main-inner">
+            <section class="section key-visual">
+                <div class="section-wrap">
+                    <div class="section-head blind">
+                        <h2 class="section-subject">ClickESG</h2>
+                    </div>
+                    <div class="section-body">
+                        <div class="swiper-display">
+                            <ul class="swiper-list bg">
+                                <li class="swiper-item"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+     <!-- // main -->
+</div>
+</body>
+</html>
