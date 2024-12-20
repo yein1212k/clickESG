@@ -131,9 +131,9 @@
       var loading_val = (100 * count )/ 50
       $('.swiper-pagination-bullet .timer-percent').css({'width':0+'%'});
       $('.swiper-pagination-bullet-active .timer-percent').css({'width':loading_val+'%'});
-    //   timerBullet.css({'width': '20px'});
-    //   activeTimerBullet.css({'width': activeTimerTitleW +'px'});
-    //   console.log(activeTimerTitleW)
+      var activeBulletTitleW = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
+                $('.swiper-pagination-bullet').css({'width':'18px'});
+                $('.swiper-pagination-bullet-active').css({'width':activeBulletTitleW+'px'});
     }
 
     function startCounter() {
@@ -180,16 +180,14 @@
                 $('.swiper-pagination-bullet').css({'width':'18px'});
                 setTimeout(function() {
                     startCounter(); 
-                }, 1000);
+                }, 100);
                 
             },
             slideChangeTransitionStart: function () {
                 count = 0; 
                 loading_bar();  
                 
-                var activeBulletTitleW = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
-                $('.swiper-pagination-bullet').css({'width':'18px'});
-                $('.swiper-pagination-bullet-active').css({'width':activeBulletTitleW+'px'});
+                
             }
         }
     });
@@ -214,9 +212,6 @@
     });
 
     $('.swiper-pagination-bullet').on('click', function() {
-        //showSlide(slidePrev);        
-        //showPrev_numSlide(slidePrev);
-
         count = 0;
         if (isCounterOn === true) {
             startCounter();          
@@ -225,6 +220,12 @@
         }
           
       });
+
+      window.addEventListener('resize', function () {
+        slider.update();
+    sliderTitle.update();
+});
+
 </script>
 </body>
 </html>
