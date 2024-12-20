@@ -1,0 +1,34 @@
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+@use '../components/icons' as *;
+
+.btn {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  &.module-a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &.style-a {
+      padding: 1.4rem 4.7rem;
+      @include font(small-4x, bold);
+      border-radius: 3rem;
+
+      &.color-a {
+        border: 0.1rem solid custom-color(neutral, 100);
+        color: custom-color(typo, 100);
+      }
+      &.color-b {
+        border: 0.1rem solid custom-color(neutral, 000);
+        color: custom-color(typo, 000);
+      }
+    }
+  }
+}

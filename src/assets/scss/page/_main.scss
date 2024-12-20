@@ -2,6 +2,97 @@
 @use '../components/variables' as *;
 @use '../components/icons' as *;
 
-.main {
-    header {display: none;}
+#wrap {
+    .main {
+        padding: 0;
+        .section {
+            &.key-visual {
+                .section-wrap {
+                    .section-head {
+
+                    }
+                    .section-body {
+                        .swiper-display {
+                            position: relative;
+
+                            .swiper-list {
+                                &.bg {
+                                    .swiper-wrapper {
+                                        .swiper-item {
+                                            position: relative;
+                                            height: 82rem;
+
+                                            .swiper-figure {
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%,-50%);
+                                                object-fit: cover;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .swiper-inner {
+                                position: absolute;
+                                top: 0;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                                padding: 0 24rem;
+                                z-index: 1;
+
+                                .swiper-list {
+                                    &.title {
+                                        width: 60rem;
+                                        margin-left: 0;
+                                        margin-right: 0;
+
+                                        .swiper-wrapper {
+                                            .swiper-item {
+                                                .swiper-head {
+                                                    .swiper-subject {
+                                                        @include font(large-5x, bold);
+                                                        color: custom-color(typo, 000);
+                                                    }
+                                                    & + .swiper-body {
+                                                        margin-top: 4rem;
+                                                    }
+                                                }
+                                                .swiper-body {
+                                                    .para {
+                                                        @include font(small-2x, bold);
+                                                        color: custom-color(typo, 000);
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        & + .link {
+                                            margin-top: 6.4rem;
+                                        }
+                                    }
+                                    &.link {
+                                        width: 60rem;
+                                        margin-left: 0;
+                                        margin-right: 0;
+                                        .swiper-wrapper {
+                                            .swiper-item {
+                                                opacity: 0 !important;
+                                                &.swiper-slide-active {
+                                                    opacity: 1 !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
