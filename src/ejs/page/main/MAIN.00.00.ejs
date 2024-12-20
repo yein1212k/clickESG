@@ -10,7 +10,6 @@
 <body>
 <!-- Modal -->
 <div id="wrap" class="wrap">
-    <%-include('../_templates/_header.ejs', {type: 'transparent',})%>
     <!-- main -->
     <main id="main" class="page main">
         <div class="page-body">
@@ -88,66 +87,134 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="swiper-controls">
+                                    <div class="swiper-pagination"></div>
+                                    <div class="controls">
+                                        <button id="toggleButton">Stop</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </section>
                 </div>
+            </section>
         </div>
     </main>
      <!-- // main -->
 </div>
 <script>
-    // 썸네일 슬라이더
-var sliderThumbnail = new Swiper(".link", {
-  slidesPerView: 1,
-  spaceBetween: 0,
-  watchSlidesProgress: true,
-  loop: true,
-  allowTouchMove: false,
-  autoplay: {
-    delay: 5000,
-  },
+    var slideData = [
+        { num: 1, name: 'ClickESG Service' },
+        { num: 2, name: 'ClickESG Solutions' },
+        { num: 3, name: 'About ClickESG' }
+    ];
 
-  effect: 'fade',
+    var sliderLink = new Swiper(".link", {
+        loop: true,
+        allowTouchMove: false,
+        autoplay: {
+            delay: 5000,
+        },
+        effect: 'fade',
+    });
 
-});
+    var slider = new Swiper(".bg", {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        },
+        speed: 1200,
+        pagination: {
+            el: ".swiper-controls .swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<div class="' + className + '"><span class="timer-title">'+ 0 + (index + 1) + ' ' + slideData[index].name +'</span>'+ '<span class="timer-bar"><span class="timer-percent"></span></span></div>';
+            },
+        },
+        thumbs: {
+            swiper: sliderLink
+        },
+        on: {
+                slideChange: function() {
+                    resetTimer();
+                },
+                init: function() {
+                    resetTimer();
+                },
 
-//메인 슬라이더
-var slider = new Swiper(".bg", {
-    loop: true,
-    autoplay: {
-    delay: 5000,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
-  thumbs: {
-    swiper: sliderThumbnail
-  },
-  speed: 1200, // 전환 속도
-});
+            }
+    });
 
-// 팝업 슬라이더
-var link = new Swiper(".title", {
-  autoHeight: true,
-  spaceBetween: 0,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  },
-  pagination: {
-    el: ".swiper-pagination"
-  },
+    var sliderTitle = new Swiper(".title", {
+        loop: true,
+        speed: 1200,
+    });
 
-  speed: 1200, // 전환 속도,
-});
+    slider.controller.control = sliderTitle;
+    sliderTitle.controller.control = slider;
 
-// 메인 슬라이더, 팝업 슬라이더 연결
-slider.controller.control = link;
-link.controller.control = slider;
+    // Toggle Play/Stop functionality
+    var toggleButton = document.getElementById('toggleButton');
+        toggleButton.addEventListener('click', function() {
+            if (slider.autoplay.running) {
+                slider.autoplay.stop();
+                stopTimer();
+                toggleButton.textContent = 'Play';
+            } else {
+                slider.autoplay.start();
+                startTimer();
+                toggleButton.textContent = 'Stop';
+            }
+        });
+
+        function resetTimer() {
+            var activeBulletT = $('.swiper-pagination-bullet-active .timer-title');
+            var activeBullet = $('.swiper-pagination-bullet-active');
+            var activeBulletPercent =$('.swiper-pagination-bullet-active .timer-percent');
+            var allBullets = $('.swiper-pagination-bullet .timer-percent');
+           // 모든 타이머 퍼센트를 초기화
+           allBullets.each(function() {
+        $(this).css('width', '0%');
+        $(this).css('transition', 'none');
+        //this.offsetWidth; // Trigger reflow to restart animation
+    });
+
+    // 현재 활성화된 타이머 퍼센트에 애니메이션 적용
+    if (activeBulletPercent) {
+        var activeBulletTW = activeBulletT.offsetWidth;
+        activeBullet.style.width = activeBulletTW + 'px';
+        // 비동기적으로 애니메이션 시작
+        setTimeout(function() {
+            activeBulletPercent.css('transition', 'width 5s linear'); // 애니메이션을 좀 더 부드럽게
+            activeBulletPercent.css('width', '100%');
+        }, 10); // 약간의 지연을 주어 리플로우가 완료되도록 함
+    }
+        }
+
+        function stopTimer() {
+            var allBullets = document.querySelectorAll('.timer-percent');
+            // allBullets.forEach(function(bullet) {
+            //     var computedStyle = window.getComputedStyle(bullet);
+            //     bullet.style.width = computedStyle.width;
+            //     bullet.style.transition = 'none';
+            // });
+
+            allBullets.each(function() {
+                $(this).css('width', '0%');
+                $(this).css('transition', 'none');
+                //this.offsetWidth; // Trigger reflow to restart animation
+            });
+        }
+
+        // function startTimer() {
+        //     var activeBulletPercent = document.querySelector('.swiper-pagination-bullet-active .timer-percent');
+        //     if (activeBulletPercent) {
+        //         activeBulletPercent.style.transition = 'width 5s';
+        //         activeBulletPercent.style.width = '100%';
+        //     }
+        // }
+
 </script>
 </body>
 </html>
