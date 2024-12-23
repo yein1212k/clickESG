@@ -247,8 +247,14 @@ function header() {
 
     // Header hover to toggle "white" class
     $header.hover(
-        () => $header.addClass('white'),
-        () => $header.removeClass('white')
+        () => {
+            $header.removeClass('transparent');
+            $header.addClass('white');
+        },
+        () => {
+            $header.removeClass('white');
+            $header.addClass('transparent');
+        }
     );
 
     // Depth1 list hover
