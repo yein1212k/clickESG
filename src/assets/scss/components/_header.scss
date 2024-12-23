@@ -132,43 +132,6 @@
                 }
             }
         }
-
-        &.active {
-            .header-inner{
-                border-bottom: 1px solid #d9d9d9;
-        
-                .site-logo {
-                    .site-name {
-                        background: url(../images/logo/logo-colored.svg);
-                    }
-                }
-        
-                .site-navi {
-                    .depth1-list {
-                        width: 102rem;
-                        margin: 0 auto;
-                        .depth1-item {
-                            .depth1 {
-                                color: custom-color(neutral, 090);
-
-                                &.link {
-                                    position: relative;
-        
-                                    &::before {
-                                        background: icon('link', custom-color(neutral, 090)) no-repeat center;
-                                    }
-                                }
-                            }
-                            
-                            .depth2-wrap {
-                                opacity: 1;
-                                transform: translateY(0);
-                            }
-                        }
-                    }
-                }
-            }    
-        }
     }
 
     // for dropdown menu
@@ -243,16 +206,6 @@
                                 }
                             }
                         }
-                        
-                        .depth2-wrap {
-                            .depth2-list {
-                                .depth2-item {
-                                    .depth2 {
-                                        color: custom-color(neutral, 020);
-                                    }
-                                }
-                            }
-                        }
                     }
                 }
             }
@@ -283,16 +236,6 @@
                             &.link {
                                 &::before {
                                     background: icon('link', custom-color(neutral, 090)) no-repeat center;
-                                }
-                            }
-                        }
-                        
-                        .depth2-wrap {
-                            .depth2-list {
-                                .depth2-item {
-                                    .depth2 {
-                                        color: custom-color(neutral, 020);
-                                    }
                                 }
                             }
                         }
