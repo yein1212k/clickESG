@@ -217,18 +217,18 @@ function lenis() {
 
 
 
-function localAnimations() {
-    $header = $('header');
-    $breadcrumb = $('.data-list.breadcrumb');
+// function localAnimations() {
+//     $header = $('header');
+//     $breadcrumb = $('.data-list.breadcrumb');
 
-    $('[data-local-animation="case-1"]').each(function(){
-        $this = $(this);
-        $this.addClass('active');
+//     $('[data-local-animation="case-1"]').each(function(){
+//         $this = $(this);
+//         $this.addClass('active');
 
-        // $header.removeClass('light').addClass('transparent');
-        $breadcrumb.removeClass('case1').addClass('case2');
-    });
-}
+//         // $header.removeClass('light').addClass('transparent');
+//         $breadcrumb.removeClass('case1').addClass('case2');
+//     });
+// }
 
 
 
@@ -236,14 +236,9 @@ function localAnimations() {
 function header() {
     const $header = $('#header');
     const $depth1List = $('.depth1-list');
-    const $depth2Wraps = $('.depth2-wrap');
     let lastScrollTop = 0;
     let throttleTimeout;
     let headerVisible = true; 
-
-    const toggleDepth2Wrap = (show) => {
-        $depth2Wraps.css('visibility', show ? 'visible' : 'hidden');
-    };
 
     // Header hover to toggle "white" class
     $header.hover(
