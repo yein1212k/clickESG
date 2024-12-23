@@ -239,16 +239,21 @@ function header() {
     const $depth2Wraps = $('.depth2-wrap');
     let lastScrollTop = 0;
     let throttleTimeout;
-    let headerVisible = true; // Track the visibility state of the header
+    let headerVisible = true; 
 
     const toggleDepth2Wrap = (show) => {
         $depth2Wraps.css('visibility', show ? 'visible' : 'hidden');
     };
 
-    // Header hover to toggle "white" class
     $header.hover(
-        () => $header.addClass('white'),
-        () => $header.removeClass('white')
+        () => {
+            $header.removeClass('transparent'); 
+            $header.addClass('white'); 
+        },
+        () => {
+            $header.removeClass('white');
+            $header.addClass('transparent');
+        }
     );
 
     // Depth1 list hover
