@@ -243,25 +243,63 @@ function header() {
         $depth2Wraps.css('visibility', show ? 'visible' : 'hidden');
     };
 
-    $depth1List.hover(
+    // Header hover to toggle "white" class
+    $header.hover(
         () => {
-            $header.addClass('active');
-            toggleDepth2Wrap(true);
+            $header.addClass('white');
         },
         () => {
-            $header.removeClass('active');
-            toggleDepth2Wrap(false);
+            $header.removeClass('white');
         }
     );
 
-    $(window).on('scroll', () => {
-        const scrollTop = $(this).scrollTop();
-        $header.toggleClass('white', scrollTop > lastScrollTop);
+    // Depth1 list hover management
+    $depth1List.on('mouseenter', () => {
+        $header.addClass('active');
+        toggleDepth2Wrap(true);
+    });
+
+    // Update to handle "mouseleave" properly
+    $header.on('mouseleave', (e) => {
+        // Ensure the mouse fully leaves the header
+        if (!$(e.relatedTarget).closest('#header').length) {
+            $header.removeClass('active');
+            toggleDepth2Wrap(false);
+        }
+    });
+
+    let scrollDirection = "down";
+
+    // Scroll event management
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        scrollDirection = scrollTop > lastScrollTop ? "down" : "up";
+
+        if (scrollTop === 0) {
+            $header.removeClass('white');
+        } else if (scrollDirection === "up") {
+            gsap.to($header, { 
+                duration: 0.3, 
+                y: 0, 
+                autoAlpha: 1, 
+                onStart: () => $header.addClass('white')
+            });
+        } else {
+            gsap.to($header, { 
+                duration: 0.3, 
+                y: -100, 
+                autoAlpha: 0, 
+                onComplete: () => $header.removeClass('white')
+            });
+        }
+
         lastScrollTop = scrollTop;
     });
 }
 
 $(document).ready(header);
+
+
 
 
 
