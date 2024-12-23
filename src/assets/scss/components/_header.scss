@@ -7,7 +7,7 @@
     top: 0;
     width: 100%;
     height: 6.4rem;
-    transition: all 0.5s ease-out;
+    transition: all 0.3s ease-out;
     z-index: 999;
 
     .header-inner {
@@ -25,7 +25,7 @@
             left: 0;
             width: 100%;
             height: 0rem;
-            transition: all 0.5s ease-out;
+            transition: all 0.3s ease-out;
             opacity: 0;
             z-index: -1;
         }
@@ -43,18 +43,18 @@
 
         .site-navi {
             position: relative;
+            width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
-            margin: 0 auto;
+            justify-content: center;
 
             .depth1-list {
                 position: relative;
-                width: 63rem;
+                width: 72rem;
                 display: flex;
                 justify-content: space-between;
-                transition: all 0.5s ease-out;
-                transform: translateX(0);
+                transition: all 0.3s ease-out;
 
                 .depth1-item {
                     width: 18rem;
@@ -65,7 +65,7 @@
                         font-size: 1.7rem;
                         font-weight: 700;
                         padding: 2rem 0;
-                    
+
                         &::after {
                             content: "";
                             position: absolute;
@@ -73,6 +73,7 @@
                             left: 0;
                             width: 0;
                             height: 0.2rem;
+                            background-color: custom-color(primary, 100);
                             transition: all 0.3s ease-out;
                         }
 
@@ -92,12 +93,8 @@
                                 opacity: 0.5;
                             }
                         }
-
-                        &::after {
-                            background-color: custom-color(primary, 100);
-                        }
                     }
-                    
+
 
                     .depth2-wrap {
                         display: none;
@@ -106,10 +103,10 @@
                         flex-direction: column;
                         visibility: visible;
                         transform: translateY(-10px);
-                        transition: opacity 0.3s ease, transform 0.3s ease;
-                        transition-delay: 0.2s;
+                        transition: all 0.3s ease-out;
                         opacity: 0;
-                        z-index: 11;
+                        visibility: hidden;
+                        z-index: 2;
 
                         .depth2-list {
                             display: flex;
@@ -134,54 +131,19 @@
         }
     }
 
-    // for dropdown menu
-    &.active {
-        .header-inner{
-            border-bottom: 1px solid #d9d9d9;
-    
-            .site-logo {
-                .site-name {
-                    background: url(../images/logo/logo-colored.svg);
-                }
-            }
-    
-            .site-navi {
-                .depth1-list {
-                    width: 102rem;
-                    margin: 0 auto;
-                    .depth1-item {
-                        .depth1 {
-                            color: custom-color(neutral, 090);
-                        }
-                        
-                        .depth2-wrap {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                    }
-                }
-            }
-
-            &::after {
-                height: 36.4rem;
-                opacity: 1;
-            }
-        }  
-    }
-
     // 해더 type1
     &.transparent {
         .header-inner {
             &::after {
-                background-color: custom-color(secondary, 060); 
+                background-color: custom-color(secondary, 060);
             }
-    
+
             .site-logo {
                 .site-name {
                     background: url(../images/logo/logo-white.svg);
                 }
             }
-    
+
             .site-navi {
                 .depth1-list {
                    .depth1-item {
@@ -198,29 +160,65 @@
                 }
             }
         }
+        &:hover {
+            background-color: custom-color(secondary, 060);
+
+            .header-inner {
+                border-bottom: 1px solid #d9d9d9;
+
+                &::after {
+                    background-color: custom-color(secondary, 060);
+                }
+
+                .site-logo {
+                    .site-name {
+                        background: url(../images/logo/logo-colored.svg);
+                    }
+                }
+
+                .site-navi {
+                    .depth1-list {
+                        .depth1-item {
+                            .depth1 {
+                                color: custom-color(neutral, 090);
+
+                                &.link {
+                                    &::before {
+                                        background: icon('link', custom-color(neutral, 090)) no-repeat center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     // 해더 type2
-    &.white {
+    &.white,
+    &.scroll {
         background-color: custom-color(secondary, 060);
 
-        .header-inner {    
+        .header-inner {
+            border-bottom: 1px solid #d9d9d9;
+
             &::after {
-                background-color: custom-color(secondary, 060); 
+                background-color: custom-color(secondary, 060);
             }
-    
+
             .site-logo {
                 .site-name {
                     background: url(../images/logo/logo-colored.svg);
                 }
             }
-    
+
             .site-navi {
                 .depth1-list {
                     .depth1-item {
                         .depth1 {
                             color: custom-color(neutral, 090);
-                    
+
                             &.link {
                                 &::before {
                                     background: icon('link', custom-color(neutral, 090)) no-repeat center;
@@ -229,6 +227,41 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    // for dropdown menu
+    &.active {
+        .header-inner{
+            border-bottom: 1px solid #d9d9d9;
+
+            .site-logo {
+                .site-name {
+                    background: url(../images/logo/logo-colored.svg);
+                }
+            }
+
+            .site-navi {
+                .depth1-list {
+                    width: 102rem;
+                    .depth1-item {
+                        .depth1 {
+                            color: custom-color(neutral, 090);
+                        }
+
+                        .depth2-wrap {
+                            visibility: visible;
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+
+            &::after {
+                height: 36.4rem;
+                opacity: 1;
             }
         }
     }

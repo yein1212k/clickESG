@@ -236,79 +236,37 @@ function lenis() {
 function header() {
     const $header = $('#header');
     const $depth1List = $('.depth1-list');
-    let lastScrollTop = 0;
-    let throttleTimeout;
-    let headerVisible = true; 
+    var lastScrollTop = 0;
 
-    // Header hover to toggle "white" class
-    $header.hover(
-        () => {
-            $header.removeClass('transparent');
-            $header.addClass('white');
-        },
-        () => {
-            $header.removeClass('white');
-            $header.addClass('transparent');
-        }
-    );
-
-    // Depth1 list hover
-    $depth1List.on('mouseenter', () => {
+    //Depth1 list mouseenter
+    $depth1List.on('mouseenter focusin', () => {
         $header.addClass('active');
-        toggleDepth2Wrap(true);
-    });
+    })
 
-    $header.on('mouseleave', (e) => {
-        if (!$(e.relatedTarget).closest('#header').length) {
-            $header.removeClass('active');
-            toggleDepth2Wrap(false);
-        }
+    $header.on('mouseleave focusout', () => {
+        $header.removeClass('active');
     });
 
     // Scroll event
     window.addEventListener('scroll', () => {
-        if (!throttleTimeout) {
-            throttleTimeout = setTimeout(() => {
-                const scrollTop = Math.round(window.scrollY); 
-                const scrollDirection = scrollTop > lastScrollTop ? "down" : "up";
-    
-                if (scrollTop <= 0) {
-                    gsap.killTweensOf($header);
-                    gsap.to($header, {
-                        duration: 1,
-                        y: 0,
-                        autoAlpha: 1, 
-                        overwrite: true,
-                        onComplete: () => {
-                            $header.removeClass('white'); 
-                        },
-                    });
-                    headerVisible = true; 
-                    
-                } else if (scrollDirection === "up" && !headerVisible) {
-                    gsap.to($header, {
-                        duration: 0.3,
-                        y: 0,
-                        autoAlpha: 1,
-                        overwrite: true,
-                        onStart: () => $header.addClass('white'),
-                    });
-                    headerVisible = true;
-                } else if (scrollDirection === "down" && headerVisible) {
-                    gsap.to($header, {
-                        duration: 0.3,
-                        y: -100,
-                        autoAlpha: 0,
-                        overwrite: true,
-                        onComplete: () => $header.removeClass('white'),
-                    });
-                    headerVisible = false;
-                }
-    
-                lastScrollTop = scrollTop; 
-                throttleTimeout = null; 
-            }, 150); 
+        var winScollTop = $(window).scrollTop();
+        var thisScollTop = $(this).scrollTop();
+
+        // 메인에서 winScollTop 0 일때는 transparent 상태여야 하기 때문에
+        if(winScollTop > 0) {
+            $('#header').addClass('scroll');
+        } else {
+            $('#header').removeClass('scroll');
         }
+
+        if (thisScollTop > lastScrollTop) {
+            $('#header').css('transform', 'translateY(-100px)');
+
+        } else {
+            $('#header').css('transform', 'translateY(0)');
+        }
+
+        lastScrollTop = thisScollTop;
     });
 }
 

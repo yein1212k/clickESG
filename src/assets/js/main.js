@@ -5,27 +5,23 @@ function mainVisual() {
         { name: 'About ClickESG' }
     ];
 
-
-
     var count = 0;
     var countId = '';
-    var isCounterOn = status;
+    var isCounterOn;
 
-
-    function loading_bar(){
-      $('.count_txt').text(count);
-      var loading_val = (100 * count )/ 50
-      $('.swiper-pagination-bullet .timer-percent').css({'width':0+'%'});
-      $('.swiper-pagination-bullet-active .timer-percent').css({'width':loading_val+'%'});
-      var activeBulletTitleW = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
-                $('.swiper-pagination-bullet').css({'width':'18px'});
-                $('.swiper-pagination-bullet-active').css({'width':activeBulletTitleW+'px'});
+    function loadingBar() {
+        var activeBulletTitleWidth = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
+        var loadingVal = (100 * count )/ 50
+        $('.count_txt').text(count);
+        $('.swiper-pagination-bullet .timer-percent').css({'width': 0 +'%'});
+        $('.swiper-pagination-bullet-active .timer-percent').css({'width':loadingVal + '%'});
+        $('.swiper-pagination-bullet').css({'width':'18px'});
+        $('.swiper-pagination-bullet-active').css({'width':activeBulletTitleWidth + 'px'});
     }
 
     function startCounter() {
-
-        var activeBulletTitleW = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
-        $('.swiper-pagination-bullet-active').css({'width':activeBulletTitleW+'px'});
+        var activeBulletTitleWidth = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
+        $('.swiper-pagination-bullet-active').css({'width':activeBulletTitleWidth + 'px'});
 
         clearTimeout(countId);
         countId = setInterval(function() {
@@ -34,22 +30,19 @@ function mainVisual() {
                 slider.slideNext();
                 count = 0;
             }
-            loading_bar();
+            loadingBar();
         }, 100);
         isCounterOn = true;
-      }
+    }
 
-      function stopCounter() {
+    function stopCounter() {
         clearTimeout(countId);
         isCounterOn = false;
-      }
-      console.log(document.querySelector('.swiper-container'));
-    var sliderBg = new Swiper(".swiper-list.bg", {
+    }
+
+    var sliderBg = new Swiper(".swiper.bg", {
         slidesPerView: 1,
         loop: true,
-        // autoplay: {
-        //     delay: 5000,
-        // },
         speed: 1200,
         pagination: {
             el: ".swiper-controls .swiper-pagination",
@@ -67,35 +60,30 @@ function mainVisual() {
                 setTimeout(function() {
                     startCounter();
                 }, 100);
-
             },
             slideChangeTransitionStart: function () {
                 count = 0;
-                loading_bar();
-
-
+                loadingBar();
             }
         }
     });
 
-    var sliderLink = new Swiper(".link", {
-        loop: true,
-        allowTouchMove: false,
-        // autoplay: {
-        //     delay: 5000,
-        // },
-        effect: 'fade',
-    });
-
-    var sliderTitle = new Swiper(".title", {
+    var sliderTitle = new Swiper(".swiper.title", {
         loop: true,
         speed: 1200,
+    });
+
+    var sliderLink = new Swiper(".swiper.link", {
+        loop: true,
+        allowTouchMove: false,
+        effect: 'fade',
     });
 
     sliderBg.controller.control = sliderTitle;
     sliderTitle.controller.control = sliderBg;
 
     var toggleButton = document.getElementById('toggleButton');
+
     toggleButton.addEventListener('click', function() {
         if (isCounterOn === true) {
             stopCounter();
@@ -106,19 +94,18 @@ function mainVisual() {
         }
     });
 
-    $('.swiper-pagination-bullet').on('click', function() {
+    $('.swiper.bg .swiper-pagination-bullet').on('click', function() {
         count = 0;
         if (isCounterOn === true) {
             startCounter();
         } else {
-            loading_bar();
+            loadingBar();
         }
+    });
 
-      });
-
-      window.addEventListener('resize', function () {
+    window.addEventListener('resize', function () {
         sliderBg.update();
-    sliderTitle.update();
+        sliderTitle.update();
     });
 }
 
