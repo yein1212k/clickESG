@@ -17,7 +17,7 @@
     <script src="./../../assets/js/ScrollTrigger.min.js"></script>
     <script src="./../../assets/js/ScrollToPlugin.min.js"></script>
     <script src="./../../assets/js/swiper-bundle.min.js"></script>
-    <script src="./../../assets/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="./../../assets/js/bootstrap.bundle.min.js"></script> -->
     <script src="./../../assets/js/common.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -26,951 +26,94 @@
     </script>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const intro = document.querySelector(".section.intro")
-            const ourEsg = intro.querySelector(".our-esg")
-            const company = document.querySelector(".section.company")
-            const subsidiary = company.querySelector(".subsidiary")
-            const network = company.querySelector(".network")
-            const media = document.querySelector(".section.media")
-            let press = media.querySelector(".press-media")
-            const sns = media.querySelector(".sns-media")
-            const investment = document.querySelector(".section.investment")
-
-            intro.classList.add("active1")
-            setTimeout(() => {
-                intro.classList.add("active2")
-            }, 1500);
-
-            const io = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    const _width = window.innerWidth
-                    const intro = entry.target.closest(".intro")
-                    if (_width >= 1024) {
-                        if (entry.intersectionRatio > 0.5) {
-                            intro.classList.add("active3")
-                        } else {
-                            intro.classList.remove("active3")
-                        }
-                    } else {
-                        if (entry.intersectionRatio > 0.1) {
-                            intro.classList.add("active3")
-                        } else {
-                            intro.classList.remove("active3")
-                        }
-                    }
-                })
-            }, {
-                threshold: [0.1, 0.5]
-            })
-
-            const io2 = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    const _width = window.innerWidth
-                    const company = entry.target
-                    if (_width >= 1024) {
-                        if (entry.intersectionRatio > 0.2) {
-                            intro.classList.add("active4")
-                            company.classList.add("active1")
-                        } else {
-                            company.classList.remove("active1")
-                            intro.classList.remove("active4")
-                        }
-                    } else {
-                        if (entry.intersectionRatio > 0.1) {
-                            intro.classList.add("active4")
-                            company.classList.add("active1")
-                        } else {
-                            company.classList.remove("active1")
-                            intro.classList.remove("active4")
-                        }
-                    }
-                })
-            }, {
-                threshold: [0.1, 0.2]
-            })
-
-            const io3 = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    const _width = window.innerWidth
-                    if (_width >= 1024) {
-                        if (entry.intersectionRatio > 0.4) {
-                            company.classList.remove("active4")
-                            company.classList.add("active2")
-                        }
-                    } else {
-                        if (entry.intersectionRatio > 0.2) {
-                            company.classList.add("active2")
-                        }
-                    }
-                    if (!entry.isIntersecting) {
-                        company.classList.remove("active2")
-                    }
-                })
-            }, {
-                threshold: [0.2, 0.4]
-            })
-
-            const io6 = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.intersectionRatio > 0.1) {
-                        press.style.top = window.innerHeight - press.offsetHeight + "px"
-                        media.classList.add("active1")
-                    } else {
-                        media.classList.remove("active1")
-                    }
-                })
-            }, {
-                threshold: [0.1]
-            })
-
-            const io7 = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.intersectionRatio > 0.1) {
-                        investment.classList.add("active1")
-                    } else {
-                        investment.classList.remove("active1")
-                    }
-                })
-            }, {
-                threshold: [0.1]
-            })
-
-            io.observe(ourEsg)
-            io2.observe(company)
-            io3.observe(network)
-            io6.observe(media)
-            io7.observe(investment)
-
-            let _width = window.innerWidth
-            let pressSwiper = undefined;
-
-            function initPressSwiper() {
-                if (_width >= 1024 && pressSwiper == undefined) {
-                    pressSwiper = new Swiper(".press-swiper", {
-                        slidesPerView: "auto",
-                        freeMode: true,
-                        scrollbar: {
-                            el: ".swiper-scrollbar",
-                            draggable: true,
-                        }
-                    });
-                } else if (_width < 1024 && pressSwiper != undefined) {
-                    pressSwiper.destroy();
-                    pressSwiper = undefined;
-                }
-            }
-            initPressSwiper();
-            window.addEventListener("resize", () => {
-                _width = window.innerWidth;
-                initPressSwiper();
-                company.classList.remove("active3")
-                media.classList.remove("active1")
-                media.classList.remove("active2")
-                sns.style.marginTop = "0"
-            })
-
-            new Swiper(".section-content.esg .swiper", {
-                slidesPerView: "auto",
-                freeMode: true,
-            });
-
-            new Swiper(".section.media .sns-media .swiper", {
-                slidesPerView: "auto",
-                freeMode: true,
-            });
-        });
-    </script>
 </head>
 
 <body>
     <!-- Modal -->
-    <div class="modal-display">
-        <div class="modal notice" id="modalNotice1">
-            <div class="modal-inner modal-dialog">
-                <div class="modal-area">
-                    <div class="modal-wrap">
-                        <div class="modal-body">
-                            <div class="section">
-                                <div class="section-wrap">
-                                    <div class="section-head">
-                                        <em class="section-subject"><span class="section-name">회사 분할에 따른 개인정보 이전<br> [통지/공고]</span></em>
-                                    </div>
-                                    <div class="section-body">
-                                        <p class="para">
-                                            에스케이네트웍스 주식회사(이하 “당사”)는 2024년 8월 7일 주주총회에서 Trading 사업부문을 물적 분할(이하 “본건 분할”)하여 분할신설회사를 설립하고, 당사가 존속하면서 분할신설회사 발행주식 전부를 배정받는 내용의 분할계획서를 승인하였습니다.<br>
-                                        </p>
-                                        <p class="para">
-                                            본건 분할 이후 기존에 당사가 제공받아 처리하던 개인정보는 2024년 12월 1일자(예정)로 분할신설회사에 이전될 예정입니다.
-                                        </p>
-                                        <p class="para">
-                                            세부사항은 전자공고를 통해 확인하시기 바랍니다.
-                                        </p>
-                                    </div>
-                                    <div class="section-util">
-                                        <div class="btn-display design1 case1 align3">
-                                            <div class="btn-area">
-                                                <a class="btn design1 case1 type1 color1" href="https://www.sknetworks.co.kr/ir/announcement/RNuXzmwLq9FYGVuF" tabindex="1"><span class="btn-text">상세 내용 확인하기</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div class="form checkbox design1 case1 type1">
-                                <div class="checkbox-list">
-                                    <div class="checkbox-item">
-                                        <label for="checkbox1">
-                                            <input type="checkbox" name="temp" value="chk1" id="checkbox1" tabindex="2">
-                                            <span class="option">하루 동안 보지 않기</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="btn-display design1 case1 align3">
-                                <div class="btn-area">
-                                    <a href="javascript:void(0);" onclick="closePop('modalNotice1');" class="btn design3 case2 type1 color4 ar-icon-close modal-close" tabindex="3"><span class="btn-text">닫기</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="modal notice" id="modalNotice2">
-            <div class="modal-inner modal-dialog">
-                <div class="modal-area">
-                    <div class="modal-wrap">
-                        <div class="modal-body">
-                            <div class="section">
-                                <div class="section-wrap">
-                                    <div class="section-head">
-                                        <em class="section-subject"><span class="section-name">Trading사업부 분할보고총회에<br> 갈음하는 공고</span></em>
-                                    </div>
-                                    <div class="section-body">
-                                        <p class="para">
-                                            에스케이네트웍스 주식회사(이하 “에스케이네트웍스”)는 2024년 8월 7일 개최된 임시주주총회에서 다음과 같이 에스케이네트웍스가 영위하는 사업 중 Trading사업부문(화학제품 수출입업 등)을 물적분할하여 글로와이드 주식회사를 설립하기로 결의하였고, 이 결의에 따라 상법 소정의 분할 및 설립절차를 완료하였습니다. 이에 에스케이네트웍스는 상법 제530조의12, 제530조의11 및 제526조 제3항에 의거 분할보고총회를 이사회 결의 및 본 공고로 갈음하기로 이사회에서 결의함에 따라, 다음과 같이 분할의 경과를 보고 및 공고합니다.
-                                        </p>
-                                        <p class="para">
-                                            세부사항은 전자공고를 통해 확인하시기 바랍니다.
-                                        </p>
-                                    </div>
-                                    <div class="section-util">
-                                        <div class="btn-display design1 case1 align3">
-                                            <div class="btn-area">
-                                                <a class="btn design1 case1 type1 color1" href="https://www.sknetworks.co.kr/ir/announcement/b4thrtzgvlZC8PSX" tabindex="4"><span class="btn-text">상세 내용 확인하기</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div class="form checkbox design1 case1 type1">
-                                <div class="checkbox-list">
-                                    <div class="checkbox-item">
-                                        <label for="checkbox2">
-                                            <input type="checkbox" name="temp" value="chk1" id="checkbox2" tabindex="5">
-                                            <span class="option">하루 동안 보지 않기</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="btn-display design1 case1 align3">
-                                <div class="btn-area">
-                                    <a href="javascript:void(0);" onclick="closePop('modalNotice2');" class="btn design3 case2 type1 color4 ar-icon-close modal-close" tabindex="6"><span class="btn-text">닫기</span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="wrap" class="main">
-        <div class="skip">
-            <span class="blind">skip navigation</span>
-            <ul>
-                <li><a href="#naviMenu">메뉴 바로가기</a></li>
-                <li><a href="#main">본문 바로가기</a></li>
-                <li><a href="#footer">하단 정보(링크) 바로가기</a></li>
-            </ul>
-        </div>
-        <header class="transparent" id="header">
-            <div class="header-inner">
-                <h1 class="site-logo">
-                    <a href="javascript:void(0)" class="site-name">
-                        <span class="blind">SK 네트웍스 로고</span>
-                    </a>
-                </h1>
-                <div class="site-navi" id="naviMenu">
-                    <ul class="depth1-list">
-                        <li class="depth1-item">
-                            <a href="javascript:void(0)" class="depth1">Company</a>
-                            <div class="depth2-wrap">
-                                <ul class="depth2-list ">
-                                    <li class="depth2-item ">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">기업 개요</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">CEO인사말</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">연혁</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 네트워크</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="depth1-item">
-                            <a href="javascript:void(0)" class="depth1">Business</a>
-                            <div class="depth2-wrap">
-                                <ul class="depth2-list">
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">사업 개요</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">글로벌 투자</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">정보통신</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">워커힐 호텔앤리조트</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">SK매직</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">SK스피드메이트</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">SK일렉링크</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">글로와이드</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">민팃</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">엔코아</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">피닉스 랩</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="depth1-item">
-                            <a href="javascript:void(0)" class="depth1">Sustainability</a>
-                            <div class="depth2-wrap">
-                                <ul class="depth2-list">
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">Sustainability <br class="pc-only">개요</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">사회적 가치</a>
-                                        <div class="depth3-wrap">
-                                            <ul class="depth3-list">
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">Double Bottom Line</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">사회적 가치 성과</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">환경</a>
-                                        <div class="depth3-wrap">
-                                            <ul class="depth3-list">
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">환경경영</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">기후변화</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">사회</a>
-                                        <div class="depth3-wrap">
-                                            <ul class="depth3-list">
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">구성원 행복</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">안전보건</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">이해관계자 행복</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">정보보호 및 보안</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">거버넌스</a>
-                                        <div class="depth3-wrap">
-                                            <ul class="depth3-list">
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">지배구조</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">윤리경영</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">투자관리</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">자료실</a>
-                                        <div class="depth3-wrap">
-                                            <ul class="depth3-list">
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">보고서 및 정책</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">인증</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="depth1-item">
-                            <a href="javascript:void(0)" class="depth1">IR</a>
-                            <div class="depth2-wrap">
-                                <ul class="depth2-list">
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">주식정보</a>
-                                        <div class="depth3-wrap">
-                                            <ul class="depth3-list">
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">주가정보</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">주주환원</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">재무정보</a>
-                                        <div class="depth3-wrap">
-                                            <ul class="depth3-list">
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">주요재무현황</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">감사보고서</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">신용등급</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">IR정보</a>
-                                        <div class="depth3-wrap">
-                                            <ul class="depth3-list">
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR일정</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">IR자료</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">공시정보</a>
-                                        <div class="depth3-wrap">
-                                            <ul class="depth3-list">
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">전자공시</a>
-                                                </li>
-                                                <li class="depth3-item">
-                                                    <a href="javascript:void(0)" target="_self" class="depth3">전자공고</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="depth1-item">
-                            <a href="javascript:void(0)" class="depth1">PR</a>
-                            <div class="depth2-wrap">
-                                <ul class="depth2-list">
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">뉴스룸</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">브랜드</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="depth1-item">
-                            <a href="javascript:void(0)" class="depth1">Career</a>
-                            <div class="depth2-wrap">
-                                <ul class="depth2-list">
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">기업문화</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">인재육성</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">평가/보상</a>
-                                    </li>
-                                    <li class="depth2-item">
-                                        <a href="javascript:void(0)" target="_self" class="depth2">채용정보</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="site-util">
-                    <div class="util contact-wrap">
-                        <a href="javascript:void(0)" class="btn text design1 case2 color2 contact">
-                            <span class="btn-text">문의·제안</span>
-                        </a>
-                    </div>
-                    <div class="util lang" id="gnb_lang">
-                        <button title="언어 선택" aria-label="언어 선택" aria-haspopup="true" class="selected">
-                            <span class="select-text cur-lang">KR</span>
-                        </button>
-                        <div class="option-area">
-                            <ul class="option-list">
-                                <li class="option-item">
-                                    <a href="javascript:void(0)" class="option active">KR</a>
-                                </li>
-                                <li class="option-item">
-                                    <a href="javascript:void(0)" class="option">EN</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="site-control">
-                    <button class="btn icon case2 menu-header">
-                        <span class="btn-text blind">메뉴 열기</span>
-                    </button>
-                </div>
-            </div>
-        </header>
+    <div id="wrap" class="wrap">
         <!-- main -->
-        <div class="sk-main" id="main">
-            <div class="main-inner">
-                <section class="section intro">
+        <main id="main" class="page main">
+            <div class="page-body">
+                <section class="section key-visual">
                     <div class="section-wrap">
-                        <div class="background intro-video">
-                            <video preload="auto" autoplay loop muted playsinline poster="../../assets/images/main/poster-main-intro1.png" src="../../assets/movies/bg-main-intro1.mp4"></video>
+                        <div class="section-head blind">
+                            <h2 class="section-subject">ClickESG</h2>
                         </div>
-                        <div class="section-content our-business">
-                            <div class="content-inner">
-                                <div class="section-head">
-                                    <h2 class="section-name">
-                                        우리 모두를 위한 AI, <br>SK네트웍스가 만들어갑니다.
-                                    </h2>
-                                </div>
-                                <div class="section-body">
-                                    <p class="para">
-                                        기존의 일상에 새로운 가능성을 열어주는 AI,<br>
-                                        누구나 누릴 수 있도록 SK네트웍스가 함께합니다.
-                                    </p>
-                                </div>
-                                <div class="section-util">
-                                    <a class="btn design3 case1 type1 color3 ar-icon-arrow-right2-bg" href="#">
-                                        <span class="btn-text">Business</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section-content our-esg">
-                            <div class="content-background">
-                                <div class="figure-bundle1">
-                                    <span class="figure1"></span>
-                                    <span class="figure2"></span>
-                                    <span class="figure3"></span>
-                                </div>
-                                <div class="figure-bundle2">
-                                    <span class="figure4"></span>
-                                    <span class="figure5"></span>
-                                    <span class="figure6"></span>
-                                </div>
-                            </div>
-                            <div class="content-inner">
-                                <div class="section-head">
-                                    <h3 class="section-name">Responsibility<br>for Sustainability</h3>
-                                </div>
-                                <div class="section-body">
-                                    <p class="para">
-                                        AI Company로서의 비전을 현실화하고<br>
-                                        효율적인 지속가능경영을 실천하며 <br class="mo-only">다양한 이해관계자들과 함께 <br class="mo-only">
-                                        지속가능한 미래를 그려 나가겠습니다.
-                                    </p>
-                                </div>
-                                <div class="section-util">
-                                    <a class="btn design3 case1 type1 color3 ar-icon-arrow-right2-bg" href="#">
-                                        <span class="btn-text">Sustainability</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section company">
-                    <div class="section-wrap">
-                        <div class="section-content subsidiary">
-                            <div class="content-background">
-                                <video preload="auto" autoplay loop muted playsinline poster="../../assets/images/main/poster-main-company1.png" src="../../assets/movies/bg-main-company1.mp4"></video>
-                            </div>
-                            <div class="content-inner">
-                                <div class="section-head">
-                                    <h3 class="split-wrap1">
-                                        <span class="split pc-only">SK네트웍스는</span>
-                                        <span class="split mo-only">SK네트웍스는 AI를 통해</span>
-                                    </h3>
-                                    <h3 class="split-wrap2">
-                                        <span class="split pc-only">AI를 통해 미래의 가치를 만들어 나가는</span>
-                                        <span class="split mo-only">미래의 가치를 만들어 나가는</span>
-                                    </h3>
-                                    <h3 class="split-wrap3">
-                                        <span class="split">글로벌 AI Company입니다.</span>
-                                    </h3>
-                                </div>
-                                <div class="section-body">
-                                    <video preload="auto" autoplay loop muted playsinline src="../../assets/movies/bg-main-company-logo.mp4"></video>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section-content network">
-                            <div class="content-inner">
-                                <div class="section-head">
-                                    <div class="section-subject">
-                                        <h3 class="section-name">AI 중심의<br class="mo-only"> 비즈니스 모델로의 변화</h3>
-                                    </div>
-                                    <p class="section-summary">
-                                        AI 기반의 비즈니스 모델 혁신과 미래 유망 기술 투자로 지속가능한 성장을 이뤄 가겠습니다.
-                                    </p>
-                                </div>
-                                <div class="section-body">
-                                    <ul class="board-list">
-                                        <li class="item global-investment">
-                                            <div class="board-head">
-                                                <h3 class="board-name">글로벌 투자</h3>
-                                            </div>
-                                            <div class="board-body">
-                                                <p class="para">글로벌 네트워크와 포트폴리오 관리 역량을<br> 바탕으로 미래 가능성에 투자합니다.</p>
-                                            </div>
+                        <div class="section-body">
+                            <div class="swiper-display">
+                                <div class="swiper swiper-list bg">
+                                    <ul class="swiper-wrapper">
+                                        <li class="swiper-slide swiper-item">
+                                            <video class="swiper-figure" preload="auto" autoplay loop muted playsinline src="../../assets/movies/main-visual-01.mp4"></video>
                                         </li>
-                                        <li class="item infocom">
-                                            <div class="board-head">
-                                                <h3 class="board-name">정보통신</h3>
-                                            </div>
-                                            <div class="board-body">
-                                                <p class="para">ICT 디바이스를 통해<br>사람과 AI를 연결합니다.</p>
-                                            </div>
+                                        <li class="swiper-slide swiper-item">
+                                            <video class="swiper-figure" preload="auto" autoplay loop muted playsinline src="../../assets/movies/main-visual-02.mp4"></video>
                                         </li>
-                                        <li class="item hotel">
-                                            <div class="board-head">
-                                                <h3 class="board-name">호텔앤리조트</h3>
-                                            </div>
-                                            <div class="board-body">
-                                                <p class="para">Beyond Entertainment,<br>Elevating Excitement</p>
-                                            </div>
-                                        </li>
-                                        <li class="item rental">
-                                            <div class="board-head">
-                                                <h3 class="board-name">웰니스 가전</h3>
-                                            </div>
-                                            <div class="board-body">
-                                                <p class="para">건강하고 편리한,<br>친환경적인 일상을 시작합니다.</p>
-                                            </div>
-                                        </li>
-                                        <li class="item mobility">
-                                            <div class="board-head">
-                                                <h3 class="board-name">모빌리티</h3>
-                                            </div>
-                                            <div class="board-body">
-                                                <p class="para">AI를 통해 더 차별화된<br>Mobility Service로 혁신합니다.</p>
-                                            </div>
-                                        </li>
-                                        <li class="item global-trading">
-                                            <div class="board-head">
-                                                <h3 class="board-name">글로벌 트레이딩</h3>
-                                            </div>
-                                            <div class="board-body">
-                                                <p class="para">화학제품 위주의 무역을 전개하며<br>비즈니스 파트너에게 가치를 전달합니다.</p>
-                                            </div>
+                                        <li class="swiper-slide swiper-item">
+                                            <video class="swiper-figure" preload="auto" autoplay loop muted playsinline src="../../assets/movies/main-visual-03.mp4"></video>
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section media">
-                    <div class="section-wrap">
-                        <div class="section-content press-media">
-                            <div class="content-inner">
-                                <div class="section-head">
-                                    <div class="section-subject">
-                                        <h3 class="section-name">Press Media</h3>
-                                    </div>
-                                    <p class="section-summary">
-                                        내일을 향한 SK네트웍스의 최신소식을 통해<br class="mo-only"> 어떤 미래가 기다리고 있는지 만나보세요.
-                                    </p>
-                                </div>
-                                <div class="section-body">
-                                    <div class="swiper press-swiper">
+                                <div class="swiper-inner">
+                                    <div class="swiper swiper-list title">
                                         <ul class="swiper-wrapper">
-                                            <li class="swiper-slide">
-                                                <a href="" class="link">
+                                            <li class="swiper-slide swiper-item">
+                                                <div class="swiper-wrap">
                                                     <div class="swiper-head">
-                                                        <div class="img-wrap">
-                                                            <img src="https://place-hold.it/387x218" alt="">
-                                                        </div>
+                                                        <h3 class="swiper-subject">ClickESG SERVICE</h3>
                                                     </div>
                                                     <div class="swiper-body">
-                                                        <span class="swiper-caption">Press</span>
-                                                        <p class="para">SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!</p>
-                                                        <span class="date">2024.02.01</span>
+                                                        <p class="para">ClickESG는 Global 표준 기술력 보유하고,<br> ESG 전문성을 가진 기업중심의 컨설팅 서비스를 제공합니다.</p>
                                                     </div>
-                                                </a>
-                                            </li>
-                                            <li class="swiper-slide">
-                                                <a href="" class="link">
-                                                    <div class="swiper-head">
-                                                        <div class="img-wrap">
-                                                            <img src="https://place-hold.it/387x218" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-body">
-                                                        <span class="swiper-caption">Press</span>
-                                                        <p class="para">SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!</p>
-                                                        <span class="date">2024.02.01</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="swiper-slide">
-                                                <a href="" class="link">
-                                                    <div class="swiper-head">
-                                                        <div class="img-wrap">
-                                                            <img src="https://place-hold.it/387x218" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-body">
-                                                        <span class="swiper-caption">Press</span>
-                                                        <p class="para">SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!</p>
-                                                        <span class="date">2024.02.01</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="swiper-slide">
-                                                <a href="" class="link">
-                                                    <div class="swiper-head">
-                                                        <div class="img-wrap">
-                                                            <img src="https://place-hold.it/387x218" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-body">
-                                                        <span class="swiper-caption">Press</span>
-                                                        <p class="para">SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!</p>
-                                                        <span class="date">2024.02.01</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="swiper-slide">
-                                                <a href="" class="link">
-                                                    <div class="swiper-head">
-                                                        <div class="img-wrap">
-                                                            <img src="https://place-hold.it/387x218" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-body">
-                                                        <span class="swiper-caption">Press</span>
-                                                        <p class="para">SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!</p>
-                                                        <span class="date">2024.02.01</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="swiper-slide">
-                                                <a href="" class="link">
-                                                    <div class="swiper-head">
-                                                        <div class="img-wrap">
-                                                            <img src="https://place-hold.it/387x218" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-body">
-                                                        <span class="swiper-caption">Press</span>
-                                                        <p class="para">SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!</p>
-                                                        <span class="date">2024.02.01</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="swiper-slide">
-                                                <a href="" class="link">
-                                                    <div class="swiper-head">
-                                                        <div class="img-wrap">
-                                                            <img src="https://place-hold.it/387x218" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="swiper-body">
-                                                        <span class="swiper-caption">Press</span>
-                                                        <p class="para">SK네트웍스, 2023년 영업이익 2,373억원 달성 전년비 33.6% 증가 배당 증액·자사주 소각 통해 주주가치 제고 추진!</p>
-                                                        <span class="date">2024.02.01</span>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <div class="swiper-scrollbar"></div>
-                                    </div>
-                                </div>
-                                <div class="section-util">
-                                    <a class="btn design3 case1 type1 color1 ar-icon-arrow-right2-bg report" href="javascript:void(0)">
-                                        <span class="btn-text">보도자료 전체보기</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section-content sns-media">
-                            <div class="content-inner">
-                                <div class="section-head">
-                                    <h3 class="section-name">SNS Media</h3>
-                                </div>
-                                <div class="section-body">
-                                    <div class="sns-newest">
-                                        <a href="" class="link">
-                                            <div class="post-head">
-                                                <div class="img-wrap">
-                                                    <img src="https://place-hold.it/590x331" alt="">
                                                 </div>
-                                            </div>
-                                            <div class="post-body">
-                                                <span class="post-cate">Youtube</span>
-                                                <h4 class="post-name">[이 팀을 알렸다] 진.짜. 최고의 마케팅팀!<br> 워커힐을 완전 뒤집어 놓으셨다 ✊</h4>
-                                                <p class="para">천하의 장돌뱅희를 당황시키는 밈잘알 마케팅팀의 등장이라...숲 속에서 열리는 콘서트부터 아이돌과의 협업까지!! 워커힐 마케팅팀의 넘치는 아이디어를 지금 영상을 통해 만나보시오~!</p>
-                                                <span class="date">2024.02.01</span>
-                                            </div>
-                                        </a>
+                                            </li>
+                                            <li class="swiper-slide swiper-item">
+                                                <div class="swiper-wrap">
+                                                    <div class="swiper-head">
+                                                        <h3 class="swiper-subject">ClickESG Solutions</h3>
+                                                    </div>
+                                                    <div class="swiper-body">
+                                                        <p class="para">맞춤형 ESG 솔루션으로 고객니즈에 맞춘 최적화 솔루션을 제공하고, 다양한 언어 Pack을 갖춰 해외사업장의 공급망 ESG 진단을 지원할 수 있습니다.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide swiper-item">
+                                                <div class="swiper-wrap">
+                                                    <div class="swiper-head">
+                                                        <h3 class="swiper-subject">About ClickESG</h3>
+                                                    </div>
+                                                    <div class="swiper-body">
+                                                        <p class="para">ESG 혁신의 선두주자 SK C&C ClickESG<br> 기술과 전문성으로 지속가능한 미래를 열어갑니다.</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <div class="sns-swiper swiper">
-                                        <ul class="post-list swiper-wrapper">
-                                            <li class="item swiper-slide">
-                                                <a href="" class="link">
-                                                    <div class="post-head">
-                                                        <div class="img-wrap">
-                                                            <img src="https://place-hold.it/387x218" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="post-body">
-                                                        <span class="post-cate">Youtube</span>
-                                                        <h4 class="post-name">[이 팀을 알렸다] 진.짜. 최고의 마케팅팀!<br> 워커힐을 완전 뒤집어 놓으셨다 ✊</h4>
-                                                        <span class="date">2024.02.01</span>
-                                                    </div>
+                                    <div class="swiper swiper-list link">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide swiper-item">
+                                                <a href="#" class="btn module-a style-a color-b">
+                                                    <span class="btn-text">More</span>
                                                 </a>
                                             </li>
-                                            <li class="item swiper-slide">
-                                                <a href="" class="link">
-                                                    <div class="post-head">
-                                                        <div class="img-wrap">
-                                                            <img src="https://place-hold.it/387x218" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="post-body">
-                                                        <span class="post-cate">Youtube</span>
-                                                        <h4 class="post-name">[이 팀을 알렸다] 진.짜. 최고의 마케팅팀!<br> 워커힐을 완전 뒤집어 놓으셨다 ✊</h4>
-                                                        <span class="date">2024.02.01</span>
-                                                    </div>
+                                            <li class="swiper-slide swiper-item">
+                                                <a href="#" class="btn module-a style-a color-b">
+                                                    <span class="btn-text">More</span>
                                                 </a>
                                             </li>
-                                            <li class="item swiper-slide">
-                                                <a href="" class="link">
-                                                    <div class="post-head">
-                                                        <div class="img-wrap">
-                                                            <img src="https://place-hold.it/387x218" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="post-body">
-                                                        <span class="post-cate">Youtube</span>
-                                                        <h4 class="post-name">[이 팀을 알렸다] 진.짜. 최고의 마케팅팀!<br> 워커힐을 완전 뒤집어 놓으셨다 ✊</h4>
-                                                        <span class="date">2024.02.01</span>
-                                                    </div>
+                                            <li class="swiper-slide swiper-item">
+                                                <a href="#" class="btn module-a style-a color-b">
+                                                    <span class="btn-text">More</span>
                                                 </a>
                                             </li>
                                         </ul>
                                     </div>
-                                </div>
-                                <div class="section-util">
-                                    <a class="btn design3 case1 type1 color1 ar-icon-arrow-right2-bg" href="javascript:void(0)">
-                                        <span class="btn-text">소셜미디어 전체보기</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section investment">
-                    <div class="section-wrap">
-                        <div class="content-inner">
-                            <div class="section-head">
-                                <div class="section-subject">
-                                    <h3 class="section-name">Investment</h3>
-                                </div>
-                            </div>
-                            <div class="section-body">
-                                <div class="board-list">
-                                    <div class="board-item sk-stock">
-                                        <iframe src="https://ir.gsifn.io/sknetworks/ir2_main_pc.html?koreng=1" title="SK네트웍스 주가" class="pc-only">
-                                        </iframe>
-                                        <iframe src="https://ir.gsifn.io/sknetworks/ir2_main_m.html?koreng=1" title="SK네트웍스 주가" class="mo-only"></iframe>
-                                    </div>
-                                    <div class="board-item stock-info">
-                                        <a href="javascript:void(0)" class="link">
-                                            <div class="board-head">
-                                                <h4 class="board-name">주식정보</h4>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="board-item fina-info">
-                                        <a href="javascript:void(0)" class="link">
-                                            <div class="board-head">
-                                                <h4 class="board-name">재무정보</h4>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="board-item ir">
-                                        <div class="board-head">
-                                            <img src="../../assets/images/logo/logo-w-k.svg" class="sk-logo" alt="SK 네트웍스 로고">
-                                        </div>
-                                        <div class="board-body">
-                                            <h4 class="board-name">IR자료실</h4>
-                                            <div class="board-util">
-                                                <a href="javascript:void(0)" class="ir-link">
-                                                    <span class="text">경영 실적 발표</span>
-                                                </a>
-                                                <a href="javascript:void(0)" class="ir-link">
-                                                    <span class="text">감사보고서</span>
-                                                </a>
-                                            </div>
+                                    <div class="swiper-controls">
+
+                                        <p class="count_txt"></p>
+                                        <div class="swiper-pagination"></div>
+                                        <div class="controls">
+                                            <button id="toggleButton">Stop</button>
                                         </div>
                                     </div>
                                 </div>
@@ -979,192 +122,146 @@
                     </div>
                 </section>
             </div>
-        </div>
-        <!-- page-foot -->
-        <footer id="footer">
-            <div class="footer-inner">
-                <div class="footer-head">
-                    <a href="#" class="footer-subject"><span class="footer-name blind">SK networks</span></a>
-                </div>
-                <div class="footer-body">
-                    <div class="section policy">
-                        <div class="section-wrap">
-                            <div class="section-head blind">운영 정책</div>
-                            <div class="section-body">
-                                <ul class="navi-list">
-                                    <li class="navi-item"><a href="#" class="navi-text privacy">개인정보처리방침</a></li>
-                                    <li class="navi-item"><a href="#" class="navi-text">사이트맵</a></li>
-                                    <li class="navi-item"><a href="https://ethics.sk.co.kr/" target="_blank" title="새창 열기" class="navi-text">제보하기</a></li>
-                                </ul>
-                                <ul class="info-list">
-                                    <!-- <li class="info-item ncsi"><span class="info-text blind">NCSI</span></li> -->
-                                    <li class="info-item isms" title="정보보호 관리체계(ISMS) 인증&#10;[인증범위] 온라인 서비스 운영(ERS, 수입차 부품 홍보 및 자동차부품 대리점 관리, 대리점 휴대폰 주문 및 악세사리 판매, ICT마케팅)&#10;[유효기간] 2021.12.15 ~ 2024.12.14">
-                                        <span class="info-text blind">정보보호 관리체계 ISMS 인증 마크</span>
-                                    </li>
-                                    <li class="info-item wa" title="웹접근성 인증">
-                                        <span class="info-text blind">웹접근성 인증 마크</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section info">
-                        <div class="section-wrap">
-                            <div class="section-head blind">기업정보</div>
-                            <div class="section-body">
-                                <ul class="data-list">
-                                    <li class="data-item"><span class="data-text">경기도 수원시 장안구 경수대로 976번길 19(송죽동)</span></li>
-                                    <li class="data-item"><span class="data-text">Tel : 070-7800-2114</span></li>
-                                    <li class="data-item"><span class="data-text">Copyright ⓒ 2024 by SK Networks Co. Ltd. All Rights Reserved</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section family-site">
-                        <button title="패밀리 사이트" aria-label="패밀리 사이트" aria-haspopup="true" class="btn-family">
-                            <span class="btn-text">패밀리 사이트</span>
-                        </button>
-                        <div class="site-area">
-                            <ul class="site-list">
-                                <li class="site-item">
-                                    <a href="https://www.walkerhill.com/" target="_blank" title="새창 열기" class="site">워커힐 호텔앤리조트</a>
-                                </li>
-                                <li class="site-item">
-                                    <a href="https://www.walkerhill.com/grandwalkerhillseoul/" target="_blank" title="새창 열기" class="site">그랜드 워커힐 서울</a>
-                                </li>
-                                <li class="site-item">
-                                    <a href="https://www.walkerhill.com/vistawalkerhillseoul/" target="_blank" title="새창 열기" class="site">비스타 워커힐 서울</a>
-                                </li>
-                                <li class="site-item">
-                                    <a href="https://www.walkerhill.com/about/CustomerService" target="_blank" title="새창 열기" class="site">워커힐 대외사업부</a>
-                                </li>
-                                <li class="site-item">
-                                    <a href="https://www.sknservice.com/index.do" target="_blank" title="새창 열기" class="site">SK네트웍스 서비스</a>
-                                </li>
-                                <li class="site-item">
-                                    <a href="https://www.skmagic.com/?_ga=2.199319278.1937658122.1716172891-198197358.1712136793" target="_blank" title="새창 열기" class="site">SK매직</a>
-                                </li>
-                                <li class="site-item">
-                                    <a href="https://www.speedmate.com/Company" target="_blank" title="새창 열기" class="site">SK스피드메이트</a>
-                                </li>
-                                <li class="site-item">
-                                    <a href="https://skelectlink.co.kr/" target="_blank" title="새창 열기" class="site">SK일렉링크</a>
-                                </li>
-                                <li class="site-item">
-                                    <a href="https://www.mintit.co.kr/" target="_blank" title="새창 열기" class="site">민팃</a>
-                                </li>
-                                <li class="site-item">
-                                    <a href="https://www.en-core.com/" target="_blank" title="새창 열기" class="site">엔코아</a>
-                                </li>
-                                <li class="site-item">
-                                    <a href="https://hico.vc/hico-ventures/" target="_blank" title="새창 열기" class="site">하이코캐피탈</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="btn-to-top">
-                <button type="button" id="topBtn" class="top-btn">
-                    <span class="btn-text">Top</span>
-                </button>
-            </div>
-        </footer>
-        <!-- //page-foot -->
+        </main>
+        <!-- // main -->
     </div>
     <script>
-        window.onload = () => {
-            checkAndToggleModal('modalNotice1', '2024-10-31 09:00:00', '2025-03-07 20:30:00'); // 진짜1 (실서버 반영)
-            // checkAndToggleModal('modalNotice2', '2024-12-02 16:00:00', '2024-12-10 24:00:00'); // 진짜2 (실버서 반영)
-            checkAndToggleModal('modalNotice2', '2024-11-27 12:51:00', '2025-11-27 13:33:00'); // 가짜 (테스트용)
-        };
-
-        function checkAndToggleModal(id, startDateTime, endDateTime) {
-
-            if (checkTodayHidePopup("hidePopup_" + id)) return;
-
-            // 모달 오픈 시간
-            var now = new Date();
-            let startDate = new Date(startDateTime);
-            let endDate = new Date(endDateTime);
-
-            if (now >= startDate && now <= endDate) {
-                openPop(id);
-                $('.modal-display').addClass('show');
+        var slideData = [{
+                name: 'ClickESG Service'
+            },
+            {
+                name: 'ClickESG Solutions'
+            },
+            {
+                name: 'About ClickESG'
             }
+        ];
+
+        var sliderLink = new Swiper(".link", {
+            loop: true,
+            allowTouchMove: false,
+            // autoplay: {
+            //     delay: 5000,
+            // },
+            effect: 'fade',
+        });
+
+        var count = 0;
+        var countId = '';
+        var isCounterOn = status;
+
+
+        function loading_bar() {
+            $('.count_txt').text(count);
+            var loading_val = (100 * count) / 50
+            $('.swiper-pagination-bullet .timer-percent').css({
+                'width': 0 + '%'
+            });
+            $('.swiper-pagination-bullet-active .timer-percent').css({
+                'width': loading_val + '%'
+            });
+            var activeBulletTitleW = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
+            $('.swiper-pagination-bullet').css({
+                'width': '18px'
+            });
+            $('.swiper-pagination-bullet-active').css({
+                'width': activeBulletTitleW + 'px'
+            });
         }
 
-        function checkTodayHidePopup(id) {
-            var nowTime = new Date().getTime();
-            const hideUntil = localStorage.getItem(id);
-            if (nowTime < hideUntil) {
-                return true;
-            } else {
-                // 자정이 지나면 로컬 스토리지에서 항목을 제거
-                localStorage.removeItem(id);
-            }
+        function startCounter() {
 
-            return false;
+            var activeBulletTitleW = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
+            $('.swiper-pagination-bullet-active').css({
+                'width': activeBulletTitleW + 'px'
+            });
+
+            clearTimeout(countId);
+            countId = setInterval(function() {
+                count += 1;
+                if (count === 50) {
+                    slider.slideNext();
+                    count = 0;
+                }
+                loading_bar();
+            }, 100);
+            isCounterOn = true;
         }
 
-        function openPop(id) {
-            document.getElementById(id)?.classList.add('show');
+        function stopCounter() {
+            clearTimeout(countId);
+            isCounterOn = false;
         }
 
-        function closePop(id) {
-            console.log('닫기 누름');
+        var slider = new Swiper(".bg", {
+            slidesPerView: 1,
+            loop: true,
+            // autoplay: {
+            //     delay: 5000,
+            // },
+            speed: 1200,
+            pagination: {
+                el: ".swiper-controls .swiper-pagination",
+                clickable: true,
+                renderBullet: function(index, className) {
+                    return '<div class="' + className + '"><span class="timer-title">' + 0 + (index + 1) + ' ' + slideData[index].name + '</span>' + '<span class="timer-bar"><span class="timer-percent"></span></span></div>';
+                },
+            },
+            thumbs: {
+                swiper: sliderLink
+            },
+            on: {
+                init: function() {
+                    $('.swiper-pagination-bullet').css({
+                        'width': '18px'
+                    });
+                    setTimeout(function() {
+                        startCounter();
+                    }, 100);
 
-            // 해당 팝업의 체크박스 선택
-            const checkbox = document.getElementById(id);
+                },
+                slideChangeTransitionStart: function() {
+                    count = 0;
+                    loading_bar();
 
-            if (checkbox && checkbox.checked) {
-                // 팝업을 하루 동안 숨기도록 설정
-                setHidePopup(id);
-            }
 
-            // 특정 팝업만 닫기
-            document.getElementById(id).classList.remove('show');
-
-            // 모든 팝업이 닫혔는지 확인
-            const openModals = document.querySelectorAll('.modal.show'); // 아직 열려 있는 팝업들
-            if (openModals.length === 0) {
-                // 모든 팝업이 닫혔을 때만 실행
-                $('.modal-display').removeClass('show');
-            }
-        }
-
-        // "오늘 하루 보지 않기" 기능을 위한 함수
-        function setHidePopup(id) {
-            // 현재 날짜와 시간을 가져오기
-            console.log(id);
-            const now = new Date();
-
-            // 자정 시간 계산
-            const midnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
-
-            // 남은 시간 계산 (밀리초 단위)
-            const timeUntilMidnight = midnight.getTime() - now.getTime();
-
-            // 로컬 스토리지에 숨김 상태를 저장 (현재 시간 + 남은 시간)
-            localStorage.setItem('hidePopup_' + id, now.getTime() + timeUntilMidnight);
-        }
-
-        function shouldHidePopup() {
-            const hideUntil = localStorage.getItem('hidePopup_' + id);
-
-            if (hideUntil) {
-                const now = new Date().getTime();
-
-                // 저장된 시간이 현재 시간보다 크면 팝업을 숨겨야 함
-                if (now < hideUntil) {
-                    return true;
-                } else {
-                    // 자정이 지나면 로컬 스토리지에서 항목을 제거
-                    localStorage.removeItem('hidePopup_' + id);
                 }
             }
-            return false;
-        }
+        });
+
+        var sliderTitle = new Swiper(".title", {
+            loop: true,
+            speed: 1200,
+        });
+
+        slider.controller.control = sliderTitle;
+        sliderTitle.controller.control = slider;
+
+        var toggleButton = document.getElementById('toggleButton');
+        toggleButton.addEventListener('click', function() {
+            if (isCounterOn === true) {
+                stopCounter();
+                toggleButton.textContent = 'Play';
+            } else {
+                startCounter();
+                toggleButton.textContent = 'Stop';
+            }
+        });
+
+        $('.swiper-pagination-bullet').on('click', function() {
+            count = 0;
+            if (isCounterOn === true) {
+                startCounter();
+            } else {
+                loading_bar();
+            }
+
+        });
+
+        window.addEventListener('resize', function() {
+            slider.update();
+            sliderTitle.update();
+        });
     </script>
 </body>
 
