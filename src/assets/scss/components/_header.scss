@@ -131,7 +131,7 @@
                         }
 
                         &:hover .depth1::after {
-                            width: 18rem; // Hover 시 depth1의 after가 표시되도록 설정
+                            width: 18rem;
                         }
                     }
                 }
@@ -202,8 +202,6 @@
                                 color: custom-color(neutral, 090);
                         
                                 &.link {
-                                    position: relative;
-        
                                     &::before {
                                         background: icon('link', custom-color(neutral, 090)) no-repeat center;
                                     }
