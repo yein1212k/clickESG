@@ -245,15 +245,10 @@ function header() {
         $depth2Wraps.css('visibility', show ? 'visible' : 'hidden');
     };
 
+    // Header hover to toggle "white" class
     $header.hover(
-        () => {
-            $header.removeClass('transparent'); 
-            $header.addClass('white'); 
-        },
-        () => {
-            $header.removeClass('white');
-            $header.addClass('transparent');
-        }
+        () => $header.addClass('white'),
+        () => $header.removeClass('white')
     );
 
     // Depth1 list hover
