@@ -7,8 +7,7 @@
     top: 0;
     width: 100%;
     height: 6.4rem;
-    background-color: transparent; 
-    transition: background-color 0.3s ease-out;
+    transition: all 0.5s ease-out;
     z-index: 999;
 
     // 해더 type1
@@ -54,12 +53,12 @@
                 margin: 0 auto;
     
                 .depth1-list {
+                    position: relative;
                     width: 63rem;
                     display: flex;
                     justify-content: space-between;
                     transition: all 0.5s ease-out;
                     transform: translateX(0);
-                    position: relative;
     
                     .depth1-item {
                         width: 18rem;
@@ -180,143 +179,15 @@
                 }
             }    
         }
-    }
 
-    // 해더 type2
-    &.white {
-        background-color: custom-color(secondary, 060);
-        transition: all 0.5s ease-out;
-
-        .header-inner {
-            position: relative;
-            display: flex;
-            align-items: center;
-            height: 100%;
-            max-height: 6.4rem;
-            padding: 0 6rem;
+        // 해더 type2
+        &.white {
+            background-color: custom-color(secondary, 060);
     
-            &::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 0rem;
-                background-color: custom-color(secondary, 060); 
-                transition: all 0.5s ease-out;
-                opacity: 0;
-                z-index: -1;
-            }
-    
-            .site-logo {
-                display: inline-block;
-                max-height: 6.4rem;
-    
-                .site-name {
-                    display: inline-block;
-                    width: 10.2rem;
-                    height: 3.8rem;
-                    background: url(../images/logo/logo-colored.svg);
+            .header-inner {    
+                &::after {
+                    background-color: custom-color(secondary, 060); 
                 }
-            }
-    
-            .site-navi {
-                position: relative;
-                height: 100%;
-                display: flex;
-                align-items: center;
-                margin: 0 auto;
-    
-                .depth1-list {
-                    width: 63rem;
-                    display: flex;
-                    justify-content: space-between;
-                    transition: all 0.5s ease-out;
-                    transform: translateX(0);
-                    position: relative;
-    
-                    .depth1-item {
-                        width: 18rem;
-    
-                        .depth1 {
-                            display: inline-block;
-                            position: relative;
-                            font-size: 1.7rem;
-                            font-weight: 700;
-                            color: custom-color(neutral, 090);
-                            padding: 2rem 0;
-                        
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                bottom: 0.1rem;
-                                left: 0;
-                                width: 0;
-                                height: 0.2rem;
-                                background-color: custom-color(primary, 100);
-                                transition: all 0.3s ease-out;
-                            }
-                        
-                            &:hover::after,
-                            &:focus::after {
-                                width: 18rem;
-                            }
-
-                            &.link {
-                                position: relative;
-    
-                                &::before {
-                                    content: "";
-                                    display: inline-block;
-                                    position: absolute;
-                                    top: 50%;
-                                    right: -3.5rem;
-                                    width: 3.6rem;
-                                    height: 3.6rem;
-                                    background: icon('link', custom-color(neutral, 090)) no-repeat center;
-                                    background-size: 2rem;
-                                    transform: translateY(-50%);
-                                    opacity: 0.5;
-                                }
-                            }
-                        }
-                        
-    
-                        .depth2-wrap {
-                            display: none;
-                            position: absolute;
-                            display: flex;
-                            flex-direction: column;
-                            visibility: visible;
-                            transform: translateY(-10px);
-                            transition: opacity 0.3s ease, transform 0.3s ease;
-                            transition-delay: 0.2s;
-                            opacity: 0;
-                            z-index: 11;
-    
-                            .depth2-list {
-                                display: flex;
-                                flex-direction: column;
-                                gap: 2.2rem;
-                                padding: 2.8rem 0;
-    
-                                .depth2-item {
-                                    .depth2 {
-                                        font-size: 1.6rem;
-                                        color: custom-color(neutral, 020);
-                                        line-height: 1.9rem;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        &.active {
-            .header-inner{
-                border-bottom: 1px solid #d9d9d9;
         
                 .site-logo {
                     .site-name {
@@ -326,12 +197,10 @@
         
                 .site-navi {
                     .depth1-list {
-                        width: 102rem;
-                        margin: 0 auto;
                         .depth1-item {
                             .depth1 {
                                 color: custom-color(neutral, 090);
-
+                        
                                 &.link {
                                     position: relative;
         
@@ -342,18 +211,18 @@
                             }
                             
                             .depth2-wrap {
-                                opacity: 1;
-                                transform: translateY(0);
+                                .depth2-list {
+                                    .depth2-item {
+                                        .depth2 {
+                                            color: custom-color(neutral, 020);
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
                 }
-
-                &::after {
-                    height: 36.4rem;
-                    opacity: 1;
-                }
-            }    
+            }
         }
     }
 }

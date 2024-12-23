@@ -251,7 +251,7 @@ function header() {
         () => $header.removeClass('white')
     );
 
-    // Depth1 list hover management
+    // Depth1 list hover
     $depth1List.on('mouseenter', () => {
         $header.addClass('active');
         toggleDepth2Wrap(true);
@@ -264,7 +264,7 @@ function header() {
         }
     });
 
-    // Scroll event management
+    // Scroll event
     window.addEventListener('scroll', () => {
         if (!throttleTimeout) {
             throttleTimeout = setTimeout(() => {
@@ -285,7 +285,6 @@ function header() {
                     headerVisible = true; 
                     
                 } else if (scrollDirection === "up" && !headerVisible) {
-                    // Show the header when scrolling up
                     gsap.to($header, {
                         duration: 0.3,
                         y: 0,
@@ -295,7 +294,6 @@ function header() {
                     });
                     headerVisible = true;
                 } else if (scrollDirection === "down" && headerVisible) {
-                    // Hide the header when scrolling down
                     gsap.to($header, {
                         duration: 0.3,
                         y: -100,
@@ -311,10 +309,7 @@ function header() {
             }, 150); 
         }
     });
-    
 }
-
-$(document).ready(header);
 
 
 
