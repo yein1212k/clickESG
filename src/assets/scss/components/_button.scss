@@ -20,14 +20,45 @@
       padding: 1.4rem 4.7rem;
       @include font(small-4x, bold);
       border-radius: 3rem;
+      transition: all .2s ease-out;
 
       &.color-a {
         border: 0.1rem solid custom-color(neutral, 100);
         color: custom-color(typo, 100);
+        &:hover,
+        &:focus {
+          background-color: custom-color(neutral, 100);
+          color: custom-color(typo, 000);
+        }
       }
       &.color-b {
         border: 0.1rem solid custom-color(neutral, 000);
         color: custom-color(typo, 000);
+        &:hover,
+        &:focus {
+          border: 0.1rem solid rgba(255, 255, 255, 0.0);
+          background-color: rgba(255, 255, 255, 0.50);
+        }
+      }
+    }
+  }
+  &.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &.style-a {
+      width: 1.6rem;
+      height: 1.6rem;
+      font-size: 0;
+      line-height: 0;
+
+      &.play {
+        background: icon('play', custom-color(neutral, 000)) no-repeat center;
+      }
+      &.stop {
+        background: icon('stop', custom-color(neutral, 000)) no-repeat center;
       }
     }
   }

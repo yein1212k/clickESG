@@ -11,7 +11,7 @@ function mainVisual() {
 
     function loadingBar() {
         var activeBulletTitleWidth = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
-        var loadingVal = (100 * count )/ 50
+        var loadingVal = (100 * count ) / 50
         $('.count_txt').text(count);
         $('.swiper-pagination-bullet .timer-percent').css({'width': 0 +'%'});
         $('.swiper-pagination-bullet-active .timer-percent').css({'width':loadingVal + '%'});
@@ -27,7 +27,7 @@ function mainVisual() {
         countId = setInterval(function() {
             count += 1;
             if(count === 50){
-                slider.slideNext();
+                sliderBg.slideNext();
                 count = 0;
             }
             loadingBar();
@@ -75,12 +75,14 @@ function mainVisual() {
 
     var sliderLink = new Swiper(".swiper.link", {
         loop: true,
-        allowTouchMove: false,
+        //allowTouchMove: false,
         effect: 'fade',
     });
 
     sliderBg.controller.control = sliderTitle;
     sliderTitle.controller.control = sliderBg;
+    sliderBg.controller.control = sliderLink;
+    sliderLink.controller.control = sliderBg;
 
     var toggleButton = document.getElementById('toggleButton');
 
@@ -88,9 +90,14 @@ function mainVisual() {
         if (isCounterOn === true) {
             stopCounter();
             toggleButton.textContent = 'Play';
+            toggleButton.classList.remove('play');
+            toggleButton.classList.add('stop');
+
         } else {
             startCounter();
             toggleButton.textContent = 'Stop';
+            toggleButton.classList.add('play');
+            toggleButton.classList.remove('stop');
         }
     });
 
