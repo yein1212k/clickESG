@@ -238,6 +238,8 @@ function header() {
     const $depth1List = $('.depth1-list');
     const $depth2Wraps = $('.depth2-wrap');
     let lastScrollTop = 0;
+    let throttleTimeout;
+    let headerVisible = true; // Track the visibility state of the header
 
     const toggleDepth2Wrap = (show) => {
         $depth2Wraps.css('visibility', show ? 'visible' : 'hidden');
@@ -245,12 +247,8 @@ function header() {
 
     // Header hover to toggle "white" class
     $header.hover(
-        () => {
-            $header.addClass('white');
-        },
-        () => {
-            $header.removeClass('white');
-        }
+        () => $header.addClass('white'),
+        () => $header.removeClass('white')
     );
 
     // Depth1 list hover management
@@ -259,45 +257,65 @@ function header() {
         toggleDepth2Wrap(true);
     });
 
-    // Update to handle "mouseleave" properly
     $header.on('mouseleave', (e) => {
-        // Ensure the mouse fully leaves the header
         if (!$(e.relatedTarget).closest('#header').length) {
             $header.removeClass('active');
             toggleDepth2Wrap(false);
         }
     });
 
-    let scrollDirection = "down";
-
     // Scroll event management
     window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        scrollDirection = scrollTop > lastScrollTop ? "down" : "up";
-
-        if (scrollTop === 0) {
-            $header.removeClass('white');
-        } else if (scrollDirection === "up") {
-            gsap.to($header, { 
-                duration: 0.3, 
-                y: 0, 
-                autoAlpha: 1, 
-                onStart: () => $header.addClass('white')
-            });
-        } else {
-            gsap.to($header, { 
-                duration: 0.3, 
-                y: -100, 
-                autoAlpha: 0, 
-                onComplete: () => $header.removeClass('white')
-            });
+        if (!throttleTimeout) {
+            throttleTimeout = setTimeout(() => {
+                const scrollTop = Math.round(window.scrollY); 
+                const scrollDirection = scrollTop > lastScrollTop ? "down" : "up";
+    
+                if (scrollTop <= 0) {
+                    gsap.killTweensOf($header);
+                    gsap.to($header, {
+                        duration: 1,
+                        y: 0,
+                        autoAlpha: 1, 
+                        overwrite: true,
+                        onComplete: () => {
+                            $header.removeClass('white'); 
+                        },
+                    });
+                    headerVisible = true; 
+                    
+                } else if (scrollDirection === "up" && !headerVisible) {
+                    // Show the header when scrolling up
+                    gsap.to($header, {
+                        duration: 0.3,
+                        y: 0,
+                        autoAlpha: 1,
+                        overwrite: true,
+                        onStart: () => $header.addClass('white'),
+                    });
+                    headerVisible = true;
+                } else if (scrollDirection === "down" && headerVisible) {
+                    // Hide the header when scrolling down
+                    gsap.to($header, {
+                        duration: 0.3,
+                        y: -100,
+                        autoAlpha: 0,
+                        overwrite: true,
+                        onComplete: () => $header.removeClass('white'),
+                    });
+                    headerVisible = false;
+                }
+    
+                lastScrollTop = scrollTop; 
+                throttleTimeout = null; 
+            }, 150); 
         }
-
-        lastScrollTop = scrollTop;
     });
+    
 }
 
 $(document).ready(header);
+
 
 
 
