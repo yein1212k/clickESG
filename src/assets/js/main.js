@@ -11,7 +11,7 @@ function mainVisual() {
 
     function loadingBar() {
         var activeBulletTitleWidth = $('.swiper-pagination-bullet-active .timer-title').outerWidth();
-        var loadingVal = (100 * count ) / 50
+        var loadingVal = (100 * count )/ 50
         $('.count_txt').text(count);
         $('.swiper-pagination-bullet .timer-percent').css({'width': 0 +'%'});
         $('.swiper-pagination-bullet-active .timer-percent').css({'width':loadingVal + '%'});
@@ -27,7 +27,7 @@ function mainVisual() {
         countId = setInterval(function() {
             count += 1;
             if(count === 50){
-                sliderBg.slideNext();
+                slider.slideNext();
                 count = 0;
             }
             loadingBar();
@@ -39,12 +39,6 @@ function mainVisual() {
         clearTimeout(countId);
         isCounterOn = false;
     }
-
-    var sliderLink = new Swiper(".swiper.link", {
-        loop: true,
-        //allowTouchMove: false,
-        effect: 'fade',
-    });
 
     var sliderBg = new Swiper(".swiper.bg", {
         slidesPerView: 1,
@@ -79,6 +73,12 @@ function mainVisual() {
         speed: 1200,
     });
 
+    var sliderLink = new Swiper(".swiper.link", {
+        loop: true,
+        allowTouchMove: false,
+        effect: 'fade',
+    });
+
     sliderBg.controller.control = sliderTitle;
     sliderTitle.controller.control = sliderBg;
 
@@ -88,14 +88,9 @@ function mainVisual() {
         if (isCounterOn === true) {
             stopCounter();
             toggleButton.textContent = 'Play';
-            toggleButton.classList.remove('play');
-            toggleButton.classList.add('stop');
-
         } else {
             startCounter();
             toggleButton.textContent = 'Stop';
-            toggleButton.classList.add('play');
-            toggleButton.classList.remove('stop');
         }
     });
 
@@ -106,25 +101,6 @@ function mainVisual() {
         } else {
             loadingBar();
         }
-    });
-
-    var solutionSlider = new Swiper(".story-02 .swiper", {
-        loop: true,
-        slidesPerView: 'auto',
-        spaceBetween: 32,
-        freeMode: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            type: "progressbar",
-        },
     });
 
     window.addEventListener('resize', function () {
