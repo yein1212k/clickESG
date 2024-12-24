@@ -48,6 +48,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-left: -10.2rem;
 
             .depth1-list {
                 position: relative;
@@ -56,8 +57,43 @@
                 justify-content: space-between;
                 transition: all 0.3s ease-out;
 
+                @include mobile {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: auto;
+                    width: 100% !important;
+                    flex-direction: column;
+                    transition: height 0.3s ease-out;
+                    padding: 2rem 0 0;
+                }
+                
                 .depth1-item {
                     width: 18rem;
+
+                    @include mobile {
+                        width: 100%;
+                        &.open {
+                            display: block;
+                            
+                            .depth1 {
+                                color: custom-color(primary, 090) !important;
+
+                                .open-close {
+                                    &::after {
+                                        background: icon('mines', custom-color(neutral, 090)) no-repeat center;
+                                    }
+                                }
+                                &::after {
+                                    display: none;
+                                }
+                            }
+
+                            .depth2-wrap {
+                                display: block;
+                            }
+                        }
+                    }
 
                     .depth1 {
                         display: inline-block;
@@ -93,6 +129,30 @@
                                 opacity: 0.5;
                             }
                         }
+
+                        @include mobile {
+
+
+                            .open-close {
+                                position: relative;
+
+                                &::after {
+                                    content: "";
+                                    display: inline-block;
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 0;
+                                    width: 1.5rem;
+                                    height: 1.65rem;
+                                    background: icon('plus', custom-color(neutral, 090)) no-repeat center;
+                                    background-size: 2rem;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                            &::after {
+                                display: none;
+                            }
+                        }
                     }
 
 
@@ -114,12 +174,24 @@
                             gap: 2.2rem;
                             padding: 2.8rem 0;
 
+                            @include mobile {
+                                padding: 0;
+                            }
+
                             .depth2-item {
                                 .depth2 {
                                     font-size: 1.6rem;
                                     line-height: 1.9rem;
                                 }
                             }
+
+                        }
+                        @include mobile {
+                            position: relative;
+                            width: 100%;
+                            padding: 3rem 2.2rem;
+                            background: #f9f8f9;
+                            display: none;
                         }
                     }
 
@@ -127,6 +199,47 @@
                         width: 18rem;
                     }
                 }
+            }
+
+            @include mobile {
+                position: absolute;
+                top: 6.4rem;
+                left: 0;
+                height: 100%;
+                margin-left: 0;
+                opacity: 0;
+            }
+
+        }
+
+        @include mobile {
+            padding: 0 1.8rem;
+
+            .site-control {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+
+                .menu {
+                    position: relative;
+                    &::after {
+                        content: "";
+                        display: inline-block;
+                        position: absolute;
+                        top: 50%;
+                        right: 1.8rem;
+                        width: 2rem;
+                        height: 1.6rem;
+                        background: icon('menu', custom-color(neutral, 090)) no-repeat center;
+                        background-size: 2rem;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+
+            &::after {
+                display: none;
             }
         }
     }
@@ -262,6 +375,38 @@
             &::after {
                 height: 36.4rem;
                 opacity: 1;
+            }
+        }
+    }
+
+    @include mobile {
+        &.mobile {
+            height: 100%;
+            .header-inner {
+                .site-navi {
+                    height: 100%;
+                    opacity: 1;
+                    .depth1-list {
+                        .depth1-item {
+                            .depth1 {
+                                padding: 2.2rem;
+                                opacity: 1;
+                                visibility: visible;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                            }
+                        }
+                    }
+                }
+                
+                .site-control {
+                    .menu {
+                        &::after {
+                            background: icon('close', custom-color(neutral, 090)) no-repeat center;
+                        }
+                    }
+                }
             }
         }
     }
