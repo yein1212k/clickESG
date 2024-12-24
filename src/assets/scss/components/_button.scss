@@ -47,18 +47,74 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    font-size: 0;
+    line-height: 0;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 50%;
+    }
 
     &.style-a {
       width: 1.6rem;
       height: 1.6rem;
-      font-size: 0;
-      line-height: 0;
 
       &.play {
-        background: icon('play', custom-color(neutral, 000)) no-repeat center;
+        &::after {
+          background: icon('play', custom-color(neutral, 000)) no-repeat center;
+          background-size: 1.2rem;
+        }
       }
+
       &.stop {
-        background: icon('stop', custom-color(neutral, 000)) no-repeat center;
+        &::after {
+          background: icon('stop', custom-color(neutral, 000)) no-repeat center;
+          background-size: 1.6rem;
+        }
+      }
+    }
+
+    &.style-b {
+      width: 4.8rem;
+      height: 4.8rem;
+      border-radius: 50%;
+      border: 0.1rem solid rgba(255, 255, 255, 0.50);
+      transition:all .2s ease-out;
+
+      &.arrow-left1 {
+        &::after {
+          background: icon('arrow-left1', custom-color(neutral, 000)) no-repeat center;
+          background-size: 2.2rem;
+        }
+        &:hover,
+        &:focus {
+          background-color: custom-color(neutral, 000);
+          border: 0.1rem solid rgba(255, 255, 255, 1);
+
+          &:after {
+            background: icon('arrow-left1', custom-color(neutral, 100)) no-repeat center;
+          }
+        }
+      }
+
+      &.arrow-right1 {
+        &::after {
+          background: icon('arrow-right1', custom-color(neutral, 000)) no-repeat center;
+          background-size: 2.2rem;
+        }
+        &:hover,
+        &:focus {
+          background-color: custom-color(neutral, 000);
+          border: 0.1rem solid rgba(255, 255, 255, 1);
+
+          &:after {
+            background: icon('arrow-right1', custom-color(neutral, 100)) no-repeat center;
+          }
+        }
       }
     }
   }

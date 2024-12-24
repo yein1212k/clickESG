@@ -40,6 +40,12 @@ function mainVisual() {
         isCounterOn = false;
     }
 
+    var sliderLink = new Swiper(".swiper.link", {
+        loop: true,
+        //allowTouchMove: false,
+        effect: 'fade',
+    });
+
     var sliderBg = new Swiper(".swiper.bg", {
         slidesPerView: 1,
         loop: true,
@@ -73,16 +79,8 @@ function mainVisual() {
         speed: 1200,
     });
 
-    var sliderLink = new Swiper(".swiper.link", {
-        loop: true,
-        //allowTouchMove: false,
-        effect: 'fade',
-    });
-
     sliderBg.controller.control = sliderTitle;
     sliderTitle.controller.control = sliderBg;
-    sliderBg.controller.control = sliderLink;
-    sliderLink.controller.control = sliderBg;
 
     var toggleButton = document.getElementById('toggleButton');
 
@@ -108,6 +106,25 @@ function mainVisual() {
         } else {
             loadingBar();
         }
+    });
+
+    var solutionSlider = new Swiper(".story-02 .swiper", {
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 32,
+        freeMode: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
     });
 
     window.addEventListener('resize', function () {
