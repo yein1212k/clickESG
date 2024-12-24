@@ -236,124 +236,39 @@ function lenis() {
 function header() {
     const $header = $('#header');
     const $depth1List = $('.depth1-list');
-    const $menu = $('.site-control .menu');
-    const $dep1Item = $('.depth1-item');
+    var lastScrollTop = 0;
 
+    //Depth1 list mouseenter
+    $depth1List.on('mouseenter focusin', () => {
+        $header.addClass('active');
+    })
 
-    let lastScrollTop = 0;
-
-    const isDesktop = () => window.innerWidth >= 1024;
-
-    const addDesktopEvents = () => {
-        $depth1List.on('mouseenter focusin', () => $header.addClass('active'));
-        $header.on('mouseleave focusout', () => $header.removeClass('active'));
-    };
-
-    const removeDesktopEvents = () => {
-        $depth1List.off('mouseenter focusin');
-        $header.off('mouseleave focusout');
-    };
-
-    const initResponsiveEvents = () => {
-        if (isDesktop()) {
-            addDesktopEvents();
-        } else {
-            removeDesktopEvents();
-        }
-    };
-
-    const handleScroll = () => {
-        const winScrollTop = $(window).scrollTop();
-
-        $header.toggleClass('scroll', winScrollTop > 0);
-
-        if (winScrollTop > lastScrollTop) {
-            $header.css('transform', 'translateY(-100px)');
-        } else {
-            $header.css('transform', 'translateY(0)');
-        }
-
-        lastScrollTop = winScrollTop;
-    };
-
-
-
-
-    // 모바일 toggle
-    const handleMobileMenuToggle = () => {
-        $menu.on('click', () => {
-            $header.toggleClass('mobile');
-        });
-    };
-
-    $('.depth1-item').click(function () {
-        console.log('hi')
-        $(this).find('.depth2-wrap').stop().slideDown();
-        //$(this).toggleClass('open');
-        //$(this).siblings().removeClass('open');
-        
-        //$('.depth2-wrap').stop().slideUp(); 
-        //$(this).hasClass('open') && $(this).find('.depth2-wrap').stop().slideDown(200);
-    
-       // return false; 
+    $header.on('mouseleave focusout', () => {
+        $header.removeClass('active');
     });
 
-    // $( document ).ready( function() {
-    //     $( 'button.a' ).click( function() {
-    //       $( '.b' ).slideDown();
-    //     } );
-    //   } );
+    // Scroll event
+    window.addEventListener('scroll', () => {
+        var winScollTop = $(window).scrollTop();
+        var thisScollTop = $(this).scrollTop();
 
-    //const $depth1Links = document.querySelectorAll('.depth1');
-    // const $tems = document.querySelectorAll('.depth1-item');
-    // const $targetWrap = parentItem.querySelector('.depth2-wrap');
+        // 메인에서 winScollTop 0 일때는 transparent 상태여야 하기 때문에
+        if(winScollTop > 0) {
+            $('#header').addClass('scroll');
+        } else {
+            $('#header').removeClass('scroll');
+        }
 
-    // $depth1Links.click(function(){
-    //     $tems.addClass('open');
-    // });
+        if (thisScollTop > lastScrollTop) {
+            $('#header').css('transform', 'translateY(-100px)');
 
-    // 2depths 메뉴 아코디언
-    // const handleDepth1Clicks = () => {
-    //     const depth1Links = document.querySelectorAll('.depth1');
+        } else {
+            $('#header').css('transform', 'translateY(0)');
+        }
 
-    //     depth1Links.forEach(link => {
-    //         link.addEventListener('click', (event) => {
-    //             event.preventDefault(); 
-
-    //             const parentItem = link.closest('.depth1-item');
-    //             const allItems = document.querySelectorAll('.depth1-item');
-    //             const targetWrap = parentItem.querySelector('.depth2-wrap');
-
-    //             allItems.forEach(item => {
-    //                 if (item !== parentItem) {
-    //                     const wrap = item.querySelector('.depth2-wrap');
-    //                     if (wrap) {
-    //                         wrap.style.height = '0';
-    //                         item.classList.remove('open');
-    //                     }
-    //                 }
-    //             });
-
-    //             if (parentItem.classList.contains('open')) {
-    //                 targetWrap.style.height = '0';
-    //                 parentItem.classList.remove('open');
-    //             } else {
-    //                 targetWrap.style.height = `${targetWrap.scrollHeight}px`;
-    //                 parentItem.classList.add('open');
-    //             }
-    //         });
-    //     });
-    // };
-
-    initResponsiveEvents();
-
-    window.addEventListener('resize', initResponsiveEvents);
-    window.addEventListener('scroll', handleScroll);
-
-    handleMobileMenuToggle();
-    //handleDepth1Clicks();
+        lastScrollTop = thisScollTop;
+    });
 }
-
 
 
 
