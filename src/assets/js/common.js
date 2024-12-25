@@ -236,39 +236,72 @@ function lenis() {
 function header() {
     const $header = $('#header');
     const $depth1List = $('.depth1-list');
-    var lastScrollTop = 0;
+    const $menu = $('.site-control .menu');
+    
 
-    //Depth1 list mouseenter
-    $depth1List.on('mouseenter focusin', () => {
-        $header.addClass('active');
-    })
 
-    $header.on('mouseleave focusout', () => {
-        $header.removeClass('active');
-    });
+    let lastScrollTop = 0;
 
-    // Scroll event
-    window.addEventListener('scroll', () => {
-        var winScollTop = $(window).scrollTop();
-        var thisScollTop = $(this).scrollTop();
+    const isDesktop = () => window.innerWidth >= 1024;
 
-        // 메인에서 winScollTop 0 일때는 transparent 상태여야 하기 때문에
-        if(winScollTop > 0) {
-            $('#header').addClass('scroll');
+    const addDesktopEvents = () => {
+        $depth1List.on('mouseenter focusin', () => $header.addClass('active'));
+        $header.on('mouseleave focusout', () => $header.removeClass('active'));
+    };
+
+    const removeDesktopEvents = () => {
+        $depth1List.off('mouseenter focusin');
+        $header.off('mouseleave focusout');
+    };
+
+    const initResponsiveEvents = () => {
+        if (isDesktop()) {
+            addDesktopEvents();
         } else {
-            $('#header').removeClass('scroll');
+            removeDesktopEvents();
+        }
+    };
+
+    const handleScroll = () => {
+        const winScrollTop = $(window).scrollTop();
+
+        $header.toggleClass('scroll', winScrollTop > 0);
+
+        if (winScrollTop > lastScrollTop) {
+            $header.css('transform', 'translateY(-100px)');
+        } else {
+            $header.css('transform', 'translateY(0)');
         }
 
-        if (thisScollTop > lastScrollTop) {
-            $('#header').css('transform', 'translateY(-100px)');
+        lastScrollTop = winScrollTop;
+    };
 
-        } else {
-            $('#header').css('transform', 'translateY(0)');
-        }
 
-        lastScrollTop = thisScollTop;
+
+
+    // 모바일 toggle
+    const handleMobileMenuToggle = () => {
+        $menu.on('click', () => {
+            $header.toggleClass('menu-bar');
+        });
+    };
+
+    $('.depth1-item').click(function () {
+        var $this = $(this);
+        $this.find('.depth2-wrap').stop().slideToggle();
+        $this.toggleClass('open');
     });
+
+
+
+    initResponsiveEvents();
+
+    window.addEventListener('resize', initResponsiveEvents);
+    window.addEventListener('scroll', handleScroll);
+
+    handleMobileMenuToggle();
 }
+
 
 
 

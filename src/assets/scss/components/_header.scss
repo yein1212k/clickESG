@@ -163,7 +163,7 @@
                         flex-direction: column;
                         visibility: visible;
                         transform: translateY(-10px);
-                        transition: all 0.3s ease-out;
+                        //transition: all 0.3s ease-out;
                         opacity: 0;
                         visibility: hidden;
                         z-index: 2;
@@ -192,6 +192,8 @@
                             padding: 3rem 2.2rem;
                             background: #f9f8f9;
                             display: none;
+                            opacity: 1;
+                            visibility: visible;
                         }
                     }
 
@@ -272,6 +274,22 @@
                     }
                 }
             }
+
+            .menu {
+                position: relative;
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    top: 50%;
+                    right: 1.8rem;
+                    width: 2rem;
+                    height: 1.6rem;
+                    background: icon('menu', custom-color(secondary, 060)) no-repeat center;
+                    background-size: 2rem;
+                    transform: translateY(-50%);
+                }
+            }
         }
         &:hover {
             background-color: custom-color(secondary, 060);
@@ -303,6 +321,12 @@
                             }
                         }
                     }
+                }
+            }
+
+            .menu {
+                &::after {
+                    background: icon('menu', custom-color(neutral, 090)) no-repeat center;
                 }
             }
         }
@@ -341,6 +365,12 @@
                     }
                 }
             }
+
+            .menu {
+                &::after {
+                    background: icon('menu', custom-color(neutral, 090)) no-repeat center;
+                }
+            }
         }
     }
 
@@ -367,6 +397,7 @@
                             visibility: visible;
                             opacity: 1;
                             transform: translateY(0);
+                            
                         }
                     }
                 }
@@ -380,7 +411,7 @@
     }
 
     @include mobile {
-        &.mobile {
+        &.menu-bar {
             height: 100%;
             .header-inner {
                 .site-navi {
