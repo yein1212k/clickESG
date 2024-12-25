@@ -1,0 +1,123 @@
+
+@use '../components/mixin' as *;
+@use '../components/variables' as *;
+@use '../components/icons' as *;
+
+#footer {
+    width: 100%;
+    background-color: custom-color(primary, 080);
+    
+    .footer-inner {
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: 22.3rem;
+        padding: 5.6rem 24rem 8rem;
+
+        .footer-head {
+            .footer-subject {
+                display: block;
+                width: 14.2rem;
+                height: 5.2rem;
+                background-image: url(../images/logo/footer-logo.svg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                box-sizing: border-box;
+            }
+        }
+
+        .footer-body{
+            .section {
+                .section-wrap {
+                    .section-body {
+                        .section-content {
+                            .section-list {
+                                display: flex;
+                                gap: 7.2rem;
+
+                                .section-item {
+                                    width: 20rem;
+
+                                    .section-title {
+                                        @include font(small-2x, bold);
+                                        color: custom-color(secondary, 060);
+                                    }
+
+                                    .section-detail {
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 2.2rem;
+                                        margin-top: 2.8rem;
+                                        font-size: 1.5rem;
+                                        font-weight: 400;
+                                        color: custom-color(secondary, 060);
+                                    }
+
+                                    .link {
+                                        position: relative;
+
+                                        &::after {
+                                            content: '';
+                                            position: absolute;
+                                            top: 50%;
+                                            right: -2.4rem;
+                                            width: 1.6rem;
+                                            height: 1.6rem;
+                                            background: icon('link', custom-color(secondary, 060)) no-repeat center;
+                                            transform: translateY(-50%);
+                                            opacity: 0.5;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .footer-aside {
+        width: 100%;
+        padding: 3rem 24rem;
+        background-color: custom-color(primary, 070);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .copyright {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: custom-color(secondary, 060);
+            opacity: 0.6;
+        }
+
+        .info-area {
+            display: flex;
+            gap: 4.1rem;
+            
+            .info-area-link {
+                position: relative;
+                font-size: 1.3rem;
+                font-weight: 500;
+                color: custom-color(secondary, 060); 
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: -2rem;
+                    transform: translateY(-50%);
+                    width: 0.1rem;
+                    height: 0.7rem;
+                    background-color: custom-color(neutral, 060);
+                }
+
+                &:last-child::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
